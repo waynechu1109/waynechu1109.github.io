@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wayne Chu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="/assets/css/pure-min.css" rel="stylesheet" />
+  <link href="/assets/css/syntax.css" rel="stylesheet" />
+  <link href="/assets/css/typora-wiki.css" rel="stylesheet" />
+  <link rel='icon' href='/assets/img/favicon-16.png' sizes='16x16'>
+  <link rel='icon' href='/assets/img/favicon-32.png' sizes='32x32'>
+  <link rel='icon' href='/assets/img/favicon-48.png' sizes='48x48'>
+  <link rel='icon' href='/assets/img/favicon-64.png' sizes='64x64'>
+  <link rel='icon' href='/assets/img/favicon-128.png' sizes='128x128'>
+</head>
+
+<body>
+  <style type="text/css">
+
+    body {
+      font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+      font-weight: 300;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #2E2E2E;
+      line-height: 1.15em;
+      font-family: 'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+      text-rendering: geometricPrecision;
+    }
+
+/****************************************************************************/
+/*SlideBar*/
+.internships {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.internship-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.internship-media {
+    flex: 1;
+    text-align: center;
+}
+
+.internship-image {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 1px;
+}
+
+.internship-details {
+    flex: 3;
+    padding-left: 20px;
+}
+
+.company-name {
+    color: #001F3F;
+    margin: 0;
+}
+
+.internship-title, .internship-date, .project-name {
+    font-style: italic;
+    color: #555;
+}
+
+.internship-description {
+    color: #333;
+    margin-top: 5px;
+}
+
+.project-location {
+    font-weight: bold;
+    color: #0078D4; /* 深藍色，讓地點顯眼 */
+    margin-bottom: 5px;
+}
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-media {
+    flex: 1;
+    text-align: center;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 5px;
+}
+
+.project-details {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.project-title {
+    color: #001F3F;
+    margin: 0;
+}
+
+.project-duration {
+    font-style: italic;
+    color: #555;
+}
+
+.project-description {
+    color: #333;
+}
+
+.underline {
+    text-decoration: underline; /* 只讓這行有底線 */
+}
+.italic {
+    font-style: italic; /* 只讓這行有底線 */
+}
+.title {
+    color: #4076ac; /* 海軍藍 */
+}
+
+.recent-work {
+    height: auto;
+    width: 102%;
+    padding-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0 auto 0 0;
+}
+
+.slider {
+    width: 234.5%;
+}
+
+.slider a:hover {
+    border: none
+}
+
+.slider img {
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.recent-work::-webkit-scrollbar {
+    background: none;
+    height: 8px;
+}
+
+.recent-work::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 4px;
+    margin-left: 240px;
+    margin-right: 240px;
+}
+
+.recent-work::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.recent-work::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+/*<div class="recent-work">
+    <div class="slider">
+        <a href="https://dingmyu.github.io/physion_v2/"><img src="/media/teaser/23cogsci_physion++.gif"></a>
+        <a href="https://dingmyu.github.io/ecl/"><img src="/media/teaser/22corl_ECL.png"></a>
+    </div>
+</div>*/
+/****************************************************************************/
+/*https://codepen.io/rperry1886/pen/KKwbQNP*/
+    .grid-container {
+      columns: 9 150px;
+      /*columns: 3 150px;*/
+      /*columns: 3 auto;*/
+      column-gap: 1.5rem;
+      width: 95%;
+      margin: 0 0 0 0;
+    }
+    .grid-container div {
+      /*width: auto;*/
+      /*width: 150px;*/
+      /*margin: 0 1.5rem 1.5rem 0;*/
+      margin: 0 0.5rem 0.5rem 0;
+      display: inline-block;
+      width: 100%;
+      border: solid 2px black;
+      padding: 5px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      transition: all 0.25s ease-in-out;
+
+      overflow: hidden;
+      /*display: block;*/
+      position: relative;
+      text-align: center;
+    }
+/*    .grid-container div:hover img {
+      filter: grayscale(0);
+    }*/
+    .grid-container div:hover {
+      border-color: coral;
+    }
+    .grid-container div img {
+      width: 100%;
+      /*filter: grayscale(100%);*/
+      border-radius: 5px;
+      transition: all 0.25s ease-in-out;
+      margin: auto;
+    }
+    .grid-container div p {
+      /*margin: 5px 0;*/
+      margin: 0px 0;
+      padding: 0;
+      text-align: center;
+      font-style: italic;
+      font-family: sans-serif;
+      font-size:15px;
+    }
+/****************************************************************************/
+
+  	#pagecontainer {
+  		background-color: #fff;
+  		min-height: calc(100vh - 510px);
+  	}
+
+    #pre-content {
+      padding-top: 36px;
+/*      border-top: 1px dashed #999999;*/
+/*      line-height: 1.6rem;*/
+      padding-bottom: 5px;
+    }
+
+    #post-content {
+      padding-top: 36px;
+      border-top: 1px dashed #999999;
+      line-height: 1.6rem;
+      padding-bottom: 36px;
+    }
+
+    #post-content>blockquote:first-child {
+      padding-top: 0.4em;
+      padding-bottom: 0.4em;
+      margin-bottom:2em;
+      margin-left: 0;
+    }
+
+  	.nav {
+      border-bottom: none;
+      height: auto;
+    }
+
+  	.inner-page {
+  		width: 87%;
+  		/*max-width: 800px;*/
+      max-width: 1025px;
+  		margin: auto;
+  	}
+
+  	h1 {
+  		border-bottom: 0;
+  	}
+
+    #header {
+      padding-bottom: 32px;
+    }
+
+    #header h1 {
+      text-align: center;
+      white-space: pre-wrap;
+      width: 90%;
+      margin: 81px auto 48px auto;
+    }
+
+    h1 {
+      font-size: 3.6rem;
+      letter-spacing: -2px;
+      text-indent: -3px;
+    }
+
+    h2 {
+      margin-top: 2em;
+    }
+
+    .pure-menu-active>.pure-menu-link, .pure-menu-link:hover, .pure-menu-link:focus {
+        background-color: initial;
+        border: #777 solid 1px;
+    }
+
+    .post-meta {
+      font-style: italic;
+      text-align: center;
+      color: #7a7a7a;
+    }
+
+    div.highlighter-rouge {
+      padding: 8px;
+      border: 1px #777 solid;
+      line-height: 1.2rem;
+      font-family: Menlo, Monaco, "Courier New", monospace;
+    }
+
+    div.highlighter-rouge pre{
+      font-size: 0.95em;
+      overflow: hidden;
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+
+    a {
+      color: #463F5C;
+      text-decoration: underline;
+    }
+    
+
+    /* 美觀的分隔線樣式 */
+  .custom-hr {
+    border: none;
+    height: 1.5px;
+    background: linear-gradient(to right, #4076ac, #ccc, #4076ac);
+    margin: 40px auto;
+    width: 95%;
+    position: relative;
+  }
+
+  /* 增加裝飾的菱形符號 */
+  .custom-hr::before, .custom-hr::after {
+    content: "◆";
+    position: absolute;
+    top: -10px;
+    font-size: 18px;
+    color: #4076ac;
+  }
+  
+  .custom-hr::before {
+    left: -20px;
+  }
+  .custom-hr::after {
+    right: -20px;
+  }
+  
+  </style>
+
+  <header>
+    <div id="pre-content" class="inner-page">
+      <div id="profile">
+        <style>
+        .avatar {
+          vertical-align: middle;
+          width: 210px;
+          height: 200px;
+          border-radius: 50%;
+          float: left;
+          padding: 16px;
+          border: 3px solid #FFFFFF;
+        }
+        @media only screen and (max-width: 736px) {
+          .avatar {
+            float: unset;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        </style>
+        <img class="avatar" src="media/waynechu.jpg" alt="Wayne Chu">
+      </div>
+      <h1 style="line-height:120%;margin:30px;font-size:40px;" align="center">Wayne (Wei-Teng) CHU</h1>
+      <p align="center" style="line-height:120%;margin:15px"><strong>Incoming <a href="https://www.ri.cmu.edu/education/academic-programs/master-of-science-computer-vision/">MSCV</a> Student</strong></p>
+      <p align="center" style="line-height:120%;margin:15px"><strong>Robotics Institute @ Carnegie Mellon University</strong></p>
+      <p align="center" style="line-height:120%;margin:15px"><a href="mailto:waynechu1109@gmail.com">waynechu1109@gmail.com</a> &nbsp;&nbsp;&nbsp; </p>  
+      <p align="center" style="line-height:120%;margin:15px">
+        <a href="https://drive.google.com/drive/folders/1zVD6jjLdWz4_ZpVvjzc0BdXZgr7YYeRZ?usp=sharing">[CV]</a>
+        <a href="https://scholar.google.com/citations?user=O48Gh_QAAAAJ&hl=en">[Google Scholar]</a>
+        <a href="https://linkedin.com/in/waynechu1109">[LinkedIn]</a>
+        <a href="https://github.com/waynechu1109">[GitHub]</a>
+      </p>
+    </div>
+  </header>
+
+  <div id="pagecontainer" class="container">
+    <!-- <div id="post-content" class="inner-page"> -->
+    <div class="inner-page">
+        <hr class="custom-hr">
+        <!-- <hr style="border: 1px solid #ccc; margin: 30px 0;"> -->
+        <p>The term “journeyman” seems to epitomize Wayne's undergraduate life. 
+            Instead of the life within the comfort zone all the way to graduation in the homeland, 
+            he enriched last two college years with his footage across those prestigious campus 
+            worldwide. From the exchange life in Nanyang Technological University in Singapore, 
+            the summer internship in UC San Diego, to the exchange experience in UC Berkeley, 
+            these experiences made him gain a harvest and international perspective that most 
+            students cannot have.</p>
+        <p>Research interests: <strong><span style="color:#4076ac">Computer vision, Robotics, 
+            and Antonomous Driving.</span></strong></p>
+    
+    <!-- <strong><span style="color:#996600">I am actively seeking self-motivated students for PhD and intern positions. If you’re interested, please fill out this <a href="https://forms.gle/jxR4B71WPZ75muNk9">form</a> before <a href="mailto:md@cs.unc.edu">email me</a> with your CV, thanks!</span></strong></p> -->
+
+    <h2 id="education" class="title">Education</h2>
+
+    <div class="education">
+        <div class="education-item">
+            <h3><span class="underline">Carnegie Mellon University</span></h3>
+            <p><strong>Master of Science in Computer Vision</strong></p>
+            <p><strong>GPA:</strong> N/A</p>
+            <p>Aug. 2025 - </p>
+        </div>
+    
+        <div class="education-item">
+            <h3><span class="underline">National Tsing Hua University</span></h3>
+            <h4><span class="italic"> Graduated with Distinction</span></h4>
+            <p><strong>Bachelor of Science in Interdisciplinary Program of Engineering</strong></p>
+            <p>Electrical Engineering / Power Mechanical Engineering</p>
+            <p><strong>GPA:</strong> 4.15/4.30</p>
+            <p>Sep. 2020 - Jan. 2024</p>
+        </div>
+    </div>
+    
+    <h2 id="internship-experience" class="title">Internship Experience</h2>
+
+    <div class="internships">
+        <div class="internship-item">
+            <div class="internship-media">
+                <img src="media/ITRI.png" alt="Company Logo" class="internship-image">
+            </div>
+            <div class="internship-details">
+                <h3 class="company-name">Industrial Technology Research Institute (ITRI)</h3>
+                <p class="internship-title"><strong>Automotive AI Algorithm Development Intern</strong></p>
+                <p class="internship-date">Sep. 2024 - Nov. 2024, Feb. 2025 - </p>
+                <!-- <p class="project-name"><strong>Project:</strong> Autonomous Robot Navigation in Dynamic Environments</p> -->
+                <p class="internship-description">
+                    Retrained a computer vision model for Autonomous Mobile Robots (AMR) and autonomous vehicles.
+                    Tested the model’s inference output on an autonomous car using the NVIDIA Omniverse platform, 
+                    focusing on the SparseDrive model for end-to-end autonomous driving via sparse scene representation.
+                </p>
+            </div>
+        </div>
+        
+        <div class="internship-item">
+            <div class="internship-media">
+                <img src="media/FOXCONN.svg" alt="Company Logo" class="internship-image">
+            </div>
+            <div class="internship-details">
+                <h3 class="company-name">Foxconn</h3>
+                <p class="internship-title"><strong>Technology Innovation Group of Chairman Office Intern </strong> </p>
+                <p class="internship-date"> June 2023 - Sep. 2023</p>
+                <!-- <p class="project-name"><strong>Project:</strong> Vision-based Defect Detection for Manufacturing</p> -->
+                <p class="internship-description">
+                    Designed an Android app that controls the car's air conditioner temperature using the driver’s voice. 
+                    Utilized Azure Speech Service to convert speech into text, then transformed the text into intent 
+                    with Dialog Flow for natural language processing. Leveraged CarAPI to operate the air conditioning 
+                    system based on voice commands.
+                </p>
+            </div>
+        </div>
+    </div>
+     
+
+
+<h2 id="research-and-project" class="title">Selected Research & Project</h2>
+
+<div class="projects">
+    <div class="project-item">
+        <div class="project-media">
+            <img src="media/smart_fridge.jpg" alt="Project Image" class="project-image">
+        </div>
+        <div class="project-details">
+            <h3 class="project-title">Smart Fridge</h3>
+            <p class="project-duration">Jun. 2024 - Sep. 2024</p>
+            <p class="project-location">Google Hardware Product Sprint (HPS) Program</p>
+            <p class="project-description">
+                Developed a smart refrigerator with food recognition and expiration tracking 
+                using Google Gemini and built a recipe suggestion system based on soon-to-expire ingredients.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1cRpE48WuzvNL2ulp7dlx_5jeWnp0vrvi">[poster]</a>
+            <a href="https://drive.google.com/drive/folders/1z53mgymRqtlfQE-MjEcPxL2G1seHGHrX?usp=sharing">[slides]</a>
+        </div>
+    </div>
+    <div class="project-item">
+        <div class="project-media">
+            <img src="media/landing_imagination.jpg" alt="Project Image" class="project-image">
+        </div>
+        <div class="project-details">
+            <h3 class="project-title">Laser-Assisted Guidance Landing Technology for Drones</h3>
+            <p class="project-duration">Jan. 2023 - Nov. 2023</p>
+            <p class="project-location"> <a href="http://hscc.cs.nthu.edu.tw">[HSCC Lab]</a>, National Tsing Hua University</p>
+            <p class="project-description">
+                Developed a novel landing guidance system using laser sensors
+                to enhance the accuracy and reliability of drone landings in challenging environments.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1o3hIwAdn8HWKZkmYq9HUBYTKjKqbptRA?usp=sharing">[report]</a>
+            <a href="https://youtu.be/gLfIuNrkDxw">[video]</a>
+            <a href="https://drive.google.com/drive/folders/19-ce8-9G2E20dTpC0pFsRcH7Qna_agCB?usp=sharing">[paper]</a>
+        </div>
+    </div>
+
+    <div class="project-item">
+        <div class="project-media">
+            <img src="media/75-175.png" alt="Project Image" class="project-image">
+        </div>
+        <div class="project-details">
+            <h3 class="project-title">Dodging Dynamical Obstacles Using TurtleBot4 Camera Feed</h3>
+            <p class="project-duration">Jun. 2023 - Aug. 2023</p>
+            <p class="project-location"><a href="http://muro.ucsd.edu">[MURO Lab]</a>, UC San Diego</p>
+            <p class="project-description">
+                Implemented real-time obstacle avoidance for mobile robots using computer vision model
+                and ROS2, improving navigation efficiency in dynamic environments.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1LSuGS2-LgospQTcNaYfdHyU8aEiBde6Y">[report]</a>
+            <a href="https://drive.google.com/drive/folders/1f9EbRnlkV-Rr65heuL9DJ1oDyD4U__KC?usp=sharing">[slides]</a>
+            <a href="https://youtu.be/wdz8laYMFX0?si=9YsBBpm0sXYLn-bW">[video]</a>
+            <a href="https://drive.google.com/drive/folders/1admrbA_Zubr3zAXCr55Y_5lYIp5B3BYs?usp=sharing">[paper]</a>
+        </div>
+    </div>
+</div>
+
+    
+
+
+<h2 id="publication" class="title">Publications</h2>
+
+<p>     († Corresponding author)</p>
+
+<ul>
+  <li>Laser-Assisted Guidance Landing Technology for Drones
+    <ul>
+      <li>Yung-Ching Kuo, <strong>Wei-Teng Chu</strong>†, Yu-Po Cho, Jang-Ping Sheu<br />
+  <code class="language-plaintext highlighter-rouge">MASS 2024</code> 
+  <a href="https://drive.google.com/drive/folders/19-ce8-9G2E20dTpC0pFsRcH7Qna_agCB?usp=sharing">[pdf]</a></li>
+    </ul>
+  </li>
+  <li>Dodging Dynamical Obstacles Using Turtlebot4 Camera Feed
+    <ul>
+      <li><strong>Wei-Teng Chu</strong>†<br />
+  <code class="language-plaintext highlighter-rouge">PMAE 2023</code> (The Best Oral Presentation Award) 
+  <a href="https://drive.google.com/drive/folders/1admrbA_Zubr3zAXCr55Y_5lYIp5B3BYs?usp=sharing">[pdf]</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="selected-awards" class="title">Selected Awards</h2>
+<ul>
+  <li><a href="http://www.phitauphi.org.tw">2024 Member of the Phi Tau Phi Scholastic Honor Society</a> (Top 1% of Graduands in NTHU)</li>
+  <li>2024 Outstanding Graduate Award of NTHU (Top 1 in the Department) </li>
+  <li>2024 The Excellence Award in the Undergraduate Research Competition </li>
+  <li>2024 The 2nd Place in Undergraduate Research Poster Interpretation Competition </li>
+  <li>2023, 2019 Dr. Chu Shun-I ZyXEL Scholarship (Top 15 in the Total of 2200 Seniors) </li>
+  <li>2023 UC San Diego J. Yang Scholarship Award  </li>
+  <li>2023, 2022, 2021 NTHU & IPE Outgoing Exchange Student Scholarship </li>
+  <li>2022 Jason International Charity Fund Scholarship Award by Acer Inc. </li>
+  <li>2022 The Excellence Award in the Asia-Pacific Mechanics Contest for College Students </li>
+  <li>2021, 2020 Academic Achievement Award of NTHU</li>
+  
+</ul>
+
+    </div>
+  </div>
+
+    <footer id="post-footer" style="background-color: #4076ac; padding-top:30px; padding-bottom:0px; text-align:center;font-size:13px;">
+      <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=223&t=n&d=yVXIco2LYkk6GNfwUrLHMM4Jvf8Cm2AHTrdpq8pHhAI&co=333333'></script> -->
+      <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=yVXIco2LYkk6GNfwUrLHMM4Jvf8Cm2AHTrdpq8pHhAI"></script>
+    </footer>
+  <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> -->
+</body>
+</html>
