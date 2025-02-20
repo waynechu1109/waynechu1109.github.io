@@ -261,6 +261,22 @@
     }
 /****************************************************************************/
 
+    #table-of-contents {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    body {
+        padding-top: 25px; /* 防止內容被固定導航遮擋 */
+    }
+
+
   	#pagecontainer {
   		background-color: #fff;
   		min-height: calc(100vh - 510px);
@@ -382,6 +398,15 @@
   }
   
   </style>
+
+  <nav id="table-of-contents" style="text-align:center; padding: 10px; background-color: #f8f8f8; border-bottom: 2px solid #ccc;">
+    <a href="#education" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #1e4f81;">Education</a>
+    <a href="#internship-experience" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #1e4f81;">Internships</a>
+    <a href="#research-and-project" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #1e4f81;">Projects</a>
+    <a href="#publication" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #1e4f81;">Publications</a>
+    <a href="#selected-awards" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #1e4f81;">Awards</a>
+  </nav>
+
 
   <header>
     <div id="pre-content" class="inner-page">
@@ -622,10 +647,10 @@
     </div>
   </div>
 
-    <footer id="post-footer" style="background-color: #4076ac; padding-top:30px; padding-bottom:0px; text-align:center;font-size:13px;">
-      <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=223&t=n&d=yVXIco2LYkk6GNfwUrLHMM4Jvf8Cm2AHTrdpq8pHhAI&co=333333'></script> -->
-      <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac'></script>
-    </footer>
+  <footer id="post-footer" style="background-color: #4076ac; padding-top:30px; padding-bottom:0px; text-align:center;font-size:13px;">
+    <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=223&t=n&d=yVXIco2LYkk6GNfwUrLHMM4Jvf8Cm2AHTrdpq8pHhAI&co=333333'></script> -->
+    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac'></script>
+  </footer>
   <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> -->
 </body>
 </html>
