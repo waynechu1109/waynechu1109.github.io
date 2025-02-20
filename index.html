@@ -34,6 +34,22 @@
 
 /****************************************************************************/
 /*SlideBar*/
+.gif-container {
+        margin-top: 15px;
+        text-align: center;
+    }
+    .gif-wrapper {
+        max-width: 100%;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+    .internship-gif {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
 .internships {
     display: flex;
     flex-direction: column;
@@ -442,22 +458,27 @@
     <h2 id="internship-experience" class="title">Internship Experience</h2>
 
     <div class="internships">
-        <div class="internship-item">
-            <div class="internship-media">
-                <img src="media/ITRI.png" alt="Company Logo" class="internship-image">
-            </div>
-            <div class="internship-details">
-                <h3 class="company-name">Industrial Technology Research Institute (ITRI)</h3>
-                <p class="internship-title"><strong>Automotive AI Algorithm Development Intern</strong></p>
-                <p class="internship-date">Sep. 2024 - Nov. 2024, Feb. 2025 - </p>
-                <!-- <p class="project-name"><strong>Project:</strong> Autonomous Robot Navigation in Dynamic Environments</p> -->
-                <p class="internship-description">
-                    Retrained a computer vision model for Autonomous Mobile Robots (AMR) and autonomous vehicles.
-                    Tested the model’s inference output on an autonomous car using the NVIDIA Omniverse platform, 
-                    focusing on the SparseDrive model for end-to-end autonomous driving via sparse scene representation.
-                </p>
+      <div class="internship-item">
+        <div class="internship-media">
+            <img src="media/ITRI.png" alt="Company Logo" class="internship-image">
+        </div>
+        <div class="internship-details">
+            <h3 class="company-name">Industrial Technology Research Institute (ITRI)</h3>
+            <p class="internship-title"><strong>Automotive AI Algorithm Development Intern</strong></p>
+            <p class="internship-title"><strong>AMR Development Intern</strong></p>
+            <p class="internship-date">Sep. 2024 - Nov. 2024, Feb. 2025 - </p>
+            <p class="internship-description">
+                Retrained a computer vision model for Autonomous Mobile Robots (AMR) and autonomous vehicles.
+                Tested the model’s inference output on an autonomous car using the <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>
+                platform, focusing on the <a href="https://github.com/swc-17/SparseDrive">SparseDrive</a> model for end-to-end autonomous driving via sparse scene representation.
+            </p>
+            <div class="gif-container">
+                <div class="gif-wrapper">
+                    <img src="media/ITRI_demo.gif" alt="itri demo" class="internship-gif">
+                </div>
             </div>
         </div>
+    </div>
         
         <div class="internship-item">
             <div class="internship-media">
