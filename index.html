@@ -407,6 +407,84 @@
   .custom-hr::after {
     right: -20px;
   }
+
+  /* General Styling */
+  .education {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  /* Card Style */
+  .education-item {
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+  }
+
+  .education-item p {
+      text-align: center;
+  }
+
+  .education-item:hover {
+      transform: scale(1.03);
+  }
+
+  /* School Header */
+  .edu-header h3 {
+      margin: 0;
+      padding: 10px 0;
+      font-size: 20px;
+      text-align: center;
+      color: #fff;
+      border-radius: 8px;
+  }
+
+  /* Degree Styling */
+  .degree {
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 10px;
+  }
+
+  /* List Styling */
+  .education-item ul {
+      list-style: none;
+      padding: 0;
+  }
+  .education-item ul li {
+      font-size: 16px;
+      margin: 5px 0;
+  }
+
+  /* School-Specific Colors */
+  .cmu {
+      background: #f8f8f8;
+      border-left: 5px solid #D62828;
+  }
+  .cmu .edu-header h3 {
+      background: #D62828;
+  }
+
+  .ntu {
+      background: #E8F6EF;
+      border-left: 5px solid #0077B6;
+  }
+  .ntu .edu-header h3 {
+      background: #0077B6;
+  }
+
+  .nthu {
+      background: #FAE3D9;
+      border-left: 5px solid #6A0572;
+  }
+  .nthu .edu-header h3 {
+      background: #6A0572;
+  }
   
   </style>
 
@@ -493,22 +571,49 @@
     <h2 id="education" class="title">Education</h2>
 
     <div class="education">
-        <div class="education-item">
-            <h3><span class="underline">Carnegie Mellon University, PA</span></h3>
-            <p><strong>Master of Science in Computer Vision</strong></p>
-            <p><strong>GPA:</strong> N/A</p>
-            <p>Aug. 2025 - </p>
+
+        <!-- Carnegie Mellon University -->
+        <div class="education-item cmu">
+            <div class="edu-header">
+                <h3>Carnegie Mellon University, PA</h3>
+            </div>
+            <p class="degree">Master of Science in Computer Vision</p>
+            <ul>
+                <li>📊 <strong>GPA:</strong> N/A</li>
+                <li>📅 <strong>Duration:</strong> Aug. 2025 - Present</li>
+            </ul>
         </div>
-    
-        <div class="education-item">
-            <h3><span class="underline">National Tsing Hua University, Taiwan</span></h3>
-            <h4><span class="italic"> Graduated with Distinction</span></h4>
-            <p><strong>Bachelor of Science in <a href="https://ipe.site.nthu.edu.tw/index.php?Lang=en">Interdisciplinary Program of Engineering</a></strong></p>
-            <p>Electrical Engineering / Power Mechanical Engineering</p>
-            <p><strong>GPA:</strong> 4.15/4.30</p>
-            <p>Sep. 2020 - Jan. 2024</p>
+
+        <!-- National Taiwan University -->
+        <div class="education-item ntu">
+            <div class="edu-header">
+                <h3>National Taiwan University, Taiwan</h3>
+            </div>
+            <p class="degree">M.S. Program in Electrical Engineering</p>
+            <ul>
+                <li>📊 <strong>GPA:</strong> 4.23 / 4.30</li>
+                <li>📅 <strong>Duration:</strong> Feb. 2024 - Jun. 2024</li>
+            </ul>
         </div>
+
+        <!-- National Tsing Hua University -->
+        <div class="education-item nthu">
+            <div class="edu-header">
+                <h3>National Tsing Hua University, Taiwan</h3>
+            </div>
+            <p class="degree">
+                Bachelor of Science in <a href="https://ipe.site.nthu.edu.tw/index.php?Lang=en">Interdisciplinary Program of Engineering</a>
+            </p>
+            <p>Concentration: Electrical Engineering / Power Mechanical Engineering</p>
+            <ul>
+                <li>🏆 <strong>Graduated with Distinction</strong></li>
+                <li>📊 <strong>GPA:</strong> 4.15 / 4.30</li>
+                <li>📅 <strong>Duration:</strong> Sep. 2020 - Jan. 2024</li>
+            </ul>
+        </div>
+
     </div>
+
     
     <h2 id="internship-experience" class="title">Internships</h2>
 
