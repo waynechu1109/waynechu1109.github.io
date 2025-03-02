@@ -270,10 +270,11 @@
       font-family: sans-serif;
       font-size:15px;
     }
-/****************************************************************************/
+/****************************************************************************/    
 
+    /* 目錄基礎樣式 */
     #table-of-contents {
-        position: fixed;
+      position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -293,6 +294,26 @@
         align-items: center;  /* 垂直置中 */
         justify-content: center;  
     }
+
+    /* 按鈕樣式 */
+    #table-of-contents a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        color: #1e4f81;
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* 滑鼠懸停效果 */
+    #table-of-contents a:hover {
+        background: #1e4f81;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(30, 79, 129, 0.3);
+    }
+
     body {
         padding-top: 80px; /* 防止內容被固定導航遮擋 */
     }
@@ -495,15 +516,54 @@
   .nthu .edu-header h3 {
       background: #874a8b;
   }
+  /* 讓所有社交連結按鈕統一樣式 */
+  .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+  }
+
+  /* 按鈕基礎樣式 */
+  .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 16px;
+      color: #1e4f81;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+  }
+
+  /* 圖標樣式 */
+  .social-btn i {
+      font-size: 24px;
+      transition: transform 0.3s ease-in-out;
+  }
+
+  /* 滑鼠懸停時的效果 */
+  .social-btn:hover {
+      background: #1e4f81;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(30, 79, 129, 0.3);
+  }
+
+  /* 滑鼠懸停時讓圖標稍微變大 */
+  .social-btn:hover i {
+      transform: scale(1.2);
+  }
   
   </style>
 
-  <nav id="table-of-contents" style="text-align:center; padding: 10px; background-color: #f8f8f8; border-bottom: 2px solid #ccc;">
-    <a href="#education" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #1e4f81;">Education</a>
-    <a href="#internship-experience" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #1e4f81;">Internships</a>
-    <a href="#research-and-project" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #1e4f81;">Research & Projects</a>
-    <a href="#publication" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #1e4f81;">Publications</a>
-    <a href="#selected-awards" style="margin: 0 15px; text-decoration: none; font-weight: bold; color: #1e4f81;">Awards</a>
+  <nav id="table-of-contents">
+    <a href="#education">Education</a>
+    <a href="#internship-experience">Internships</a>
+    <a href="#research-and-project">Research & Projects</a>
+    <a href="#publication">Publications</a>
+    <a href="#selected-awards">Awards</a>
   </nav>
 
 
@@ -536,22 +596,27 @@
       <p align="center" style="line-height:120%;margin:15px"><strong>Robotics Institute @ Carnegie Mellon University</strong></p>
       <p align="center" style="line-height:120%;margin:15px"><a href="mailto:waynechu1109@gmail.com">waynechu1109@gmail.com</a> &nbsp;&nbsp;&nbsp; </p>  
       <p align="center" style="line-height:120%; margin:15px;">
-        <a href="https://drive.google.com/drive/folders/1zVD6jjLdWz4_ZpVvjzc0BdXZgr7YYeRZ?usp=sharing" target="_blank" style="margin: 0 15px; text-decoration: none; color: #1e4f81;">
-            <i class="fa-solid fa-file-lines fa-2x"></i>
-            <span style="vertical-align: middle; font-size: 15px; margin-left: 5px;">CV</span>
-        </a>
-        <a href="https://scholar.google.com/citations?user=O48Gh_QAAAAJ&hl=en" target="_blank" style="margin: 0 15px; text-decoration: none; color: #1e4f81;">
-            <i class="fa-brands fa-google-scholar fa-2x"></i>
-            <span style="vertical-align: middle; font-size: 15px; margin-left: 5px;">Google Scholar</span>
-        </a>
-        <a href="https://linkedin.com/in/waynechu1109" target="_blank" style="margin: 0 15px; text-decoration: none; color: #1e4f81;">
-            <i class="fa-brands fa-linkedin fa-2x"></i>
-            <span style="vertical-align: middle; font-size: 15px; margin-left: 5px;">LinkedIn</span>
-        </a>
-        <a href="https://github.com/waynechu1109" target="_blank" style="margin: 0 15px; text-decoration: none; color: #1e4f81;">
-            <i class="fa-brands fa-github fa-2x"></i>
-            <span style="vertical-align: middle; font-size: 15px; margin-left: 5px;">GitHub</span>
-        </a>
+        <div class="social-links">
+          <a href="https://drive.google.com/drive/folders/1zVD6jjLdWz4_ZpVvjzc0BdXZgr7YYeRZ?usp=sharing" target="_blank" class="social-btn">
+              <i class="fa-solid fa-file-lines"></i>
+              <span>CV</span>
+          </a>
+          
+          <a href="https://scholar.google.com/citations?user=O48Gh_QAAAAJ&hl=en" target="_blank" class="social-btn">
+              <i class="fa-brands fa-google-scholar"></i>
+              <span>Google Scholar</span>
+          </a>
+          
+          <a href="https://linkedin.com/in/waynechu1109" target="_blank" class="social-btn">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+          </a>
+          
+          <a href="https://github.com/waynechu1109" target="_blank" class="social-btn">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+          </a>
+        </div>
     </p>
     
     
