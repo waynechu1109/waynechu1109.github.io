@@ -629,13 +629,20 @@
     <div class="inner-page">
         <hr class="custom-hr">
         <!-- <hr style="border: 1px solid #ccc; margin: 30px 0;"> -->
-        <p>The term “journeyman” seems to epitomize Wayne's undergraduate life. 
-            Instead of the life within the comfort zone all the way to graduation in the homeland, 
-            he enriched last two college years with his footage across those prestigious campus 
-            worldwide. From the exchange life in Nanyang Technological University in Singapore, 
-            the summer internship in UC San Diego, to the exchange experience in UC Berkeley, 
-            these experiences made him gain a harvest and international perspective that most 
-            students cannot have.</p>
+        <p>
+          The term “journeyman” seems to epitomize Wayne's undergraduate life. 
+          Instead of the life within the comfort zone all the way to graduation in the homeland, 
+          he enriched last two college years with his footage across those prestigious campus 
+          worldwide. From the exchange life in Nanyang Technological University in Singapore, 
+          the summer internship in UC San Diego, to the exchange experience in UC Berkeley, 
+          these experiences made him gain a harvest and international perspective that most 
+          students cannot have.
+        </p>
+
+        <p>
+          Currently, I am remotely conducting research in computer vision and robotics under the supervision of <a href="https://www.weimingzhi.com/home"> Dr. William Zhi</a> and 
+          <a href="https://tyz1030.github.io/#about"> Dr. Tianyi Zhang</a> at <a href="https://droplab.ri.cmu.edu/">the DROP Lab</a>, Carnegie Mellon University.
+        </p>
 
         <!-- <p>Actively seeking research or internship opportunity which is starting from <b>May 2025</b>. My research interests lie at 
           the intersection of <strong><span style="color:#4076ac"> Robotics, Computer Vision, AI,
@@ -702,13 +709,20 @@
             <p class="internship-title"><strong>Automotive AI Algorithm Development Intern</strong></p>
             <!-- <p class="internship-title"><strong>AMR Development Intern</strong></p> -->
             <p class="internship-date">Sep. 2024 - Nov. 2024, Feb. 2025 - </p>
-            <p class="internship-description">
-                Retrained image segmentation models applicable to quadruped robots and autonomous vehicles.
-                Developed a customized semantic segmentation dataset by combining ADE20k and Mapillary-Vistas, tailored to meet real-world application requirements.
-                Optimized the trained model for faster inference speed using TensorRT by generating TensorRT engine, focusing on <a href="https://github.com/facebookresearch/Mask2Former">Mask2Former</a>.
-                <!-- Tested the model's inference output on an autonomous car using the <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> -->
-                <!-- focusing on the <a href="https://github.com/facebookresearch/Mask2Former">Mask2Former</a> and <a href="https://github.com/swc-17/SparseDrive">SparseDrive</a>. -->
-            </p>
+            <div class="internship-description">
+              <h4>Mask2Former Semantic Segmentation</h4>
+              <p>
+                Combined and re-annotated Mapillary and ADE20k datasets to fulfill requirements for quadruped robots and autonomous vehicles.
+                Converted to COCO format and trained a custom Mask2Former model using NVIDIA TAO Toolkit.
+                Integrated into ROS2 for real-time video inference on robotic and vehicle platforms.
+              </p>
+              <h4>Person Re-Identification (Re-ID)</h4>
+              <p>
+                Built a real-time pedestrian detection and re-ID pipeline using YOLOv11n and OSNet.
+                Employed cosine similarity for feature matching and exported models in .onnx and .engine formats.
+                Achieved real-time inference at ~25 FPS for surveillance, robotics, and automotive use cases.
+              </p>
+            </div>
             <!-- <div class="gif-container">
                 <div class="gif-wrapper">
                     <img src="media/ITRI_demo.gif" alt="itri demo" class="internship-gif">
