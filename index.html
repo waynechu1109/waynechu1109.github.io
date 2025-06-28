@@ -214,6 +214,28 @@
 .recent-work::-webkit-scrollbar-thumb:hover {
     background: #999;
 }
+
+.highlight-row {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.highlight-gif-container,
+.highlight-internship-media {
+  flex: 1 1 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.highlight-gif,
+.highlight-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 或可依需求改 contain */
+  display: block;
+}
+
 /*<div class="recent-work">
     <div class="slider">
         <a href="https://dingmyu.github.io/physion_v2/"><img src="/media/teaser/23cogsci_physion++.gif"></a>
@@ -638,11 +660,21 @@
           these experiences made him gain a harvest and international perspective that most 
           students cannot have.
         </p>
-
         <p>
           Currently, Wayne is remotely conducting research in computer vision and robotics under the supervision of <a href="https://www.weimingzhi.com/home"> Dr. William Zhi</a> and 
           <a href="https://tyz1030.github.io/#about"> Dr. Tianyi Zhang</a> at <a href="https://droplab.ri.cmu.edu/">the DROP Lab</a>, Carnegie Mellon University.
         </p>
+
+        <div class="highlight-row">
+          <div class="highlight-gif-container">
+            <div class="gif-wrapper">
+              <img src="media/sdf_shoes.gif" alt="sdf demo" class="highlight-gif">
+            </div>
+          </div>
+          <div class="highlight-internship-media">
+            <img src="media/sdf_shoes_distrib.png" alt="Company Logo" class="highlight-image">
+          </div>
+        </div>
 
         <!-- <p>Actively seeking research or internship opportunity which is starting from <b>May 2025</b>. My research interests lie at 
           the intersection of <strong><span style="color:#4076ac"> Robotics, Computer Vision, AI,
@@ -810,7 +842,7 @@
             <a href="paper/Dodging Dynamical Obstacles.pdf">[paper]</a>
             <div class="gif-container">
               <div class="gif-wrapper">
-                  <img src="media/MURO.gif" alt="itri demo" class="internship-gif">
+                  <img src="media/MURO.gif" alt="muro demo" class="internship-gif">
               </div>
             </div>
         </div>
