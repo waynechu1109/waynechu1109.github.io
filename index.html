@@ -192,7 +192,7 @@
         <img class="avatar" src="media/waynechu.jpg" alt="Wayne Chu" />
       </div>
       <div class="header-center">
-        <h1>Wayne (Wei-Teng) CHU</h1>
+        <h1>Wei-Teng (Wayne) CHU</h1>
         <p><strong><a href="https://ee.stanford.edu">Master of Science in Electrical Engineering (MSEE)</a> Student</strong></p>
         <p><strong>Stanford University</strong></p>
         <p>waynechu@stanford.edu</p>
@@ -312,15 +312,18 @@
             <p class="internship-date">Sep. 2024 - Nov. 2024, Mar. 2025 - Jul. 2025</p>
             <div class="internship-description">
               <h4>Mask2Former Semantic Segmentation</h4>
-              <p>Combined and re-annotated Mapillary and ADE20k datasets to fulfill requirements for quadruped robots and autonomous vehicles. Converted to COCO format and trained a custom Mask2Former model using NVIDIA TAO Toolkit. Integrated into ROS2 for real-time video inference on robotic and vehicle platforms.</p>
+              <p>We combined and re-annotated Mapillary and ADE20k datasets to fulfill requirements for quadruped robots and autonomous vehicles. It was then converted to COCO format for the training of custom Mask2Former model using NVIDIA TAO Toolkit. Lastly, the re-trained model was integrated into ROS2 for real-time video inference on robotic and vehicle platforms at about 15 FPS.</p>
               <div class="gif-container"><div class="gif-wrapper"><img src="media/merged_dog_.gif" alt="semantic segmentation demo" class="internship-gif" /></div></div>
               <p></p>
               <h4>Person Re-Identification (Re-ID)</h4>
-              <p>Built a real-time pedestrian detection and re-ID pipeline using YOLO11n and OSNet. Employed cosine similarity for feature matching and exported models in .onnx and .engine formats. Achieved real-time inference at ~25 FPS for surveillance, robotics, and automotive use cases.</p>
+              <p>We built a real-time pedestrian detection and re-ID pipeline using YOLO11n and OSNet. The pipeline employed cosine similarity for feature matching and it exported models in .onnx and TensorRT .engine formats for model acceleration. We successfully achieved real-time inference at about 25 FPS for robotics and automotive use cases.</p>
               <div class="gif-container"><div class="gif-wrapper"><img src="media/reid_tracker_.gif" alt="person re-id demo" class="internship-gif" /></div></div>
               <p></p>
               <h4>Sim2Real Quadruped Robot Terrain Traversal</h4>
-              <p>Developed an elevation mapping workflow for quadruped robots by integrating Gazebo and point clouds from Intel RealSense. Designed a point cloud sampling/processing pipeline and integrated RL gait models in simulation. Employed VIO to resolve sensor interruptions and implemented forward kinematics to compute foot coordinates. Deployed on Unitree Go2 for Sim2Real validation.</p>
+              <p>We developed an elevation mapping workflow for quadruped robots Unitree Go2 by integrating Gazebo and point clouds from Intel RealSense depth camera. 
+                Moreover, a point cloud sampling & processing pipeline is integrated with reinforcement learning gait models in simulation. 
+                The most challenging part is to employed visual inertial odometry (VIO) to resolve sensor interruptions and implemented forward kinematics to compute foot coordinates of Unitree Go2. 
+                Finally, the system was deployed on Unitree Go2 for Sim2Real validation.</p>
               <div class="gif-container"><div class="gif-wrapper"><img src="media/real_go2_walk_.gif" alt="quadruped robot demo" class="internship-gif" /></div></div>
             </div>
           </div>
