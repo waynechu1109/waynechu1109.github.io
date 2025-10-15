@@ -123,7 +123,7 @@
     .education-text p,.education-text ul{margin:.4em 0}
     .education-text ul{list-style:none;padding:0}
 
-    .school-logo-box{flex:0 0 120px;height:120px;border:1px solid #e3e3e3;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fff}
+    .school-logo-box{flex:0 0 120px;height:120px;display:flex;align-items:center;justify-content:center;overflow:hidden}
     .school-logo{max-width:100%;max-height:100%;display:block;object-fit:contain;border:none;border-radius:0;background:none;box-shadow:none}
 
     /* School color themes */
@@ -179,7 +179,7 @@
   <!-- Fixed top navigation -->
   <nav id="table-of-contents">
     <a href="#education">Education</a>
-    <a href="#internship-experience">Internships</a>
+    <a href="#internship-experience">Work Experience</a>
     <a href="#research-and-project">Research &amp; Projects</a>
     <a href="#publication">Publications</a>
     <a href="#selected-awards">Awards</a>
@@ -243,6 +243,12 @@
         </p>
       </div>
       
+      </br>
+
+      <p style="text-align: center; font-weight: bold; font-size: 20px;">
+        🌟 Highlight 🌟
+      </p>
+
       <p>
         Wayne dedicated much of his time to robotics and computer vision through projects, internships, and research. In the summer of 2023, he developed a project on dynamic obstacle avoidance using TurtleBot4 at UC San Diego, relying solely on depth camera inputs. His internship at ITRI further deepened his understanding of the challenges in bridging the Sim2Real gap, particularly in designing perception pipelines that remain robust in real-world conditions.
       </p>
@@ -282,6 +288,7 @@
               </ul>
             </div>
             <!-- Bounding box + side-by-side logo -->
+          </br>
             <div class="school-logo-box" aria-label="Stanford University Logo">
               <img src="media/stanford.png" alt="Stanford University Logo" class="school-logo" />
             </div>
@@ -309,8 +316,24 @@
         </div>
 
       <!-- Internships -->
-      <h2 id="internship-experience" class="title">Internships</h2>
+      <h2 id="internship-experience" class="title">Work Experience</h2>
       <section class="internships">
+        <article class="internship-item">
+          <div class="internship-media">
+            <img src="media/SAIL.png" alt="SAIL Logo" class="internship-image" />
+          </div>
+          <div class="internship-details">
+            <h3 class="company-name">Stanford Artificial Intelligence Laboratory (SAIL)</h3>
+            <p class="internship-title"><strong>Researcher @ <a href="https://svl.stanford.edu/">Stanford Vision and Learning Lab</a></strong></p>
+            <p class="internship-date">Sep. 2025 - In Progress</p>
+            <p class="internship-description">
+              Working on some interesting thing related to robot learning. </br>
+              Highlight coming soon!
+            </p>
+            <!-- <a href="https://youtu.be/v93JM6Mi8BI">[video]</a> -->
+          </div>
+        </article>
+
         <article class="internship-item">
           <div class="internship-media">
             <img src="media/ITRI.png" alt="ITRI Logo" class="internship-image" />
@@ -345,7 +368,7 @@
           <div class="internship-details">
             <h3 class="company-name">Foxconn</h3>
             <p class="internship-title"><strong>Technology Innovation Group of Chairman Office Intern</strong></p>
-            <p class="internship-date">June 2024 - Sep. 2024</p>
+            <p class="internship-date">Jun. 2024 - Sep. 2024</p>
             <p class="internship-description">
               We designed an intuitive Android car app to control A/C temperature of the vehicle via voice. 
               The pipeline was composed of Azure Speech Service → Dialogflow intent parsing → CarAPI to operate the HVAC system.</p>
