@@ -6,509 +6,171 @@
   <title>Homepage of Wei-Teng (Wayne) Chu</title>
 
   <!-- Icons & Fonts -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
-  <!-- Legacy site styles (leave if required by the rest of the site) -->
+  <!-- Base Styles -->
   <link href="/assets/css/pure-min.css" rel="stylesheet" />
   <link href="/assets/css/syntax.css" rel="stylesheet" />
   <link href="/assets/css/typora-wiki.css" rel="stylesheet" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-16x16.png" sizes="16x16">
-  <link rel='icon' type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-32x32.png" sizes='32x32'>
-  <link rel='icon' type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-128.png" sizes='128x128'>
-  <link rel='icon' type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-192x192.png" sizes='192x192'>
-  <link rel='icon' type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-196x196.png" sizes='196x196'>
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-32x32.png" sizes="32x32">
 
   <style>
-    /* =========================
-       Base & Typography
-       ========================= */
-    :root{
-      --primary:#4076ac;
-      --text:#2e2e2e;
-      --muted:#555;
-      --card:#f8f8f8;
-      --shadow:0 4px 10px rgba(0,0,0,.1);
-      --radius:12px;
-      --gap:20px;
+    :root {
+      --primary: #4076ac;
+      --text: #2e2e2e;
+      --muted: #555;
+      --card: #f8f8f8;
+      --shadow: 0 4px 10px rgba(0, 0, 0, .1);
+      --radius: 12px;
+      --gap: 20px;
     }
 
-    html,body{margin:0;padding:0}
-    body{
-      font-family:"Merriweather","PT Serif",Georgia,"Times New Roman","STSong",serif;
-      font-weight:300;
-      color:var(--text);
-      line-height:1.6;
-      padding-top:80px; /* offset for fixed TOC */
-      background:#fff;
+    html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+    body {
+      font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", serif;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.6;
+      padding-top: 80px;
+      background: #fff;
     }
 
-    h1,h2,h3,h4,h5,h6{
-      color:#2E2E2E;
-      line-height:1.15;
-      font-family:'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
-      text-rendering:geometricPrecision;
-      margin:0 0 .5em 0;
+    h1, h2, h3, h4 {
+      color: #2E2E2E;
+      line-height: 1.15;
+      font-family: 'Open Sans', 'Microsoft YaHei', sans-serif;
+      margin: 0 0 .5em 0;
     }
-    h1{font-size:3rem;letter-spacing:-.5px}
-    h2{margin-top:2em}
 
-    a{color:#463F5C;text-decoration:underline}
+    h1 { font-size: 3rem; letter-spacing: -.5px; }
+    a { color: #1e4f81; text-decoration: none; }
+    .inner-page { width: 87%; max-width: 1025px; margin: auto; }
 
-    .inner-page{width:87%;max-width:1025px;margin:auto}
-
-    /* =========================
-       Top Nav (Table of contents)
-       ========================= */
-    #table-of-contents{
-      position:fixed;top:0;left:0;right:0;height:60px;z-index:1000;
-      background:#fff;display:flex;align-items:center;justify-content:center;gap:25px;
-      box-shadow:0 2px 5px rgba(0,0,0,.1);
-      font-size:1.1rem;
+    /* Navigation */
+    #table-of-contents {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: 60px; z-index: 1000;
+      background: #fff; display: flex;
+      align-items: center; justify-content: center;
+      gap: 25px; box-shadow: 0 2px 5px rgba(0,0,0,.1);
+      font-size: 1.1rem;
     }
-    #table-of-contents a{
-      text-decoration:none;font-weight:700;color:#1e4f81;padding:10px 15px;border-radius:8px;transition:.3s;
+    #table-of-contents a {
+      font-weight: 700; color: #1e4f81;
+      padding: 10px 15px; border-radius: 8px;
+      transition: .3s;
     }
-    #table-of-contents a:hover{background:#1e4f81;color:#fff;transform:translateY(-3px);box-shadow:0 5px 15px rgba(30,79,129,.3)}
+    #table-of-contents a:hover {
+      background: #1e4f81; color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(30,79,129,.3);
+    }
 
-    /* =========================
-       Header
-       ========================= */
-    header{padding:40px 0 20px 0}
-    .header-flex{display:flex;align-items:center;justify-content:center;gap:32px;max-width:1200px;margin:0 auto}
-    .header-left{flex:0 0 180px;display:flex;justify-content:center;align-items:center;padding-left:100px}
-    .avatar{width:160px;height:160px;object-fit:cover;border-radius:50%;border:3px solid #fff;display:block}
-    .header-center{flex:1 1 auto;text-align:center;padding:0 32px}
-    .header-center h1{font-size:3em;margin:0 0 10px 0;font-weight:700}
-    .header-right{flex:0 0 150px;display:flex;flex-direction:column;align-items:flex-end;gap:24px;padding-right:100px}
+    /* Header */
+    header { padding: 40px 0 20px 0; }
+    .header-flex {
+      display: flex; align-items: center; justify-content: center;
+      gap: 32px; max-width: 1200px; margin: 0 auto;
+    }
+    .avatar {
+      width: 160px; height: 160px; object-fit: cover;
+      border-radius: 50%; border: 3px solid #fff;
+    }
 
-    .social-links{display:flex;justify-content:center;gap:20px;margin-top:18px}
-    .social-btn{display:flex;align-items:center;gap:8px;padding:10px 15px;text-decoration:none;font-size:16px;color:#1e4f81;border-radius:8px;transition:.3s}
-    .social-btn i{font-size:24px;transition:transform .3s}
-    .social-btn:hover{background:#1e4f81;color:#fff;transform:translateY(-3px);box-shadow:0 5px 15px rgba(30,79,129,.3)}
-    .social-btn:hover i{transform:scale(1.2)}
+    .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 18px; }
+    .social-btn {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 15px; font-size: 16px;
+      color: #1e4f81; border-radius: 8px;
+      transition: .3s;
+    }
+    .social-btn:hover {
+      background: #1e4f81; color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(30,79,129,.3);
+    }
 
-    /* =========================
-       Pretty HR
-       ========================= */
-    .custom-hr{border:none;height:1.5px;background:linear-gradient(to right,var(--primary),#ccc,var(--primary));margin:40px auto;width:95%;position:relative}
-    .custom-hr::before,.custom-hr::after{content:"◆";position:absolute;top:-10px;font-size:18px;color:var(--primary)}
-    .custom-hr::before{left:-20px}.custom-hr::after{right:-20px}
+    /* Section titles */
+    .title { color: var(--primary); margin-top: 2em; }
 
-    /* =========================
-       Highlight Row (hero GIFs)
-       ========================= */
-    .highlight-row{display:flex;align-items:stretch;gap:24px}
-    .highlight-gif-container,.highlight-internship-media{flex:1 1 0;display:flex;align-items:stretch}
-    .gif-wrapper{max-width:100%;overflow:hidden;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
-    .highlight-gif,.highlight-image{width:100%;height:100%;object-fit:cover;display:block}
-
-    /* =========================
-       Sections: Education, Internships, Projects
-       ========================= */
-    .title{color:var(--primary)}
-
-    .education{display:flex;flex-direction:column;gap:var(--gap);max-width:1200px;margin:0 auto}
-    .education-item{padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);transition:transform .3s;background:var(--card)}
-    .education-item:hover{transform:scale(1.03)}
-
-    /* EDU header band */
-    .edu-header h3{margin:0;padding:10px 0;font-size:20px;text-align:center;color:#fff;border-radius:8px}
-
-    /* NEW: side-by-side text + logo in a fixed bounding box */
-    .edu-content{display:flex;align-items:center;gap:20px}
-    .education-text{flex:1}
-    .education-text p,.education-text ul{margin:.4em 0}
-    .education-text ul{list-style:none;padding:0}
-
-    .school-logo-box{flex:0 0 120px;height:120px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-    .school-logo{max-width:100%;max-height:100%;display:block;object-fit:contain;border:none;border-radius:0;background:none;box-shadow:none}
-
-    /* School color themes */
-    .cmu{border-left:5px solid #e77373}
-    .cmu .edu-header h3{background:#e77373}
-    .ntu{border-left:5px solid #3888b3}
-    .ntu .edu-header h3{background:#3888b3}
-    .nthu{border-left:5px solid #874a8b}
-    .nthu .edu-header h3{background:#874a8b}
-
-    .degree{font-weight:700;font-size:18px;margin:.4em 0}
-
-    /* Internships */
-    .internships,.projects{display:flex;flex-direction:column;gap:var(--gap);margin-top:20px}
-    .internship-item,.project-item{display:flex;align-items:center;background:#f9f9f9;padding:15px;border-radius:8px;box-shadow:2px 2px 10px rgba(0,0,0,.1);transition:transform .3s}
-    .internship-item:hover,.project-item:hover{transform:scale(1.03)}
-    .internship-media,.project-media{flex:1;text-align:center}
-    .internship-image{width:100%;max-width:200px;border-radius:1px}
-    .project-image{width:100%;max-width:250px;border-radius:5px}
-    .internship-details{flex:3;padding-left:20px}
-    .project-details{flex:2;padding-left:20px}
-    .company-name,.project-title{color:#001F3F;margin:0}
-    .internship-title,.internship-date,.project-duration{font-style:italic;color:var(--muted)}
-    .project-location{font-weight:700;color:#0078D4;margin-bottom:5px}
-
-    .gif-container{margin-top:15px;text-align:center}
-    .internship-gif{width:100%;height:auto;display:block}
-
-    /* Masonry gallery (unused here but kept) */
-    .grid-container{columns:9 150px;column-gap:1.5rem;width:95%;margin:0}
-    .grid-container div{margin:0 .5rem .5rem 0;display:inline-block;width:100%;border:2px solid #000;padding:5px;box-shadow:5px 5px 5px rgba(0,0,0,.5);border-radius:5px;transition:.25s;overflow:hidden;position:relative;text-align:center}
-    .grid-container div:hover{border-color:coral}
-    .grid-container div img{width:100%;border-radius:5px;transition:.25s;margin:auto}
-    .grid-container div p{margin:0;padding:0;text-align:center;font-style:italic;font-family:sans-serif;font-size:15px}
+    /* Project Cards */
+    .projects { display: flex; flex-direction: column; gap: var(--gap); margin-top: 20px; }
+    .project-item {
+      display: flex; align-items: center;
+      background: #f9f9f9; padding: 15px;
+      border-radius: 8px; box-shadow: 2px 2px 10px rgba(0,0,0,.1);
+      transition: transform .3s;
+    }
+    .project-item:hover { transform: scale(1.03); }
+    .project-media img { width: 100%; max-width: 250px; border-radius: 5px; }
+    .project-details { flex: 2; padding-left: 20px; }
 
     /* Footer */
-    footer{background-color:var(--primary);padding:30px 0 0;text-align:center;font-size:13px;color:#fff;margin-top:40px}
+    footer { background-color: var(--primary); padding: 30px 0 0; text-align: center; font-size: 13px; color: #fff; margin-top: 40px; }
 
-    /* Responsive */
-    @media (max-width: 800px){
-      .header-flex{flex-direction:column;align-items:center;padding:12px 0}
-      .header-left{padding-left:0}
-      .header-right{flex-direction:row;align-items:center;gap:16px;margin-top:16px;padding-right:0}
-      .school-logo-box{flex-basis:100px;height:100px}
-      .project-item,.internship-item{flex-direction:column;align-items:flex-start}
-      .internship-details,.project-details{padding-left:0;margin-top:10px}
-      .education-text{text-align:center}
-      .edu-content{flex-direction:column}
+    @media (max-width: 800px) {
+      .header-flex { flex-direction: column; }
+      .project-item { flex-direction: column; align-items: flex-start; }
+      .project-details { padding-left: 0; margin-top: 10px; }
     }
   </style>
 </head>
+
 <body>
   <!-- Fixed top navigation -->
   <nav id="table-of-contents">
-    <a href="index.html">Home</a>
-    <a href="index.html#education">Education</a>
-    <a href="index.html#internship-experience">Work Experience</a>
-    <a href="index.html#research-and-project">Research &amp; Projects</a>
-    <a href="index.html#publication">Publications</a>
-    <a href="index.html#selected-awards">Awards</a>
+    <a href="#home">Home</a>
+    <a href="#education">Education</a>
+    <a href="#internship-experience">Work Experience</a>
+    <a href="#research-and-project">Research &amp; Projects</a>
+    <a href="#publication">Publications</a>
+    <a href="#selected-awards">Awards</a>
     <a href="course_projects.html">Course Projects</a>
   </nav>
 
-  <!-- Header / Hero -->
-  <header class="inner-page">
+  <!-- Header -->
+  <header class="inner-page" id="home">
     <div class="header-flex">
-      <div class="header-left">
-        <img class="avatar" src="media/waynechu.jpg" alt="Wayne Chu" />
-      </div>
+      <img class="avatar" src="media/waynechu.jpg" alt="Wayne Chu" />
       <div class="header-center">
         <h1>Wei-Teng (Wayne) CHU</h1>
-        <p><strong><a href="https://ee.stanford.edu">Master of Science in Electrical Engineering (MSEE)</a> Student</strong></p>
-        <p><strong>Stanford University</strong></p>
+        <p><strong><a href="https://ee.stanford.edu">M.S. in Electrical Engineering</a></strong>, Stanford University</p>
         <p>waynechu@stanford.edu</p>
-        <div class="social-links" style="margin-top: 18px;">
-          <a href="https://drive.google.com/drive/folders/1zVD6jjLdWz4_ZpVvjzc0BdXZgr7YYeRZ?usp=sharing" target="_blank" class="social-btn">
-            <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
-            <span>Resume</span>
-          </a>
-          <a href="https://scholar.google.com/citations?user=O48Gh_QAAAAJ&amp;hl=en" target="_blank" class="social-btn">
-            <i class="fa-brands fa-google-scholar" aria-hidden="true"></i>
-            <span>Google Scholar</span>
-          </a>
-          <a href="https://linkedin.com/in/waynechu1109" target="_blank" class="social-btn">
-            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-            <span>LinkedIn</span>
-          </a>
-          <a href="https://github.com/waynechu1109" target="_blank" class="social-btn">
-            <i class="fa-brands fa-github" aria-hidden="true"></i>
-            <span>GitHub</span>
-          </a>
+
+        <div class="social-links">
+          <a href="https://drive.google.com/drive/folders/1zVD6jjLdWz4_ZpVvjzc0BdXZgr7YYeRZ?usp=sharing" target="_blank" class="social-btn"><i class="fa-solid fa-file-lines"></i><span>Resume</span></a>
+          <a href="https://scholar.google.com/citations?user=O48Gh_QAAAAJ&amp;hl=en" target="_blank" class="social-btn"><i class="fa-brands fa-google-scholar"></i><span>Scholar</span></a>
+          <a href="https://linkedin.com/in/waynechu1109" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+          <a href="https://github.com/waynechu1109" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
         </div>
       </div>
-      <div class="header-right"><!-- reserved for extra header content if needed --></div>
     </div>
   </header>
 
   <!-- Main Content -->
-  <!-- <main id="pagecontainer">
-    <section class="inner-page">
-      <hr class="custom-hr" />
-      <p style="text-align: center; font-weight: bold; font-size: 20px;">
-        📣 Wayne is actively seeking internship opportunities for Summer 2026! 📣
-      </p>
-      
-      <div style="text-align: center; font-weight: bold; background-color: #f5f9ff; border: 2px solid #4076ac; border-radius: 12px; padding: 15px 20px; width: 90%; margin: 0 auto 25px auto; box-shadow: 0 3px 8px rgba(0,0,0,0.1);">
-        <p style="margin: 8px 0;">
-          🎉 UPDATE🎉
-        </p>        
-        <p style="margin: 8px 0;">
-          <span style="text-decoration: underline;">Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation</span> can be found on <a href="https://arxiv.org/abs/2509.20681">arXiv</a> now!
-        </p>
-        <p style="margin: 8px 0;">
-          I recently joined <a href="https://svl.stanford.edu/">the Stanford Vision and Learning Lab (SVL)</a>, 
-          advised by <a href="https://engineering.stanford.edu/people/fei-fei-li">Prof. Fei-Fei Li</a>.
-        </p>
-        <p style="margin: 8px 0;">
-          <span style="text-decoration: underline;">Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation</span> was submitted to ICRA 2026!
-        </p>
-      </div>
-      
-      </br>
-
-      <p style="text-align: center; font-weight: bold; font-size: 20px;">
-        🌟 Highlight 🌟
-      </p>
-
-      <p>
-        Wayne dedicated much of his time to robotics and computer vision through projects, internships, and research. In the summer of 2023, he developed a project on dynamic obstacle avoidance using TurtleBot4 at UC San Diego, relying solely on depth camera inputs. His internship at ITRI further deepened his understanding of the challenges in bridging the Sim2Real gap, particularly in designing perception pipelines that remain robust in real-world conditions.
-      </p>
-      <p>
-        He conducted remote research in computer vision and robotics under the supervision of 
-        <a href="https://www.weimingzhi.com/home">Prof. Weiming Zhi</a> and <a href="https://tyz1030.github.io/#about">Dr. Tianyi Zhang</a> at <a href="https://droplab.ri.cmu.edu/">the DROP Lab</a>, CMU before beginning his studies at Stanford. 
-      </p> -->
-
-      <!-- Hero media row -->
-      <!-- <div class="highlight-row">
-        <div class="highlight-internship-media">
-          <img src="media/dtu_114_32.png" alt="dtu_114_32" class="highlight-image" />
+  <main class="inner-page">
+    <h2 id="research-and-project" class="title">Selected Research</h2>
+    <section class="projects">
+      <article class="project-item">
+        <div class="project-media">
+          <img src="media/franka_side.gif" alt="Project Demo" />
         </div>
-        <div class="highlight-gif-container">
-          <div class="gif-wrapper">
-            <img src="media/sdf_buddha.gif" alt="sdf demo" class="highlight-gif" />
-          </div>
+        <div class="project-details">
+          <h3>Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation</h3>
+          <p>Mar. 2025 – Sep. 2025 | <a href="https://droplab.ri.cmu.edu/">DROP Lab</a>, Carnegie Mellon University</p>
+          <p>Advised by <a href="https://www.weimingzhi.com/home">Prof. Weiming Zhi</a> and <a href="https://tyz1030.github.io/#about">Dr. Tianyi Zhang</a>.</p>
+          <p>We present <strong>Fast Image-to-Neural Surface (FINS)</strong>, a lightweight framework capable of reconstructing high-fidelity signed distance fields (SDF) from a single image in 10 seconds. FINS fuses multi-resolution hash grids and efficient optimization to achieve state-of-the-art accuracy with significant speedups. </p>
+          <p><a href="https://arxiv.org/abs/2509.20681">[arXiv]</a></p>
         </div>
-        <div class="highlight-internship-media">
-          <img src="media/franka_side.gif" alt="robotic arm demo" class="highlight-image" />
-        </div>
-      </div> -->
-
-      <!-- Education -->
-      <!-- <h2 id="education" class="title">Education</h2>
-      <div class="education"> -->
-        <!-- Stanford -->
-        <!-- <article class="education-item cmu">
-          <div class="edu-header"><h3>Stanford University, CA</h3></div>
-          <div class="edu-content">
-            <div class="education-text">
-              <p class="degree">M.S. Student, Electrical Engineering</p>
-              <p>Concentration: Robotics / Computer Vision</p>
-              <ul>
-                <li><strong>GPA:</strong> N/A</li>
-                <li><strong>Duration:</strong> Sep. 2025 - Apr. 2027 (Expected)</li>
-              </ul>
-            </div> -->
-            <!-- Bounding box + side-by-side logo -->
-          <!-- </br>
-            <div class="school-logo-box" aria-label="Stanford University Logo">
-              <img src="media/stanford.png" alt="Stanford University Logo" class="school-logo" />
-            </div>
-          </div>
-        </article> -->
-
-        <!-- NTHU -->
-        <!-- <article class="education-item nthu">
-          <div class="edu-header"><h3>National Tsing Hua University, Taiwan</h3></div>
-            <div class="edu-content">
-              <div class="education-text">
-              <p class="degree">Bachelor of Science in <a href="https://ipe.site.nthu.edu.tw/index.php?Lang=en">Interdisciplinary Program of Engineering</a></p>
-              <p>Concentration: Electrical Engineering / Power Mechanical Engineering</p>
-                <ul>
-                  <li><strong>Graduated with Distinction</strong></li>
-                  <li><strong>GPA:</strong> 4.15 / 4.30</li>
-                  <li><strong>Duration:</strong> Sep. 2020 - Jan. 2024</li>
-                </ul>
-              </div>
-            <div class="school-logo-box" aria-label="National Tsing Hua University Logo">
-              <img src="media/nthu.png" alt="NTHU Logo" class="school-logo" />
-            </div>
-          </div>
-        </article>
-        </div> -->
-
-      <!-- Internships -->
-      <!-- <h2 id="internship-experience" class="title">Work Experience</h2>
-      <section class="internships">
-        <article class="internship-item">
-          <div class="internship-media">
-            <img src="media/SAIL.png" alt="SAIL Logo" class="internship-image" />
-          </div>
-          <div class="internship-details">
-            <h3 class="company-name">Stanford Artificial Intelligence Laboratory (SAIL)</h3>
-            <p class="internship-title"><strong>Researcher @ <a href="https://svl.stanford.edu/">Stanford Vision and Learning Lab</a></strong></p>
-            <p class="internship-date">Sep. 2025 - In Progress</p>
-            <p class="internship-description">
-              Working on something interesting related to robot learning. </br>
-              Highlight coming soon!
-            </p>
-          </div>
-        </article>
-
-        <article class="internship-item">
-          <div class="internship-media">
-            <img src="media/ITRI.png" alt="ITRI Logo" class="internship-image" />
-          </div>
-          <div class="internship-details">
-            <h3 class="company-name">Industrial Technology Research Institute (ITRI)</h3>
-            <p class="internship-title"><strong>Automotive AI Algorithm Development Intern</strong></p>
-            <p class="internship-date">Sep. 2024 - Nov. 2024, Mar. 2025 - Jul. 2025</p>
-            <div class="internship-description">
-              <h4>Mask2Former Semantic Segmentation</h4>
-              <p>We combined and re-annotated Mapillary and ADE20k datasets to fulfill requirements for quadruped robots and autonomous vehicles. It was then converted to COCO format for the training of custom Mask2Former model using NVIDIA TAO Toolkit. Lastly, the re-trained model was integrated into ROS2 for real-time video inference on robotic and vehicle platforms at about 15 FPS.</p>
-              <div class="gif-container"><div class="gif-wrapper"><img src="media/merged_dog_.gif" alt="semantic segmentation demo" class="internship-gif" /></div></div>
-              <p></p>
-              <h4>Person Re-Identification (Re-ID)</h4>
-              <p>We built a real-time pedestrian detection and re-ID pipeline using YOLO11n and OSNet. The pipeline employed cosine similarity for feature matching and it exported models in .onnx and TensorRT .engine formats for model acceleration. We successfully achieved real-time inference at about 25 FPS for robotics and automotive use cases.</p>
-              <div class="gif-container"><div class="gif-wrapper"><img src="media/reid_tracker_.gif" alt="person re-id demo" class="internship-gif" /></div></div>
-              <p></p>
-              <h4>Sim2Real Quadruped Robot Terrain Traversal</h4>
-              <p>We developed an elevation mapping workflow for quadruped robots Unitree Go2 by integrating Gazebo and point clouds from Intel RealSense depth camera. 
-                Moreover, a point cloud sampling & processing pipeline is integrated with reinforcement learning gait models in simulation. 
-                The most challenging part is to employed visual inertial odometry (VIO) to resolve sensor interruptions and implemented forward kinematics to compute foot coordinates of Unitree Go2. 
-                Finally, the system was deployed on Unitree Go2 for Sim2Real validation.</p>
-              <div class="gif-container"><div class="gif-wrapper"><img src="media/real_go2_walk_.gif" alt="quadruped robot demo" class="internship-gif" /></div></div>
-            </div>
-          </div>
-        </article>
-
-        <article class="internship-item">
-          <div class="internship-media">
-            <img src="media/FOXCONN.svg" alt="Foxconn Logo" class="internship-image" />
-          </div>
-          <div class="internship-details">
-            <h3 class="company-name">Foxconn</h3>
-            <p class="internship-title"><strong>Technology Innovation Group of Chairman Office Intern</strong></p>
-            <p class="internship-date">Jun. 2024 - Sep. 2024</p>
-            <p class="internship-description">
-              We designed an intuitive Android car app to control A/C temperature of the vehicle via voice. 
-              The pipeline was composed of Azure Speech Service → Dialogflow intent parsing → CarAPI to operate the HVAC system.</p>
-            <a href="https://youtu.be/v93JM6Mi8BI">[video]</a>
-          </div>
-        </article>
-      </section> -->
-
-      <!-- Projects -->
-      <h2 id="research-and-project" class="title">Selected Course Projects</h2>
-      <section class="projects">
-        <article class="project-item">
-          <div class="project-media"><img src="media/franka_side.gif" alt="Smart Fridge" class="project-image" /></div>
-          <div class="project-details">
-            <h3 class="project-title">Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation</h3>
-            <p class="project-duration">Mar. 2025 - Sep. 2025</p>
-            <p class="project-location"><a href="https://droplab.ri.cmu.edu/">[DROP Lab]</a>, Carnegie Mellon University</p>
-            <p class="project-description">
-              Advised by <a href="https://www.weimingzhi.com/home">Prof. Weiming Zhi</a> and <a href="https://tyz1030.github.io/#about">Tianyi Zhang Ph.D.</a>. <br>
-              We present Fast Image-to-Neural Surface (FINS), a lightweight framework capable of reconstructing high fidelity signed distance fields (SDF) from a single image in 10 seconds. 
-              Our method fuses a multi-resolution hash grid and efficient optimization to achieve state-of-the-art accuracy while being an order of magnitude faster than existing methods. 
-              The scalability and real-world usability of FINS were also tested through robotic surface-following experiments, showing its utility in a wide range of tasks and datasets.
-            </p>
-            <p class="project-description">
-              <a href="https://arxiv.org/abs/2509.20681">[arXiv]</a>
-            </p>
-            <!-- <a href="https://drive.google.com/drive/folders/1cRpE48WuzvNL2ulp7dlx_5jeWnp0vrvi">[poster]</a>
-            <a href="slides/Smart Fridge Final Presentation.pptx.pdf">[slides]</a>
-            <a href="https://github.com/waynechu1109/Google_HPS_Smart_Fridge_-Food-Recognition-">[code]</a> -->
-          </div>
-        </article>
-      </section>
-
-      <!-- Publications -->
-      <!-- <h2 id="publication" class="title">Publications</h2>
-      <p>(† Corresponding author)</p>
-      <ul>
-
-        <li>Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation
-          <ul>
-            <li><strong>Wei-Teng Chu</strong>, Tianyi Zhang, Matthew Johnson-Roberson, Weiming Zhi†<br />
-              <code>arXiv</code>
-              <a href="paper/Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation.pdf">[pdf]</a>
-              <details>
-                <summary>BibTeX</summary>
-                <pre>@misc{chu2025efficientconstructionimplicitsurface,
-  title={Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation}, 
-  author={Wei-Teng Chu and Tianyi Zhang and Matthew Johnson-Roberson and Weiming Zhi},
-  year={2025},
-  eprint={2509.20681},
-  archivePrefix={arXiv},
-  primaryClass={cs.RO},
-  url={https://arxiv.org/abs/2509.20681}, 
-}
-</pre>
-              </details>
-              <details>
-                <summary>Plain Text</summary>
-                <pre>W.-T. Chu, T. Zhang, M. Johnson-Roberson, and W. Zhi, “Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation,” arXiv preprint arXiv:2509.20681, 2025. [Online]. Available: https://doi.org/10.48550/arXiv.2509.20681
-</pre>
-              </details>
-            </li>
-          </ul>
-        </li>
-
-        <li>Laser-Assisted Guidance Landing Technology for Drones
-          <ul>
-            <li>Yung-Ching Kuo, <strong>Wei-Teng Chu</strong>†, Yu-Po Cho, Jang-Ping Sheu<br />
-              <code>MASS 2024</code>
-              <a href="paper/Laser-Assisted_Guidance_Landing_Technology_for_Drones.pdf">[pdf]</a>
-              <details>
-                <summary>BibTeX</summary>
-                <pre>@INPROCEEDINGS{10723664,
-  author={Kuo, Yung-Ching and Chu, Wei-Teng and Cho, Yu-Po and Sheu, Jang-Ping},
-  booktitle={2024 IEEE 21st International Conference on Mobile Ad-Hoc and Smart Systems (MASS)},
-  title={Laser-Assisted Guidance Landing Technology for Drones},
-  year={2024},
-  pages={670-675},
-  doi={10.1109/MASS62177.2024.00107}
-}
-</pre>
-              </details>
-              <details>
-                <summary>Plain Text</summary>
-                <pre>Y. -C. Kuo, W. -T. Chu, Y. -P. Cho and J. -P. Sheu, "Laser-Assisted Guidance Landing Technology for Drones," 2024 IEEE 21st International Conference on Mobile Ad-Hoc and Smart Systems (MASS), Seoul, Korea, Republic of, 2024, pp. 670-675, doi: 10.1109/MASS62177.2024.00107
-</pre>
-              </details>
-            </li>
-          </ul>
-        </li>
-        <li>Dodging Dynamical Obstacles Using Turtlebot4 Camera Feed
-          <ul>
-            <li><strong>Wei-Teng Chu</strong>†<br />
-              <code>PMAE 2023</code> (The Best Oral Presentation Award)
-              <a href="paper/Dodging Dynamical Obstacles.pdf">[pdf]</a>
-              <details>
-                <summary>BibTeX</summary>
-                <pre>@InProceedings{10.1007/978-981-97-4806-8_17,
-  author="Chu, Wei-Teng",
-  editor="Mo, John P. T.",
-  title="Dodging Dynamical Obstacles Using Turtlebot4 Camera Feed",
-  booktitle="Proceedings of the 10th International Conference on Mechanical, Automotive and Materials Engineering",
-  year="2024",
-  publisher="Springer Nature Singapore",
-  pages="195--204",
-  isbn="978-981-97-4806-8"
-}
-</pre>
-              </details>
-              <details>
-                <summary>Plain Text</summary>
-                <pre>Chu, WT. (2024). Dodging Dynamical Obstacles Using Turtlebot4 Camera Feed. In: Mo, J.P.T. (eds) Proceedings of the 10th International Conference on Mechanical, Automotive and Materials Engineering. CMAME 2023. Lecture Notes in Mechanical Engineering. Springer, Singapore. https://doi.org/10.1007/978-981-97-4806-8_17
-</pre>
-              </details>
-            </li>
-          </ul>
-        </li>
-      </ul> -->
-
-      <!-- Awards -->
-      <!-- <h2 id="selected-awards" class="title">Selected Awards</h2>
-      <ul>
-        <li>2024 <a href="http://www.phitauphi.org.tw">Member of the Phi Tau Phi Scholastic Honor Society</a> (Top 1% of Graduands in NTHU)</li>
-        <li>2024 Outstanding Graduate Award of NTHU (Top 1 in the Department)</li>
-        <li>2024 The Excellence Award in the Undergraduate Research Competition</li>
-        <li>2024 The 2nd Place in Undergraduate Research Poster Interpretation Competition</li>
-        <li>2023, 2019 <a href="https://www.zyxel.com/service-provider/global/en/sustainable-initiatives/zyxel-empowers-future-talents-through-education">Dr. Chu Shun-I ZyXEL Scholarship</a> (Top 15 in the Total of 2200 Seniors)</li>
-        <li>2023 UC San Diego J. Yang Scholarship Award</li>
-        <li>2023, 2022, 2021 NTHU &amp; IPE Outgoing Exchange Student Scholarship</li>
-        <li>2022 Jason International Charity Fund Scholarship Award by Acer Inc.</li>
-        <li>2022 The Excellence Award in the Asia-Pacific Mechanics Contest for College Students</li>
-        <li>2021, 2020 Academic Achievement Award of NTHU</li>
-      </ul> -->
+      </article>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer id="post-footer">
-    <script id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac'></script>
+  <footer>
+    <script id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac"></script>
   </footer>
 </body>
 </html>
