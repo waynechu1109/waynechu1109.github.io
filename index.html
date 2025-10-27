@@ -140,6 +140,55 @@
     .internships,.projects{display:flex;flex-direction:column;gap:var(--gap);margin-top:20px}
     .internship-item,.project-item{display:flex;align-items:center;background:#f9f9f9;padding:15px;border-radius:8px;box-shadow:2px 2px 10px rgba(0,0,0,.1);transition:transform .3s}
     .internship-item:hover,.project-item:hover{transform:scale(1.03)}
+    /* Add semi-transparent logo background to project-item */
+    .project-item {
+      position: relative;
+      overflow: hidden; /* 防止偽元素溢出 */
+    }
+
+    .project-item::before {
+      content: "";
+      position: absolute;
+      top: 27%;
+      left: 85%;
+      width: 100px; /* logo 大小，可依實際需求調整 */
+      height: 100px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0.3; /* 控制透明度，0.05 ~ 0.15 建議值 */
+      transform: translate(-50%, -50%);
+      z-index: 0; /* 放在文字後方 */
+    }
+
+    /* 確保文字內容顯示在 logo 上層 */
+    .project-item > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Individual project logos */
+    .cmu-logo::before {
+      background-image: url('media/cmu.png');
+      top: 24%;
+      left: 85.5%;
+      width: 150px;
+      height: 150px;
+    }
+    .google-logo::before {
+      background-image: url('media/google.png');
+      width: 150px;
+      height: 150px;
+    }
+    .nthu-logo::before {
+      background-image: url('media/nthu_horizontal.jpg');
+    }
+    .ucsd-logo::before {
+      background-image: url('media/ucsd.png');
+      width: 150px;
+      height: 150px;
+    }
+
     .internship-media,.project-media{flex:1;text-align:center}
     .internship-image{width:100%;max-width:200px;border-radius:1px}
     .project-image{width:100%;max-width:250px;border-radius:5px}
@@ -380,7 +429,7 @@
       <!-- Projects -->
       <h2 id="research-and-project" class="title">Selected Research &amp; Projects</h2>
       <section class="projects">
-        <article class="project-item">
+        <article class="project-item cmu-logo">
           <div class="project-media"><img src="media/franka_side.gif" alt="Smart Fridge" class="project-image" /></div>
           <div class="project-details">
             <h3 class="project-title">Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation</h3>
@@ -395,14 +444,11 @@
             <p class="project-description">
               <a href="https://arxiv.org/abs/2509.20681">[arXiv]</a>
             </p>
-            <!-- <a href="https://drive.google.com/drive/folders/1cRpE48WuzvNL2ulp7dlx_5jeWnp0vrvi">[poster]</a>
-            <a href="slides/Smart Fridge Final Presentation.pptx.pdf">[slides]</a>
-            <a href="https://github.com/waynechu1109/Google_HPS_Smart_Fridge_-Food-Recognition-">[code]</a> -->
           </div>
         </article>
 
 
-        <article class="project-item">
+        <article class="project-item google-logo">
           <div class="project-media"><img src="media/smart_fridge.jpg" alt="Smart Fridge" class="project-image" /></div>
           <div class="project-details">
             <h3 class="project-title">Smart Fridge</h3>
@@ -416,7 +462,7 @@
           </div>
         </article>
 
-        <article class="project-item">
+        <article class="project-item nthu-logo">
           <div class="project-media"><img src="media/landing_imagination.jpg" alt="Laser-Assisted Guidance Landing" class="project-image" /></div>
           <div class="project-details">
             <h3 class="project-title">Laser-Assisted Guidance Landing Technology for Drones</h3>
@@ -433,8 +479,8 @@
           </div>
         </article>
 
-        <article class="project-item">
-          <div class="project-media"><img src="media/75-175.png" alt="TurtleBot4 Project" class="project-image" /></div>
+        <article class="project-item ucsd-logo">
+          <div class="project-media"><img src="media/MURO.gif" alt="TurtleBot4 Project" class="project-image" /></div>
           <div class="project-details">
             <h3 class="project-title">Dodging Dynamical Obstacles Using TurtleBot4 Camera Feed</h3>
             <p class="project-duration">Jun. 2023 - Aug. 2023</p>
@@ -447,7 +493,6 @@
             <a href="slides/PMAE2023_Presentation.pdf">[slides]</a>
             <a href="https://youtu.be/wdz8laYMFX0?si=9YsBBpm0sXYLn-bW">[video]</a>
             <a href="paper/Dodging Dynamical Obstacles.pdf">[paper]</a>
-            <div class="gif-container"><div class="gif-wrapper"><img src="media/MURO.gif" alt="MURO demo" class="internship-gif" /></div></div>
           </div>
         </article>
       </section>
