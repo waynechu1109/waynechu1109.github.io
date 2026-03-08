@@ -3,126 +3,251 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Homepage of Wei-Teng (Wayne) Chu</title>
+  <title>Course Projects | Wei-Teng (Wayne) Chu</title>
+  <meta
+    name="description"
+    content="Course projects by Wei-Teng (Wayne) Chu, including work in graph machine learning, graphics, animation, and simulation."
+  />
 
-  <!-- Icons & Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
-  <!-- Base Styles -->
   <link href="/assets/css/pure-min.css" rel="stylesheet" />
   <link href="/assets/css/syntax.css" rel="stylesheet" />
   <link href="/assets/css/typora-wiki.css" rel="stylesheet" />
 
-  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-32x32.png" sizes="32x32">
 
   <style>
-    :root {
-      --primary: #4076ac;
-      --text: #2e2e2e;
-      --muted: #555;
-      --card: #f8f8f8;
-      --shadow: 0 4px 10px rgba(0, 0, 0, .1);
-      --radius: 12px;
-      --gap: 20px;
+    :root{
+      --primary:#4076ac;
+      --primary-deep:#1e4f81;
+      --primary-soft:#eef5ff;
+      --accent:#f3b15d;
+      --text:#2e2e2e;
+      --muted:#555;
+      --card:#f8f8f8;
+      --shadow:0 4px 10px rgba(0,0,0,.1);
+      --radius:12px;
+      --gap:20px;
     }
 
-    html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
-    body {
-      font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", serif;
-      font-weight: 300;
-      color: var(--text);
-      line-height: 1.6;
-      padding-top: 80px;
-      background: #fff;
+    html,body{margin:0;padding:0}
+    body{
+      font-family:"Merriweather","PT Serif",Georgia,"Times New Roman","STSong",serif;
+      font-weight:300;
+      color:var(--text);
+      line-height:1.6;
+      padding-top:80px;
+      background:#fff;
     }
 
-    h1, h2, h3, h4 {
-      color: #2E2E2E;
-      line-height: 1.15;
-      font-family: 'Open Sans', 'Microsoft YaHei', sans-serif;
-      margin: 0 0 .5em 0;
+    h1,h2,h3,h4,h5,h6{
+      color:#2E2E2E;
+      line-height:1.15;
+      font-family:'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+      text-rendering:geometricPrecision;
+      margin:0 0 .5em 0;
+    }
+    h1{font-size:3rem;letter-spacing:-.5px}
+    h2{margin-top:2em}
+
+    a{color:#463F5C;text-decoration:underline}
+    a:focus-visible{
+      outline:2px solid var(--accent);
+      outline-offset:3px;
     }
 
-    h1 { font-size: 3rem; letter-spacing: -.5px; }
-    a { color: #1e4f81; text-decoration: none; }
-    .inner-page { width: 87%; max-width: 1025px; margin: auto; }
+    .inner-page{width:87%;max-width:1025px;margin:auto}
+    h2[id]{scroll-margin-top:96px}
 
-    /* Navigation */
-    #table-of-contents {
-      position: fixed; top: 0; left: 0; right: 0;
-      height: 60px; z-index: 1000;
-      background: #fff; display: flex;
-      align-items: center; justify-content: center;
-      gap: 25px; box-shadow: 0 2px 5px rgba(0,0,0,.1);
-      font-size: 1.1rem;
+    #table-of-contents{
+      position:fixed;top:0;left:0;right:0;height:60px;z-index:1000;
+      background:#fff;display:flex;align-items:center;justify-content:center;gap:25px;
+      box-shadow:0 2px 5px rgba(0,0,0,.1);
+      font-size:1.1rem;
     }
-    #table-of-contents a {
-      font-weight: 700; color: #1e4f81;
-      padding: 10px 15px; border-radius: 8px;
-      transition: .3s;
+    #table-of-contents a{
+      text-decoration:none;font-weight:700;color:#1e4f81;padding:10px 15px;border-radius:8px;transition:.3s;
     }
-    #table-of-contents a:hover {
-      background: #1e4f81; color: #fff;
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(30,79,129,.3);
+    #table-of-contents a:hover{
+      background:#1e4f81;color:#fff;transform:translateY(-3px);box-shadow:0 5px 15px rgba(30,79,129,.3)
     }
 
-    /* Header */
-    header { padding: 40px 0 20px 0; }
-    .header-flex {
-      display: flex; align-items: center; justify-content: center;
-      gap: 32px; max-width: 1200px; margin: 0 auto;
-    }
-    .avatar {
-      width: 160px; height: 160px; object-fit: cover;
-      border-radius: 50%; border: 3px solid #fff;
-    }
-
-    .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 18px; }
-    .social-btn {
-      display: flex; align-items: center; gap: 8px;
-      padding: 10px 15px; font-size: 16px;
-      color: #1e4f81; border-radius: 8px;
-      transition: .3s;
-    }
-    .social-btn:hover {
-      background: #1e4f81; color: #fff;
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(30,79,129,.3);
+    .social-btn,
+    .resource-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border-radius:999px;
+      font-weight:700;
+      text-decoration:none;
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
     }
 
-    /* Section titles */
-    .title { color: var(--primary); margin-top: 2em; }
+    header{padding:40px 0 20px 0}
+    .header-flex{display:flex;align-items:center;justify-content:center;gap:32px;max-width:1200px;margin:0 auto}
+    .header-left{flex:0 0 180px;display:flex;justify-content:center;align-items:center;padding-left:100px}
+    .avatar{width:160px;height:160px;object-fit:cover;border-radius:50%;border:3px solid #fff;display:block}
+    .header-center{flex:1 1 auto;text-align:center;padding:0 32px}
+    .header-center h1{font-size:3em;margin:0 0 10px 0;font-weight:700}
 
-    /* Project Cards */
-    .projects { display: flex; flex-direction: column; gap: var(--gap); margin-top: 20px; }
-    .project-item {
-      display: flex; 
-      flex-direction: column;
-      align-items: center;
-      background: #f9f9f9; padding: 15px;
-      border-radius: 8px; box-shadow: 2px 2px 10px rgba(0,0,0,.1);
-      transition: transform .3s;
+    .social-links{display:flex;justify-content:center;align-items:center;flex-wrap:nowrap;gap:10px;margin-top:18px}
+    .social-btn{
+      min-width:122px;
+      padding:10px 14px;
+      font-size:14px;
+      color:var(--primary-deep);
+      background:linear-gradient(135deg,#ffffff 0%, var(--primary-soft) 100%);
+      border:1px solid rgba(64,118,172,.22);
+      box-shadow:0 12px 24px rgba(64,118,172,.12);
     }
-    .project-item:hover { transform: scale(1.03); }
-    .project-media img { width: 100%; max-width: 250px; border-radius: 5px; }
-    .project-details { flex: 2; padding-left: 20px; }
+    .social-btn i{
+      font-size:16px;
+      width:16px;
+      text-align:center;
+      transition:transform .25s ease;
+    }
+    .social-btn:hover{
+      color:#fff;
+      background:linear-gradient(135deg,var(--primary) 0%, var(--primary-deep) 100%);
+      border-color:transparent;
+      transform:translateY(-3px);
+      box-shadow:0 18px 34px rgba(30,79,129,.28);
+    }
 
-    /* Footer */
-    footer { background-color: var(--primary); padding: 30px 0 0; text-align: center; font-size: 13px; color: #fff; margin-top: 40px; }
+    .resource-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .resource-btn{
+      padding:8px 14px;
+      font-size:14px;
+      color:var(--primary-deep);
+      background:#fff;
+      border:1px solid rgba(64,118,172,.22);
+      box-shadow:0 6px 16px rgba(20,44,77,.08);
+    }
+    .resource-btn:hover{
+      color:#1c3550;
+      background:linear-gradient(135deg,#fff8ed 0%, #ffe1b3 100%);
+      border-color:rgba(243,177,93,.5);
+      transform:translateY(-2px);
+      box-shadow:0 10px 22px rgba(163,101,20,.18);
+    }
 
-    @media (max-width: 800px) {
-      .header-flex { flex-direction: column; }
-      .project-item { flex-direction: column; align-items: flex-start; }
-      .project-details { padding-left: 0; margin-top: 10px; }
+    .custom-hr{border:none;height:1.5px;background:linear-gradient(to right,var(--primary),#ccc,var(--primary));margin:40px auto;width:95%;position:relative}
+    .custom-hr::before,.custom-hr::after{content:"◆";position:absolute;top:-10px;font-size:18px;color:var(--primary)}
+    .custom-hr::before{left:-20px}.custom-hr::after{right:-20px}
+
+    .title{color:var(--primary)}
+    .section-intro{
+      margin:8px 0 18px;
+      color:var(--muted);
+    }
+    .course-projects{
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+      margin-top:20px;
+    }
+    .project-item{
+      display:flex;
+      align-items:flex-start;
+      gap:24px;
+      background:#f9f9f9;
+      padding:20px;
+      border-radius:16px;
+      box-shadow:2px 2px 10px rgba(0,0,0,.1);
+      transition:transform .3s;
+    }
+    .project-item:hover{transform:scale(1.02)}
+    .project-media{
+      flex:0 0 340px;
+      width:340px;
+    }
+    .media-frame{
+      width:100%;
+      overflow:hidden;
+      border:none;
+      border-radius:12px;
+      box-shadow:0 8px 24px rgba(20,44,77,.12);
+      background:#fff;
+    }
+    .media-frame.square{
+      aspect-ratio:1 / 1;
+    }
+    .media-frame.tall{
+      aspect-ratio:5 / 8;
+    }
+    .project-media img,
+    .project-media iframe{
+      width:100%;
+      height:100%;
+      display:block;
+      margin:0 auto;
+      border:none;
+      background:#fff;
+    }
+    .project-details{
+      flex:1 1 0;
+      min-width:0;
+    }
+    .project-title{
+      color:#001F3F;
+      margin:0;
+    }
+    .project-meta{
+      margin:0 0 10px;
+      font-style:italic;
+      color:var(--muted);
+    }
+    .project-course{
+      color:#0078D4;
+      font-weight:700;
+    }
+    .project-summary{
+      margin:0 0 12px;
+    }
+    .plain-list{
+      margin:.5em 0 0;
+      padding-left:20px;
+    }
+    .plain-list li{
+      margin:.3em 0;
+    }
+    .course-note{
+      margin-top:10px;
+    }
+
+    footer{background-color:var(--primary);padding:30px 0 0;text-align:center;font-size:13px;color:#fff;margin-top:40px}
+
+    @media (max-width: 900px){
+      body{padding-top:132px}
+      .header-flex{flex-direction:column;align-items:center;padding:12px 0}
+      .header-left{padding-left:0}
+      .project-item{flex-direction:column}
+      .project-media{flex-basis:auto;width:100%}
+      #table-of-contents{
+        height:auto;
+        padding:10px 12px;
+        flex-wrap:wrap;
+        gap:12px;
+      }
+      .social-links{flex-wrap:wrap}
+      .social-btn{min-width:0;width:calc(50% - 7px)}
+    }
+
+    @media (max-width: 560px){
+      .social-btn{width:100%}
     }
   </style>
 </head>
-
 <body>
-  <!-- Fixed top navigation -->
-  <nav id="table-of-contents">
+  <nav id="table-of-contents" aria-label="Primary">
     <a href="index.html">Home</a>
     <a href="index.html#education">Education</a>
     <a href="index.html#internship-experience">Work Experience</a>
@@ -132,148 +257,152 @@
     <a href="course_projects.html">Course Projects</a>
   </nav>
 
-  <!-- Header -->
-  <!-- <header class="inner-page">
+  <header class="inner-page">
     <div class="header-flex">
       <div class="header-left">
-        <img class="avatar" src="media/waynechu.jpg" alt="Wayne Chu" />
+        <img class="avatar" src="media/waynechu.jpg" alt="Wayne Chu" loading="lazy" />
       </div>
       <div class="header-center">
-        <h1>Wei-Teng (Wayne) CHU</h1>
-        <p><strong><a href="https://ee.stanford.edu">Master of Science in Electrical Engineering (MSEE)</a> Student</strong></p>
-        <p><strong>Stanford University</strong></p>
-        <p>waynechu@stanford.edu</p>
-        <div class="social-links" style="margin-top: 18px;">
-          <a href="https://drive.google.com/drive/folders/1zVD6jjLdWz4_ZpVvjzc0BdXZgr7YYeRZ?usp=sharing" target="_blank" class="social-btn">
+        <h1>Course Projects</h1>
+        <p><strong>Selected class projects in graph learning, graphics, animation, and simulation.</strong></p>
+        <p><strong>Wei-Teng (Wayne) Chu</strong></p>
+        <div class="social-links">
+          <a href="mailto:waynechu@stanford.edu" class="social-btn">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://drive.google.com/file/d/17QoRGFir5z-ctMb0RwCYrUfOgcAe6Yll/view" target="_blank" rel="noopener noreferrer" class="social-btn">
             <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
             <span>Resume</span>
           </a>
-          <a href="https://scholar.google.com/citations?user=O48Gh_QAAAAJ&amp;hl=en" target="_blank" class="social-btn">
-            <i class="fa-brands fa-google-scholar" aria-hidden="true"></i>
-            <span>Google Scholar</span>
-          </a>
-          <a href="https://linkedin.com/in/waynechu1109" target="_blank" class="social-btn">
+          <a href="https://linkedin.com/in/waynechu1109" target="_blank" rel="noopener noreferrer" class="social-btn">
             <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
             <span>LinkedIn</span>
           </a>
-          <a href="https://github.com/waynechu1109" target="_blank" class="social-btn">
+          <a href="https://github.com/waynechu1109" target="_blank" rel="noopener noreferrer" class="social-btn">
             <i class="fa-brands fa-github" aria-hidden="true"></i>
             <span>GitHub</span>
           </a>
         </div>
       </div>
-      <div class="header-right"></div>
     </div>
-  </header> -->
+  </header>
 
-  <!-- Main Content -->
-  <main class="inner-page">
-    <h2 id="research-and-project" class="title">Selected Course Projects</h2>
+  <main>
+    <section class="inner-page">
+      <hr class="custom-hr" />
 
-    <section class="projects">
-      <article class="project-item">
-        
-        <!-- Project Media (Demo / Image / Video) -->
-        <div class="project-media">
-          <img 
-              src="media/coft.gif" 
-              alt="COFT Project Demo" 
-              width="500"
-              height="500"
-              style="display:block; margin:0 auto; border:none; max-width:100%;"
-          />
-        </div>
-    
-        <!-- Project Details -->
-        <div class="project-details" style="margin-top: 30px;">
-          <h3>PyTorch Geometric Contribution: COFT</h3>
-    
-          <p>Dec. 2025 | <a href="https://web.stanford.edu/class/cs224w/" target="_blank">CS 224W</a>, Machine Learning with Graphs 
-            [with <a href="https://www.linkedin.com/in/hsinchen22/">Hsin (Newton) Chen</a>]</p>
-    
-          <p>
-            Contributed a full implementation of <a href="https://arxiv.org/abs/2410.15116"/a> COFT (Coarse-to-Fine Highlighting)</a> into the 
-            <a href="https://github.com/pyg-team/pytorch_geometric">PyTorch Geometric (PyG)</a> framework, enabling structured entity-aware highlighting for hallucination reduction in
-            LLM long-context reasoning tasks. The module includes:
-          </p>
-    
-          <ul>
-            <li>⚡ Recaller with Wikidata entity expansion</li>
-            <li>📊 Scorer with TF-ISF + self-information weighting</li>
-            <li>🧠 Selector with dynamic thresholding and flexible granularity</li>
-            <li>🧪 Full test suite & examples integrated into PyG</li>
-          </ul>
-    
-          <p>
-            Our project also includes a Medium deep-dive article explaining our approach, architecture,
-            and integration challenges:
-          </p>
-    
-          <p>
-            🔗 <a href="https://medium.com/@rfnewton22/ff9f68d3920f" target="_blank">
-              Medium Post</a>
-          </p>
-    
-          <p>
-            The module is currently under review <a href="https://github.com/pyg-team/pytorch_geometric/pull/10550">(Pull Request #10550)</a> in PyTorch Geometric. More demos and docs will be added soon.
-          </p>
-    
-        </div>
-      </article>
-    </section>
+      <h2 id="course-projects" class="title">Selected Course Projects</h2>
+      <p class="section-intro">Coursework projects focused on implementation-heavy systems, interactive simulation, and research-oriented software contributions.</p>
 
+      <section class="course-projects">
+        <article class="project-item">
+          <div class="project-media">
+            <div class="media-frame square">
+              <img
+                src="media/coft.gif"
+                alt="COFT project demo"
+                width="500"
+                height="500"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">PyTorch Geometric Contribution: COFT</h3>
+            <p class="project-meta">
+              Dec. 2025 |
+              <a class="project-course" href="https://web.stanford.edu/class/cs224w/" target="_blank" rel="noopener noreferrer">CS 224W</a>,
+              Machine Learning with Graphs |
+              with <a href="https://www.linkedin.com/in/hsinchen22/" target="_blank" rel="noopener noreferrer">Hsin (Newton) Chen</a>
+            </p>
+            <p class="project-summary">
+              Contributed a full implementation of <a href="https://arxiv.org/abs/2410.15116" target="_blank" rel="noopener noreferrer">COFT (Coarse-to-Fine Highlighting)</a> to
+              <a href="https://github.com/pyg-team/pytorch_geometric" target="_blank" rel="noopener noreferrer">PyTorch Geometric (PyG)</a>, enabling structured entity-aware highlighting for hallucination reduction in long-context LLM reasoning tasks.
+            </p>
+            <p class="project-summary">The module includes:</p>
+            <ul class="plain-list">
+              <li>Recaller with Wikidata entity expansion</li>
+              <li>Scorer with TF-ISF and self-information weighting</li>
+              <li>Selector with dynamic thresholding and flexible granularity</li>
+              <li>Full test suite and examples integrated into PyG</li>
+            </ul>
+            <p class="course-note">
+              The project also includes a technical write-up describing the architecture and integration challenges, and the implementation is currently under review in PyTorch Geometric.
+            </p>
+            <div class="resource-links">
+              <a href="https://medium.com/@rfnewton22/ff9f68d3920f" class="resource-btn" target="_blank" rel="noopener noreferrer">Medium Post</a>
+              <a href="https://github.com/pyg-team/pytorch_geometric/pull/10550" class="resource-btn" target="_blank" rel="noopener noreferrer">Pull Request #10550</a>
+              <a href="https://arxiv.org/abs/2410.15116" class="resource-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+            </div>
+          </div>
+        </article>
 
-    <section class="projects">
-      <article class="project-item">
-        <!-- <div class="project-media">
-          <img src="media/pinball.gif" alt="Project Demo" />
-        </div> -->
-        <div class="project-media">
-          <iframe 
-            src="https://openprocessing.org/sketch/2760485/embed/?plusEmbedHash=8308dbf8&userID=551522&plusEmbedTitle=true&show=sketch"
-            width="500"
-            height="500"
-            style="display: block; margin: 0 auto; border: none;">
-          </iframe>
-        </div>
-        <div class="project-details" style="margin-top: 30px;">
-          <h3>Attack of the Blobs!</h3>
-          <p>Oct. 2025 | <a href="https://stanford-cs248b.github.io/autumn25/">CS 248B</a>, Fundamentals of Computer Graphics:
-Animation and Simulation</p>
-          <p>Implemented a 2D deformable-body simulation featuring hundreds of interactive “blobs” with realistic elasticity and collision dynamics. Built robust internal forces including stretch, bending, and area-preserving compression, and developed stable collision processing using penalty springs and contact impulses. Designed broad-phase acceleration with bounding volumes to handle dense multi-blob interactions efficiently. Enhanced visual engagement through expressive, deformable blob faces and reactive animations.
-          <p>The game is available on the left. Press "SPACEBAR" to start.</p>
-          <p>Enjoy the game!</p>
-        </div>
-      </article>
-    </section>
+        <article class="project-item">
+          <div class="project-media">
+            <div class="media-frame square">
+              <iframe
+                src="https://openprocessing.org/sketch/2760485/embed/?plusEmbedHash=8308dbf8&userID=551522&plusEmbedTitle=true&show=sketch"
+                width="500"
+                height="500"
+                loading="lazy"
+                title="Attack of the Blobs interactive demo"
+              ></iframe>
+            </div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Attack of the Blobs!</h3>
+            <p class="project-meta">
+              Oct. 2025 |
+              <a class="project-course" href="https://stanford-cs248b.github.io/autumn25/" target="_blank" rel="noopener noreferrer">CS 248B</a>,
+              Fundamentals of Computer Graphics: Animation and Simulation
+            </p>
+            <p class="project-summary">
+              Implemented a 2D deformable-body simulation with hundreds of interactive blobs, realistic elasticity, and dense collision dynamics. Built internal force models for stretch, bending, and area-preserving compression, then added stable collision handling through penalty springs and contact impulses.
+            </p>
+            <p class="project-summary">
+              To keep the simulation responsive under heavy interaction, I also designed broad-phase acceleration with bounding volumes and added expressive blob faces plus reactive animations for a more playful game feel.
+            </p>
+            <div class="resource-links">
+              <a href="https://openprocessing.org/sketch/2760485" class="resource-btn" target="_blank" rel="noopener noreferrer">OpenProcessing</a>
+            </div>
+            <p class="course-note">The playable demo is embedded on the left. Press <strong>Space</strong> to start.</p>
+          </div>
+        </article>
 
-    <section class="projects">
-      <article class="project-item">
-        <!-- <div class="project-media">
-          <img src="media/pinball.gif" alt="Project Demo" />
-        </div> -->
-        <div class="project-media">
-          <iframe 
-            src="https://openprocessing.org/sketch/2741061/embed/?plusEmbedHash=d015635d&userID=551522&plusEmbedTitle=true&show=sketch"
-            width="500"
-            height="800"
-            style="display: block; margin: 0 auto; border: none;">
-          </iframe>
-        </div>
-        <div class="project-details" style="margin-top: 30px;">
-          <h3>Kitty Pinball Machine!</h3>
-          <p>Sep. 2025 | <a href="https://stanford-cs248b.github.io/autumn25/">CS 248B</a>, Fundamentals of Computer Graphics:
-Animation and Simulation</p>
-          <p>Implemented continuous collision detection using SDF ray marching, accurate normal estimation with two-sided finite differences, and interactive flipper mechanics with energy transfer. Focused on robust numerical simulation and engaging gameplay design.</p>
-          <p>The game is available on the left. Press "SPACEBAR" to start, "F" to flip the left plipper, and "J" to flip the right flipper.</p>
-          <p>Enjoy the game!</p>
-        </div>
-      </article>
+        <article class="project-item">
+          <div class="project-media">
+            <div class="media-frame tall">
+              <iframe
+                src="https://openprocessing.org/sketch/2741061/embed/?plusEmbedHash=d015635d&userID=551522&plusEmbedTitle=true&show=sketch"
+                width="500"
+                height="800"
+                loading="lazy"
+                title="Kitty Pinball Machine interactive demo"
+              ></iframe>
+            </div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Kitty Pinball Machine!</h3>
+            <p class="project-meta">
+              Sep. 2025 |
+              <a class="project-course" href="https://stanford-cs248b.github.io/autumn25/" target="_blank" rel="noopener noreferrer">CS 248B</a>,
+              Fundamentals of Computer Graphics: Animation and Simulation
+            </p>
+            <p class="project-summary">
+              Implemented continuous collision detection with SDF ray marching, accurate normal estimation with two-sided finite differences, and interactive flipper mechanics with energy transfer. The focus was on robust numerical simulation together with responsive gameplay.
+            </p>
+            <div class="resource-links">
+              <a href="https://openprocessing.org/sketch/2741061" class="resource-btn" target="_blank" rel="noopener noreferrer">OpenProcessing</a>
+            </div>
+            <p class="course-note">The playable demo is embedded on the left. Press <strong>Space</strong> to start, <strong>F</strong> to flip the left flipper, and <strong>J</strong> to flip the right flipper.</p>
+          </div>
+        </article>
+      </section>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
+  <footer id="post-footer">
     <script id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac"></script>
   </footer>
 </body>
