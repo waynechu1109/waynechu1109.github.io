@@ -168,6 +168,7 @@
     .project-media{
       flex:0 0 340px;
       width:340px;
+      align-self:center;
     }
     .media-frame{
       width:100%;
@@ -180,6 +181,9 @@
     .media-frame.square{
       aspect-ratio:1 / 1;
     }
+    .media-frame.landscape{
+      aspect-ratio:4 / 3;
+    }
     .media-frame.tall{
       aspect-ratio:5 / 8;
     }
@@ -191,6 +195,34 @@
       margin:0 auto;
       border:none;
       background:#fff;
+    }
+    .project-media img{
+      object-fit:contain;
+    }
+    .media-placeholder{
+      width:100%;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding:22px;
+      box-sizing:border-box;
+      color:#fff;
+      background:
+        radial-gradient(circle at 68% 28%, rgba(255,232,170,.95) 0 12%, rgba(255,210,120,.45) 12%, rgba(255,210,120,0) 30%),
+        radial-gradient(circle at 50% 78%, rgba(74,130,187,.55) 0 20%, rgba(74,130,187,0) 48%),
+        linear-gradient(180deg, #08172c 0%, #173965 52%, #7ea2cb 100%);
+    }
+    .media-placeholder-title{
+      margin:0;
+      font-size:1.2rem;
+      font-weight:700;
+      letter-spacing:.03em;
+    }
+    .media-placeholder-subtitle{
+      margin:.3em 0 0;
+      font-size:.95rem;
+      opacity:.9;
     }
     .project-details{
       flex:1 1 0;
@@ -296,6 +328,37 @@
       <p class="section-intro">Coursework projects focused on implementation-heavy systems, interactive simulation, and research-oriented software contributions.</p>
 
       <section class="course-projects">
+        <article class="project-item">
+          <div class="project-media">
+            <div class="media-frame landscape">
+              <img
+                src="media/earth_orbit_thick_red.gif"
+                alt="Atmospheric scattering project demo"
+                width="800"
+                height="600"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Implementation of Atmospheric Scattering</h3>
+            <p class="project-meta">
+              Mar. 2026 |
+              <a class="project-course" href="https://gfxcourses.stanford.edu/cs248a/winter26" target="_blank" rel="noopener noreferrer">CS 248A</a>,
+              Final Project
+            </p>
+            <p class="project-summary">
+              Implemented a real-time atmospheric scattering model for sky color and aerial perspective using Rayleigh scattering for molecules and Mie scattering for aerosols.
+            </p>
+            <p class="project-summary">
+              The renderer combines height-dependent density, Beer-Lambert extinction, and ray-marched single scattering, with lightweight approximations for limb refraction and weak multiple scattering near the horizon.
+            </p>
+            <p class="course-note">
+              The write-up focuses on phase functions, transmittance integration, and practical shader approximations for rendering planetary atmospheres.
+            </p>
+          </div>
+        </article>
+
         <article class="project-item">
           <div class="project-media">
             <div class="media-frame square">
