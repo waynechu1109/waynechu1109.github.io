@@ -255,7 +255,53 @@
       margin-top:10px;
     }
 
-    footer{background-color:var(--primary);padding:30px 0 0;text-align:center;font-size:13px;color:#fff;margin-top:40px}
+    footer{
+      background:linear-gradient(135deg,var(--primary-deep) 0%, var(--primary) 100%);
+      padding:34px 0 24px;
+      text-align:center;
+      font-size:13px;
+      color:#fff;
+      margin-top:40px;
+    }
+    .footer-inner{
+      width:87%;
+      max-width:1025px;
+      margin:0 auto;
+    }
+    .footer-title{
+      margin:0;
+      font-size:1.25rem;
+      color:#fff;
+    }
+    .footer-copy{
+      margin:8px auto 0;
+      max-width:680px;
+      color:rgba(255,255,255,.86);
+    }
+    .footer-social-links{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+    }
+    .footer-social-links .social-btn{
+      color:#fff;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.2);
+      box-shadow:0 10px 24px rgba(8,27,48,.18);
+    }
+    .footer-social-links .social-btn:hover{
+      color:var(--primary-deep);
+      background:linear-gradient(135deg,#fff8ed 0%, #ffffff 100%);
+      border-color:transparent;
+      box-shadow:0 16px 30px rgba(8,27,48,.26);
+    }
+    .footer-note{
+      margin:18px 0 16px;
+      color:rgba(255,255,255,.75);
+    }
 
     @media (max-width: 900px){
       body{padding-top:132px}
@@ -275,6 +321,7 @@
 
     @media (max-width: 560px){
       .social-btn{width:100%}
+      .footer-social-links .social-btn{width:100%}
     }
   </style>
 </head>
@@ -469,6 +516,21 @@
   </main>
 
   <footer id="post-footer">
+    <div class="footer-inner">
+      <h2 class="footer-title">Let's Connect</h2>
+      <p class="footer-copy">You can also find me on a few more personal social platforms below.</p>
+      <div class="footer-social-links" aria-label="Personal social links">
+        <a href="https://www.facebook.com/waynechu.aviation/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook profile">
+          <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://www.instagram.com/waynechu_aviation/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram profile">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span>Instagram</span>
+        </a>
+      </div>
+      <p class="footer-note"></p>
+    </div>
     <script id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac"></script>
   </footer>
 </body>
