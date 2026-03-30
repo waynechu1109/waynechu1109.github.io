@@ -308,6 +308,37 @@
       flex-direction:column;
       gap:12px;
     }
+    .news-archive{
+      margin-top:12px;
+    }
+    .news-archive details{
+      padding:14px 18px;
+      background:linear-gradient(135deg,#f7f9fc 0%, #ffffff 100%);
+      border:1px solid rgba(64,118,172,.16);
+      border-radius:14px;
+      box-shadow:0 10px 24px rgba(20,44,77,.06);
+    }
+    .news-archive summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--primary-deep);
+      list-style:none;
+    }
+    .news-archive summary::-webkit-details-marker{
+      display:none;
+    }
+    .news-archive summary::after{
+      content:"Show older updates";
+    }
+    .news-archive details[open] summary::after{
+      content:"Hide older updates";
+    }
+    .news-archive-list{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:14px;
+    }
     .news-item{
       display:grid;
       grid-template-columns:110px 1fr;
@@ -628,29 +659,36 @@
               <p><strong>FINS</strong>, <em>Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation</em>, was accepted to ICRA 2026 and is now available on <a href="https://arxiv.org/abs/2509.20681">arXiv</a>.</p>
             </div>
           </article>
-          <article class="news-item">
-            <div class="news-date">Sep. 2025</div>
-            <div class="news-content">
-              <p>I joined <a href="https://svl.stanford.edu/">the Stanford Vision and Learning Lab (SVL)</a> at Stanford, advised by <a href="https://engineering.stanford.edu/people/fei-fei-li">Prof. Fei-Fei Li</a>.</p>
+        </div>
+        <div class="news-archive">
+          <details>
+            <summary aria-label="Toggle older news updates"></summary>
+            <div class="news-archive-list">
+              <article class="news-item">
+                <div class="news-date">Sep. 2025</div>
+                <div class="news-content">
+                  <p>I joined <a href="https://svl.stanford.edu/">the Stanford Vision and Learning Lab (SVL)</a> at Stanford, advised by <a href="https://engineering.stanford.edu/people/fei-fei-li">Prof. Fei-Fei Li</a>.</p>
+                </div>
+              </article>
+              <article class="news-item">
+                <div class="news-date">Sep. 2025</div>
+                <div class="news-content">
+                  <p>I began my M.S. in Electrical Engineering at Stanford University, focusing on robotics and computer vision.</p>
+                </div>
+              </article>
             </div>
-          </article>
-          <article class="news-item">
-            <div class="news-date">Sep. 2025</div>
-            <div class="news-content">
-              <p>I began my M.S. in Electrical Engineering at Stanford University, focusing on robotics and computer vision.</p>
-            </div>
-          </article>
+          </details>
         </div>
       </section>
 
       <p class="section-kicker">🌟 Highlight 🌟</p>
 
       <p>
-        Wayne dedicated much of his time to robotics and computer vision through projects, internships, and research. In the summer of 2023, he developed a project on dynamic obstacle avoidance using TurtleBot4 at UC San Diego, relying solely on depth camera inputs. His internship at ITRI further deepened his understanding of the challenges in bridging the Sim2Real gap, particularly in designing perception pipelines that remain robust in real-world conditions.
+        I am passionate about robotics and computer vision, and I have explored these areas through research, internships, and hands-on engineering projects. In the summer of 2023, I developed a vision-based dynamic obstacle avoidance system for TurtleBot4 at UC San Diego using only depth camera inputs. My internship at ITRI further deepened my interest in sim-to-real robotics, especially in building perception pipelines that remain reliable in real-world environments.
       </p>
       <p>
-        He conducted remote research in computer vision and robotics under the supervision of 
-        <a href="https://www.weimingzhi.com/home">Prof. Weiming Zhi</a> and <a href="https://tyz1030.github.io/#about">Dr. Tianyi Zhang</a> at <a href="https://droplab.ri.cmu.edu/">the DROP Lab</a>, CMU before beginning his studies at Stanford. 
+        Before starting my M.S. at Stanford, I also conducted remote research in computer vision and robotics with
+        <a href="https://www.weimingzhi.com/home">Prof. Weiming Zhi</a> and <a href="https://tyz1030.github.io/#about">Dr. Tianyi Zhang</a> at <a href="https://droplab.ri.cmu.edu/">the DROP Lab</a>, Carnegie Mellon University. My recent work spans 3D vision, robot learning, and embodied intelligence, with a focus on building systems that connect strong perception models to robust real-world robot behavior.
       </p>
 
       <!-- Hero media row -->
@@ -679,7 +717,7 @@
               <p class="degree">M.S. Student, Electrical Engineering</p>
               <p>Concentration: Robotics / Computer Vision</p>
               <ul>
-                <li><strong>GPA:</strong> N/A</li>
+                <!-- <li><strong>GPA:</strong> N/A</li> -->
                 <li><strong>Duration:</strong> Sep. 2025 - Apr. 2027 (Expected)</li>
               </ul>
             </div>
@@ -723,8 +761,8 @@
             <div class="internship-description">
               <p>Current work:</p>
               <ul class="plain-list">
-                <li>Constructed a real-to-sim-to-real pipeline to generate controllable digital cousins and narrow the sim-to-real gap in robot learning policy.</li>
-                <li>Collected real-world data and developed a real-to-sim replay method.</li>
+                <li>Building a real-to-sim-to-real pipeline that generates controllable digital cousins to reduce the sim-to-real gap in robot learning.</li>
+                <li>Collecting real-world data and developing a replay workflow that transfers observed behavior back into simulation for faster iteration and policy evaluation.</li>
               </ul>
             </div>
           </div>
@@ -740,18 +778,15 @@
             <p class="internship-date">Sep. 2024 - Nov. 2024, Mar. 2025 - Jul. 2025</p>
             <div class="internship-description">
               <h4>Mask2Former Semantic Segmentation</h4>
-              <p>We combined and re-annotated Mapillary and ADE20k datasets to fulfill requirements for quadruped robots and autonomous vehicles. It was then converted to COCO format for the training of custom Mask2Former model using NVIDIA TAO Toolkit. Lastly, the re-trained model was integrated into ROS2 for real-time video inference on robotic and vehicle platforms at about 15 FPS.</p>
+              <p>I built a custom semantic segmentation pipeline for robotics and autonomous driving by merging and re-annotating Mapillary and ADE20k, converting the data to COCO format, and training Mask2Former with NVIDIA TAO Toolkit. The final model was deployed in ROS2 and delivered real-time inference at about 15 FPS on robot and vehicle platforms.</p>
               <div class="gif-container"><div class="gif-wrapper"><img src="media/merged_dog_.gif" alt="Semantic segmentation demo on a quadruped robot" class="internship-gif" loading="lazy" /></div></div>
               <p></p>
               <h4>Person Re-Identification (Re-ID)</h4>
-              <p>We built a real-time pedestrian detection and re-ID pipeline using YOLO11n and OSNet. The pipeline employed cosine similarity for feature matching and it exported models in .onnx and TensorRT .engine formats for model acceleration. We successfully achieved real-time inference at about 25 FPS for robotics and automotive use cases.</p>
+              <p>I developed a real-time pedestrian detection and re-identification pipeline using YOLO11n, OSNet, and cosine-similarity matching. By exporting models to ONNX and TensorRT for acceleration, the system achieved about 25 FPS and was suitable for robotics and automotive deployment.</p>
               <div class="gif-container"><div class="gif-wrapper"><img src="media/reid_tracker_.gif" alt="Person re-identification tracking demo" class="internship-gif" loading="lazy" /></div></div>
               <p></p>
               <h4>Sim2Real Quadruped Robot Terrain Traversal</h4>
-              <p>We developed an elevation mapping workflow for quadruped robots Unitree Go2 by integrating Gazebo and point clouds from Intel RealSense depth camera. 
-                Moreover, a point cloud sampling & processing pipeline is integrated with reinforcement learning gait models in simulation. 
-                The most challenging part is to employed visual inertial odometry (VIO) to resolve sensor interruptions and implemented forward kinematics to compute foot coordinates of Unitree Go2. 
-                Finally, the system was deployed on Unitree Go2 for Sim2Real validation.</p>
+              <p>I developed a sim-to-real terrain traversal pipeline for the Unitree Go2 that combined Gazebo simulation, RealSense point clouds, and elevation mapping for locomotion over uneven ground. I also integrated point-cloud processing with reinforcement learning gait policies, added VIO and forward kinematics to handle sensor interruptions, and validated the full system on the physical robot.</p>
               <div class="gif-container"><div class="gif-wrapper"><img src="media/real_go2_walk_.gif" alt="Unitree Go2 terrain traversal demo" class="internship-gif" loading="lazy" /></div></div>
             </div>
           </div>
@@ -766,8 +801,7 @@
             <p class="internship-title"><strong>Technology Innovation Group of Chairman Office Intern</strong></p>
             <p class="internship-date">Jun. 2024 - Sep. 2024</p>
             <p class="internship-description">
-              We designed an intuitive Android car app to control A/C temperature of the vehicle via voice. 
-              The pipeline was composed of Azure Speech Service → Dialogflow intent parsing → CarAPI to operate the HVAC system.</p>
+              I built an Android in-vehicle app for voice-based A/C control, making HVAC adjustment more intuitive for drivers. The end-to-end pipeline connected Azure Speech Service, Dialogflow intent parsing, and CarAPI to execute temperature control commands in the vehicle.</p>
             <div class="resource-links">
               <a href="https://youtu.be/v93JM6Mi8BI" class="resource-btn" target="_blank" rel="noopener noreferrer">Video</a>
             </div>
@@ -815,7 +849,7 @@
             <p class="project-duration">Jun. 2024 - Sep. 2024</p>
             <p class="project-location">Google Hardware Product Sprint (HPS) Program</p>
             <p class="project-description">
-              Developed a smart refrigerator with food pattern recognition and expiration tracking using Google Gemini. Built a recipe suggestion system based on soon-to-expire ingredients.</p>
+              I developed a smart refrigerator system that combined food recognition, expiration tracking, and recipe recommendation with Google Gemini. The project focused on turning inventory awareness into actionable suggestions, helping users reduce food waste by surfacing recipes based on soon-to-expire ingredients.</p>
             <div class="resource-links">
               <a href="https://drive.google.com/drive/folders/1cRpE48WuzvNL2ulp7dlx_5jeWnp0vrvi" class="resource-btn" target="_blank" rel="noopener noreferrer">Poster</a>
               <a href="slides/Smart Fridge Final Presentation.pptx.pdf" class="resource-btn">Slides</a>
@@ -830,10 +864,8 @@
             <h3 class="project-title">Laser-Assisted Guidance Landing Technology for Drones</h3>
             <p class="project-duration">Jan. 2023 - Nov. 2023</p>
             <p class="project-location"><a href="http://hscc.cs.nthu.edu.tw">[HSCC Lab]</a>, National Tsing Hua University</p>
-            <p class="project-description">Advised by <a href="http://hscc.cs.nthu.edu.tw/~sheujp/">Jang-Ping Sheu</a>. <br> 
-              We propose a laser-assisted guidance approach to improve the landing accuracy of a drone where GPS creates a multi-meter error. 
-              This system merges embedded electronics, 3D-printed mechanical design, and low-power laser sensing to achieve 30-40 cm landing accuracy 
-              while also confirming the feasibility of laser-based localization for future unmanned aerial vehicle (UAV) applications that are either autonomous or remote.</p>
+            <p class="project-description">Advised by <a href="http://hscc.cs.nthu.edu.tw/~sheujp/">Prof. Jang-Ping Sheu</a>. <br> 
+              I developed a laser-assisted landing system to improve drone landing accuracy in settings where GPS can drift by several meters. By combining embedded electronics, 3D-printed mechanical design, and low-power laser sensing, the system achieved 30-40 cm landing accuracy and demonstrated the feasibility of laser-based localization for future UAV platforms.</p>
             <div class="resource-links">
               <a href="https://drive.google.com/drive/folders/1o3hIwAdn8HWKZkmYq9HUBYTKjKqbptRA?usp=sharing" class="resource-btn" target="_blank" rel="noopener noreferrer">Report</a>
               <a href="slides/MASS2024.pdf" class="resource-btn">Slides</a>
@@ -849,10 +881,8 @@
             <h3 class="project-title">Dodging Dynamical Obstacles Using TurtleBot4 Camera Feed</h3>
             <p class="project-duration">Jun. 2023 - Aug. 2023</p>
             <p class="project-location"><a href="http://muro.ucsd.edu">[MURO Lab]</a>, UC San Diego</p>
-            <p class="project-description">Supervised by <a href="http://terrano.ucsd.edu/jorge/">Jorge Cortés</a>. <br>
-              Implemented real-time dynamic obstacle avoidance for mobile robots using vision-based sensing and ROS2. 
-              The system employed the Turtlebot4 equipped with an OAK-D Pro camera to achieve precise obstacle tracking and smooth, collision-free navigation.
-              It also integrated RRT* path planning and Bézier curve smoothing, demonstrating affordable and efficient vision-driven navigation in dynamic environments.</p>
+            <p class="project-description">Supervised by <a href="http://terrano.ucsd.edu/jorge/">Prof. Jorge Cortés</a>. <br>
+              I built a real-time dynamic obstacle avoidance system for TurtleBot4 using ROS2 and vision-based sensing with an OAK-D Pro camera. The system combined obstacle tracking, RRT* path planning, and Bezier-curve smoothing to achieve reliable and collision-free navigation in dynamic environments using an affordable camera-first setup.</p>
             <div class="resource-links">
               <a href="https://drive.google.com/drive/folders/1LSuGS2-LgospQTcNaYfdHyU8aEiBde6Y" class="resource-btn" target="_blank" rel="noopener noreferrer">Report</a>
               <a href="slides/PMAE2023_Presentation.pdf" class="resource-btn">Slides</a>
@@ -869,7 +899,7 @@
       <div class="publication-list">
         <article class="publication-item">
           <h3 class="publication-title">Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation</h3>
-          <p class="publication-authors"><strong>Wei-Teng Chu</strong>, Tianyi Zhang, Matthew Johnson-Roberson, Weiming Zhi†</p>
+          <p class="publication-authors"><strong>Wei-Teng Chu†</strong>, Tianyi Zhang, Matthew Johnson-Roberson, Weiming Zhi</p>
           <div class="publication-meta">
             <span class="publication-badge">ICRA 2026</span>
             <span class="publication-badge">arXiv</span>
@@ -912,7 +942,7 @@ arXiv preprint arXiv:2509.20681, 2025.
           <div class="publication-actions">
             <details>
               <summary>BibTeX</summary>
-              <pre>@INPROCEEDINGS{10723664,
+              <pre>@INPROCEEDINGS{kuo2024laserlanding,
   author    = {Kuo, Yung-Ching and Chu, Wei-Teng and Cho, Yu-Po and Sheu, Jang-Ping},
   booktitle = {2024 IEEE 21st International Conference on Mobile Ad-Hoc and Smart Systems (MASS)},
   title     = {Laser-Assisted Guidance Landing Technology for Drones},
@@ -948,7 +978,7 @@ doi: 10.1109/MASS62177.2024.00107
           <div class="publication-actions">
             <details>
               <summary>BibTeX</summary>
-              <pre>@InProceedings{10.1007/978-981-97-4806-8_17,
+              <pre>@InProceedings{chu2024dynamicobstacles,
   author    = "Chu, Wei-Teng",
   editor    = "Mo, John P. T.",
   title     = "Dodging Dynamical Obstacles Using Turtlebot4 Camera Feed",
