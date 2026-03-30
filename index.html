@@ -39,6 +39,7 @@
       --shadow:0 4px 10px rgba(0,0,0,.1);
       --radius:12px;
       --gap:20px;
+      --nav-offset:96px;
     }
 
     html,body{margin:0;padding:0}
@@ -47,7 +48,6 @@
       font-weight:300;
       color:var(--text);
       line-height:1.6;
-      padding-top:80px; /* offset for fixed TOC */
       background:#fff;
     }
 
@@ -68,13 +68,15 @@
     }
 
     .inner-page{width:87%;max-width:1025px;margin:auto}
-    h2[id]{scroll-margin-top:96px}
+    h2[id]{scroll-margin-top:calc(var(--nav-offset) + 16px)}
 
     /* =========================
        Top Nav (Table of contents)
        ========================= */
     #table-of-contents{
-      position:fixed;top:0;left:0;right:0;height:60px;z-index:1000;
+      position:sticky;top:0;left:0;right:0;z-index:1000;
+      min-height:60px;
+      padding:10px 16px;
       background:#fff;display:flex;align-items:center;justify-content:center;gap:25px;
       box-shadow:0 2px 5px rgba(0,0,0,.1);
       font-size:1.1rem;
@@ -319,19 +321,40 @@
       box-shadow:0 10px 24px rgba(20,44,77,.06);
     }
     .news-archive summary{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
       cursor:pointer;
       font-weight:700;
       color:var(--primary-deep);
       list-style:none;
     }
+    .news-archive summary::before{
+      content:"+";
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:22px;
+      height:22px;
+      border-radius:999px;
+      background:rgba(64,118,172,.12);
+      font-size:16px;
+      line-height:1;
+    }
+    .news-archive details[open] summary::before{
+      content:"-";
+    }
     .news-archive summary::-webkit-details-marker{
       display:none;
     }
-    .news-archive summary::after{
-      content:"Show older updates";
+    .news-archive summary .summary-open{
+      display:none;
     }
-    .news-archive details[open] summary::after{
-      content:"Hide older updates";
+    .news-archive details[open] summary .summary-closed{
+      display:none;
+    }
+    .news-archive details[open] summary .summary-open{
+      display:inline;
     }
     .news-archive-list{
       display:flex;
@@ -561,7 +584,7 @@
 
     /* Responsive */
     @media (max-width: 800px){
-      body{padding-top:132px}
+      :root{--nav-offset:148px}
       .header-flex{flex-direction:column;align-items:center;padding:12px 0}
       .header-left{padding-left:0}
       .school-logo-box{flex-basis:100px;height:100px}
@@ -577,8 +600,6 @@
       .education-text{text-align:center}
       .edu-content{flex-direction:column}
       #table-of-contents{
-        height:auto;
-        padding:10px 12px;
         flex-wrap:wrap;
         gap:12px;
       }
@@ -662,7 +683,10 @@
         </div>
         <div class="news-archive">
           <details>
-            <summary aria-label="Toggle older news updates"></summary>
+            <summary>
+              <span class="summary-closed">Show older updates</span>
+              <span class="summary-open">Hide older updates</span>
+            </summary>
             <div class="news-archive-list">
               <article class="news-item">
                 <div class="news-date">Sep. 2025</div>
@@ -683,12 +707,12 @@
 
       <p class="section-kicker">🌟 Highlight 🌟</p>
 
+      <!-- <p>
+        I work at the intersection of robotics, computer vision, and embodied intelligence. Across research, internships, and engineering projects, I build perception-driven systems that connect strong visual models to reliable robot behavior in the real world.
+      </p> -->
       <p>
-        I am passionate about robotics and computer vision, and I have explored these areas through research, internships, and hands-on engineering projects. In the summer of 2023, I developed a vision-based dynamic obstacle avoidance system for TurtleBot4 at UC San Diego using only depth camera inputs. My internship at ITRI further deepened my interest in sim-to-real robotics, especially in building perception pipelines that remain reliable in real-world environments.
-      </p>
-      <p>
-        Before starting my M.S. at Stanford, I also conducted remote research in computer vision and robotics with
-        <a href="https://www.weimingzhi.com/home">Prof. Weiming Zhi</a> and <a href="https://tyz1030.github.io/#about">Dr. Tianyi Zhang</a> at <a href="https://droplab.ri.cmu.edu/">the DROP Lab</a>, Carnegie Mellon University. My recent work spans 3D vision, robot learning, and embodied intelligence, with a focus on building systems that connect strong perception models to robust real-world robot behavior.
+        My recent work spans vision-based navigation, sim-to-real learning, and 3D surface reconstruction. Before starting my M.S. at Stanford, I also conducted remote research with
+        <a href="https://www.weimingzhi.com/home">Prof. Weiming Zhi</a> and <a href="https://tyz1030.github.io/#about">Dr. Tianyi Zhang</a> at <a href="https://droplab.ri.cmu.edu/">the DROP Lab</a>, Carnegie Mellon University.
       </p>
 
       <!-- Hero media row -->
