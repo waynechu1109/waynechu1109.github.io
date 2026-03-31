@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aviation Photography | Wei-Teng (Wayne) Chu</title>
+  <meta
+    name="description"
+    content="Aviation photography portfolio by Wei-Teng (Wayne) Chu, organized by airport and featuring selected aircraft photography work."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <link href="/assets/css/pure-min.css" rel="stylesheet" />
+  <link href="/assets/css/syntax.css" rel="stylesheet" />
+  <link href="/assets/css/typora-wiki.css" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-32x32.png" sizes="32x32">
+
+  <style>
+    :root{
+      --primary:#4076ac;
+      --primary-deep:#1e4f81;
+      --primary-soft:#eef5ff;
+      --accent:#f3b15d;
+      --text:#2e2e2e;
+      --muted:#555;
+      --card:#f8f8f8;
+      --shadow:0 4px 10px rgba(0,0,0,.1);
+      --radius:12px;
+      --gap:20px;
+      --nav-offset:96px;
+      --photo-bg:#0f1b2f;
+      --photo-glow:#c98b32;
+    }
+
+    html,body{margin:0;padding:0}
+    body{
+      font-family:"Merriweather","PT Serif",Georgia,"Times New Roman","STSong",serif;
+      font-weight:300;
+      color:var(--text);
+      line-height:1.6;
+      background:#fff;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+      color:#2E2E2E;
+      line-height:1.15;
+      font-family:'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+      text-rendering:geometricPrecision;
+      margin:0 0 .5em 0;
+    }
+    h1{font-size:3rem;letter-spacing:-.5px}
+    h2{margin-top:2em}
+
+    a{color:#463F5C;text-decoration:underline}
+    a:focus-visible{
+      outline:2px solid var(--accent);
+      outline-offset:3px;
+    }
+
+    .inner-page{width:87%;max-width:1100px;margin:auto}
+    h2[id]{scroll-margin-top:calc(var(--nav-offset) + 16px)}
+
+    #table-of-contents{
+      position:sticky;top:0;left:0;right:0;z-index:1000;
+      min-height:60px;
+      padding:10px 16px;
+      background:#fff;display:flex;align-items:center;justify-content:center;gap:25px;
+      box-shadow:0 2px 5px rgba(0,0,0,.1);
+      font-size:1.1rem;
+    }
+    #table-of-contents a{
+      text-decoration:none;font-weight:700;color:#1e4f81;padding:10px 15px;border-radius:8px;transition:.3s;
+    }
+    #table-of-contents a:hover{
+      background:#1e4f81;color:#fff;transform:translateY(-3px);box-shadow:0 5px 15px rgba(30,79,129,.3)
+    }
+
+    .social-btn,
+    .resource-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border-radius:999px;
+      font-weight:700;
+      text-decoration:none;
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+    }
+
+    header{padding:40px 0 20px 0}
+    .header-flex{display:flex;align-items:center;justify-content:center;gap:32px;max-width:1200px;margin:0 auto}
+    .header-left{flex:0 0 180px;display:flex;justify-content:center;align-items:center;padding-left:100px}
+    .avatar{width:160px;height:160px;object-fit:cover;border-radius:50%;border:3px solid #fff;display:block}
+    .header-center{flex:1 1 auto;text-align:center;padding:0 32px}
+    .header-center h1{font-size:3em;margin:0 0 10px 0;font-weight:700}
+
+    .social-links{display:flex;justify-content:center;align-items:center;flex-wrap:nowrap;gap:10px;margin-top:18px}
+    .social-btn{
+      min-width:122px;
+      padding:10px 14px;
+      font-size:14px;
+      color:var(--primary-deep);
+      background:linear-gradient(135deg,#ffffff 0%, var(--primary-soft) 100%);
+      border:1px solid rgba(64,118,172,.22);
+      box-shadow:0 12px 24px rgba(64,118,172,.12);
+    }
+    .social-btn i{
+      font-size:16px;
+      width:16px;
+      text-align:center;
+      transition:transform .25s ease;
+    }
+    .social-btn:hover{
+      color:#fff;
+      background:linear-gradient(135deg,var(--primary) 0%, var(--primary-deep) 100%);
+      border-color:transparent;
+      transform:translateY(-3px);
+      box-shadow:0 18px 34px rgba(30,79,129,.28);
+    }
+
+    .resource-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .resource-btn{
+      padding:8px 14px;
+      font-size:14px;
+      color:var(--primary-deep);
+      background:#fff;
+      border:1px solid rgba(64,118,172,.22);
+      box-shadow:0 6px 16px rgba(20,44,77,.08);
+    }
+    .resource-btn:hover{
+      color:#1c3550;
+      background:linear-gradient(135deg,#fff8ed 0%, #ffe1b3 100%);
+      border-color:rgba(243,177,93,.5);
+      transform:translateY(-2px);
+      box-shadow:0 10px 22px rgba(163,101,20,.18);
+    }
+
+    .custom-hr{border:none;height:1.5px;background:linear-gradient(to right,var(--primary),#ccc,var(--primary));margin:40px auto;width:95%;position:relative}
+    .custom-hr::before,.custom-hr::after{content:"◆";position:absolute;top:-10px;font-size:18px;color:var(--primary)}
+    .custom-hr::before{left:-20px}.custom-hr::after{right:-20px}
+
+    .title{color:var(--primary)}
+    .section-intro{
+      margin:8px 0 18px;
+      color:var(--muted);
+    }
+
+    .airport-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:22px 0 10px;
+    }
+
+    .airport-section{
+      margin-top:34px;
+      padding:28px;
+      border-radius:20px;
+      background:linear-gradient(135deg,#f8fbff 0%, #eef5ff 45%, #fffaf1 100%);
+      border:1px solid rgba(64,118,172,.16);
+      box-shadow:0 14px 34px rgba(20,44,77,.08);
+    }
+    .airport-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .airport-name{
+      margin:0;
+      color:#163453;
+    }
+    .airport-meta{
+      margin:0;
+      color:var(--muted);
+      font-style:italic;
+    }
+    .airport-description{
+      margin:0 0 18px;
+    }
+
+    .photo-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+    .photo-card{
+      overflow:hidden;
+      border-radius:16px;
+      background:#fff;
+      border:1px solid rgba(64,118,172,.12);
+      box-shadow:0 10px 24px rgba(20,44,77,.08);
+    }
+    .photo-frame{
+      position:relative;
+      overflow:hidden;
+    }
+    .photo-frame.placeholder-photo{
+      aspect-ratio:4 / 3;
+      background:
+        radial-gradient(circle at 70% 22%, rgba(245,214,146,.95) 0 9%, rgba(245,214,146,0) 26%),
+        linear-gradient(180deg, #071729 0%, #18395c 48%, #6b87a7 100%);
+    }
+    .photo-frame.placeholder-photo::before{
+      content:"";
+      position:absolute;
+      inset:auto -10% 0;
+      height:36%;
+      background:linear-gradient(180deg, rgba(8,18,32,0) 0%, rgba(11,20,35,.78) 100%);
+    }
+    .photo-frame.placeholder-photo::after{
+      content:"";
+      position:absolute;
+      right:14%;
+      bottom:20%;
+      width:42%;
+      height:10%;
+      border-radius:999px 999px 45% 45%;
+      background:linear-gradient(90deg, rgba(255,255,255,.92) 0%, rgba(238,244,249,.9) 78%, rgba(194,214,228,.9) 100%);
+      box-shadow:
+        -85px 9px 0 -28px rgba(255,255,255,.86),
+        74px 4px 0 -30px rgba(255,255,255,.82),
+        -24px -28px 0 -30px rgba(255,255,255,.88);
+      transform:rotate(-8deg);
+    }
+    .photo-frame.real-photo{
+      aspect-ratio:auto;
+      display:block;
+      background:#0f1b2f;
+    }
+    .photo-frame.real-photo::before,
+    .photo-frame.real-photo::after{
+      content:none;
+    }
+    .photo-image{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .photo-card:nth-child(2) .photo-frame.placeholder-photo{
+      background:
+        radial-gradient(circle at 26% 18%, rgba(255,199,146,.92) 0 10%, rgba(255,199,146,0) 28%),
+        linear-gradient(180deg, #151d30 0%, #59466b 52%, #d6a773 100%);
+    }
+    .photo-card:nth-child(3) .photo-frame.placeholder-photo{
+      background:
+        radial-gradient(circle at 58% 20%, rgba(230,244,255,.92) 0 11%, rgba(230,244,255,0) 26%),
+        linear-gradient(180deg, #091421 0%, #24405c 46%, #7aa3c7 100%);
+    }
+    .photo-body{
+      padding:16px 16px 18px;
+    }
+    .photo-title{
+      margin:0 0 6px;
+      color:#163453;
+      font-size:1.02rem;
+    }
+    .photo-caption{
+      margin:0;
+      color:var(--muted);
+      font-size:.96rem;
+    }
+
+    .portfolio-note{
+      margin-top:26px;
+      padding:16px 18px;
+      border-left:4px solid var(--photo-glow);
+      border-radius:12px;
+      background:#fff8ed;
+      color:#5c4630;
+    }
+    .portfolio-cta{
+      margin-top:28px;
+      display:flex;
+      justify-content:center;
+    }
+    .instagram-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      padding:14px 22px;
+      border-radius:999px;
+      font-family:'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+      font-size:15px;
+      font-weight:700;
+      color:#fff;
+      text-decoration:none;
+      background:linear-gradient(135deg,#d88a4a 0%, #e8c37a 18%, #bf5f8b 52%, #765292 78%, #5d69b5 100%);
+      box-shadow:0 14px 28px rgba(118,82,146,.2);
+      transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
+    }
+    .instagram-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 34px rgba(118,82,146,.24);
+      filter:saturate(1.03);
+    }
+    .instagram-btn i{
+      font-size:18px;
+    }
+
+    footer{
+      background:linear-gradient(135deg,var(--primary-deep) 0%, var(--primary) 100%);
+      padding:34px 0 24px;
+      text-align:center;
+      font-size:13px;
+      color:#fff;
+      margin-top:40px;
+    }
+    .footer-inner{
+      width:87%;
+      max-width:1025px;
+      margin:0 auto;
+    }
+    .footer-title{
+      margin:0;
+      font-size:1.25rem;
+      color:#fff;
+    }
+    .footer-copy{
+      margin:8px auto 0;
+      max-width:680px;
+      color:rgba(255,255,255,.86);
+    }
+    .footer-social-links{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+    }
+    .footer-social-links .social-btn{
+      color:#fff;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.2);
+      box-shadow:0 10px 24px rgba(8,27,48,.18);
+    }
+    .footer-social-links .social-btn:hover{
+      color:var(--primary-deep);
+      background:linear-gradient(135deg,#fff8ed 0%, #ffffff 100%);
+      border-color:transparent;
+      box-shadow:0 16px 30px rgba(8,27,48,.26);
+    }
+    .footer-note{
+      margin:18px 0 16px;
+      color:rgba(255,255,255,.75);
+    }
+
+    @media (max-width: 900px){
+      :root{--nav-offset:148px}
+      .header-flex{flex-direction:column;align-items:center;padding:12px 0}
+      .header-left{padding-left:0}
+      .airport-header{flex-direction:column;align-items:flex-start}
+      .photo-grid{grid-template-columns:1fr 1fr}
+      #table-of-contents{
+        flex-wrap:wrap;
+        gap:12px;
+      }
+      .social-links{flex-wrap:wrap}
+      .social-btn{min-width:0;width:calc(50% - 7px)}
+    }
+
+    @media (max-width: 640px){
+      .airport-section{padding:22px 18px}
+      .photo-grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width: 560px){
+      .social-btn{width:100%}
+      .footer-social-links .social-btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <nav id="table-of-contents" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="index.html#education">Education</a>
+    <a href="index.html#internship-experience">Work Experience</a>
+    <a href="index.html#research-and-project">Research &amp; Projects</a>
+    <a href="index.html#publication">Publications</a>
+    <a href="index.html#selected-awards">Awards</a>
+    <a href="course_projects.html">Course Projects</a>
+    <a href="aviation_photography.html">Aviation Photography</a>
+  </nav>
+
+  <header class="inner-page">
+    <div class="header-flex">
+      <div class="header-left">
+        <img class="avatar" src="media/waynechu.jpg" alt="Wayne Chu" loading="lazy" />
+      </div>
+      <div class="header-center">
+        <h1>Aviation Photography</h1>
+        <p><strong>Selected aircraft photography organized by airport.</strong></p>
+        <p><strong>Wei-Teng (Wayne) Chu</strong></p>
+        <div class="social-links">
+          <a href="mailto:waynechu@stanford.edu" class="social-btn">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://drive.google.com/file/d/17QoRGFir5z-ctMb0RwCYrUfOgcAe6Yll/view" target="_blank" rel="noopener noreferrer" class="social-btn">
+            <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+            <span>Resume</span>
+          </a>
+          <a href="https://linkedin.com/in/waynechu1109" target="_blank" rel="noopener noreferrer" class="social-btn">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/waynechu1109" target="_blank" rel="noopener noreferrer" class="social-btn">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="inner-page">
+      <hr class="custom-hr" />
+
+      <h2 id="airport-portfolio" class="title">Aviation Photography</h2>
+      <p class="section-intro">
+        This page collects my aviation photography work.
+      </p>
+
+      <div class="airport-links" aria-label="Airport categories">
+        <a href="#rctp" class="resource-btn">RCTP / TPE</a>
+        <!-- <a href="#ksfo" class="resource-btn">KSFO / SFO</a> -->
+        <a href="#rjtt" class="resource-btn">RJTT / HND</a>
+        <a href="#rjaa" class="resource-btn">RJAA / NRT</a>
+      </div>
+
+      <section id="rctp" class="airport-section" aria-labelledby="rctp-heading">
+        <div class="airport-header">
+          <div>
+            <h3 id="rctp-heading" class="airport-name">Taiwan Taoyuan International Airport</h3>
+            <p class="airport-meta">RCTP / TPE</p>
+          </div>
+        </div>
+        <!-- <p class="airport-description">
+          Taiwan's main international gateway.
+        </p> -->
+        <div class="photo-grid">
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/tpe/DSC09972.jpg"
+                alt="Taiwan Taoyuan International Airport photo 1"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇹🇼 EVA AIR</h4>
+              <!-- <p class="photo-caption">This card now preserves the original aspect ratio of your photo without cropping.</p> -->
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/tpe/DSC04046.jpg"
+                alt="Taiwan Taoyuan International Airport photo 2"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇹🇼 China Airlines</h4>
+              <!-- <p class="photo-caption">Put your second TPE image at `media/tpe_002.jpg`, then update the aircraft or airline details here.</p> -->
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/tpe/DSC03687-2.jpg"
+                alt="Taiwan Taoyuan International Airport photo 3"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇹🇼 STARLUX Airlines</h4>
+              <!-- <p class="photo-caption">Put your third TPE image at `media/tpe_003.jpg`, then revise this caption for the scene or shooting condition.</p> -->
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- <section id="ksfo" class="airport-section" aria-labelledby="ksfo-heading">
+        <div class="airport-header">
+          <div>
+            <h3 id="ksfo-heading" class="airport-name">San Francisco International Airport</h3>
+            <p class="airport-meta">KSFO / SFO</p>
+          </div>
+        </div>
+        <p class="airport-description">
+          A space for Bay Area traffic, long-haul heavies, and shots that capture the changing weather and coastline light around SFO.
+        </p>
+        <div class="photo-grid">
+          <article class="photo-card">
+            <div class="photo-frame placeholder-photo" aria-hidden="true"></div>
+            <div class="photo-body">
+              <h4 class="photo-title">Marine Layer Arrival</h4>
+              <p class="photo-caption">Perfect for fog, side light, or a dramatic approach sequence.</p>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame placeholder-photo" aria-hidden="true"></div>
+            <div class="photo-body">
+              <h4 class="photo-title">Transpacific Heavy</h4>
+              <p class="photo-caption">Highlight an airline, aircraft family, or a frame with strong livery details.</p>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame placeholder-photo" aria-hidden="true"></div>
+            <div class="photo-body">
+              <h4 class="photo-title">Blue Hour Taxi</h4>
+              <p class="photo-caption">Use this card for evening taxi shots or moody runway scenes.</p>
+            </div>
+          </article>
+        </div>
+      </section> -->
+
+      <section id="rjtt" class="airport-section" aria-labelledby="rjtt-heading">
+        <div class="airport-header">
+          <div>
+            <h3 id="rjtt-heading" class="airport-name">Tokyo Haneda Airport</h3>
+            <p class="airport-meta">RJTT / HND</p>
+          </div>
+        </div>
+        <!-- <p class="airport-description">
+          A category for dense Tokyo traffic, clean Japanese domestic liveries, and the fast rhythm of operations at Haneda.
+        </p> -->
+        <div class="photo-grid">
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/hnd/DSC07359-Enhanced-NR-2.jpg"
+                alt="Tokyo Haneda Airport photo 1"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇩🇪 Lufthansa / 🇯🇵 ANA</h4>
+              <!-- <p class="photo-caption">This card now preserves the original aspect ratio of your photo without cropping.</p> -->
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/hnd/DSC07672.jpg"
+                alt="Tokyo Haneda Airport photo 2"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇬🇧 British Airways</h4>
+              <!-- <p class="photo-caption">Put your second TPE image at `media/tpe_002.jpg`, then update the aircraft or airline details here.</p> -->
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/hnd/DSC07755.jpg "
+                alt="Tokyo Haneda Airport photo 3"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇮🇹 ITA Airways</h4>
+              <!-- <p class="photo-caption">Put your third TPE image at `media/tpe_003.jpg`, then revise this caption for the scene or shooting condition.</p> -->
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="rjaa" class="airport-section" aria-labelledby="rjaa-heading">
+        <div class="airport-header">
+          <div>
+            <h3 id="rjaa-heading" class="airport-name">Narita International Airport</h3>
+            <p class="airport-meta">RJAA / NRT</p>
+          </div>
+        </div>
+        <!-- <p class="airport-description">
+          A category for long-haul traffic, cargo movement, and the distinct spotting atmosphere that makes Narita such a classic airport for photographers.
+        </p> -->
+        <div class="photo-grid">
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/nrt/DSC06510.jpg"
+                alt="Tokyo Narita Airport photo 1"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇸🇬 Singapore Airlines</h4>
+              <!-- <p class="photo-caption">This card now preserves the original aspect ratio of your photo without cropping.</p> -->
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/nrt/DSC05882.jpg"
+                alt="Tokyo Narita Airport photo 2"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇲🇽 Aeromexico</h4>
+              <!-- <p class="photo-caption">Put your second TPE image at `media/tpe_002.jpg`, then update the aircraft or airline details here.</p> -->
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/nrt/DSC06095.jpg"
+                alt="Tokyo Narita Airport photo 3"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇨🇳 Air China</h4>
+              <!-- <p class="photo-caption">Put your third TPE image at `media/tpe_003.jpg`, then revise this caption for the scene or shooting condition.</p> -->
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="portfolio-cta">
+        <a
+          href="https://www.instagram.com/waynechu_aviation/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="instagram-btn"
+          aria-label="See more aviation photos on Instagram"
+        >
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span>See More Photos on Instagram</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="post-footer">
+    <div class="footer-inner">
+      <h2 class="footer-title">Let's Connect</h2>
+      <p class="footer-copy">You can also find me on a few more personal social platforms below.</p>
+      <div class="footer-social-links" aria-label="Personal social links">
+        <a href="https://www.facebook.com/waynechu.aviation/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook profile">
+          <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://www.instagram.com/waynechu_aviation/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram profile">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span>Instagram</span>
+        </a>
+      </div>
+      <p class="footer-note"></p>
+    </div>
+    <script id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac"></script>
+  </footer>
+</body>
+</html>
