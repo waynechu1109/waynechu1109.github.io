@@ -176,9 +176,7 @@
     }
     .airport-header{
       display:flex;
-      justify-content:space-between;
       align-items:flex-end;
-      gap:18px;
       margin-bottom:18px;
     }
     .airport-name{
@@ -192,6 +190,39 @@
     }
     .airport-description{
       margin:0 0 18px;
+    }
+    .airport-map{
+      width:100%;
+      margin:0 0 18px;
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid rgba(64,118,172,.16);
+      box-shadow:0 10px 24px rgba(20,44,77,.08);
+      background:#fff;
+    }
+    .airport-map iframe{
+      width:100%;
+      height:132px;
+      display:block;
+      border:none;
+    }
+    .airport-map-link{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:10px 12px;
+      font-family:'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+      font-size:13px;
+      font-weight:700;
+      text-decoration:none;
+      color:var(--primary-deep);
+      background:linear-gradient(135deg,#f8fbff 0%, #eef5ff 100%);
+      border-top:1px solid rgba(64,118,172,.12);
+    }
+    .airport-map-link:hover{
+      background:linear-gradient(135deg,#fff8ed 0%, #ffe6bf 100%);
+      color:#1c3550;
     }
 
     .photo-grid{
@@ -416,7 +447,6 @@
       :root{--nav-offset:148px}
       .header-flex{flex-direction:column;align-items:center;padding:12px 0}
       .header-left{padding-left:0}
-      .airport-header{flex-direction:column;align-items:flex-start}
       .photo-grid{grid-template-columns:1fr 1fr}
       #table-of-contents{
         flex-wrap:wrap;
@@ -507,6 +537,18 @@
             <p class="airport-meta">RCTP / TPE</p>
           </div>
         </div>
+        <div class="airport-map">
+          <iframe
+            title="Map of Taiwan Taoyuan International Airport"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Taiwan%20Taoyuan%20International%20Airport&output=embed"
+          ></iframe>
+          <a class="airport-map-link" href="https://www.google.com/maps?q=Taiwan%20Taoyuan%20International%20Airport" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Open Map</span>
+          </a>
+        </div>
         <!-- <p class="airport-description">
           Taiwan's main international gateway.
         </p> -->
@@ -563,6 +605,18 @@
             <p class="airport-meta">RCSS / TSA</p>
           </div>
         </div>
+        <div class="airport-map">
+          <iframe
+            title="Map of Taipei Songshan Airport"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Taipei%20Songshan%20Airport&output=embed"
+          ></iframe>
+          <a class="airport-map-link" href="https://www.google.com/maps?q=Taipei%20Songshan%20Airport" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Open Map</span>
+          </a>
+        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -612,6 +666,18 @@
             <h3 id="hsinchu-air-base-heading" class="airport-name">🇹🇼 Hsinchu Air Base</h3>
             <p class="airport-meta">RCPO / HSZ</p>
           </div>
+        </div>
+        <div class="airport-map">
+          <iframe
+            title="Map of Hsinchu Air Base"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Hsinchu%20Air%20Base&output=embed"
+          ></iframe>
+          <a class="airport-map-link" href="https://www.google.com/maps?q=Hsinchu%20Air%20Base" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Open Map</span>
+          </a>
         </div>
         <div class="photo-grid">
           <article class="photo-card">
@@ -698,6 +764,18 @@
             <p class="airport-meta">RJTT / HND</p>
           </div>
         </div>
+        <div class="airport-map">
+          <iframe
+            title="Map of Tokyo Haneda Airport"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Tokyo%20Haneda%20Airport&output=embed"
+          ></iframe>
+          <a class="airport-map-link" href="https://www.google.com/maps?q=Tokyo%20Haneda%20Airport" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Open Map</span>
+          </a>
+        </div>
         <!-- <p class="airport-description">
           A category for dense Tokyo traffic, clean Japanese domestic liveries, and the fast rhythm of operations at Haneda.
         </p> -->
@@ -753,6 +831,18 @@
             <h3 id="rjaa-heading" class="airport-name">🇯🇵 Narita International Airport</h3>
             <p class="airport-meta">RJAA / NRT</p>
           </div>
+        </div>
+        <div class="airport-map">
+          <iframe
+            title="Map of Narita International Airport"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Narita%20International%20Airport&output=embed"
+          ></iframe>
+          <a class="airport-map-link" href="https://www.google.com/maps?q=Narita%20International%20Airport" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Open Map</span>
+          </a>
         </div>
         <!-- <p class="airport-description">
           A category for long-haul traffic, cargo movement, and the distinct spotting atmosphere that makes Narita such a classic airport for photographers.
@@ -810,6 +900,18 @@
             <p class="airport-meta">RJTY / OKO</p>
           </div>
         </div>
+        <div class="airport-map">
+          <iframe
+            title="Map of Yokota Air Base"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Yokota%20Air%20Base&output=embed"
+          ></iframe>
+          <a class="airport-map-link" href="https://www.google.com/maps?q=Yokota%20Air%20Base" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Open Map</span>
+          </a>
+        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -859,6 +961,18 @@
             <h3 id="iruma-air-base-heading" class="airport-name">🇯🇵 Iruma Air Base</h3>
             <p class="airport-meta">RJTJ / N/A</p>
           </div>
+        </div>
+        <div class="airport-map">
+          <iframe
+            title="Map of Iruma Air Base"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Iruma%20Air%20Base&output=embed"
+          ></iframe>
+          <a class="airport-map-link" href="https://www.google.com/maps?q=Iruma%20Air%20Base" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Open Map</span>
+          </a>
         </div>
         <div class="photo-grid">
           <article class="photo-card">
