@@ -251,6 +251,7 @@
       width:100%;
       height:auto;
       display:block;
+      cursor:zoom-in;
     }
     .photo-card:nth-child(2) .photo-frame.placeholder-photo{
       background:
@@ -312,6 +313,55 @@
     }
     .instagram-btn i{
       font-size:18px;
+    }
+
+    .lightbox{
+      position:fixed;
+      inset:0;
+      z-index:2000;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+      background:rgba(6,14,24,.88);
+      backdrop-filter:blur(6px);
+    }
+    .lightbox.is-open{
+      display:flex;
+    }
+    .lightbox-dialog{
+      position:relative;
+      max-width:min(1200px, 92vw);
+      max-height:88vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .lightbox-image{
+      max-width:100%;
+      max-height:88vh;
+      display:block;
+      border-radius:16px;
+      box-shadow:0 24px 60px rgba(0,0,0,.38);
+      background:#0f1b2f;
+    }
+    .lightbox-close{
+      position:absolute;
+      top:-14px;
+      right:-14px;
+      width:42px;
+      height:42px;
+      border:none;
+      border-radius:999px;
+      color:#fff;
+      background:rgba(12,22,36,.82);
+      box-shadow:0 12px 26px rgba(0,0,0,.28);
+      cursor:pointer;
+      font-size:22px;
+      line-height:1;
+    }
+    .lightbox-close:hover{
+      background:rgba(24,41,66,.96);
     }
 
     footer{
@@ -441,15 +491,19 @@
 
       <div class="airport-links" aria-label="Airport categories">
         <a href="#rctp" class="resource-btn">RCTP / TPE</a>
+        <a href="#rcss" class="resource-btn">RCSS / TSA</a>
+        <a href="#hsinchu-air-base" class="resource-btn">RCPO / HSZ</a>
         <!-- <a href="#ksfo" class="resource-btn">KSFO / SFO</a> -->
         <a href="#rjtt" class="resource-btn">RJTT / HND</a>
         <a href="#rjaa" class="resource-btn">RJAA / NRT</a>
+        <a href="#rjty" class="resource-btn">RJTY / OKO</a>
+        <a href="#iruma-air-base" class="resource-btn">RJTJ</a>
       </div>
 
       <section id="rctp" class="airport-section" aria-labelledby="rctp-heading">
         <div class="airport-header">
           <div>
-            <h3 id="rctp-heading" class="airport-name">Taiwan Taoyuan International Airport</h3>
+            <h3 id="rctp-heading" class="airport-name">🇹🇼 Taiwan Taoyuan International Airport</h3>
             <p class="airport-meta">RCTP / TPE</p>
           </div>
         </div>
@@ -502,10 +556,110 @@
         </div>
       </section>
 
+      <section id="rcss" class="airport-section" aria-labelledby="rcss-heading">
+        <div class="airport-header">
+          <div>
+            <h3 id="rcss-heading" class="airport-name">🇹🇼 Taipei Songshan Airport</h3>
+            <p class="airport-meta">RCSS / TSA</p>
+          </div>
+        </div>
+        <div class="photo-grid">
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/tsa/DSC05332_2.jpg"
+                alt="Taipei Songshan Airport photo 2"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇹🇼 Tigerair Taiwan</h4>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/tsa/DSC00250.jpg"
+                alt="Taipei Songshan Airport photo 1"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇯🇵 ANA</h4>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/tsa/DSC05527_1.jpg"
+                alt="Taipei Songshan Airport photo 3"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇹🇼 EVA AIR</h4>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="hsinchu-air-base" class="airport-section" aria-labelledby="hsinchu-air-base-heading">
+        <div class="airport-header">
+          <div>
+            <h3 id="hsinchu-air-base-heading" class="airport-name">🇹🇼 Hsinchu Air Base</h3>
+            <p class="airport-meta">RCPO / HSZ</p>
+          </div>
+        </div>
+        <div class="photo-grid">
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/hsz/DSC01183.jpg"
+                alt="Hsinchu Air Base photo 1"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇹🇼 Republic of China Air Force</h4>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/hsz/DSC04724-2.jpg"
+                alt="Hsinchu Air Base photo 2"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇹🇼 Republic of China Air Force</h4>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/hsz/DSC04768.jpg"
+                alt="Hsinchu Air Base photo 3"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇹🇼 Republic of China Air Force</h4>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <!-- <section id="ksfo" class="airport-section" aria-labelledby="ksfo-heading">
         <div class="airport-header">
           <div>
-            <h3 id="ksfo-heading" class="airport-name">San Francisco International Airport</h3>
+            <h3 id="ksfo-heading" class="airport-name">🇺🇸 San Francisco International Airport</h3>
             <p class="airport-meta">KSFO / SFO</p>
           </div>
         </div>
@@ -540,7 +694,7 @@
       <section id="rjtt" class="airport-section" aria-labelledby="rjtt-heading">
         <div class="airport-header">
           <div>
-            <h3 id="rjtt-heading" class="airport-name">Tokyo Haneda Airport</h3>
+            <h3 id="rjtt-heading" class="airport-name">🇯🇵 Tokyo Haneda Airport</h3>
             <p class="airport-meta">RJTT / HND</p>
           </div>
         </div>
@@ -596,7 +750,7 @@
       <section id="rjaa" class="airport-section" aria-labelledby="rjaa-heading">
         <div class="airport-header">
           <div>
-            <h3 id="rjaa-heading" class="airport-name">Narita International Airport</h3>
+            <h3 id="rjaa-heading" class="airport-name">🇯🇵 Narita International Airport</h3>
             <p class="airport-meta">RJAA / NRT</p>
           </div>
         </div>
@@ -649,6 +803,106 @@
         </div>
       </section>
 
+      <section id="rjty" class="airport-section" aria-labelledby="rjty-heading">
+        <div class="airport-header">
+          <div>
+            <h3 id="rjty-heading" class="airport-name">🇯🇵 Yokota Air Base</h3>
+            <p class="airport-meta">RJTY / OKO</p>
+          </div>
+        </div>
+        <div class="photo-grid">
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/oko/DSC08041.jpg"
+                alt="Yokota Air Base photo 1"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇺🇸 U.S. Air Force</h4>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/oko/DSC08659.jpg"
+                alt="Yokota Air Base photo 2"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇺🇸 U.S. Air Force</h4>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/oko/DSC08737.jpg"
+                alt="Yokota Air Base photo 3"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇺🇸 U.S. Air Force</h4>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="iruma-air-base" class="airport-section" aria-labelledby="iruma-air-base-heading">
+        <div class="airport-header">
+          <div>
+            <h3 id="iruma-air-base-heading" class="airport-name">🇯🇵 Iruma Air Base</h3>
+            <p class="airport-meta">RJTJ / N/A</p>
+          </div>
+        </div>
+        <div class="photo-grid">
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/rjtj/DSC08129.jpg"
+                alt="Iruma Air Base photo 1"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇯🇵 Japan Air Self-Defense Force</h4>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/rjtj/DSC08191.jpg"
+                alt="Iruma Air Base photo 2"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇯🇵 Japan Air Self-Defense Force</h4>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/spotting/rjtj/DSC08562.jpg"
+                alt="Iruma Air Base photo 3"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇯🇵 Japan Air Self-Defense Force</h4>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <div class="portfolio-cta">
         <a
           href="https://www.instagram.com/waynechu_aviation/"
@@ -663,6 +917,13 @@
       </div>
     </section>
   </main>
+
+  <div class="lightbox" id="photo-lightbox" aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Expanded photo viewer">
+      <button class="lightbox-close" type="button" aria-label="Close expanded photo">&times;</button>
+      <img class="lightbox-image" alt="" />
+    </div>
+  </div>
 
   <footer id="post-footer">
     <div class="footer-inner">
@@ -681,6 +942,46 @@
       <p class="footer-note"></p>
     </div>
     <script id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac"></script>
+    <script>
+      const lightbox = document.getElementById("photo-lightbox");
+      const lightboxImage = lightbox.querySelector(".lightbox-image");
+      const lightboxClose = lightbox.querySelector(".lightbox-close");
+      const photoImages = document.querySelectorAll(".photo-image");
+
+      function openLightbox(image) {
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightbox.classList.add("is-open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.removeAttribute("src");
+        lightboxImage.alt = "";
+        document.body.style.overflow = "";
+      }
+
+      photoImages.forEach((image) => {
+        image.addEventListener("click", () => openLightbox(image));
+      });
+
+      lightboxClose.addEventListener("click", closeLightbox);
+
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+          closeLightbox();
+        }
+      });
+    </script>
   </footer>
 </body>
 </html>
