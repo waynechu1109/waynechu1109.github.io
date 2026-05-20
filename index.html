@@ -505,22 +505,22 @@
 
     /* Individual project logos */
     .cmu-logo::before {
-      background-image: url('media/cmu.png');
+      background-image: url('media/logos/cmu.png');
       top: 24%;
       left: 85.5%;
       width: 150px;
       height: 150px;
     }
     .google-logo::before {
-      background-image: url('media/google.png');
+      background-image: url('media/logos/google.png');
       width: 150px;
       height: 150px;
     }
     .nthu-logo::before {
-      background-image: url('media/nthu_horizontal.jpg');
+      background-image: url('media/logos/nthu_horizontal.jpg');
     }
     .ucsd-logo::before {
-      background-image: url('media/ucsd.png');
+      background-image: url('media/logos/ucsd.png');
       width: 150px;
       height: 150px;
     }
@@ -636,7 +636,7 @@
   <header class="inner-page">
     <div class="header-flex">
       <div class="header-left">
-        <img class="avatar" src="media/waynechu.jpg" alt="Wayne Chu" />
+        <img class="avatar" src="media/profile/waynechu.jpg" alt="Wayne Chu" />
       </div>
       <div class="header-center">
         <h1>Wei-Teng (Wayne) CHU</h1>
@@ -724,15 +724,15 @@
       <!-- Hero media row -->
       <div class="highlight-row">
         <div class="highlight-internship-media">
-          <img src="media/dtu_114_32.png" alt="Autonomous driving and mobility project visual" class="highlight-image" loading="lazy" />
+          <img src="media/projects/dtu_114_32.png" alt="Autonomous driving and mobility project visual" class="highlight-image" loading="lazy" />
         </div>
         <div class="highlight-gif-container">
           <div class="gif-wrapper">
-            <img src="media/sdf_buddha.gif" alt="FINS signed distance field reconstruction demo" class="highlight-gif" loading="lazy" />
+            <img src="media/research/sdf_buddha.gif" alt="FINS signed distance field reconstruction demo" class="highlight-gif" loading="lazy" />
           </div>
         </div>
         <div class="highlight-internship-media">
-          <img src="media/franka_side.gif" alt="Robotic arm surface-following demo" class="highlight-image" loading="lazy" />
+          <img src="media/research/franka_side.gif" alt="Robotic arm surface-following demo" class="highlight-image" loading="lazy" />
         </div>
       </div>
 
@@ -752,7 +752,7 @@
               </ul>
             </div>
             <div class="school-logo-box" aria-label="Stanford University Logo">
-              <img src="media/stanford.png" alt="Stanford University Logo" class="school-logo" loading="lazy" />
+              <img src="media/logos/stanford.png" alt="Stanford University Logo" class="school-logo" loading="lazy" />
             </div>
           </div>
         </article>
@@ -771,7 +771,7 @@
                 </ul>
               </div>
             <div class="school-logo-box" aria-label="National Tsing Hua University Logo">
-              <img src="media/nthu.png" alt="National Tsing Hua University Logo" class="school-logo" loading="lazy" />
+              <img src="media/logos/nthu.png" alt="National Tsing Hua University Logo" class="school-logo" loading="lazy" />
             </div>
           </div>
         </article>
@@ -782,7 +782,7 @@
       <section class="internships">
         <article class="internship-item">
           <div class="internship-media">
-            <img src="media/nimble_logo.png" alt="Nimble logo" class="internship-image" loading="lazy" />
+            <img src="media/logos/nimble_logo.png" alt="Nimble logo" class="internship-image" loading="lazy" />
           </div>
           <div class="internship-details">
             <h3 class="company-name">Nimble</h3>
@@ -796,7 +796,7 @@
 
         <article class="internship-item">
           <div class="internship-media">
-            <img src="media/SAIL.png" alt="Stanford Artificial Intelligence Laboratory logo" class="internship-image" loading="lazy" />
+            <img src="media/logos/SAIL.png" alt="Stanford Artificial Intelligence Laboratory logo" class="internship-image" loading="lazy" />
           </div>
           <div class="internship-details">
             <h3 class="company-name">Stanford Artificial Intelligence Laboratory (SAIL)</h3>
@@ -814,7 +814,7 @@
 
         <article class="internship-item">
           <div class="internship-media">
-            <img src="media/ITRI.png" alt="Industrial Technology Research Institute logo" class="internship-image" loading="lazy" />
+            <img src="media/logos/ITRI.png" alt="Industrial Technology Research Institute logo" class="internship-image" loading="lazy" />
           </div>
           <div class="internship-details">
             <h3 class="company-name">Industrial Technology Research Institute (ITRI)</h3>
@@ -823,22 +823,22 @@
             <div class="internship-description">
               <h4>Mask2Former Semantic Segmentation</h4>
               <p>I built a custom semantic segmentation pipeline for robotics and autonomous driving by merging and re-annotating Mapillary and ADE20k, converting the data to COCO format, and training Mask2Former with NVIDIA TAO Toolkit. The final model was deployed in ROS2 and delivered real-time inference at about 15 FPS on robot and vehicle platforms.</p>
-              <div class="gif-container"><div class="gif-wrapper"><img src="media/merged_dog_.gif" alt="Semantic segmentation demo on a quadruped robot" class="internship-gif" loading="lazy" /></div></div>
+              <div class="gif-container"><div class="gif-wrapper"><img src="media/demos/merged_dog_.gif" alt="Semantic segmentation demo on a quadruped robot" class="internship-gif" loading="lazy" /></div></div>
               <p></p>
               <h4>Person Re-Identification (Re-ID)</h4>
               <p>I developed a real-time pedestrian detection and re-identification pipeline using YOLO11n, OSNet, and cosine-similarity matching. By exporting models to ONNX and TensorRT for acceleration, the system achieved about 25 FPS and was suitable for robotics and automotive deployment.</p>
-              <div class="gif-container"><div class="gif-wrapper"><img src="media/reid_tracker_.gif" alt="Person re-identification tracking demo" class="internship-gif" loading="lazy" /></div></div>
+              <div class="gif-container"><div class="gif-wrapper"><img src="media/demos/reid_tracker_.gif" alt="Person re-identification tracking demo" class="internship-gif" loading="lazy" /></div></div>
               <p></p>
               <h4>Sim2Real Quadruped Robot Terrain Traversal</h4>
               <p>I developed a sim-to-real terrain traversal pipeline for the Unitree Go2 that combined Gazebo simulation, RealSense point clouds, and elevation mapping for locomotion over uneven ground. I also integrated point-cloud processing with reinforcement learning gait policies, added VIO and forward kinematics to handle sensor interruptions, and validated the full system on the physical robot.</p>
-              <div class="gif-container"><div class="gif-wrapper"><img src="media/real_go2_walk_.gif" alt="Unitree Go2 terrain traversal demo" class="internship-gif" loading="lazy" /></div></div>
+              <div class="gif-container"><div class="gif-wrapper"><img src="media/demos/real_go2_walk_.gif" alt="Unitree Go2 terrain traversal demo" class="internship-gif" loading="lazy" /></div></div>
             </div>
           </div>
         </article>
 
         <article class="internship-item">
           <div class="internship-media">
-            <img src="media/FOXCONN.svg" alt="Foxconn logo" class="internship-image" loading="lazy" />
+            <img src="media/logos/FOXCONN.svg" alt="Foxconn logo" class="internship-image" loading="lazy" />
           </div>
           <div class="internship-details">
             <h3 class="company-name">Foxconn</h3>
@@ -858,7 +858,7 @@
       <!-- <p class="section-intro">My current flagship research project in 3D vision, robotics, and sim-to-real learning.</p> -->
       <article class="featured-research">
         <div class="featured-research-media">
-          <img src="media/franka_side.gif" alt="FINS robotic surface-following experiment" class="featured-research-image" loading="lazy" />
+          <img src="media/research/franka_side.gif" alt="FINS robotic surface-following experiment" class="featured-research-image" loading="lazy" />
         </div>
         <div class="featured-research-body">
           <p class="featured-label">Featured Research</p>
@@ -876,6 +876,7 @@
           </p>
           <div class="resource-links">
             <a href="https://arxiv.org/abs/2509.20681" class="resource-btn" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <a href="media/research/FINS_Poster.pdf" class="resource-btn">Poster</a>
             <a href="https://github.com/waynechu1109/FINS" class="resource-btn" target="_blank" rel="noopener noreferrer">Code</a>
             <a href="https://waynechu1109.github.io/fins.github.io/" class="resource-btn" target="_blank" rel="noopener noreferrer">Project Page</a>
           </div>
@@ -887,7 +888,7 @@
       <p class="section-intro">Additional projects spanning robotics, embedded systems, and applied computer vision.</p> -->
       <section class="projects">
         <article class="project-item google-logo">
-          <div class="project-media"><img src="media/smart_fridge.jpg" alt="Smart Fridge prototype" class="project-image" loading="lazy" /></div>
+          <div class="project-media"><img src="media/projects/smart_fridge.jpg" alt="Smart Fridge prototype" class="project-image" loading="lazy" /></div>
           <div class="project-details">
             <h3 class="project-title">Smart Fridge</h3>
             <p class="project-duration">Jun. 2024 - Sep. 2024</p>
@@ -903,7 +904,7 @@
         </article>
 
         <article class="project-item nthu-logo">
-          <div class="project-media"><img src="media/landing_imagination.jpg" alt="Laser-assisted drone landing concept image" class="project-image" loading="lazy" /></div>
+          <div class="project-media"><img src="media/projects/landing_imagination.jpg" alt="Laser-assisted drone landing concept image" class="project-image" loading="lazy" /></div>
           <div class="project-details">
             <h3 class="project-title">Laser-Assisted Guidance Landing Technology for Drones</h3>
             <p class="project-duration">Jan. 2023 - Nov. 2023</p>
@@ -920,7 +921,7 @@
         </article>
 
         <article class="project-item ucsd-logo">
-          <div class="project-media"><img src="media/MURO.gif" alt="TurtleBot4 obstacle avoidance demo" class="project-image" loading="lazy" /></div>
+          <div class="project-media"><img src="media/projects/MURO.gif" alt="TurtleBot4 obstacle avoidance demo" class="project-image" loading="lazy" /></div>
           <div class="project-details">
             <h3 class="project-title">Dodging Dynamical Obstacles Using TurtleBot4 Camera Feed</h3>
             <p class="project-duration">Jun. 2023 - Aug. 2023</p>
@@ -949,6 +950,7 @@
             <span class="publication-badge">arXiv</span>
             <!-- <span class="publication-badge role">First Author</span> -->
             <a href="paper/2509.20681v3.pdf" class="resource-btn publication-btn">PDF</a>
+            <a href="media/research/FINS_Poster.pdf" class="resource-btn publication-btn">Poster</a>
           </div>
           <div class="publication-actions">
             <details>
