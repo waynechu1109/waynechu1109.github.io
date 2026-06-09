@@ -17,11 +17,7 @@
     href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap"
   />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-
-  <!-- Legacy site styles (leave if required by the rest of the site) -->
-  <link href="/assets/css/pure-min.css" rel="stylesheet" />
-  <link href="/assets/css/syntax.css" rel="stylesheet" />
-  <link href="/assets/css/typora-wiki.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-16x16.png" sizes="16x16">
@@ -32,591 +28,194 @@
 
   <style>
     /* =========================
-       Base & Typography
+       Highlight Row
        ========================= */
-    :root{
-      --primary:#4076ac;
-      --primary-deep:#1e4f81;
-      --primary-soft:#eef5ff;
-      --accent:#f3b15d;
-      --text:#2e2e2e;
-      --muted:#555;
-      --card:#f8f8f8;
-      --shadow:0 4px 10px rgba(0,0,0,.1);
-      --radius:12px;
-      --gap:20px;
-      --nav-offset:96px;
-    }
-
-    html,body{margin:0;padding:0}
-    body{
-      font-family:"Merriweather","PT Serif",Georgia,"Times New Roman","STSong",serif;
-      font-weight:300;
-      color:var(--text);
-      line-height:1.6;
-      background:#fff;
-    }
-
-    h1,h2,h3,h4,h5,h6{
-      color:#2E2E2E;
-      line-height:1.15;
-      font-family:'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
-      text-rendering:geometricPrecision;
-      margin:0 0 .5em 0;
-    }
-    h1{font-size:3rem;letter-spacing:-.5px}
-    h2{margin-top:2em}
-
-    a{color:#463F5C;text-decoration:underline}
-    a:focus-visible{
-      outline:2px solid var(--accent);
-      outline-offset:3px;
-    }
-
-    .inner-page{width:87%;max-width:1025px;margin:auto}
-    h2[id]{scroll-margin-top:calc(var(--nav-offset) + 16px)}
+    .highlight-row { display: flex; align-items: stretch; gap: 24px; }
+    .highlight-gif-container, .highlight-internship-media { flex: 1 1 0; display: flex; align-items: stretch; }
+    .gif-wrapper { max-width: 100%; overflow: hidden; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+    .highlight-gif, .highlight-image { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* =========================
-       Top Nav (Table of contents)
+       Section Kicker
        ========================= */
-    #table-of-contents{
-      position:sticky;top:0;left:0;right:0;z-index:1000;
-      min-height:60px;
-      padding:10px 16px;
-      background:#fff;display:flex;align-items:center;justify-content:center;gap:25px;
-      box-shadow:0 2px 5px rgba(0,0,0,.1);
-      font-size:1.1rem;
-    }
-    #table-of-contents a{
-      text-decoration:none;font-weight:700;color:#1e4f81;padding:10px 15px;border-radius:8px;transition:.3s;
-    }
-    #table-of-contents a:hover{background:#1e4f81;color:#fff;transform:translateY(-3px);box-shadow:0 5px 15px rgba(30,79,129,.3)}
-
-    .social-btn,
-    .resource-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      border-radius:999px;
-      font-weight:700;
-      text-decoration:none;
-      transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
-    }
+    .section-kicker { margin: 0 0 18px; text-align: center; font-weight: 700; font-size: 20px; }
 
     /* =========================
-       Header
+       News
        ========================= */
-    header{padding:40px 0 20px 0}
-    .header-flex{display:flex;align-items:center;justify-content:center;gap:32px;max-width:1200px;margin:0 auto}
-    .header-left{flex:0 0 180px;display:flex;justify-content:center;align-items:center;padding-left:100px}
-    .avatar{width:160px;height:160px;object-fit:cover;border-radius:50%;border:3px solid #fff;display:block}
-    .header-center{flex:1 1 auto;text-align:center;padding:0 32px}
-    .header-center h1{font-size:3em;margin:0 0 10px 0;font-weight:700}
-    .social-links{display:flex;justify-content:center;align-items:center;flex-wrap:nowrap;gap:10px;margin-top:18px}
-    .social-btn{
-      min-width:122px;
-      padding:10px 14px;
-      font-size:14px;
-      color:var(--primary-deep);
-      background:linear-gradient(135deg,#ffffff 0%, var(--primary-soft) 100%);
-      border:1px solid rgba(64,118,172,.22);
-      box-shadow:0 12px 24px rgba(64,118,172,.12);
+    .news-section { margin: 0 auto 30px; }
+    .news-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+    .news-title { margin: 0; color: var(--primary); font-size: 1.35rem; }
+    .news-subtitle { margin: 0; color: var(--muted); font-size: .95rem; }
+    .news-list { display: flex; flex-direction: column; gap: 12px; }
+    .news-archive { margin-top: 12px; }
+    .news-archive details {
+      padding: 14px 18px;
+      background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+      border: 1px solid rgba(64,118,172,.16);
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(20,44,77,.06);
     }
-    .social-btn i{
-      font-size:16px;
-      width:16px;
-      text-align:center;
-      transition:transform .25s ease;
+    .news-archive summary {
+      display: inline-flex; align-items: center; gap: 10px;
+      cursor: pointer; font-weight: 700; color: var(--primary-deep); list-style: none;
     }
-    .social-btn:hover{
-      color:#fff;
-      background:linear-gradient(135deg,var(--primary) 0%, var(--primary-deep) 100%);
-      border-color:transparent;
-      transform:translateY(-3px);
-      box-shadow:0 18px 34px rgba(30,79,129,.28);
+    .news-archive summary::before {
+      content: "+";
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 999px;
+      background: rgba(64,118,172,.12); font-size: 16px; line-height: 1;
     }
-    .social-btn:hover i{transform:scale(1.12)}
-
-    .resource-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:14px;
+    .news-archive details[open] summary::before { content: "-"; }
+    .news-archive summary::-webkit-details-marker { display: none; }
+    .news-archive summary .summary-open { display: none; }
+    .news-archive details[open] summary .summary-closed { display: none; }
+    .news-archive details[open] summary .summary-open { display: inline; }
+    .news-archive-list { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
+    .news-item {
+      display: grid; grid-template-columns: 110px 1fr; gap: 16px;
+      padding: 16px 18px;
+      background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+      border: 1px solid rgba(64,118,172,.18); border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(20,44,77,.08);
     }
-    .resource-btn{
-      padding:8px 14px;
-      font-size:14px;
-      color:var(--primary-deep);
-      background:#fff;
-      border:1px solid rgba(64,118,172,.22);
-      box-shadow:0 6px 16px rgba(20,44,77,.08);
-    }
-    .resource-btn:hover{
-      color:#1c3550;
-      background:linear-gradient(135deg,#fff8ed 0%, #ffe1b3 100%);
-      border-color:rgba(243,177,93,.5);
-      transform:translateY(-2px);
-      box-shadow:0 10px 22px rgba(163,101,20,.18);
-    }
-
-    .publication-btn{
-      padding:4px 10px;
-      font-size:12px;
-      margin-left:8px;
-      box-shadow:0 4px 10px rgba(20,44,77,.07);
-    }
-    .publication-list{
-      list-style:none;
-      padding:0;
-      margin:16px 0 0;
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
-    .publication-item{
-      padding:18px 20px;
-      background:#fbfbfc;
-      border:1px solid rgba(64,118,172,.14);
-      border-radius:14px;
-      box-shadow:0 8px 20px rgba(20,44,77,.06);
-      transition:transform .25s ease, box-shadow .25s ease;
-    }
-    .publication-item:hover{
-      transform:scale(1.02);
-      box-shadow:0 14px 28px rgba(20,44,77,.1);
-    }
-    .publication-title{
-      margin:0 0 8px;
-      font-size:1.08rem;
-      color:#1c3550;
-    }
-    .publication-authors{
-      margin:0 0 10px;
-    }
-    .publication-meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      align-items:center;
-      margin-bottom:10px;
-    }
-    .publication-badge{
-      display:inline-flex;
-      align-items:center;
-      padding:4px 10px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:.02em;
-      background:rgba(64,118,172,.1);
-      color:var(--primary-deep);
-    }
-    .publication-badge.role{
-      background:rgba(243,177,93,.2);
-      color:#7a4b09;
-    }
-    .publication-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      align-items:center;
-    }
-    .publication-actions details{
-      width:100%;
-      margin-top:8px;
-    }
-    .publication-actions summary{
-      cursor:pointer;
-      font-weight:700;
-      color:var(--primary-deep);
-    }
-    .award-groups{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:18px;
-      margin-top:16px;
-    }
-    .award-group{
-      padding:18px 20px;
-      background:#fbfbfc;
-      border:1px solid rgba(64,118,172,.14);
-      border-radius:14px;
-      box-shadow:0 8px 20px rgba(20,44,77,.06);
-      transition:transform .25s ease, box-shadow .25s ease;
-    }
-    .award-group:hover{
-      transform:scale(1.02);
-      box-shadow:0 14px 28px rgba(20,44,77,.1);
-    }
-    .award-group h3{
-      margin:0 0 12px;
-      color:#1c3550;
-      font-size:1.05rem;
-    }
-    .award-group ul{
-      margin:0;
-      padding-left:20px;
-    }
-    .award-group li{
-      margin:.55em 0;
-    }
+    .news-date { font-weight: 700; color: var(--primary-deep); letter-spacing: .03em; white-space: nowrap; }
+    .news-content p { margin: 0; }
+    .news-content strong { color: #1c3550; }
 
     /* =========================
-       Pretty HR
+       Education
        ========================= */
-    .custom-hr{border:none;height:1.5px;background:linear-gradient(to right,var(--primary),#ccc,var(--primary));margin:40px auto;width:95%;position:relative}
-    .custom-hr::before,.custom-hr::after{content:"◆";position:absolute;top:-10px;font-size:18px;color:var(--primary)}
-    .custom-hr::before{left:-20px}.custom-hr::after{right:-20px}
+    .education { display: flex; flex-direction: column; gap: var(--gap); max-width: 1200px; margin: 0 auto; }
+    .education-item { padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); transition: transform .3s; background: var(--card); }
+    .education-item:hover { transform: scale(1.03); }
+    .edu-header h3 { margin: 0; padding: 10px 0; font-size: 20px; text-align: center; color: #fff; border-radius: 8px; }
+    .edu-content { display: flex; align-items: center; gap: 20px; }
+    .education-text { flex: 1; }
+    .education-text p, .education-text ul { margin: .4em 0; }
+    .education-text ul { list-style: none; padding: 0; }
+    .school-logo-box { flex: 0 0 120px; height: 120px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .school-logo { max-width: 100%; max-height: 100%; display: block; object-fit: contain; border: none; border-radius: 0; background: none; box-shadow: none; }
+    .stanford { border-left: 5px solid #8c1515; }
+    .stanford .edu-header h3 { background: #8c1515; }
+    .nthu { border-left: 5px solid #874a8b; }
+    .nthu .edu-header h3 { background: #874a8b; }
+    .degree { font-weight: 700; font-size: 18px; margin: .4em 0; }
 
     /* =========================
-       Highlight Row (hero GIFs)
+       Work Experience & Projects
        ========================= */
-    .highlight-row{display:flex;align-items:stretch;gap:24px}
-    .highlight-gif-container,.highlight-internship-media{flex:1 1 0;display:flex;align-items:stretch}
-    .gif-wrapper{max-width:100%;overflow:hidden;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
-    .highlight-gif,.highlight-image{width:100%;height:100%;object-fit:cover;display:block}
+    .internships, .projects { display: flex; flex-direction: column; gap: var(--gap); margin-top: 20px; }
+    .internship-item, .project-item {
+      display: flex; align-items: center;
+      background: #f9f9f9; padding: 15px; border-radius: 8px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,.1); transition: transform .3s;
+    }
+    .internship-item:hover, .project-item:hover { transform: scale(1.03); }
 
-    /* =========================
-       Sections: Education, Internships, Projects
-       ========================= */
-    .title{color:var(--primary)}
-    .section-kicker{
-      margin:0 0 18px;
-      text-align:center;
-      font-weight:700;
-      font-size:20px;
+    .featured-research {
+      display: flex; gap: 24px; align-items: stretch;
+      padding: 24px; margin-top: 20px; border-radius: 18px;
+      background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 45%, #fffaf1 100%);
+      border: 1px solid rgba(64,118,172,.18);
+      box-shadow: 0 18px 42px rgba(30,79,129,.12);
+      transition: transform .25s ease, box-shadow .25s ease;
     }
-    .section-intro{
-      margin:8px 0 18px;
-      color:var(--muted);
+    .featured-research:hover { transform: scale(1.02); box-shadow: 0 24px 50px rgba(30,79,129,.18); }
+    .featured-research-media { flex: 1 1 280px; display: flex; align-items: center; justify-content: center; }
+    .featured-research-image { width: 100%; max-width: 320px; border-radius: 14px; box-shadow: 0 12px 28px rgba(20,44,77,.18); display: block; }
+    .featured-research-body { flex: 2 1 0; min-width: 0; }
+    .featured-label {
+      display: inline-block; margin-bottom: 10px; padding: 6px 12px; border-radius: 999px;
+      background: rgba(64,118,172,.12); color: var(--primary-deep);
+      font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
     }
-    .news-section{
-      margin:0 auto 30px;
-    }
-    .news-header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:14px;
-    }
-    .news-title{
-      margin:0;
-      color:var(--primary);
-      font-size:1.35rem;
-    }
-    .news-subtitle{
-      margin:0;
-      color:var(--muted);
-      font-size:.95rem;
-    }
-    .news-list{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
-    .news-archive{
-      margin-top:12px;
-    }
-    .news-archive details{
-      padding:14px 18px;
-      background:linear-gradient(135deg,#f7f9fc 0%, #ffffff 100%);
-      border:1px solid rgba(64,118,172,.16);
-      border-radius:14px;
-      box-shadow:0 10px 24px rgba(20,44,77,.06);
-    }
-    .news-archive summary{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      cursor:pointer;
-      font-weight:700;
-      color:var(--primary-deep);
-      list-style:none;
-    }
-    .news-archive summary::before{
-      content:"+";
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:22px;
-      height:22px;
-      border-radius:999px;
-      background:rgba(64,118,172,.12);
-      font-size:16px;
-      line-height:1;
-    }
-    .news-archive details[open] summary::before{
-      content:"-";
-    }
-    .news-archive summary::-webkit-details-marker{
-      display:none;
-    }
-    .news-archive summary .summary-open{
-      display:none;
-    }
-    .news-archive details[open] summary .summary-closed{
-      display:none;
-    }
-    .news-archive details[open] summary .summary-open{
-      display:inline;
-    }
-    .news-archive-list{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      margin-top:14px;
-    }
-    .news-item{
-      display:grid;
-      grid-template-columns:110px 1fr;
-      gap:16px;
-      padding:16px 18px;
-      background:linear-gradient(135deg,#f8fbff 0%, #ffffff 100%);
-      border:1px solid rgba(64,118,172,.18);
-      border-radius:14px;
-      box-shadow:0 10px 24px rgba(20,44,77,.08);
-    }
-    .news-date{
-      font-weight:700;
-      color:var(--primary-deep);
-      letter-spacing:.03em;
-      white-space:nowrap;
-    }
-    .news-content p{
-      margin:0;
-    }
-    .news-content strong{
-      color:#1c3550;
-    }
+    .featured-research .project-title { font-size: 1.75rem; margin-bottom: 10px; }
+    .featured-meta { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-bottom: 14px; color: var(--muted); font-style: italic; }
+    .featured-summary { margin: 0; }
 
-    .education{display:flex;flex-direction:column;gap:var(--gap);max-width:1200px;margin:0 auto}
-    .education-item{padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);transition:transform .3s;background:var(--card)}
-    .education-item:hover{transform:scale(1.03)}
-
-    /* EDU header band */
-    .edu-header h3{margin:0;padding:10px 0;font-size:20px;text-align:center;color:#fff;border-radius:8px}
-
-    .edu-content{display:flex;align-items:center;gap:20px}
-    .education-text{flex:1}
-    .education-text p,.education-text ul{margin:.4em 0}
-    .education-text ul{list-style:none;padding:0}
-
-    .school-logo-box{flex:0 0 120px;height:120px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-    .school-logo{max-width:100%;max-height:100%;display:block;object-fit:contain;border:none;border-radius:0;background:none;box-shadow:none}
-
-    /* School color themes */
-    .stanford{border-left:5px solid #8c1515}
-    .stanford .edu-header h3{background:#8c1515}
-    .nthu{border-left:5px solid #874a8b}
-    .nthu .edu-header h3{background:#874a8b}
-
-    .degree{font-weight:700;font-size:18px;margin:.4em 0}
-
-    /* Internships */
-    .internships,.projects{display:flex;flex-direction:column;gap:var(--gap);margin-top:20px}
-    .internship-item,.project-item{display:flex;align-items:center;background:#f9f9f9;padding:15px;border-radius:8px;box-shadow:2px 2px 10px rgba(0,0,0,.1);transition:transform .3s}
-    .internship-item:hover,.project-item:hover{transform:scale(1.03)}
-    .featured-research{
-      display:flex;
-      gap:24px;
-      align-items:stretch;
-      padding:24px;
-      margin-top:20px;
-      border-radius:18px;
-      background:linear-gradient(135deg,#f8fbff 0%, #eef5ff 45%, #fffaf1 100%);
-      border:1px solid rgba(64,118,172,.18);
-      box-shadow:0 18px 42px rgba(30,79,129,.12);
-      transition:transform .25s ease, box-shadow .25s ease;
-    }
-    .featured-research:hover{
-      transform:scale(1.02);
-      box-shadow:0 24px 50px rgba(30,79,129,.18);
-    }
-    .featured-research-media{
-      flex:1 1 280px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .featured-research-image{
-      width:100%;
-      max-width:320px;
-      border-radius:14px;
-      box-shadow:0 12px 28px rgba(20,44,77,.18);
-      display:block;
-    }
-    .featured-research-body{
-      flex:2 1 0;
-      min-width:0;
-    }
-    .featured-label{
-      display:inline-block;
-      margin-bottom:10px;
-      padding:6px 12px;
-      border-radius:999px;
-      background:rgba(64,118,172,.12);
-      color:var(--primary-deep);
-      font-size:13px;
-      font-weight:700;
-      letter-spacing:.04em;
-      text-transform:uppercase;
-    }
-    .featured-research .project-title{
-      font-size:1.75rem;
-      margin-bottom:10px;
-    }
-    .featured-meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px 18px;
-      margin-bottom:14px;
-      color:var(--muted);
-      font-style:italic;
-    }
-    .featured-summary{
-      margin:0;
-    }
-    .project-item {
-      position: relative;
-      overflow: hidden;
-    }
-
+    .project-item { position: relative; overflow: hidden; }
     .project-item::before {
-      content: "";
-      position: absolute;
-      top: 27%;
-      left: 85%;
-      width: 100px;
-      height: 100px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      opacity: 0.3;
-      transform: translate(-50%, -50%);
-      z-index: 0;
+      content: ""; position: absolute; top: 27%; left: 85%;
+      width: 100px; height: 100px;
+      background-repeat: no-repeat; background-position: center; background-size: contain;
+      opacity: 0.3; transform: translate(-50%, -50%); z-index: 0;
     }
+    .project-item > * { position: relative; z-index: 1; }
+    .cmu-logo::before { background-image: url('media/logos/cmu.png'); top: 24%; left: 85.5%; width: 150px; height: 150px; }
+    .google-logo::before { background-image: url('media/logos/google.png'); width: 150px; height: 150px; }
+    .nthu-logo::before { background-image: url('media/logos/nthu_horizontal.jpg'); }
+    .ucsd-logo::before { background-image: url('media/logos/ucsd.png'); width: 150px; height: 150px; }
 
-    .project-item > * {
-      position: relative;
-      z-index: 1;
-    }
+    .internship-media, .project-media { flex: 1; text-align: center; }
+    .internship-image { width: 100%; max-width: 200px; border-radius: 1px; }
+    .project-image { width: 100%; max-width: 250px; border-radius: 5px; }
+    .internship-details { flex: 3; padding-left: 20px; }
+    .project-details { flex: 2; padding-left: 20px; }
+    .company-name, .project-title { color: #001F3F; margin: 0; }
+    .internship-title, .internship-date, .project-duration { font-style: italic; color: var(--muted); }
+    .project-location { font-weight: 700; color: #0078D4; margin-bottom: 5px; }
+    .gif-container { margin-top: 15px; text-align: center; }
+    .internship-gif { width: 100%; height: auto; display: block; }
 
-    /* Individual project logos */
-    .cmu-logo::before {
-      background-image: url('media/logos/cmu.png');
-      top: 24%;
-      left: 85.5%;
-      width: 150px;
-      height: 150px;
+    /* =========================
+       Publications
+       ========================= */
+    .publication-btn { padding: 4px 10px; font-size: 12px; margin-left: 8px; box-shadow: 0 4px 10px rgba(20,44,77,.07); }
+    .publication-list { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; gap: 18px; }
+    .publication-item {
+      padding: 18px 20px; background: #fbfbfc;
+      border: 1px solid rgba(64,118,172,.14); border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(20,44,77,.06);
+      transition: transform .25s ease, box-shadow .25s ease;
     }
-    .google-logo::before {
-      background-image: url('media/logos/google.png');
-      width: 150px;
-      height: 150px;
+    .publication-item:hover { transform: scale(1.02); box-shadow: 0 14px 28px rgba(20,44,77,.1); }
+    .publication-title { margin: 0 0 8px; font-size: 1.08rem; color: #1c3550; }
+    .publication-authors { margin: 0 0 10px; }
+    .publication-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+    .publication-badge {
+      display: inline-flex; align-items: center;
+      padding: 4px 10px; border-radius: 999px;
+      font-size: 12px; font-weight: 700; letter-spacing: .02em;
+      background: rgba(64,118,172,.1); color: var(--primary-deep);
     }
-    .nthu-logo::before {
-      background-image: url('media/logos/nthu_horizontal.jpg');
-    }
-    .ucsd-logo::before {
-      background-image: url('media/logos/ucsd.png');
-      width: 150px;
-      height: 150px;
-    }
+    .publication-badge.role { background: rgba(243,177,93,.2); color: #7a4b09; }
+    .publication-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .publication-actions details { width: 100%; margin-top: 8px; }
+    .publication-actions summary { cursor: pointer; font-weight: 700; color: var(--primary-deep); }
 
-    .internship-media,.project-media{flex:1;text-align:center}
-    .internship-image{width:100%;max-width:200px;border-radius:1px}
-    .project-image{width:100%;max-width:250px;border-radius:5px}
-    .internship-details{flex:3;padding-left:20px}
-    .project-details{flex:2;padding-left:20px}
-    .company-name,.project-title{color:#001F3F;margin:0}
-    .internship-title,.internship-date,.project-duration{font-style:italic;color:var(--muted)}
-    .project-location{font-weight:700;color:#0078D4;margin-bottom:5px}
-    .plain-list{margin:.5em 0 0;padding-left:20px}
-    .plain-list li{margin:.3em 0}
+    /* =========================
+       Awards
+       ========================= */
+    .award-groups { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin-top: 16px; }
+    .award-group {
+      padding: 18px 20px; background: #fbfbfc;
+      border: 1px solid rgba(64,118,172,.14); border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(20,44,77,.06);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .award-group:hover { transform: scale(1.02); box-shadow: 0 14px 28px rgba(20,44,77,.1); }
+    .award-group h3 { margin: 0 0 12px; color: #1c3550; font-size: 1.05rem; }
+    .award-group ul { margin: 0; padding-left: 20px; }
+    .award-group li { margin: .55em 0; }
 
-    .gif-container{margin-top:15px;text-align:center}
-    .internship-gif{width:100%;height:auto;display:block}
-
-    /* Footer */
-    footer{
-      background:linear-gradient(135deg,var(--primary-deep) 0%, var(--primary) 100%);
-      padding:34px 0 24px;
-      text-align:center;
-      font-size:13px;
-      color:#fff;
-      margin-top:40px;
-    }
-    .footer-inner{
-      width:87%;
-      max-width:1025px;
-      margin:0 auto;
-    }
-    .footer-title{
-      margin:0;
-      font-size:1.25rem;
-      color:#fff;
-    }
-    .footer-copy{
-      margin:8px auto 0;
-      max-width:680px;
-      color:rgba(255,255,255,.86);
-    }
-    .footer-social-links{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:18px;
-    }
-    .footer-social-links .social-btn{
-      color:#fff;
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.2);
-      box-shadow:0 10px 24px rgba(8,27,48,.18);
-    }
-    .footer-social-links .social-btn:hover{
-      color:var(--primary-deep);
-      background:linear-gradient(135deg,#fff8ed 0%, #ffffff 100%);
-      border-color:transparent;
-      box-shadow:0 16px 30px rgba(8,27,48,.26);
-    }
-    .footer-note{
-      margin:18px 0 16px;
-      color:rgba(255,255,255,.75);
-    }
-
-    /* Responsive */
-    @media (max-width: 800px){
-      :root{--nav-offset:148px}
-      .header-flex{flex-direction:column;align-items:center;padding:12px 0}
-      .header-left{padding-left:0}
-      .school-logo-box{flex-basis:100px;height:100px}
-      .highlight-row{flex-direction:column}
-      .news-header{flex-direction:column;align-items:flex-start}
-      .news-item{grid-template-columns:1fr;gap:8px}
-      .featured-research{flex-direction:column;padding:20px}
-      .featured-research-image{max-width:100%}
-      .project-item,.internship-item{flex-direction:column;align-items:flex-start}
-      .publication-item{padding:16px}
-      .award-groups{grid-template-columns:1fr}
-      .internship-details,.project-details{padding-left:0;margin-top:10px}
-      .education-text{text-align:center}
-      .edu-content{flex-direction:column}
-      #table-of-contents{
-        flex-wrap:wrap;
-        gap:12px;
-      }
-      .social-links{flex-wrap:wrap}
-      .social-btn{min-width:0;width:calc(50% - 7px)}
-      .resource-links{gap:8px}
-    }
-
-    @media (max-width: 560px){
-      .social-btn{width:100%}
-      .footer-social-links .social-btn{width:100%}
+    /* =========================
+       Responsive (page-specific)
+       ========================= */
+    @media (max-width: 800px) {
+      .school-logo-box { flex-basis: 100px; height: 100px; }
+      .highlight-row { flex-direction: column; }
+      .news-header { flex-direction: column; align-items: flex-start; }
+      .news-item { grid-template-columns: 1fr; gap: 8px; }
+      .featured-research { flex-direction: column; padding: 20px; }
+      .featured-research-image { max-width: 100%; }
+      .project-item, .internship-item { flex-direction: column; align-items: flex-start; }
+      .publication-item { padding: 16px; }
+      .award-groups { grid-template-columns: 1fr; }
+      .internship-details, .project-details { padding-left: 0; margin-top: 10px; }
+      .education-text { text-align: center; }
+      .edu-content { flex-direction: column; }
+      .resource-links { gap: 8px; }
     }
   </style>
 </head>
@@ -713,9 +312,6 @@
 
       <p class="section-kicker">🌟 Highlight 🌟</p>
 
-      <!-- <p>
-        I work at the intersection of robotics, computer vision, and embodied intelligence. Across research, internships, and engineering projects, I build perception-driven systems that connect strong visual models to reliable robot behavior in the real world.
-      </p> -->
       <p>
         My recent work spans vision-based navigation, sim-to-real learning, and 3D surface reconstruction. Before starting my M.S. at Stanford, I also conducted remote research with
         <a href="https://www.weimingzhi.com/home" target="_blank" rel="noopener noreferrer">Prof. Weiming Zhi</a> and <a href="https://tyz1030.github.io/#about" target="_blank" rel="noopener noreferrer">Dr. Tianyi Zhang</a> at <a href="https://droplab.ri.cmu.edu/" target="_blank" rel="noopener noreferrer">the DROP Lab</a>, Carnegie Mellon University.
@@ -855,7 +451,6 @@
 
       <!-- Research & Projects -->
       <h2 id="research-and-project" class="title">Research &amp; Projects</h2>
-      <!-- <p class="section-intro">My current flagship research project in 3D vision, robotics, and sim-to-real learning.</p> -->
       <article class="featured-research">
         <div class="featured-research-media">
           <img src="media/research/franka_side.gif" alt="FINS robotic surface-following experiment" class="featured-research-image" loading="lazy" />
@@ -883,9 +478,7 @@
         </div>
       </article>
 
-      <!-- Projects -->
-      <!-- <h2 class="title">Selected Projects</h2>
-      <p class="section-intro">Additional projects spanning robotics, embedded systems, and applied computer vision.</p> -->
+      <h3 class="title" style="margin-top:2em">Selected Projects</h3>
       <section class="projects">
         <article class="project-item google-logo">
           <div class="project-media"><img src="media/projects/smart_fridge.jpg" alt="Smart Fridge prototype" class="project-image" loading="lazy" /></div>
@@ -1096,7 +689,6 @@ https://doi.org/10.1007/978-981-97-4806-8_17
           <span>Instagram</span>
         </a>
       </div>
-      <p class="footer-note"></p>
     </div>
     <script id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac'></script>
   </footer>
