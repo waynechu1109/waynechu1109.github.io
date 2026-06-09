@@ -1,0 +1,53 @@
+  <style>
+    /* =========================
+       Course Projects
+       ========================= */
+    .course-projects { display: flex; flex-direction: column; gap: 24px; margin-top: 20px; }
+    .project-item {
+      display: flex; align-items: flex-start; gap: 24px;
+      background: #f9f9f9; padding: 20px; border-radius: 16px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,.1); transition: transform .3s;
+    }
+    .project-item:hover { transform: scale(1.02); }
+    .project-media { flex: 0 0 340px; width: 340px; align-self: center; }
+    .media-frame {
+      width: 100%; overflow: hidden;
+      border: none; border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(20,44,77,.12); background: #fff;
+    }
+    .media-frame.square { aspect-ratio: 1 / 1; }
+    .media-frame.landscape { aspect-ratio: 4 / 3; }
+    .media-frame.tall { aspect-ratio: 5 / 8; }
+    .media-frame.wide { aspect-ratio: 16 / 9; }
+    .project-media img,
+    .project-media iframe {
+      width: 100%; height: 100%; display: block;
+      margin: 0 auto; border: none; background: #fff;
+    }
+    .project-media img { object-fit: contain; }
+    .media-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 22px; box-sizing: border-box; color: #fff;
+      background:
+        radial-gradient(circle at 68% 28%, rgba(255,232,170,.95) 0 12%, rgba(255,210,120,.45) 12%, rgba(255,210,120,0) 30%),
+        radial-gradient(circle at 50% 78%, rgba(74,130,187,.55) 0 20%, rgba(74,130,187,0) 48%),
+        linear-gradient(180deg, #08172c 0%, #173965 52%, #7ea2cb 100%);
+    }
+    .media-placeholder-title { margin: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: .03em; }
+    .media-placeholder-subtitle { margin: .3em 0 0; font-size: .95rem; opacity: .9; }
+    .project-details { flex: 1 1 0; min-width: 0; }
+    .project-title { color: #001F3F; margin: 0; }
+    .project-meta { margin: 0 0 10px; font-style: italic; color: var(--muted); }
+    .project-course { color: #0078D4; font-weight: 700; }
+    .project-summary { margin: 0 0 12px; }
+    .course-note { margin-top: 10px; }
+
+    /* =========================
+       Responsive (page-specific)
+       ========================= */
+    @media (max-width: 900px) {
+      .project-item { flex-direction: column; }
+      .project-media { flex-basis: auto; width: 100%; }
+    }
+  </style>

@@ -1,0 +1,9 @@
+title: Wei-Teng (Wayne) Chu
+url: https://waynechu1109.github.io
+baseurl: ""
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - "*.sh"
+  - _site
+  - .jekyll-cache

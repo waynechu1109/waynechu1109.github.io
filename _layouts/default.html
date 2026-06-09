@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ page.og_url | default: 'https://waynechu1109.github.io/' }}" />
+  <meta property="og:title" content="{{ page.og_title | default: page.title }}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:image" content="{{ page.og_image | default: 'https://waynechu1109.github.io/media/profile/waynechu.jpg' }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="css/style.css" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-128.png" sizes="128x128">
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-196x196.png" sizes="196x196">
+
+  {% if page.page_id == 'index' %}{% include styles_index.html %}
+  {% elsif page.page_id == 'course_projects' %}{% include styles_course_projects.html %}
+  {% elsif page.page_id == 'aviation' %}{% include styles_aviation.html %}
+  {% endif %}
+</head>
+<body>
+  <nav id="table-of-contents" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="index.html#education">Education</a>
+    <a href="index.html#internship-experience">Work Experience</a>
+    <a href="index.html#research-and-project">Research &amp; Projects</a>
+    <a href="index.html#publication">Publications</a>
+    <a href="index.html#selected-awards">Awards</a>
+    <a href="course_projects.html">Course Projects</a>
+    <a href="aviation_photography.html">Aviation Photography</a>
+  </nav>
+
+  {{ content }}
+
+  <footer id="post-footer">
+    <div class="footer-inner">
+      <h2 class="footer-title">Let's Connect</h2>
+      <p class="footer-copy">You can also find me on a few more personal social platforms below.</p>
+      <div class="footer-social-links" aria-label="Personal social links">
+        <a href="https://www.facebook.com/waynechu.aviation/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook profile">
+          <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://www.instagram.com/waynechu_aviation/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram profile">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span>Instagram</span>
+        </a>
+      </div>
+    </div>
+    <script id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac"></script>
+    {% if page.page_id == 'aviation' %}{% include lightbox_script.html %}{% endif %}
+  </footer>
+</body>
+</html>

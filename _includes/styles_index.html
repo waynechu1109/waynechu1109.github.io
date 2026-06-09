@@ -1,0 +1,192 @@
+  <style>
+    /* =========================
+       Highlight Row
+       ========================= */
+    .highlight-row { display: flex; align-items: stretch; gap: 24px; }
+    .highlight-gif-container, .highlight-internship-media { flex: 1 1 0; display: flex; align-items: stretch; }
+    .gif-wrapper { max-width: 100%; overflow: hidden; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+    .highlight-gif, .highlight-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* =========================
+       Section Kicker
+       ========================= */
+    .section-kicker { margin: 0 0 18px; text-align: center; font-weight: 700; font-size: 20px; }
+
+    /* =========================
+       News
+       ========================= */
+    .news-section { margin: 0 auto 30px; }
+    .news-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+    .news-title { margin: 0; color: var(--primary); font-size: 1.35rem; }
+    .news-subtitle { margin: 0; color: var(--muted); font-size: .95rem; }
+    .news-list { display: flex; flex-direction: column; gap: 12px; }
+    .news-archive { margin-top: 12px; }
+    .news-archive details {
+      padding: 14px 18px;
+      background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+      border: 1px solid rgba(64,118,172,.16);
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(20,44,77,.06);
+    }
+    .news-archive summary {
+      display: inline-flex; align-items: center; gap: 10px;
+      cursor: pointer; font-weight: 700; color: var(--primary-deep); list-style: none;
+    }
+    .news-archive summary::before {
+      content: "+";
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 999px;
+      background: rgba(64,118,172,.12); font-size: 16px; line-height: 1;
+    }
+    .news-archive details[open] summary::before { content: "-"; }
+    .news-archive summary::-webkit-details-marker { display: none; }
+    .news-archive summary .summary-open { display: none; }
+    .news-archive details[open] summary .summary-closed { display: none; }
+    .news-archive details[open] summary .summary-open { display: inline; }
+    .news-archive-list { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
+    .news-item {
+      display: grid; grid-template-columns: 110px 1fr; gap: 16px;
+      padding: 16px 18px;
+      background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+      border: 1px solid rgba(64,118,172,.18); border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(20,44,77,.08);
+    }
+    .news-date { font-weight: 700; color: var(--primary-deep); letter-spacing: .03em; white-space: nowrap; }
+    .news-content p { margin: 0; }
+    .news-content strong { color: #1c3550; }
+
+    /* =========================
+       Education
+       ========================= */
+    .education { display: flex; flex-direction: column; gap: var(--gap); max-width: 1200px; margin: 0 auto; }
+    .education-item { padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); transition: transform .3s; background: var(--card); }
+    .education-item:hover { transform: scale(1.03); }
+    .edu-header h3 { margin: 0; padding: 10px 0; font-size: 20px; text-align: center; color: #fff; border-radius: 8px; }
+    .edu-content { display: flex; align-items: center; gap: 20px; }
+    .education-text { flex: 1; }
+    .education-text p, .education-text ul { margin: .4em 0; }
+    .education-text ul { list-style: none; padding: 0; }
+    .school-logo-box { flex: 0 0 120px; height: 120px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .school-logo { max-width: 100%; max-height: 100%; display: block; object-fit: contain; border: none; border-radius: 0; background: none; box-shadow: none; }
+    .stanford { border-left: 5px solid #8c1515; }
+    .stanford .edu-header h3 { background: #8c1515; }
+    .nthu { border-left: 5px solid #874a8b; }
+    .nthu .edu-header h3 { background: #874a8b; }
+    .degree { font-weight: 700; font-size: 18px; margin: .4em 0; }
+
+    /* =========================
+       Work Experience & Projects
+       ========================= */
+    .internships, .projects { display: flex; flex-direction: column; gap: var(--gap); margin-top: 20px; }
+    .internship-item, .project-item {
+      display: flex; align-items: center;
+      background: #f9f9f9; padding: 15px; border-radius: 8px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,.1); transition: transform .3s;
+    }
+    .internship-item:hover, .project-item:hover { transform: scale(1.03); }
+
+    .featured-research {
+      display: flex; gap: 24px; align-items: stretch;
+      padding: 24px; margin-top: 20px; border-radius: 18px;
+      background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 45%, #fffaf1 100%);
+      border: 1px solid rgba(64,118,172,.18);
+      box-shadow: 0 18px 42px rgba(30,79,129,.12);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .featured-research:hover { transform: scale(1.02); box-shadow: 0 24px 50px rgba(30,79,129,.18); }
+    .featured-research-media { flex: 1 1 280px; display: flex; align-items: center; justify-content: center; }
+    .featured-research-image { width: 100%; max-width: 320px; border-radius: 14px; box-shadow: 0 12px 28px rgba(20,44,77,.18); display: block; }
+    .featured-research-body { flex: 2 1 0; min-width: 0; }
+    .featured-label {
+      display: inline-block; margin-bottom: 10px; padding: 6px 12px; border-radius: 999px;
+      background: rgba(64,118,172,.12); color: var(--primary-deep);
+      font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    }
+    .featured-research .project-title { font-size: 1.75rem; margin-bottom: 10px; }
+    .featured-meta { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-bottom: 14px; color: var(--muted); font-style: italic; }
+    .featured-summary { margin: 0; }
+
+    .project-item { position: relative; overflow: hidden; }
+    .project-item::before {
+      content: ""; position: absolute; top: 27%; left: 85%;
+      width: 100px; height: 100px;
+      background-repeat: no-repeat; background-position: center; background-size: contain;
+      opacity: 0.3; transform: translate(-50%, -50%); z-index: 0;
+    }
+    .project-item > * { position: relative; z-index: 1; }
+    .cmu-logo::before { background-image: url('media/logos/cmu.png'); top: 24%; left: 85.5%; width: 150px; height: 150px; }
+    .google-logo::before { background-image: url('media/logos/google.png'); width: 150px; height: 150px; }
+    .nthu-logo::before { background-image: url('media/logos/nthu_horizontal.jpg'); }
+    .ucsd-logo::before { background-image: url('media/logos/ucsd.png'); width: 150px; height: 150px; }
+
+    .internship-media, .project-media { flex: 1; text-align: center; }
+    .internship-image { width: 100%; max-width: 200px; border-radius: 1px; }
+    .project-image { width: 100%; max-width: 250px; border-radius: 5px; }
+    .internship-details { flex: 3; padding-left: 20px; }
+    .project-details { flex: 2; padding-left: 20px; }
+    .company-name, .project-title { color: #001F3F; margin: 0; }
+    .internship-title, .internship-date, .project-duration { font-style: italic; color: var(--muted); }
+    .project-location { font-weight: 700; color: #0078D4; margin-bottom: 5px; }
+    .gif-container { margin-top: 15px; text-align: center; }
+    .internship-gif { width: 100%; height: auto; display: block; }
+
+    /* =========================
+       Publications
+       ========================= */
+    .publication-btn { padding: 4px 10px; font-size: 12px; margin-left: 8px; box-shadow: 0 4px 10px rgba(20,44,77,.07); }
+    .publication-list { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; gap: 18px; }
+    .publication-item {
+      padding: 18px 20px; background: #fbfbfc;
+      border: 1px solid rgba(64,118,172,.14); border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(20,44,77,.06);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .publication-item:hover { transform: scale(1.02); box-shadow: 0 14px 28px rgba(20,44,77,.1); }
+    .publication-title { margin: 0 0 8px; font-size: 1.08rem; color: #1c3550; }
+    .publication-authors { margin: 0 0 10px; }
+    .publication-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+    .publication-badge {
+      display: inline-flex; align-items: center;
+      padding: 4px 10px; border-radius: 999px;
+      font-size: 12px; font-weight: 700; letter-spacing: .02em;
+      background: rgba(64,118,172,.1); color: var(--primary-deep);
+    }
+    .publication-badge.role { background: rgba(243,177,93,.2); color: #7a4b09; }
+    .publication-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .publication-actions details { width: 100%; margin-top: 8px; }
+    .publication-actions summary { cursor: pointer; font-weight: 700; color: var(--primary-deep); }
+
+    /* =========================
+       Awards
+       ========================= */
+    .award-groups { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin-top: 16px; }
+    .award-group {
+      padding: 18px 20px; background: #fbfbfc;
+      border: 1px solid rgba(64,118,172,.14); border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(20,44,77,.06);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .award-group:hover { transform: scale(1.02); box-shadow: 0 14px 28px rgba(20,44,77,.1); }
+    .award-group h3 { margin: 0 0 12px; color: #1c3550; font-size: 1.05rem; }
+    .award-group ul { margin: 0; padding-left: 20px; }
+    .award-group li { margin: .55em 0; }
+
+    /* =========================
+       Responsive (page-specific)
+       ========================= */
+    @media (max-width: 800px) {
+      .school-logo-box { flex-basis: 100px; height: 100px; }
+      .highlight-row { flex-direction: column; }
+      .news-header { flex-direction: column; align-items: flex-start; }
+      .news-item { grid-template-columns: 1fr; gap: 8px; }
+      .featured-research { flex-direction: column; padding: 20px; }
+      .featured-research-image { max-width: 100%; }
+      .project-item, .internship-item { flex-direction: column; align-items: flex-start; }
+      .publication-item { padding: 16px; }
+      .award-groups { grid-template-columns: 1fr; }
+      .internship-details, .project-details { padding-left: 0; margin-top: 10px; }
+      .education-text { text-align: center; }
+      .edu-content { flex-direction: column; }
+      .resource-links { gap: 8px; }
+    }
+  </style>
