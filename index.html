@@ -12,7 +12,7 @@ og_url: "https://waynechu1109.github.io/"
   <header class="inner-page">
     <div class="header-flex">
       <div class="header-left">
-        <img class="avatar" src="media/profile/waynechu.jpg" alt="Wayne Chu" />
+        <img class="avatar" src="media/profile/waynechu.jpg" alt="Wayne Chu" fetchpriority="high" />
       </div>
       <div class="header-center">
         <h1>Wei-Teng (Wayne) CHU</h1>
@@ -203,11 +203,9 @@ og_url: "https://waynechu1109.github.io/"
               <h4>Mask2Former Semantic Segmentation</h4>
               <p>I built a custom semantic segmentation pipeline for robotics and autonomous driving by merging and re-annotating Mapillary and ADE20k, converting the data to COCO format, and training Mask2Former with NVIDIA TAO Toolkit. The final model was deployed in ROS2 and delivered real-time inference at about 15 FPS on robot and vehicle platforms.</p>
               <div class="gif-container"><div class="gif-wrapper"><img src="media/demos/merged_dog_.gif" alt="Semantic segmentation demo on a quadruped robot" class="internship-gif" width="960" height="540" loading="lazy" /></div></div>
-              <p></p>
               <h4>Person Re-Identification (Re-ID)</h4>
               <p>I developed a real-time pedestrian detection and re-identification pipeline using YOLO11n, OSNet, and cosine-similarity matching. By exporting models to ONNX and TensorRT for acceleration, the system achieved about 25 FPS and was suitable for robotics and automotive deployment.</p>
               <div class="gif-container"><div class="gif-wrapper"><img src="media/demos/reid_tracker_.gif" alt="Person re-identification tracking demo" class="internship-gif" width="1348" height="779" loading="lazy" /></div></div>
-              <p></p>
               <h4>Sim2Real Quadruped Robot Terrain Traversal</h4>
               <p>I developed a sim-to-real terrain traversal pipeline for the Unitree Go2 that combined Gazebo simulation, RealSense point clouds, and elevation mapping for locomotion over uneven ground. I also integrated point-cloud processing with reinforcement learning gait policies, added VIO and forward kinematics to handle sensor interruptions, and validated the full system on the physical robot.</p>
               <div class="gif-container"><div class="gif-wrapper"><img src="media/demos/real_go2_walk_.gif" alt="Unitree Go2 terrain traversal demo" class="internship-gif" width="981" height="607" loading="lazy" /></div></div>
