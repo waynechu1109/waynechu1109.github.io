@@ -92,7 +92,16 @@
       border: 1px solid rgba(64,118,172,.18);
       box-shadow: 0 18px 42px rgba(30,79,129,.12);
       transition: transform .25s ease, box-shadow .25s ease;
+      position: relative; overflow: hidden;
     }
+    .featured-research::before {
+      content: ""; position: absolute; top: 18%; left: 20%;
+      width: 180px; height: 180px;
+      background-image: url('media/logos/cmu.png');
+      background-repeat: no-repeat; background-position: center; background-size: contain;
+      opacity: 0.3; transform: translate(-50%, -50%); z-index: 0;
+    }
+    .featured-research > * { position: relative; z-index: 1; }
     .featured-research:hover { transform: scale(1.02); box-shadow: 0 24px 50px rgba(30,79,129,.18); }
     .featured-research-media { flex: 1 1 280px; display: flex; align-items: center; justify-content: center; }
     .featured-research-image { width: 100%; max-width: 320px; height: auto; border-radius: 14px; box-shadow: 0 12px 28px rgba(20,44,77,.18); display: block; }
