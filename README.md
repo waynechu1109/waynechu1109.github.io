@@ -52,7 +52,7 @@ jekyll serve --livereload
 ```
 .
 ├── index.html                  # Home / About page
-├── aviation_photography.html   # Aviation photography gallery
+├── aviation_gallery.html       # Aviation photography gallery
 ├── course_projects.html        # Course projects listing
 ├── _layouts/
 │   └── default.html            # Shared HTML layout (nav, footer)
