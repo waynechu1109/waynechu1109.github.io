@@ -49,6 +49,44 @@ og_url: "https://waynechu1109.github.io/course_projects.html"
       <section class="course-projects">
         <article class="project-item">
           <div class="project-media">
+            <div class="media-frame" style="aspect-ratio: 1980 / 1794;">
+              <img
+                src="media/projects/cs231n_overview.png"
+                alt="Reliability-aware monocular depth supervision demo"
+                width="1980"
+                height="1794"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Reliability-Aware Monocular Depth Supervision for Sparse-View Neural Reconstruction</h3>
+            <p class="project-meta">
+              Jun. 2026 |
+              <a class="project-course" href="http://cs231n.stanford.edu/" target="_blank" rel="noopener noreferrer">CS 231N</a>,
+              Deep Learning for Computer Vision |
+              with Yashasvini Gopalan and Changju Yuan
+            </p>
+            <p class="project-summary">
+              Built a reliability-aware monocular depth supervision pipeline for sparse-view neural reconstruction in outdoor driving scenes. We used Depth Anything V2 as a dense depth prior, aligned it to metric depth, and applied depth supervision selectively using photometric masks from an RGB-only baseline.
+            </p>
+            <p class="project-summary">
+              The method was evaluated on Mip-NeRF-360 and Splatfacto across KITTISeq02, KITTISeq05, and the Bicycle scene. Results show that masked depth supervision is most effective for explicit Gaussian representations:
+            </p>
+            <ul class="plain-list">
+              <li>Splatfacto PSNR: 14.903 → <strong>15.932</strong></li>
+              <li>RMSE: 0.542 → <strong>0.100</strong></li>
+              <li>Also revealed when monocular depth priors may hurt RGB rendering quality</li>
+            </ul>
+            <div class="resource-links">
+              <a href="paper/cs231n_paper.pdf" class="resource-btn" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="slides/cs231n_poster.pdf" class="resource-btn" target="_blank" rel="noopener noreferrer">Poster</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-media">
             <div class="media-frame wide">
               <img
                 src="media/projects/dreambc_cube.gif"
