@@ -9,36 +9,7 @@ og_url: "https://waynechu1109.github.io/"
 
 
   <!-- Header / Hero -->
-  <header class="inner-page">
-    <div class="header-flex">
-      <div class="header-left">
-        <img class="avatar" src="media/profile/waynechu.jpg" alt="Wayne Chu" fetchpriority="high" />
-      </div>
-      <div class="header-center">
-        <h1>Wei-Teng (Wayne) CHU</h1>
-        <p><strong><a href="https://ee.stanford.edu" target="_blank" rel="noopener noreferrer">Master of Science in Electrical Engineering (MSEE)</a> Student</strong></p>
-        <p><strong>Stanford University</strong></p>
-        <div class="social-links">
-          <a href="mailto:waynechu@stanford.edu" class="social-btn">
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-            <span>Email</span>
-          </a>
-          <a href="https://drive.google.com/file/d/12aR9djsKC7i13ioHceHxEgQeR7XOijMN/view" target="_blank" rel="noopener noreferrer" class="social-btn">
-            <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
-            <span>Resume</span>
-          </a>
-          <a href="https://linkedin.com/in/waynechu1109" target="_blank" rel="noopener noreferrer" class="social-btn">
-            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-            <span>LinkedIn</span>
-          </a>
-          <a href="https://github.com/waynechu1109" target="_blank" rel="noopener noreferrer" class="social-btn">
-            <i class="fa-brands fa-github" aria-hidden="true"></i>
-            <span>GitHub</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
+  {% include header.html %}
 
   <!-- Main Content -->
   <main id="pagecontainer">
@@ -109,15 +80,18 @@ og_url: "https://waynechu1109.github.io/"
       <!-- Hero media row -->
       <div class="highlight-row">
         <div class="highlight-internship-media">
-          <img src="media/projects/dtu_114_32.png" alt="Autonomous driving and mobility project visual" class="highlight-image" loading="lazy" />
+          <img src="media/projects/dtu_114_32-1360.jpg"
+               srcset="media/projects/dtu_114_32-680.jpg 680w, media/projects/dtu_114_32-1360.jpg 1360w"
+               sizes="(max-width: 700px) 90vw, 340px"
+               alt="Autonomous driving and mobility project visual" class="highlight-image" loading="lazy" />
         </div>
-        <div class="highlight-gif-container">
-          <div class="gif-wrapper">
-            <img src="media/research/sdf_buddha.gif" alt="FINS signed distance field reconstruction demo" class="highlight-gif" width="800" height="800" loading="lazy" />
+        <div class="highlight-clip-container">
+          <div class="clip-wrapper">
+            <video src="media/research/sdf_buddha.mp4" class="highlight-clip" width="800" height="800" autoplay muted loop playsinline preload="metadata" aria-label="FINS signed distance field reconstruction demo"></video>
           </div>
         </div>
         <div class="highlight-internship-media">
-          <img src="media/research/franka_side.gif" alt="Robotic arm surface-following demo" class="highlight-image" width="800" height="567" loading="lazy" />
+          <video src="media/research/franka_side.mp4" class="highlight-image" width="800" height="567" autoplay muted loop playsinline preload="metadata" aria-label="Robotic arm surface-following demo"></video>
         </div>
       </div>
 
@@ -186,13 +160,13 @@ og_url: "https://waynechu1109.github.io/"
           <div class="internship-details">
             <h3 class="company-name">Stanford Artificial Intelligence Laboratory (SAIL)</h3>
             <p class="internship-title"><strong>Graduate Researcher @ <a href="https://svl.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford Vision and Learning Lab</a></strong></p>
-            <p class="internship-date">Sep. 2025 - In Progress</p>
-            <div class="internship-description">
-              <p>Current work:</p>
-              <ul class="plain-list">
-                <li>Building a real-to-sim-to-real pipeline that generates controllable digital cousins to reduce the sim-to-real gap in robot learning.</li>
-                <li>Collecting real-world data and developing a replay workflow that transfers observed behavior back into simulation for faster iteration and policy evaluation.</li>
-              </ul>
+            <p class="internship-date">Sep. 2025 - May 2026</p>
+            <p class="internship-description">
+              I contribute to <a href="https://research.nvidia.com/labs/gear/simfoundry/" target="_blank" rel="noopener noreferrer">SimFoundry</a>, a collaboration between the Stanford Vision and Learning Lab and NVIDIA GEAR that builds digital replicas of real-world scenes from video and automatically generates diverse <em>digital cousins</em> to train and evaluate robot manipulation policies. My contributions include building the <strong>object cousins asset generation pipeline</strong> and a <strong>FoundationPose-based ground-truth pose generation pipeline</strong>, <strong>collecting reconstructed scenes</strong>, developing an <strong>interactive object-cousins hot-swapping script</strong>, and <strong>optimizing the object removal algorithm</strong> in the scene decomposition step. Policies trained on the generated variations improve real-world success rates by 17-40% on average.
+            </p>
+            <div class="resource-links">
+              <a href="https://arxiv.org/abs/2606.28276" class="resource-btn" target="_blank" rel="noopener noreferrer">arXiv</a>
+              <a href="https://research.nvidia.com/labs/gear/simfoundry/" class="resource-btn" target="_blank" rel="noopener noreferrer">Project Page</a>
             </div>
           </div>
         </article>
@@ -208,13 +182,14 @@ og_url: "https://waynechu1109.github.io/"
             <div class="internship-description">
               <h4>Mask2Former Semantic Segmentation</h4>
               <p>I built a custom semantic segmentation pipeline for robotics and autonomous driving by merging and re-annotating Mapillary and ADE20k, converting the data to COCO format, and training Mask2Former with NVIDIA TAO Toolkit. The final model was deployed in ROS2 and delivered real-time inference at about 15 FPS on robot and vehicle platforms.</p>
-              <div class="gif-container"><div class="gif-wrapper"><img src="media/demos/merged_dog_.gif" alt="Semantic segmentation demo on a quadruped robot" class="internship-gif" width="960" height="540" loading="lazy" /></div></div>
+              <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/merged_dog_.mp4" class="internship-clip" width="960" height="540" autoplay muted loop playsinline preload="metadata" aria-label="Semantic segmentation demo on a quadruped robot"></video></div></div>
               <h4>Person Re-Identification (Re-ID)</h4>
               <p>I developed a real-time pedestrian detection and re-identification pipeline using YOLO11n, OSNet, and cosine-similarity matching. By exporting models to ONNX and TensorRT for acceleration, the system achieved about 25 FPS and was suitable for robotics and automotive deployment.</p>
-              <div class="gif-container"><div class="gif-wrapper"><img src="media/demos/reid_tracker_.gif" alt="Person re-identification tracking demo" class="internship-gif" width="1348" height="779" loading="lazy" /></div></div>
+              <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/reid_tracker_.mp4" class="internship-clip" width="1348" height="779" autoplay muted loop playsinline preload="metadata" aria-label="Person re-identification tracking demo"></video></div></div>
+              
               <h4>Sim2Real Quadruped Robot Terrain Traversal</h4>
               <p>I developed a sim-to-real terrain traversal pipeline for the Unitree Go2 that combined Gazebo simulation, RealSense point clouds, and elevation mapping for locomotion over uneven ground. I also integrated point-cloud processing with reinforcement learning gait policies, added VIO and forward kinematics to handle sensor interruptions, and validated the full system on the physical robot.</p>
-              <div class="gif-container"><div class="gif-wrapper"><img src="media/demos/real_go2_walk_.gif" alt="Unitree Go2 terrain traversal demo" class="internship-gif" width="981" height="607" loading="lazy" /></div></div>
+              <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/real_go2_walk_.mp4" class="internship-clip" width="981" height="607" autoplay muted loop playsinline preload="metadata" aria-label="Unitree Go2 terrain traversal demo"></video></div></div>
             </div>
           </div>
         </article>
@@ -267,7 +242,7 @@ og_url: "https://waynechu1109.github.io/"
 
       <article class="featured-research">
         <div class="featured-research-media">
-          <img src="media/research/franka_side.gif" alt="FINS robotic surface-following experiment" class="featured-research-image" width="800" height="567" loading="lazy" />
+          <video src="media/research/franka_side.mp4" class="featured-research-image" width="800" height="567" autoplay muted loop playsinline preload="metadata" aria-label="FINS robotic surface-following experiment"></video>
         </div>
         <div class="featured-research-body">
           <p class="featured-label">Featured Research</p>
@@ -328,7 +303,7 @@ og_url: "https://waynechu1109.github.io/"
         </article>
 
         <article class="project-item ucsd-logo">
-          <div class="project-media"><img src="media/projects/MURO.gif" alt="TurtleBot4 obstacle avoidance demo" class="project-image" width="800" height="502" loading="lazy" /></div>
+          <div class="project-media"><video src="media/projects/MURO.mp4" class="project-image" width="800" height="502" autoplay muted loop playsinline preload="metadata" aria-label="TurtleBot4 obstacle avoidance demo"></video></div>
           <div class="project-details">
             <h3 class="project-title">Dodging Dynamical Obstacles Using TurtleBot4 Camera Feed</h3>
             <p class="project-duration">Jun. 2023 - Aug. 2023</p>
@@ -354,7 +329,7 @@ og_url: "https://waynechu1109.github.io/"
           <p class="publication-authors">Nadun Ranawaka†, Josiah Wong, Wei-Lin Pai, <strong>Wei-Teng Chu</strong>, Tianyuan Dai, Masoud Moghani, Hang Yin, Yunfan Jiang, Wesley Durbano, Brandon Huynh, Yu Fang, Linxi Fan, Danfei Xu, Ruohan Zhang, Li Fei-Fei, Bowen Wen, Ajay Mandlekar, Yuke Zhu</p>
           <div class="publication-meta">
             <span class="publication-badge">arXiv 2026</span>
-            <a href="media/research/SimFoundry.pdf" class="resource-btn publication-btn" target="_blank" rel="noopener noreferrer">PDF</a>
+            <a href="https://arxiv.org/pdf/2606.28276" class="resource-btn publication-btn" target="_blank" rel="noopener noreferrer">PDF</a>
             <a href="https://research.nvidia.com/labs/gear/simfoundry/" class="resource-btn publication-btn" target="_blank" rel="noopener noreferrer">Project Page</a>
           </div>
           <div class="publication-actions">

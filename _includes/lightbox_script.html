@@ -1,40 +1,95 @@
     <script>
-      const lightbox = document.getElementById("photo-lightbox");
-      const lightboxImage = lightbox.querySelector(".lightbox-image");
-      const lightboxClose = lightbox.querySelector(".lightbox-close");
-      const photoImages = document.querySelectorAll(".photo-image");
+      (function () {
+        var lightbox = document.getElementById("photo-lightbox");
+        if (!lightbox) return;
+        var lightboxImage = lightbox.querySelector(".lightbox-image");
+        var closeBtn = lightbox.querySelector(".lightbox-close");
+        var prevBtn = lightbox.querySelector(".lightbox-prev");
+        var nextBtn = lightbox.querySelector(".lightbox-next");
+        var photoImages = Array.prototype.slice.call(document.querySelectorAll(".photo-image"));
+        var current = -1;
+        var lastFocused = null;
 
-      function openLightbox(image) {
-        lightboxImage.src = image.src;
-        lightboxImage.alt = image.alt;
-        lightbox.classList.add("is-open");
-        lightbox.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      }
+        function srcFor(img) { return img.dataset.full || img.currentSrc || img.src; }
 
-      function closeLightbox() {
-        lightbox.classList.remove("is-open");
-        lightbox.setAttribute("aria-hidden", "true");
-        lightboxImage.removeAttribute("src");
-        lightboxImage.alt = "";
-        document.body.style.overflow = "";
-      }
-
-      photoImages.forEach((image) => {
-        image.addEventListener("click", () => openLightbox(image));
-      });
-
-      lightboxClose.addEventListener("click", closeLightbox);
-
-      lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
-          closeLightbox();
+        function preload(i) {
+          if (i < 0 || i >= photoImages.length) return;
+          var im = new Image();
+          im.src = srcFor(photoImages[i]);
         }
-      });
 
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
-          closeLightbox();
+        function render() {
+          var img = photoImages[current];
+          lightboxImage.src = srcFor(img);
+          lightboxImage.alt = img.alt || "";
+          preload(current + 1);
+          preload(current - 1);
         }
-      });
+
+        function openLightbox(i) {
+          current = i;
+          lastFocused = document.activeElement;
+          render();
+          lightbox.classList.add("is-open");
+          lightbox.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+          closeBtn.focus();
+        }
+
+        function closeLightbox() {
+          lightbox.classList.remove("is-open");
+          lightbox.setAttribute("aria-hidden", "true");
+          lightboxImage.removeAttribute("src");
+          lightboxImage.alt = "";
+          document.body.style.overflow = "";
+          var toFocus = photoImages[current] || lastFocused;
+          if (toFocus && toFocus.focus) toFocus.focus();
+        }
+
+        function move(delta) {
+          if (current < 0) return;
+          current = (current + delta + photoImages.length) % photoImages.length;
+          render();
+        }
+
+        photoImages.forEach(function (image, i) {
+          image.setAttribute("tabindex", "0");
+          image.setAttribute("role", "button");
+          image.addEventListener("click", function () { openLightbox(i); });
+          image.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              openLightbox(i);
+            }
+          });
+        });
+
+        closeBtn.addEventListener("click", closeLightbox);
+        prevBtn.addEventListener("click", function () { move(-1); });
+        nextBtn.addEventListener("click", function () { move(1); });
+
+        lightbox.addEventListener("click", function (event) {
+          if (event.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (!lightbox.classList.contains("is-open")) return;
+          if (event.key === "Escape") {
+            closeLightbox();
+          } else if (event.key === "ArrowRight") {
+            move(1);
+          } else if (event.key === "ArrowLeft") {
+            move(-1);
+          } else if (event.key === "Tab") {
+            var focusables = [prevBtn, closeBtn, nextBtn];
+            var idx = focusables.indexOf(document.activeElement);
+            if (idx === -1) idx = 0;
+            event.preventDefault();
+            var nextIdx = event.shiftKey
+              ? (idx - 1 + focusables.length) % focusables.length
+              : (idx + 1) % focusables.length;
+            focusables[nextIdx].focus();
+          }
+        });
+      })();
     </script>

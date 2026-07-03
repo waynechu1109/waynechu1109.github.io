@@ -19,9 +19,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+    media="print" onload="this.media='all'"
   />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" />
+  </noscript>
   <link href="css/style.css" rel="stylesheet" />
 
   <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-16x16.png" sizes="16x16">
@@ -34,23 +37,70 @@
   {% elsif page.page_id == 'course_projects' %}{% include styles_course_projects.html %}
   {% elsif page.page_id == 'aviation' %}{% include styles_aviation.html %}
   {% endif %}
+
+  {% if page.page_id == 'index' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Wei-Teng (Wayne) Chu",
+    "givenName": "Wei-Teng",
+    "familyName": "Chu",
+    "alternateName": "Wayne Chu",
+    "url": "https://waynechu1109.github.io/",
+    "image": "https://waynechu1109.github.io/media/profile/waynechu.jpg",
+    "email": "waynechu@stanford.edu",
+    "jobTitle": "M.S. Student in Electrical Engineering",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Stanford University",
+      "url": "https://www.stanford.edu/"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "National Tsing Hua University",
+      "url": "https://www.nthu.edu.tw/"
+    },
+    "knowsAbout": ["Robotics", "Computer Vision", "Sim-to-Real Learning", "3D Reconstruction", "Robot Learning"],
+    "sameAs": [
+      "https://linkedin.com/in/waynechu1109",
+      "https://github.com/waynechu1109"
+    ]
+  }
+  </script>
+  {% endif %}
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Inline SVG icon sprite (replaces the Font Awesome CDN stylesheet) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+    <symbol id="i-envelope" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+    <symbol id="i-file-lines" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM112 256l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></symbol>
+    <symbol id="i-chevron-up" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></symbol>
+    <symbol id="i-location-dot" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 512 512"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.3-23-41L73 39z"/></symbol>
+  </svg>
+
   <nav id="table-of-contents" aria-label="Primary">
-    <a href="index.html">Home</a>
+    <a href="index.html"{% if page.page_id == 'index' %} aria-current="page"{% endif %}>Home</a>
     <a href="index.html#education">Education</a>
     <a href="index.html#internship-experience">Work Experience</a>
     <a href="index.html#research-and-project">Research &amp; Projects</a>
     <a href="index.html#publication">Publications</a>
     <a href="index.html#selected-awards">Awards</a>
-    <a href="course_projects.html">Course Projects</a>
-    <a href="aviation_gallery.html">Aviation Gallery</a>
+    <a href="course_projects.html"{% if page.page_id == 'course_projects' %} aria-current="page"{% endif %}>Course Projects</a>
+    <a href="aviation_gallery.html"{% if page.page_id == 'aviation' %} aria-current="page"{% endif %}>Aviation Gallery</a>
   </nav>
 
   {{ content }}
 
   <button id="back-to-top" aria-label="Back to top" title="Back to top">
-    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+    <svg class="icon" aria-hidden="true"><use href="#i-chevron-up"/></svg>
   </button>
   <script>
     (function () {
@@ -64,17 +114,34 @@
     })();
   </script>
 
+  <script>
+    /* Click-to-load facades for third-party embeds (Google Maps, OpenProcessing) */
+    (function () {
+      document.querySelectorAll('.iframe-facade').forEach(function (el) {
+        el.addEventListener('click', function () {
+          var f = document.createElement('iframe');
+          f.src = el.dataset.facadeSrc;
+          if (el.dataset.facadeTitle) f.title = el.dataset.facadeTitle;
+          f.loading = 'lazy';
+          f.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+          f.setAttribute('allowfullscreen', '');
+          el.replaceWith(f);
+        });
+      });
+    })();
+  </script>
+
   <footer id="post-footer">
     <div class="footer-inner">
       <h2 class="footer-title">Let's Connect</h2>
       <p class="footer-copy">You can also find me on a few more personal social platforms below.</p>
       <div class="footer-social-links" aria-label="Personal social links">
         <a href="https://www.facebook.com/waynechu.aviation/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook profile">
-          <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+          <svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>
           <span>Facebook</span>
         </a>
         <a href="https://www.instagram.com/waynechu_aviation/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram profile">
-          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
           <span>Instagram</span>
         </a>
       </div>

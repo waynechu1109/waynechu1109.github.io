@@ -1,0 +1,36 @@
+  <header class="inner-page" id="main-content" tabindex="-1">
+    <div class="header-flex">
+      <div class="header-left">
+        <img class="avatar" src="media/profile/waynechu.jpg" alt="Wayne Chu" {% if page.page_id == 'index' %}fetchpriority="high"{% else %}loading="lazy"{% endif %} />
+      </div>
+      <div class="header-center">
+        {% if page.page_id == 'index' %}
+        <h1>Wei-Teng (Wayne) CHU</h1>
+        <p><strong><a href="https://ee.stanford.edu" target="_blank" rel="noopener noreferrer">Master of Science in Electrical Engineering (MSEE)</a> Student</strong></p>
+        <p><strong>Stanford University</strong></p>
+        {% else %}
+        <h1>{{ page.header_title }}</h1>
+        <p><strong>{{ page.header_subtitle }}</strong></p>
+        <p><strong>Wei-Teng (Wayne) Chu</strong></p>
+        {% endif %}
+        <div class="social-links">
+          <a href="mailto:waynechu@stanford.edu" class="social-btn">
+            <svg class="icon" aria-hidden="true"><use href="#i-envelope"/></svg>
+            <span>Email</span>
+          </a>
+          <a href="https://drive.google.com/file/d/12aR9djsKC7i13ioHceHxEgQeR7XOijMN/view" target="_blank" rel="noopener noreferrer" class="social-btn">
+            <svg class="icon" aria-hidden="true"><use href="#i-file-lines"/></svg>
+            <span>Resume</span>
+          </a>
+          <a href="https://linkedin.com/in/waynechu1109" target="_blank" rel="noopener noreferrer" class="social-btn">
+            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/waynechu1109" target="_blank" rel="noopener noreferrer" class="social-btn">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
