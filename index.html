@@ -79,7 +79,7 @@ og_url: "https://waynechu1109.github.io/"
       <p class="section-kicker">🌟 Highlight 🌟</p>
 
       <p>
-        I'm a graduate researcher at the <a href="https://svl.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford Vision and Learning Lab</a>, collaborating with <a href="https://research.nvidia.com/labs/gear/" target="_blank" rel="noopener noreferrer">NVIDIA GEAR</a> on SimFoundry &mdash; a real-to-sim-to-real pipeline for training and evaluating robot manipulation policies. Earlier, I deployed real-time perception models on robots and vehicles at ITRI, and conducted remote research on 3D reconstruction with
+        I'm a graduate researcher at the <a href="https://svl.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford Vision and Learning Lab</a>, collaborating with <a href="https://research.nvidia.com/labs/gear/" target="_blank" rel="noopener noreferrer">NVIDIA GEAR</a> on SimFoundry, a real-to-sim-to-real pipeline for training and evaluating robot manipulation policies. Earlier, I deployed real-time perception models on robots and vehicles at ITRI, and conducted remote research on 3D reconstruction with
         <a href="https://www.weimingzhi.com/home" target="_blank" rel="noopener noreferrer">Prof. Weiming Zhi</a> and <a href="https://tyz1030.github.io/#about" target="_blank" rel="noopener noreferrer">Dr. Tianyi Zhang</a> at <a href="https://droplab.ri.cmu.edu/" target="_blank" rel="noopener noreferrer">the DROP Lab</a>, Carnegie Mellon University.
       </p>
 
@@ -152,10 +152,10 @@ og_url: "https://waynechu1109.github.io/"
           <div class="internship-details">
             <h3 class="company-name">Nimble</h3>
             <p class="internship-title"><strong>AI Robotics Research Intern</strong></p>
-            <p class="internship-date">Jun. 2026 - Sep. 2026 (Expected)</p>
-            <!-- <p class="internship-description">
-              Joining Nimble in Summer 2026 as an AI Robotics Research Intern.
-            </p> -->
+            <p class="internship-date">Jun. 2026 - Sep. 2026</p>
+            <p class="internship-description">
+              I built a <strong>bimanual Isaac Sim digital twin</strong> of the dual-arm Piper X cell for sim demo collection, and shipped <strong>GELLO leader-arm teleoperation</strong> across both sim and the real robot to give the team a single interface for capturing human demos. To scale training data, I multiplied a handful of human demos into large datasets through <strong>object-centric keyframe transport</strong>, synthetic motion primitives, and layout randomization, then fine-tuned <strong>&pi;<sub>0</sub> and &pi;<sub>0.5</sub> VLA policies</strong> (openpi, LoRA) on the sim-collected demos, reaching a <strong>96.9% success rate</strong> in sim. To close the visual sim-to-real gap, I reconstructed the workspace with <strong>3D Gaussian splatting</strong> paired with a <strong>collision mesh</strong> the robot can physically touch.
+            </p>
           </div>
         </article>
 
@@ -187,14 +187,14 @@ og_url: "https://waynechu1109.github.io/"
             <p class="internship-date">Sep. 2024 - Nov. 2024, Mar. 2025 - Jul. 2025</p>
             <div class="internship-description">
               <h4>Mask2Former Semantic Segmentation</h4>
-              <p>I built a custom semantic segmentation pipeline for robotics and autonomous driving by merging and re-annotating Mapillary and ADE20k, converting the data to COCO format, and training Mask2Former with NVIDIA TAO Toolkit. The final model was deployed in ROS2 and delivered real-time inference at about 15 FPS on robot and vehicle platforms.</p>
+              <p>I built a custom semantic segmentation pipeline for robotics and autonomous driving by merging and re-annotating <strong>Mapillary and ADE20k</strong>, converting the data to COCO format, and training <strong>Mask2Former</strong> with <strong>NVIDIA TAO Toolkit</strong>. The final model was deployed in <strong>ROS2</strong> and delivered <strong>real-time inference at about 15 FPS</strong> on robot and vehicle platforms.</p>
               <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/merged_dog_.mp4" class="internship-clip" width="960" height="540" autoplay muted loop playsinline preload="metadata" aria-label="Semantic segmentation demo on a quadruped robot"></video></div></div>
               <h4>Person Re-Identification (Re-ID)</h4>
-              <p>I developed a real-time pedestrian detection and re-identification pipeline using YOLO11n, OSNet, and cosine-similarity matching. By exporting models to ONNX and TensorRT for acceleration, the system achieved about 25 FPS and was suitable for robotics and automotive deployment.</p>
+              <p>I developed a real-time pedestrian detection and re-identification pipeline using <strong>YOLO11n</strong>, <strong>OSNet</strong>, and <strong>cosine-similarity matching</strong>. By exporting models to <strong>ONNX and TensorRT</strong> for acceleration, the system achieved <strong>about 25 FPS</strong> and was suitable for robotics and automotive deployment.</p>
               <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/reid_tracker_.mp4" class="internship-clip" width="1348" height="779" autoplay muted loop playsinline preload="metadata" aria-label="Person re-identification tracking demo"></video></div></div>
               
               <h4>Sim2Real Quadruped Robot Terrain Traversal</h4>
-              <p>I developed a sim-to-real terrain traversal pipeline for the Unitree Go2 that combined Gazebo simulation, RealSense point clouds, and elevation mapping for locomotion over uneven ground. I also integrated point-cloud processing with reinforcement learning gait policies, added VIO and forward kinematics to handle sensor interruptions, and validated the full system on the physical robot.</p>
+              <p>I developed a <strong>sim-to-real terrain traversal</strong> pipeline for the <strong>Unitree Go2</strong> that combined Gazebo simulation, RealSense point clouds, and <strong>elevation mapping</strong> for locomotion over uneven ground. I also integrated point-cloud processing with <strong>reinforcement learning gait policies</strong>, added <strong>VIO</strong> and <strong>forward kinematics</strong> to handle sensor interruptions, and validated the full system on the physical robot.</p>
               <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/real_go2_walk_.mp4" class="internship-clip" width="981" height="607" autoplay muted loop playsinline preload="metadata" aria-label="Unitree Go2 terrain traversal demo"></video></div></div>
             </div>
           </div>
@@ -236,8 +236,8 @@ og_url: "https://waynechu1109.github.io/"
           </div>
           <p class="featured-summary">
             A collaboration between the Stanford Vision and Learning Lab and NVIDIA GEAR, with <a href="https://engineering.stanford.edu/people/fei-fei-li" target="_blank" rel="noopener noreferrer">Prof. Fei-Fei Li</a>, <a href="https://cs.utexas.edu/~yukez/" target="_blank" rel="noopener noreferrer">Prof. Yuke Zhu</a>, and colleagues.<br>
-            SimFoundry builds digital replicas of real-world scenes directly from video and automatically generates diverse <em>digital cousins</em> &mdash; scene variations that preserve task-relevant structure &mdash; to train and evaluate robot manipulation policies.
-            Across a range of tasks, simulated performance correlates strongly with real-world results, and policies trained on the generated variations improve real-world success rates by 17-40% on average.
+            SimFoundry builds <strong>digital replicas of real-world scenes directly from video</strong> and automatically generates diverse <em>digital cousins</em>, scene variations that preserve <strong>task-relevant structure</strong> and are used to train and evaluate robot manipulation policies.
+            Across a range of tasks, <strong>simulated performance correlates strongly with real-world results</strong>, and policies trained on the generated variations <strong>improve real-world success rates by 17-40% on average</strong>.
           </p>
           <div class="resource-links">
             <a href="https://arxiv.org/abs/2606.28276" class="resource-btn" target="_blank" rel="noopener noreferrer">arXiv</a>
@@ -260,8 +260,8 @@ og_url: "https://waynechu1109.github.io/"
           </div>
           <p class="featured-summary">
             Advised by <a href="https://tyz1030.github.io/#about" target="_blank" rel="noopener noreferrer">Dr. Tianyi Zhang</a>, <a href="https://engineering.vanderbilt.edu/bio/?pid=matthew-johnson-roberson" target="_blank" rel="noopener noreferrer">Prof. Matthew Johnson-Roberson</a>, and <a href="https://www.weimingzhi.com/home" target="_blank" rel="noopener noreferrer">Prof. Weiming Zhi</a><br>
-            We present Fast Image-to-Neural Surface (FINS), a lightweight framework capable of reconstructing high fidelity signed distance fields (SDF) from a single image in 10 seconds.
-            Our method fuses a multi-resolution hash grid and efficient optimization to achieve state-of-the-art accuracy while being an order of magnitude faster than existing methods.
+            We present Fast Image-to-Neural Surface (FINS), a lightweight framework capable of reconstructing high fidelity signed distance fields (SDF) from a single image in <strong>10 seconds</strong>.
+            Our method fuses a multi-resolution hash grid and efficient optimization to achieve state-of-the-art accuracy while being an <strong>order of magnitude faster</strong> than existing methods.
             The scalability and real-world usability of FINS were also tested through robotic surface-following experiments, showing its utility in a wide range of tasks and datasets.
           </p>
           <div class="resource-links">
@@ -282,7 +282,7 @@ og_url: "https://waynechu1109.github.io/"
             <p class="project-duration">Jun. 2024 - Sep. 2024</p>
             <p class="project-location">Google Hardware Product Sprint (HPS) Program</p>
             <p class="project-description">
-              I developed a smart refrigerator system that combined food recognition, expiration tracking, and recipe recommendation with Google Gemini. The project focused on turning inventory awareness into actionable suggestions, helping users reduce food waste by surfacing recipes based on soon-to-expire ingredients.</p>
+              I developed a smart refrigerator system that combined food recognition, expiration tracking, and recipe recommendation with <strong>Google Gemini</strong>. The project focused on turning inventory awareness into actionable suggestions, helping users <strong>reduce food waste</strong> by surfacing recipes based on soon-to-expire ingredients.</p>
             <div class="resource-links">
               <a href="https://drive.google.com/drive/folders/1cRpE48WuzvNL2ulp7dlx_5jeWnp0vrvi" class="resource-btn" target="_blank" rel="noopener noreferrer">Poster</a>
               <a href="slides/Smart Fridge Final Presentation.pptx.pdf" class="resource-btn">Slides</a>
@@ -298,7 +298,7 @@ og_url: "https://waynechu1109.github.io/"
             <p class="project-duration">Jan. 2023 - Nov. 2023</p>
             <p class="project-location"><a href="http://hscc.cs.nthu.edu.tw" target="_blank" rel="noopener noreferrer">[HSCC Lab]</a>, National Tsing Hua University</p>
             <p class="project-description">Advised by <a href="http://hscc.cs.nthu.edu.tw/~sheujp/" target="_blank" rel="noopener noreferrer">Prof. Jang-Ping Sheu</a>. <br> 
-              I developed a laser-assisted landing system to improve drone landing accuracy in settings where GPS can drift by several meters. By combining embedded electronics, 3D-printed mechanical design, and low-power laser sensing, the system achieved 30-40 cm landing accuracy and demonstrated the feasibility of laser-based localization for future UAV platforms.</p>
+              I developed a laser-assisted landing system to improve drone landing accuracy in settings where GPS can drift by several meters. By combining embedded electronics, 3D-printed mechanical design, and low-power laser sensing, the system achieved <strong>30-40 cm landing accuracy</strong> and demonstrated the feasibility of laser-based localization for future UAV platforms.</p>
             <div class="resource-links">
               <a href="https://drive.google.com/drive/folders/1o3hIwAdn8HWKZkmYq9HUBYTKjKqbptRA?usp=sharing" class="resource-btn" target="_blank" rel="noopener noreferrer">Report</a>
               <a href="slides/MASS2024.pdf" class="resource-btn">Slides</a>
@@ -315,7 +315,7 @@ og_url: "https://waynechu1109.github.io/"
             <p class="project-duration">Jun. 2023 - Aug. 2023</p>
             <p class="project-location"><a href="http://muro.ucsd.edu" target="_blank" rel="noopener noreferrer">[MURO Lab]</a>, UC San Diego</p>
             <p class="project-description">Supervised by <a href="http://terrano.ucsd.edu/jorge/" target="_blank" rel="noopener noreferrer">Prof. Jorge Cortés</a>. <br>
-              I built a real-time dynamic obstacle avoidance system for TurtleBot4 using ROS2 and vision-based sensing with an OAK-D Pro camera. The system combined obstacle tracking, RRT* path planning, and Bezier-curve smoothing to achieve reliable and collision-free navigation in dynamic environments using an affordable camera-first setup.</p>
+              I built a <strong>real-time dynamic obstacle avoidance</strong> system for TurtleBot4 using ROS2 and vision-based sensing with an OAK-D Pro camera. The system combined obstacle tracking, RRT* path planning, and Bezier-curve smoothing to achieve reliable and collision-free navigation in dynamic environments using an affordable <strong>camera-first setup</strong>.</p>
             <div class="resource-links">
               <a href="https://drive.google.com/drive/folders/1LSuGS2-LgospQTcNaYfdHyU8aEiBde6Y" class="resource-btn" target="_blank" rel="noopener noreferrer">Report</a>
               <a href="slides/PMAE2023_Presentation.pdf" class="resource-btn">Slides</a>
