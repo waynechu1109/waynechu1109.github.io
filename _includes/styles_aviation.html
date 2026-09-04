@@ -155,4 +155,41 @@
       .airport-section { padding: 22px 18px; }
       .photo-grid { grid-template-columns: 1fr; }
     }
+
+    /* =========================
+       Dark Theme Overrides
+       ========================= */
+    [data-theme="dark"] .airport-section {
+      background: linear-gradient(135deg, #17202d 0%, #1a2637 45%, #2a2620 100%);
+      border-color: var(--border);
+      box-shadow: 0 14px 34px rgba(0,0,0,.4);
+    }
+    [data-theme="dark"] .airport-name { color: #e8eef5; }
+    [data-theme="dark"] .airport-meta { color: var(--muted); }
+    [data-theme="dark"] .airport-map {
+      background: var(--surface);
+      border-color: var(--border);
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+    [data-theme="dark"] .airport-map-link {
+      color: var(--primary-deep);
+      background: linear-gradient(135deg, var(--surface-alt) 0%, #223145 100%);
+      border-top-color: var(--border);
+    }
+    [data-theme="dark"] .airport-map-link:hover {
+      background: linear-gradient(135deg, #3b6a9a 0%, var(--primary) 100%);
+      color: #fff;
+    }
+    [data-theme="dark"] .photo-card {
+      background: var(--surface-alt);
+      border-color: var(--border);
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+    [data-theme="dark"] .photo-title { color: #e8eef5; }
+    [data-theme="dark"] .photo-caption { color: var(--muted); }
+    [data-theme="dark"] .portfolio-note {
+      background: rgba(201,139,50,.10);
+      color: #e0c69a;
+      border-left-color: var(--photo-glow);
+    }
   </style>
