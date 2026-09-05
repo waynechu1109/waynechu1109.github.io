@@ -180,6 +180,25 @@
   </script>
 
   <script>
+    /* Honor prefers-reduced-motion for autoplay videos */
+    (function () {
+      if (!window.matchMedia) return;
+      var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var apply = function () {
+        if (!mq.matches) return;
+        document.querySelectorAll('video[autoplay]').forEach(function (v) {
+          v.pause();
+          v.removeAttribute('autoplay');
+          v.setAttribute('controls', '');
+        });
+      };
+      apply();
+      if (mq.addEventListener) mq.addEventListener('change', apply);
+      else if (mq.addListener) mq.addListener(apply);
+    })();
+  </script>
+
+  <script>
     /* Side TOC: highlight active section on scroll */
     (function () {
       var links = document.querySelectorAll('.page-toc-link');

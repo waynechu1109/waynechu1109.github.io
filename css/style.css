@@ -78,7 +78,9 @@ h1 { font-size: 3rem; letter-spacing: -.5px; }
 h2 { margin-top: 2em; }
 
 a { color: var(--link); text-decoration: underline; }
-a:focus-visible {
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -366,6 +368,18 @@ footer {
 @media (max-width: 560px) {
   .social-btn { width: 100%; }
   .footer-social-links .social-btn { width: 100%; }
+}
+
+/* =========================
+   Reduced Motion (a11y)
+   ========================= */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* =========================
