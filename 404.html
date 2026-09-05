@@ -1,0 +1,46 @@
+---
+layout: default
+page_id: 404
+title: "Page Not Found | Wei-Teng (Wayne) Chu"
+description: "The page you're looking for doesn't exist on Wei-Teng (Wayne) Chu's site."
+og_title: "Page Not Found"
+og_url: "https://waynechu1109.github.io/404.html"
+header_title: "Page Not Found"
+header_subtitle: "This page seems to have flown off the runway."
+---
+
+  {% include header.html %}
+
+  <main id="pagecontainer">
+    <section class="inner-page">
+      <hr class="custom-hr" />
+      <section class="not-found" aria-labelledby="not-found-heading">
+        <p class="not-found-code" aria-hidden="true">404</p>
+        <h2 id="not-found-heading" class="not-found-title">The URL you tried doesn't exist, or the page has moved.</h2>
+        <p class="not-found-body">Let's get you back on course. Here are some places you might want to visit:</p>
+        <nav class="not-found-links" aria-label="Recommended destinations">
+          <a href="/" class="resource-btn">Home</a>
+          <a href="/#research-and-project" class="resource-btn">Research &amp; Projects</a>
+          <a href="/#publication" class="resource-btn">Publications</a>
+          <a href="/aviation_gallery.html" class="resource-btn">Aviation Gallery</a>
+        </nav>
+      </section>
+    </section>
+  </main>
+
+  <style>
+    .not-found { text-align: center; padding: 40px 0 60px; }
+    .not-found-code {
+      margin: 0;
+      font-size: 8rem; font-weight: 800; line-height: 1;
+      letter-spacing: -.05em;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .not-found-title { font-size: 1.35rem; margin: 20px auto 10px; max-width: 640px; }
+    .not-found-body { color: var(--muted); margin: 0 auto 28px; max-width: 560px; font-size: 1.02rem; }
+    .not-found-links { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .not-found-links .resource-btn { padding: 12px 20px; font-size: 15px; }
+    @media (max-width: 560px) { .not-found-code { font-size: 6rem; } }
+  </style>
