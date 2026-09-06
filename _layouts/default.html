@@ -36,6 +36,7 @@
   {% if page.page_id == 'index' %}{% include styles_index.html %}
   {% elsif page.page_id == 'course_projects' %}{% include styles_course_projects.html %}
   {% elsif page.page_id == 'aviation' %}{% include styles_aviation.html %}
+  {% elsif page.page_id == 'photo_gallery' %}{% include styles_photo.html %}
   {% endif %}
 
   <script>
@@ -109,6 +110,7 @@
     <a href="index.html#selected-awards">Awards</a>
     <a href="course_projects.html"{% if page.page_id == 'course_projects' %} aria-current="page"{% endif %}>Course Projects</a>
     <a href="aviation_gallery.html"{% if page.page_id == 'aviation' %} aria-current="page"{% endif %}>Aviation Gallery</a>
+    <a href="photo_gallery.html"{% if page.page_id == 'photo_gallery' %} aria-current="page"{% endif %}>Photo Gallery</a>
   </nav>
 
   {% if page.page_id == 'index' %}
@@ -308,7 +310,7 @@
       </div>
     </div>
     <script id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac"></script>
-    {% if page.page_id == 'aviation' %}{% include lightbox_script.html %}{% endif %}
+    {% if page.page_id == 'aviation' or page.page_id == 'photo_gallery' %}{% include lightbox_script.html %}{% endif %}
   </footer>
 </body>
 </html>

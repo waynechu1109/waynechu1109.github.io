@@ -371,6 +371,43 @@ footer {
 }
 
 /* =========================
+   EXIF Pull-down (shared by galleries)
+   ========================= */
+.exif-details {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(64,118,172,.12);
+}
+.exif-details summary {
+  cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .74rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--primary-deep);
+  list-style: none;
+  padding: 2px 0;
+}
+.exif-details summary::before {
+  content: "+";
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 16px; height: 16px; border-radius: 999px;
+  background: rgba(64,118,172,.12); font-size: 12px; line-height: 1;
+}
+.exif-details[open] summary::before { content: "−"; }
+.exif-details summary::-webkit-details-marker { display: none; }
+.exif-list {
+  list-style: none; padding: 0; margin: 10px 0 2px;
+  display: grid; grid-template-columns: auto 1fr; gap: 4px 12px;
+  font-size: .8rem;
+}
+.exif-list li { display: contents; }
+.exif-key { color: var(--muted); font-weight: 700; }
+.exif-val { color: var(--text); }
+
+[data-theme="dark"] .exif-details { border-top-color: var(--border-soft); }
+[data-theme="dark"] .exif-details summary::before { background: rgba(110,166,220,.14); }
+
+/* =========================
    Reduced Motion (a11y)
    ========================= */
 @media (prefers-reduced-motion: reduce) {

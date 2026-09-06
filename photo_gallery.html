@@ -1,0 +1,425 @@
+---
+layout: default
+page_id: photo_gallery
+title: "Photo Gallery | Wei-Teng (Wayne) Chu"
+description: "General photography by Wei-Teng (Wayne) Chu, one frame per place from cities, landscapes, and travels."
+og_title: "Photo Gallery | Wei-Teng (Wayne) Chu"
+og_url: "https://waynechu1109.github.io/photo_gallery.html"
+header_title: "Photo Gallery"
+header_subtitle: "Cities, landscapes, and moments worth remembering."
+---
+
+  {% include header.html %}
+
+  <main>
+    <section class="inner-page">
+      <hr class="custom-hr" />
+
+      <h2 id="places" class="title">Places</h2>
+      <p class="section-intro">
+        A curated collection of scenes from cities and landscapes I've visited.
+      </p>
+
+      <!--
+        === ADDING A NEW PHOTO ===
+        1. Drop the image into media/gallery/photo_gallery/<place>/
+        2. Generate responsive variants (macOS):
+             sips -Z 640  photo.jpg --out photo-640.jpg
+             sips -Z 1280 photo.jpg --out photo-1280.jpg
+        3. Duplicate one of the <article class="scene-card"> blocks below,
+           updating src/srcset/data-full/alt and the .scene-title.
+      -->
+
+      <div class="scenes-grid">
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/santa_monica/DSC03656-1280.jpg"
+              srcset="media/gallery/photo_gallery/santa_monica/DSC03656-640.jpg 640w, media/gallery/photo_gallery/santa_monica/DSC03656-1280.jpg 1280w, media/gallery/photo_gallery/santa_monica/DSC03656.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/santa_monica/DSC03656.jpg"
+              alt="Santa Monica scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇺🇸 Santa Monica, CA</h3>
+            <p class="scene-date"><time datetime="2026-07-06">2026-07-06</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6700</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">E PZ 16-50mm F3.5-5.6 OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">37 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/8</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">1/500</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/petco_park/DSC02064-1280.jpg"
+              srcset="media/gallery/photo_gallery/petco_park/DSC02064-640.jpg 640w, media/gallery/photo_gallery/petco_park/DSC02064-1280.jpg 1280w, media/gallery/photo_gallery/petco_park/DSC02064.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/petco_park/DSC02064.jpg"
+              alt="Petco Park scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇺🇸 Petco Park, San Diego</h3>
+            <p class="scene-date"><time datetime="2023-07-05">2023-07-05</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6000</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">E PZ 16-50mm F3.5-5.6 OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">50 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/8</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">1/400</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/sf/DSC04281-1280.jpg"
+              srcset="media/gallery/photo_gallery/sf/DSC04281-640.jpg 640w, media/gallery/photo_gallery/sf/DSC04281-1280.jpg 1280w, media/gallery/photo_gallery/sf/DSC04281.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/sf/DSC04281.jpg"
+              alt="San Francisco scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇺🇸 San Francisco, CA</h3>
+            <p class="scene-date"><time datetime="2026-08-16">2026-08-16</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6700</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">E PZ 16-50mm F3.5-5.6 OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">50 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/10</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">1/400</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/sf/DSC04359-1280.jpg"
+              srcset="media/gallery/photo_gallery/sf/DSC04359-640.jpg 640w, media/gallery/photo_gallery/sf/DSC04359-1280.jpg 1280w, media/gallery/photo_gallery/sf/DSC04359.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/sf/DSC04359.jpg"
+              alt="San Francisco scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇺🇸 San Francisco, CA</h3>
+            <p class="scene-date"><time datetime="2026-08-17">2026-08-17</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6700</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">E PZ 16-50mm F3.5-5.6 OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">50 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/8</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">1/400</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/oracle_park/DSC02497-1280.jpg"
+              srcset="media/gallery/photo_gallery/oracle_park/DSC02497-640.jpg 640w, media/gallery/photo_gallery/oracle_park/DSC02497-1280.jpg 1280w, media/gallery/photo_gallery/oracle_park/DSC02497.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/oracle_park/DSC02497.jpg"
+              alt="Oracle Park scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇺🇸 Oracle Park, San Francisco</h3>
+            <p class="scene-date"><time datetime="2026-05-10">2026-05-10</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6000</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">FE 100-400mm F4.5-5.6 GM OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">215 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/5.6</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">1/800</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/oracle_park/DSC02571-1280.jpg"
+              srcset="media/gallery/photo_gallery/oracle_park/DSC02571-640.jpg 640w, media/gallery/photo_gallery/oracle_park/DSC02571-1280.jpg 1280w, media/gallery/photo_gallery/oracle_park/DSC02571.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/oracle_park/DSC02571.jpg"
+              alt="Oracle Park scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇺🇸 Oracle Park, San Francisco</h3>
+            <p class="scene-date"><time datetime="2026-05-10">2026-05-10</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6000</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">FE 100-400mm F4.5-5.6 GM OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">400 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/5.6</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">1/1000</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/tokyo/DSC06882-1280.jpg"
+              srcset="media/gallery/photo_gallery/tokyo/DSC06882-640.jpg 640w, media/gallery/photo_gallery/tokyo/DSC06882-1280.jpg 1280w, media/gallery/photo_gallery/tokyo/DSC06882.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/tokyo/DSC06882.jpg"
+              alt="Tokyo scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇯🇵 Tokyo, Japan</h3>
+            <p class="scene-date"><time datetime="2025-03-10">2025-03-10</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6000</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">E PZ 16-50mm F3.5-5.6 OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">50 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/14</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">6 s</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/tokyo/DSC08008-1280.jpg"
+              srcset="media/gallery/photo_gallery/tokyo/DSC08008-640.jpg 640w, media/gallery/photo_gallery/tokyo/DSC08008-1280.jpg 1280w, media/gallery/photo_gallery/tokyo/DSC08008.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/tokyo/DSC08008.jpg"
+              alt="Tokyo scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇯🇵 Tokyo, Japan</h3>
+            <p class="scene-date"><time datetime="2025-03-12">2025-03-12</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6000</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">E PZ 16-50mm F3.5-5.6 OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">16 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/8</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">1/6</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">1000</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/tokyo/DSC08019-1280.jpg"
+              srcset="media/gallery/photo_gallery/tokyo/DSC08019-640.jpg 640w, media/gallery/photo_gallery/tokyo/DSC08019-1280.jpg 1280w, media/gallery/photo_gallery/tokyo/DSC08019.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/tokyo/DSC08019.jpg"
+              alt="Tokyo scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇯🇵 Tokyo, Japan</h3>
+            <p class="scene-date"><time datetime="2025-03-12">2025-03-12</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6000</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">E PZ 16-50mm F3.5-5.6 OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">16 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/18</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">4 s</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/tokyo/DSC08778-1280.jpg"
+              srcset="media/gallery/photo_gallery/tokyo/DSC08778-640.jpg 640w, media/gallery/photo_gallery/tokyo/DSC08778-1280.jpg 1280w, media/gallery/photo_gallery/tokyo/DSC08778.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/tokyo/DSC08778.jpg"
+              alt="Tokyo scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇯🇵 Tokyo, Japan</h3>
+            <p class="scene-date"><time datetime="2025-03-14">2025-03-14</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6000</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">E PZ 16-50mm F3.5-5.6 OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">16 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/8</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">1/250</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/himeji/DSC01346-1280.jpg"
+              srcset="media/gallery/photo_gallery/himeji/DSC01346-640.jpg 640w, media/gallery/photo_gallery/himeji/DSC01346-1280.jpg 1280w, media/gallery/photo_gallery/himeji/DSC01346.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/himeji/DSC01346.jpg"
+              alt="Himeji scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇯🇵 Himeji, Japan</h3>
+            <p class="scene-date"><time datetime="2023-01-17">2023-01-17</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6000</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">E PZ 16-50mm F3.5-5.6 OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">28 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/8</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">1/500</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/himeji/DSC01354-1280.jpg"
+              srcset="media/gallery/photo_gallery/himeji/DSC01354-640.jpg 640w, media/gallery/photo_gallery/himeji/DSC01354-1280.jpg 1280w, media/gallery/photo_gallery/himeji/DSC01354.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/himeji/DSC01354.jpg"
+              alt="Himeji scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇯🇵 Himeji, Japan</h3>
+            <p class="scene-date"><time datetime="2023-01-17">2023-01-17</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6000</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">E PZ 16-50mm F3.5-5.6 OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">50 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/8</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">1/320</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-frame">
+            <img
+              src="media/gallery/photo_gallery/yosemite/DSC03092-1280.jpg"
+              srcset="media/gallery/photo_gallery/yosemite/DSC03092-640.jpg 640w, media/gallery/photo_gallery/yosemite/DSC03092-1280.jpg 1280w, media/gallery/photo_gallery/yosemite/DSC03092.jpg 2560w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="media/gallery/photo_gallery/yosemite/DSC03092.jpg"
+              alt="Yosemite scene"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">🇺🇸 Yosemite, CA</h3>
+            <p class="scene-date"><time datetime="2026-05-24">2026-05-24</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6000</span></li>
+                <li><span class="exif-key">Lens</span><span class="exif-val">E PZ 16-50mm F3.5-5.6 OSS</span></li>
+                <li><span class="exif-key">Focal</span><span class="exif-val">28 mm</span></li>
+                <li><span class="exif-key">Aperture</span><span class="exif-val">f/8</span></li>
+                <li><span class="exif-key">Shutter</span><span class="exif-val">1/40</span></li>
+                <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+              </ul>
+            </details>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="photo-lightbox" aria-hidden="true">
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous photo">
+      <svg class="icon" aria-hidden="true"><use href="#i-chevron-up"/></svg>
+    </button>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Expanded photo viewer">
+      <button class="lightbox-close" type="button" aria-label="Close expanded photo">&times;</button>
+      <img class="lightbox-image" alt="" />
+    </div>
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Next photo">
+      <svg class="icon" aria-hidden="true"><use href="#i-chevron-up"/></svg>
+    </button>
+  </div>

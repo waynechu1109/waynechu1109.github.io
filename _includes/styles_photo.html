@@ -1,0 +1,106 @@
+  <style>
+    /* Photo page uses same wider inner-page as aviation */
+    .inner-page { max-width: 1100px; }
+
+    /* =========================
+       Scenes Grid (masonry via CSS columns)
+       ========================= */
+    .scenes-grid {
+      column-count: 3;
+      column-gap: 18px;
+      margin-top: 22px;
+    }
+    @media (max-width: 900px) { .scenes-grid { column-count: 2; } }
+    @media (max-width: 560px) { .scenes-grid { column-count: 1; } }
+
+    .scene-card {
+      break-inside: avoid;
+      margin: 0 0 18px;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #fff;
+      border: 1px solid rgba(64,118,172,.12);
+      box-shadow: 0 10px 24px rgba(20,44,77,.08);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .scene-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(20,44,77,.12); }
+    .scene-frame { display: block; overflow: hidden; }
+    .scene-frame .photo-image { width: 100%; height: auto; display: block; cursor: zoom-in; }
+
+    /* Placeholder gradients (used until you drop in real photos) */
+    .placeholder-scene {
+      position: relative;
+      background: linear-gradient(180deg, #08172c 0%, #173965 52%, #7ea2cb 100%);
+    }
+    .placeholder-scene::after {
+      content: "photo placeholder";
+      position: absolute; inset: auto 0 10px;
+      text-align: center; font-size: 11px; letter-spacing: .12em;
+      text-transform: uppercase; color: rgba(255,255,255,.55);
+    }
+    .placeholder-1 { aspect-ratio: 4 / 3; background: linear-gradient(180deg, #071729 0%, #24405c 46%, #7aa3c7 100%); }
+    .placeholder-2 { aspect-ratio: 3 / 4; background: linear-gradient(180deg, #1c1d29 0%, #4b4a63 52%, #b0a9c5 100%); }
+    .placeholder-3 { aspect-ratio: 4 / 3; background: linear-gradient(180deg, #151d30 0%, #59466b 52%, #d6a773 100%); }
+    .placeholder-4 { aspect-ratio: 16 / 10; background: linear-gradient(180deg, #06202e 0%, #1a5177 55%, #7dbee0 100%); }
+    .placeholder-5 { aspect-ratio: 4 / 5; background: linear-gradient(180deg, #1f1a10 0%, #6b563a 52%, #dcb389 100%); }
+    .placeholder-6 { aspect-ratio: 3 / 2; background: linear-gradient(180deg, #2a1010 0%, #ca6a3f 55%, #f6c67f 100%); }
+
+    .scene-body { padding: 14px 16px 16px; }
+    .scene-title { margin: 0 0 4px; font-size: 1.02rem; color: #163453; }
+    .scene-caption { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.5; }
+    .scene-date { margin: 2px 0 0; color: var(--muted); font-size: .82rem; font-style: italic; letter-spacing: .04em; }
+
+    /* =========================
+       Lightbox (shared shape with Aviation)
+       ========================= */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 2000;
+      display: none; align-items: center; justify-content: center;
+      padding: 28px; background: rgba(6,14,24,.88); backdrop-filter: blur(6px);
+    }
+    .lightbox.is-open { display: flex; }
+    .lightbox-dialog {
+      position: relative; max-width: min(1200px, 92vw); max-height: 88vh;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-image {
+      max-width: 100%; max-height: 88vh; display: block;
+      border-radius: 16px; box-shadow: 0 24px 60px rgba(0,0,0,.38); background: #0f1b2f;
+    }
+    .lightbox-close {
+      position: absolute; top: -14px; right: -14px;
+      width: 42px; height: 42px; border: none; border-radius: 999px;
+      color: #fff; background: rgba(12,22,36,.82);
+      box-shadow: 0 12px 26px rgba(0,0,0,.28); cursor: pointer; font-size: 22px; line-height: 1;
+    }
+    .lightbox-close:hover { background: rgba(24,41,66,.96); }
+    .lightbox-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 48px; height: 48px; border: none; border-radius: 999px;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; background: rgba(12,22,36,.7); cursor: pointer; z-index: 2;
+      box-shadow: 0 12px 26px rgba(0,0,0,.28); transition: background .2s ease;
+    }
+    .lightbox-nav:hover { background: rgba(24,41,66,.95); }
+    .lightbox-prev { left: 18px; }
+    .lightbox-next { right: 18px; }
+    .lightbox-nav .icon { width: 20px; height: 20px; fill: currentColor; }
+    .lightbox-prev .icon { transform: rotate(-90deg); }
+    .lightbox-next .icon { transform: rotate(90deg); }
+    @media (max-width: 560px) {
+      .lightbox-nav { width: 40px; height: 40px; }
+      .lightbox-prev { left: 6px; }
+      .lightbox-next { right: 6px; }
+    }
+
+    /* =========================
+       Dark Theme Overrides
+       ========================= */
+    [data-theme="dark"] .scene-card {
+      background: var(--surface-alt);
+      border-color: var(--border);
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+    [data-theme="dark"] .scene-title { color: #e8eef5; }
+    [data-theme="dark"] .scene-caption { color: var(--muted); }
+  </style>
