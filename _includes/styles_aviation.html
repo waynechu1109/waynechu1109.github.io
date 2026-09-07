@@ -8,6 +8,64 @@
     .inner-page { max-width: 1100px; }
 
     /* =========================
+       Hero Slideshow
+       ========================= */
+    .aviation-hero {
+      position: relative;
+      margin: 22px 0 30px;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 16 / 8;
+      background: var(--photo-bg);
+      border: 1px solid rgba(64,118,172,.16);
+      box-shadow: 0 20px 45px rgba(20,44,77,.15);
+    }
+    .aviation-hero-track { position: relative; width: 100%; height: 100%; }
+    .aviation-hero-slide {
+      position: absolute; inset: 0; margin: 0;
+      opacity: 0; visibility: hidden;
+      transition: opacity .9s ease-in-out, visibility 0s linear .9s;
+    }
+    .aviation-hero-slide.is-active {
+      opacity: 1; visibility: visible;
+      transition: opacity .9s ease-in-out, visibility 0s;
+    }
+    .aviation-hero-slide img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block;
+    }
+    .aviation-hero-slide figcaption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 46px 24px 20px;
+      color: #fff;
+      font-weight: 700; font-size: .98rem; letter-spacing: .02em;
+      background: linear-gradient(180deg, rgba(6,14,24,0) 0%, rgba(6,14,24,.72) 100%);
+      text-shadow: 0 2px 8px rgba(0,0,0,.5);
+    }
+    .aviation-hero-dots {
+      position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 8px; z-index: 2;
+    }
+    .aviation-hero-dots button {
+      width: 10px; height: 10px; padding: 0; border: none;
+      border-radius: 999px; cursor: pointer;
+      background: rgba(255,255,255,.42);
+      transition: background .25s ease, transform .25s ease;
+    }
+    .aviation-hero-dots button:hover { background: rgba(255,255,255,.72); }
+    .aviation-hero-dots button[aria-selected="true"] {
+      background: #fff; transform: scale(1.35);
+    }
+    @media (max-width: 640px) {
+      .aviation-hero { aspect-ratio: 4 / 3; }
+      .aviation-hero-slide figcaption { font-size: .88rem; padding: 40px 16px 16px; }
+    }
+    [data-theme="dark"] .aviation-hero {
+      border-color: var(--border);
+      box-shadow: 0 20px 45px rgba(0,0,0,.5);
+    }
+
+    /* =========================
        Airport Sections
        ========================= */
     .airport-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 10px; }

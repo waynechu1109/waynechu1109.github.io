@@ -21,6 +21,98 @@ header_subtitle: "Selected aircraft photography organized by airport."
         This page collects my aviation photography work.
       </p>
 
+      <!--
+        === HERO SLIDESHOW ===
+        A curated rotating hero of favourite shots. To swap a slide, replace
+        the <img src/srcset/data-full/alt> and the <figcaption> text. Add or
+        remove <figure class="aviation-hero-slide"> blocks and matching dot
+        buttons (data-slide index) to change the count. Auto-rotation pauses
+        on hover/focus and honors prefers-reduced-motion.
+      -->
+      <section class="aviation-hero" aria-roledescription="carousel" aria-label="Featured aviation photos">
+        <div class="aviation-hero-track">
+          <figure class="aviation-hero-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 7">
+            <img
+              src="media/gallery/aviation_gallery/sfo/DSC04992-1280.jpg"
+              srcset="media/gallery/aviation_gallery/sfo/DSC04992-640.jpg 640w, media/gallery/aviation_gallery/sfo/DSC04992-1280.jpg 1280w, media/gallery/aviation_gallery/sfo/DSC04992.jpg 2560w"
+              sizes="(max-width: 900px) 92vw, 1000px"
+              alt="Lufthansa at San Francisco International Airport"
+              loading="eager" fetchpriority="high"
+            />
+            <figcaption>🇩🇪 Lufthansa &middot; KSFO / SFO</figcaption>
+          </figure>
+          <figure class="aviation-hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 7">
+            <img
+              src="media/gallery/aviation_gallery/tpe/DSC09972-1280.jpg"
+              srcset="media/gallery/aviation_gallery/tpe/DSC09972-640.jpg 640w, media/gallery/aviation_gallery/tpe/DSC09972-1280.jpg 1280w, media/gallery/aviation_gallery/tpe/DSC09972.jpg 2560w"
+              sizes="(max-width: 900px) 92vw, 1000px"
+              alt="EVA AIR at Taiwan Taoyuan International Airport"
+              loading="lazy"
+            />
+            <figcaption>🇹🇼 EVA AIR &middot; RCTP / TPE</figcaption>
+          </figure>
+          <figure class="aviation-hero-slide" role="group" aria-roledescription="slide" aria-label="3 of 7">
+            <img
+              src="media/gallery/aviation_gallery/sjc/DSC04595-1280.jpg"
+              srcset="media/gallery/aviation_gallery/sjc/DSC04595-640.jpg 640w, media/gallery/aviation_gallery/sjc/DSC04595-1280.jpg 1280w, media/gallery/aviation_gallery/sjc/DSC04595.jpg 2560w"
+              sizes="(max-width: 900px) 92vw, 1000px"
+              alt="Southwest Airlines at San Jose International Airport"
+              loading="lazy"
+            />
+            <figcaption>🇺🇸 Southwest Airlines &middot; KSJC / SJC</figcaption>
+          </figure>
+          <figure class="aviation-hero-slide" role="group" aria-roledescription="slide" aria-label="4 of 7">
+            <img
+              src="media/gallery/aviation_gallery/hnd/DSC07359-Enhanced-NR-2-1280.jpg"
+              srcset="media/gallery/aviation_gallery/hnd/DSC07359-Enhanced-NR-2-640.jpg 640w, media/gallery/aviation_gallery/hnd/DSC07359-Enhanced-NR-2-1280.jpg 1280w, media/gallery/aviation_gallery/hnd/DSC07359-Enhanced-NR-2.jpg 2560w"
+              sizes="(max-width: 900px) 92vw, 1000px"
+              alt="Lufthansa and ANA aircraft at Tokyo Haneda Airport"
+              loading="lazy"
+            />
+            <figcaption>🇩🇪 Lufthansa / 🇯🇵 ANA &middot; RJTT / HND</figcaption>
+          </figure>
+          <figure class="aviation-hero-slide" role="group" aria-roledescription="slide" aria-label="5 of 7">
+            <img
+              src="media/gallery/aviation_gallery/sfo/DSC01500-1280.jpg"
+              srcset="media/gallery/aviation_gallery/sfo/DSC01500-640.jpg 640w, media/gallery/aviation_gallery/sfo/DSC01500-1280.jpg 1280w, media/gallery/aviation_gallery/sfo/DSC01500.jpg 2560w"
+              sizes="(max-width: 900px) 92vw, 1000px"
+              alt="Virgin Atlantic at San Francisco International Airport"
+              loading="lazy"
+            />
+            <figcaption>🇬🇧 Virgin Atlantic &middot; KSFO / SFO</figcaption>
+          </figure>
+          <figure class="aviation-hero-slide" role="group" aria-roledescription="slide" aria-label="6 of 7">
+            <img
+              src="media/gallery/aviation_gallery/hsz/DSC04724-2-1280.jpg"
+              srcset="media/gallery/aviation_gallery/hsz/DSC04724-2-640.jpg 640w, media/gallery/aviation_gallery/hsz/DSC04724-2-1280.jpg 1280w, media/gallery/aviation_gallery/hsz/DSC04724-2.jpg 2560w"
+              sizes="(max-width: 900px) 92vw, 1000px"
+              alt="Republic of China Air Force aircraft at Hsinchu Air Base"
+              loading="lazy"
+            />
+            <figcaption>🇹🇼 Republic of China Air Force &middot; RCPO / HSZ</figcaption>
+          </figure>
+          <figure class="aviation-hero-slide" role="group" aria-roledescription="slide" aria-label="7 of 7">
+            <img
+              src="media/gallery/aviation_gallery/rjtj/DSC08562-1280.jpg"
+              srcset="media/gallery/aviation_gallery/rjtj/DSC08562-640.jpg 640w, media/gallery/aviation_gallery/rjtj/DSC08562-1280.jpg 1280w, media/gallery/aviation_gallery/rjtj/DSC08562.jpg 2560w"
+              sizes="(max-width: 900px) 92vw, 1000px"
+              alt="Japan Air Self-Defense Force aircraft at Iruma Air Base"
+              loading="lazy"
+            />
+            <figcaption>🇯🇵 Japan Air Self-Defense Force &middot; RJTJ</figcaption>
+          </figure>
+        </div>
+        <div class="aviation-hero-dots" role="tablist" aria-label="Choose featured photo">
+          <button type="button" role="tab" aria-selected="true"  aria-label="Featured photo 1" data-slide="0"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Featured photo 2" data-slide="1"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Featured photo 3" data-slide="2"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Featured photo 4" data-slide="3"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Featured photo 5" data-slide="4"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Featured photo 6" data-slide="5"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Featured photo 7" data-slide="6"></button>
+        </div>
+      </section>
+
       <div class="airport-links" aria-label="Airport categories">
         <a href="#rctp" class="resource-btn">🇹🇼 RCTP / TPE</a>
         <a href="#rcss" class="resource-btn">🇹🇼 RCSS / TSA</a>
@@ -463,6 +555,62 @@ header_subtitle: "Selected aircraft photography organized by airport."
                   <li><span class="exif-key">Aperture</span><span class="exif-val">f/8</span></li>
                   <li><span class="exif-key">Shutter</span><span class="exif-val">1/1000</span></li>
                   <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/gallery/aviation_gallery/sfo/DSC04651-1280.jpg"
+                srcset="media/gallery/aviation_gallery/sfo/DSC04651-640.jpg 640w, media/gallery/aviation_gallery/sfo/DSC04651-1280.jpg 1280w, media/gallery/aviation_gallery/sfo/DSC04651.jpg 2560w"
+                sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 330px"
+                data-full="media/gallery/aviation_gallery/sfo/DSC04651.jpg"
+                alt="Qantas at San Francisco International Airport"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇦🇺 Qantas</h4>
+              <p class="photo-date"><time datetime="2026-09-07">2026-09-07</time></p>
+              <details class="exif-details">
+                <summary>Photo info</summary>
+                <ul class="exif-list">
+                  <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6700</span></li>
+                  <li><span class="exif-key">Lens</span><span class="exif-val">FE 100-400mm F4.5-5.6 GM OSS</span></li>
+                  <li><span class="exif-key">Focal</span><span class="exif-val">400 mm</span></li>
+                  <li><span class="exif-key">Aperture</span><span class="exif-val">f/8</span></li>
+                  <li><span class="exif-key">Shutter</span><span class="exif-val">1/1000</span></li>
+                  <li><span class="exif-key">ISO</span><span class="exif-val">100</span></li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="photo-card">
+            <div class="photo-frame real-photo">
+              <img
+                src="media/gallery/aviation_gallery/sfo/DSC04992-1280.jpg"
+                srcset="media/gallery/aviation_gallery/sfo/DSC04992-640.jpg 640w, media/gallery/aviation_gallery/sfo/DSC04992-1280.jpg 1280w, media/gallery/aviation_gallery/sfo/DSC04992.jpg 2560w"
+                sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 330px"
+                data-full="media/gallery/aviation_gallery/sfo/DSC04992.jpg"
+                alt="Lufthansa at San Francisco International Airport"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">🇩🇪 Lufthansa</h4>
+              <p class="photo-date"><time datetime="2026-09-07">2026-09-07</time></p>
+              <details class="exif-details">
+                <summary>Photo info</summary>
+                <ul class="exif-list">
+                  <li><span class="exif-key">Camera</span><span class="exif-val">Sony α6700</span></li>
+                  <li><span class="exif-key">Lens</span><span class="exif-val">FE 100-400mm F4.5-5.6 GM OSS</span></li>
+                  <li><span class="exif-key">Focal</span><span class="exif-val">400 mm</span></li>
+                  <li><span class="exif-key">Aperture</span><span class="exif-val">f/8</span></li>
+                  <li><span class="exif-key">Shutter</span><span class="exif-val">1/500</span></li>
+                  <li><span class="exif-key">ISO</span><span class="exif-val">320</span></li>
                 </ul>
               </details>
             </div>
@@ -1044,3 +1192,51 @@ header_subtitle: "Selected aircraft photography organized by airport."
       <svg class="icon" aria-hidden="true"><use href="#i-chevron-up"/></svg>
     </button>
   </div>
+
+  <script>
+    /* Aviation hero slideshow: auto-rotate + dot navigation, honors prefers-reduced-motion */
+    (function () {
+      var hero = document.querySelector('.aviation-hero');
+      if (!hero) return;
+      var slides = hero.querySelectorAll('.aviation-hero-slide');
+      var dots = hero.querySelectorAll('.aviation-hero-dots button');
+      if (slides.length < 2) return;
+
+      var current = 0;
+      var interval = 5000;
+      var timer = null;
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      function go(i) {
+        slides[current].classList.remove('is-active');
+        if (dots[current]) dots[current].setAttribute('aria-selected', 'false');
+        current = (i + slides.length) % slides.length;
+        slides[current].classList.add('is-active');
+        if (dots[current]) dots[current].setAttribute('aria-selected', 'true');
+      }
+      function next() { go(current + 1); }
+      function start() {
+        stop();
+        if (reduced && reduced.matches) return;
+        timer = setInterval(next, interval);
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+      dots.forEach(function (b, i) {
+        b.addEventListener('click', function () { go(i); start(); });
+      });
+
+      hero.addEventListener('mouseenter', stop);
+      hero.addEventListener('mouseleave', start);
+      hero.addEventListener('focusin', stop);
+      hero.addEventListener('focusout', start);
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) stop(); else start();
+      });
+      if (reduced && reduced.addEventListener) {
+        reduced.addEventListener('change', function () { start(); });
+      }
+
+      start();
+    })();
+  </script>
