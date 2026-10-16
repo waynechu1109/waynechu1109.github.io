@@ -309,7 +309,13 @@
         </a>
       </div>
     </div>
-    <script id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=230&t=n&d=KUoWV58gmYBX8fEU14xNS41ccPVeiqwHh0FBjsMDanw&co=4076ac"></script>
+    <!-- Visitor map (MapMyVisitors), light build: co=2f6296 matches the footer.
+         The dark build (co=18263c) cannot be a second script tag -- both would
+         need id="mapmyvisitors" -- so dark mode is handled in css/style.css.
+         w=a makes the widget measure .footer-visitor-map, which sets the size. -->
+    <div class="footer-visitor-map">
+      <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=a&t=n&d=_SZuuAE6cFmYSznUFaOGJ8whoMhwR1rCE-hLZSYJITs&co=2f6296'></script>
+    </div>
     {% if page.page_id == 'aviation' or page.page_id == 'photo_gallery' %}{% include lightbox_script.html %}{% endif %}
   </footer>
 </body>

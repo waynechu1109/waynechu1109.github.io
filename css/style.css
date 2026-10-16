@@ -290,7 +290,7 @@ header { padding: 40px 0 20px 0; }
    Footer
    ========================= */
 footer {
-  background: linear-gradient(135deg, var(--primary-deep) 0%, var(--primary) 100%);
+  background: #2f6296;
   padding: 34px 0 24px;
   text-align: center;
   font-size: 13px;
@@ -319,6 +319,34 @@ footer {
   background: linear-gradient(135deg, #fff8ed 0%, #ffffff 100%);
   border-color: transparent;
   box-shadow: 0 16px 30px rgba(8,27,48,.26);
+}
+
+/* Visitor map widget: the vendor renders at auto width, so cap it here and
+   force whatever element it injects (img/canvas/iframe) to fit the box. */
+.footer-visitor-map {
+  width: 230px;
+  max-width: 100%;
+  margin: 22px auto 0;
+  line-height: 0;
+}
+.footer-visitor-map img,
+.footer-visitor-map canvas,
+.footer-visitor-map iframe,
+.footer-visitor-map > div {
+  max-width: 100%;
+  height: auto;
+}
+
+/* The widget ships one baked-in colour per script url, and two copies of the
+   script cannot coexist (both need id="mapmyvisitors"). So the light build is
+   loaded in the layout and dark mode restates the dark build's two colours:
+   co=18263c as the container fill, plus the matching generated backdrop.
+   !important is required -- the widget writes both as inline styles. */
+[data-theme="dark"] .footer-visitor-map .mapmyvisitors-map-container {
+  background-color: #18263c !important;
+}
+[data-theme="dark"] .footer-visitor-map .mapmyvisitors-map {
+  background-image: url("https://mapmyvisitors.com/generated_content/backs/bg-w_230-co_18263c-cl_ffffff.png") !important;
 }
 
 /* =========================
@@ -525,7 +553,7 @@ footer {
 [data-theme="dark"] .section-more a { color: var(--primary-deep); border-bottom-color: var(--border); }
 [data-theme="dark"] .header-anchor { color: var(--primary); }
 [data-theme="dark"] footer {
-  background: linear-gradient(135deg, #0d131c 0%, #223a5c 100%);
+  background: #18263c;
 }
 [data-theme="dark"] #back-to-top,
 [data-theme="dark"] #theme-toggle {
