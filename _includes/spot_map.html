@@ -1,0 +1,179 @@
+      <section class="spot-map-wrap" aria-label="Map of where these photos were taken">
+        <div class="spot-map-head">
+          <h3 class="spot-map-title">{{ include.title }}</h3>
+          <div class="spot-map-regions" role="group" aria-label="Zoom the map to a region"></div>
+        </div>
+        <div id="spot-map" class="spot-map"></div>
+        <p class="spot-map-hint">{{ include.hint }}</p>
+      </section>
+
+      <script>
+        /* Spotting map: reads #spot-map-data, and only fetches Leaflet once the map scrolls near the viewport */
+        (function () {
+          var mapEl = document.getElementById('spot-map');
+          var dataEl = document.getElementById('spot-map-data');
+          if (!mapEl || !dataEl || !('IntersectionObserver' in window)) return;
+          var cfg = JSON.parse(dataEl.textContent);
+          var CLUSTER_PX = 44;
+          var regionLabel = {};
+          var regionSize = {};
+          var buttons = mapEl.parentNode.querySelector('.spot-map-regions');
+
+          // the cards live further down the page, so counting waits for the DOM
+          function setup() {
+            cfg.regions.forEach(function (r) { regionLabel[r.key] = r.label; regionSize[r.key] = 0; });
+            cfg.spots.forEach(function (s) {
+              s.cards = Array.prototype.slice.call(document.querySelectorAll(s.cards));
+              s.count = s.cards.length;
+              regionSize[s.region] += 1;
+            });
+            [{ key: 'all', label: 'All' }].concat(cfg.regions).forEach(function (r) {
+              var b = document.createElement('button');
+              b.type = 'button';
+              b.dataset.region = r.key;
+              b.textContent = r.label;
+              if (r.key === 'all') b.className = 'is-active';
+              buttons.appendChild(b);
+            });
+            var io = new IntersectionObserver(function (entries) {
+              if (!entries[0].isIntersecting) return;
+              io.disconnect();
+              load(init);
+            }, { rootMargin: '300px 0px' });
+            io.observe(mapEl);
+          }
+
+          function goTo(s) {
+            if (s.href) { location.hash = s.href; return; }
+            var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            s.cards[0].scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+            s.cards.forEach(function (c) {
+              c.classList.remove('is-flash');
+              void c.offsetWidth;
+              c.classList.add('is-flash');
+              setTimeout(function () { c.classList.remove('is-flash'); }, 1800);
+            });
+          }
+
+          function label(members) {
+            var r = members[0].region;
+            var sameRegion = members.every(function (m) { return m.region === r; });
+            if (sameRegion && members.length === regionSize[r]) return regionLabel[r];
+            if (members.length <= 2) return members.map(function (m) { return m.label; }).join(' · ');
+            return sameRegion ? regionLabel[r] : members.length + ' places';
+          }
+
+          function init() {
+            var L = window.L;
+            // western-hemisphere longitudes get +360 so a Pacific-spanning view stays in one piece
+            var pos = function (s) { return L.latLng(s.lat, s.lng < 0 ? s.lng + 360 : s.lng); };
+            var pin = function (text, n, kind) {
+              var d = Math.round((kind === 'cluster' ? 30 : 22) + Math.sqrt(n) * 4);
+              return L.divIcon({
+                className: 'spot-pin spot-pin-' + kind,
+                iconSize: [d, d],
+                html: '<span class="spot-dot">' + n + '</span><span class="spot-label">' + text + '</span>'
+              });
+            };
+
+            var map = L.map(mapEl, { scrollWheelZoom: false, zoomSnap: 0.5, minZoom: 2 });
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 19,
+              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            var all = L.latLngBounds([]);
+            var bounds = {};
+            cfg.spots.forEach(function (s) {
+              s.ll = pos(s);
+              all.extend(s.ll);
+              (bounds[s.region] = bounds[s.region] || L.latLngBounds([])).extend(s.ll);
+            });
+
+            var layer = L.layerGroup().addTo(map);
+            function addMarker(members) {
+              var n = members.reduce(function (sum, s) { return sum + s.count; }, 0);
+              if (members.length === 1) {
+                var s = members[0];
+                L.marker(s.ll, { icon: pin(s.label, n, 'spot'), title: s.name + ', ' + n + ' photos' })
+                  .on('click', function () { goTo(s); })
+                  .addTo(layer);
+                return;
+              }
+              var b = L.latLngBounds(members.map(function (m) { return m.ll; }));
+              var text = label(members);
+              L.marker(b.getCenter(), { icon: pin(text, n, 'cluster'), title: text + ', ' + n + ' photos' })
+                .on('click', function () { map.flyToBounds(b.pad(0.5), { maxZoom: 14, duration: 0.8 }); })
+                .addTo(layer);
+            }
+            // greedy pixel clustering, redone per zoom level so nearby spots never draw on top of each other
+            function redraw() {
+              layer.clearLayers();
+              var left = cfg.spots.slice().sort(function (a, b) { return b.count - a.count; });
+              while (left.length) {
+                var seed = map.latLngToLayerPoint(left[0].ll);
+                var members = left.filter(function (s) { return map.latLngToLayerPoint(s.ll).distanceTo(seed) < CLUSTER_PX; });
+                left = left.filter(function (s) { return members.indexOf(s) === -1; });
+                addMarker(members);
+              }
+              hideCrowdedLabels();
+            }
+            // markers were added busiest first, so a label that would overlap gets dropped in favor of the bigger spot
+            function hideCrowdedLabels() {
+              var taken = [];
+              var overlaps = function (a, b) {
+                return a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom;
+              };
+              layer.eachLayer(function (m) {
+                var el = m.getElement();
+                if (el) taken.push(el.querySelector('.spot-dot').getBoundingClientRect());
+              });
+              layer.eachLayer(function (m) {
+                var el = m.getElement();
+                if (!el) return;
+                var lab = el.querySelector('.spot-label');
+                lab.classList.remove('is-hidden');
+                var box = lab.getBoundingClientRect();
+                var dot = el.querySelector('.spot-dot').getBoundingClientRect();
+                var hit = taken.some(function (r) { return r !== dot && overlaps(box, r); });
+                if (hit) lab.classList.add('is-hidden');
+                else taken.push(box);
+              });
+            }
+
+            buttons.addEventListener('click', function (e) {
+              var btn = e.target.closest('button');
+              if (!btn) return;
+              buttons.querySelectorAll('button').forEach(function (x) { x.classList.toggle('is-active', x === btn); });
+              var r = btn.dataset.region;
+              if (r === 'all') map.flyToBounds(all.pad(0.15), { duration: 0.8 });
+              else map.flyToBounds(bounds[r].pad(0.5), { maxZoom: 10, duration: 0.8 });
+            });
+
+            map.on('zoomend', redraw);
+            map.on('click focus', function () { map.scrollWheelZoom.enable(); });
+            map.on('mouseout blur', function () { map.scrollWheelZoom.disable(); });
+            map.fitBounds(all.pad(0.15));
+            redraw();
+          }
+
+          function load(cb) {
+            var base = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/';
+            var css = document.createElement('link');
+            css.rel = 'stylesheet';
+            css.href = base + 'leaflet.min.css';
+            css.integrity = 'sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==';
+            css.crossOrigin = 'anonymous';
+            document.head.appendChild(css);
+            var js = document.createElement('script');
+            js.src = base + 'leaflet.min.js';
+            js.integrity = 'sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==';
+            js.crossOrigin = 'anonymous';
+            js.onload = cb;
+            document.head.appendChild(js);
+          }
+
+          if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setup);
+          else setup();
+        })();
+      </script>

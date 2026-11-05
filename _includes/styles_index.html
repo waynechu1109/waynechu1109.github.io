@@ -230,43 +230,6 @@
     .award-group li { margin: .55em 0; }
 
     /* =========================
-       Side Table of Contents (desktop only)
-       ========================= */
-    .page-toc {
-      position: fixed;
-      top: calc(var(--nav-offset) + 30px);
-      left: 24px;
-      width: 170px;
-      font-size: .85rem;
-      z-index: 500;
-      display: none;
-    }
-    @media (min-width: 1500px) { .page-toc { display: block; } }
-    .page-toc-title {
-      margin: 0 0 10px; padding-left: 12px;
-      font-size: .7rem; font-weight: 700;
-      letter-spacing: .12em; text-transform: uppercase;
-      color: var(--muted);
-    }
-    .page-toc ol {
-      list-style: none; padding: 0; margin: 0;
-      border-left: 2px solid rgba(64,118,172,.14);
-    }
-    .page-toc-link {
-      display: block; padding: 6px 12px;
-      color: var(--muted); text-decoration: none;
-      border-left: 2px solid transparent;
-      margin-left: -2px; line-height: 1.4;
-      transition: color .18s ease, border-color .18s ease, background .18s ease;
-    }
-    .page-toc-link:hover { color: var(--primary-deep); }
-    .page-toc-link.active {
-      color: var(--primary-deep); font-weight: 700;
-      border-left-color: var(--primary-deep);
-      background: rgba(64,118,172,.06);
-    }
-
-    /* =========================
        Responsive (page-specific)
        ========================= */
     @media (max-width: 800px) {

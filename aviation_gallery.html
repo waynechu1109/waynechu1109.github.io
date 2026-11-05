@@ -135,6 +135,46 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </div>
       </section>
 
+      <section class="flap-board" aria-labelledby="flap-board-title">
+        <div class="flap-board-head">
+          <span id="flap-board-title">Recent sightings</span>
+          <span>Selected work</span>
+        </div>
+        <div class="flap-table">
+          <div class="flap-cols" aria-hidden="true">
+            <span style="--n: 10">Date</span>
+            <span style="--n: 8">Reg</span>
+            <span style="--n: 6">Spotted at</span>
+            <span class="flap-wide" style="--n: 13">Type</span>
+            <span class="flap-wide" style="--n: 20">Remarks</span>
+          </div>
+          <ol class="flap-rows"></ol>
+        </div>
+      </section>
+
+      <script type="application/json" id="spot-map-data">
+        {
+          "regions": [
+            { "key": "tw", "label": "🇹🇼 Taiwan" },
+            { "key": "us", "label": "🇺🇸 Bay Area" },
+            { "key": "jp", "label": "🇯🇵 Tokyo area" }
+          ],
+          "spots": [
+            { "label": "TPE", "name": "Taiwan Taoyuan International Airport", "region": "tw", "lat": 25.0777, "lng": 121.2328, "cards": "#rctp .photo-card", "href": "rctp" },
+            { "label": "TSA", "name": "Taipei Songshan Airport", "region": "tw", "lat": 25.0694, "lng": 121.5525, "cards": "#rcss .photo-card", "href": "rcss" },
+            { "label": "HSZ", "name": "Hsinchu Air Base", "region": "tw", "lat": 24.818, "lng": 120.9392, "cards": "#hsinchu-air-base .photo-card", "href": "hsinchu-air-base" },
+            { "label": "SFO", "name": "San Francisco International Airport", "region": "us", "lat": 37.619, "lng": -122.3749, "cards": "#ksfo .photo-card", "href": "ksfo" },
+            { "label": "SJC", "name": "San Jose Mineta International Airport", "region": "us", "lat": 37.3626, "lng": -121.9291, "cards": "#ksjc .photo-card", "href": "ksjc" },
+            { "label": "Fleet Week", "name": "SF Fleet Week", "region": "us", "lat": 37.808, "lng": -122.437, "cards": "#sf-fleet-week .photo-card", "href": "sf-fleet-week" },
+            { "label": "HND", "name": "Tokyo Haneda Airport", "region": "jp", "lat": 35.5523, "lng": 139.7797, "cards": "#rjtt .photo-card", "href": "rjtt" },
+            { "label": "NRT", "name": "Narita International Airport", "region": "jp", "lat": 35.7647, "lng": 140.3864, "cards": "#rjaa .photo-card", "href": "rjaa" },
+            { "label": "OKO", "name": "Yokota Air Base", "region": "jp", "lat": 35.7485, "lng": 139.3485, "cards": "#rjty .photo-card", "href": "rjty" },
+            { "label": "Iruma", "name": "Iruma Air Base", "region": "jp", "lat": 35.8419, "lng": 139.4106, "cards": "#iruma-air-base .photo-card", "href": "iruma-air-base" }
+          ]
+        }
+      </script>
+      {% include spot_map.html title="Where these were shot" hint="Pick a region, then click an airport to jump to its photos." %}
+
       <div class="airport-links" aria-label="Airport categories">
         <a href="#rctp" class="resource-btn">🇹🇼 RCTP / TPE</a>
         <a href="#rcss" class="resource-btn">🇹🇼 RCSS / TSA</a>
@@ -148,7 +188,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <a href="#iruma-air-base" class="resource-btn">🇯🇵 RJTJ</a>
       </div>
 
-      <section id="rctp" class="airport-section" aria-labelledby="rctp-heading">
+      <section id="rctp" class="airport-section" data-code="TPE" data-code-sub="RCTP &middot; Taoyuan" aria-labelledby="rctp-heading">
         <div class="airport-header">
           <div>
             <h3 id="rctp-heading" class="airport-name">🇹🇼 Taiwan Taoyuan International Airport</h3>
@@ -158,17 +198,6 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <p class="airport-description">
           Taiwan's main international gateway, known for long-haul traffic, widebody operations, and a strong mix of Taiwanese and international carriers.
         </p>
-        <div class="airport-map">
-          <button type="button" class="iframe-facade" data-facade-src="https://www.google.com/maps?q=Taiwan%20Taoyuan%20International%20Airport&output=embed" data-facade-title="Map of Taiwan Taoyuan International Airport">
-            <svg class="facade-icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Load interactive map</span>
-            <small>Google Maps</small>
-          </button>
-          <a class="airport-map-link" href="https://www.google.com/maps?q=Taiwan%20Taoyuan%20International%20Airport" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Open Map</span>
-          </a>
-        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -715,7 +744,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
                 srcset="media/gallery/aviation_gallery/tpe/DSC09582-640.jpg 640w, media/gallery/aviation_gallery/tpe/DSC09582-1280.jpg 1280w, media/gallery/aviation_gallery/tpe/DSC09582-2560.jpg 2560w"
                 sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 330px"
                 data-full="media/gallery/aviation_gallery/tpe/DSC09582-2560.jpg"
-                alt="EVA Air Boeing 777-300ER B-16722 in Hello Kitty Shining Star Sanrio livery under tow at Taiwan Taoyuan International Airport"
+                alt="EVA Air Boeing 777-300ER B-16722 in Hello Kitty Besties Jet Sanrio livery under tow at Taiwan Taoyuan International Airport"
                 class="photo-image"
                 loading="lazy"
               />
@@ -723,7 +752,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
             <div class="photo-body">
               <h4 class="photo-title">🇹🇼 EVA AIR</h4>
               <p class="photo-aircraft">Boeing 777-300ER</p>
-              <p class="photo-tags"><span class="reg-chip">B-16722</span><span class="livery-tag">Hello Kitty Shining Star</span></p>
+              <p class="photo-tags"><span class="reg-chip">B-16722</span><span class="livery-tag">Hello Kitty Besties Jet</span></p>
               <p class="photo-date"><time datetime="2024-08-30">2024-08-30</time></p>
               <details class="exif-details">
                 <summary>Details</summary>
@@ -736,7 +765,8 @@ header_subtitle: "Selected aircraft photography organized by airport."
                   <li><span class="exif-key">Line no.</span><span class="exif-val">1302</span></li>
                   <li><span class="exif-key">Engines</span><span class="exif-val">GE90-115B</span></li>
                   <li><span class="exif-key">Delivered</span><span class="exif-val">2015-05</span></li>
-                  <li><span class="exif-key">Livery</span><span class="exif-val">Hello Kitty &ldquo;Shining Star&rdquo; (Sanrio Characters), since 2015-06</span></li>
+                  <li><span class="exif-key">Livery</span><span class="exif-val">Hello Kitty &ldquo;Besties Jet&rdquo; with My Melody and Kuromi, since 2024-08-28</span></li>
+                  <li><span class="exif-key">Previous livery</span><span class="exif-val">Hello Kitty &ldquo;Shining Star&rdquo;, 2015-06 to 2024</span></li>
                 </ul>
                 <p class="exif-group">Photo</p>
                 <ul class="exif-list">
@@ -795,7 +825,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </div>
       </section>
 
-      <section id="rcss" class="airport-section" aria-labelledby="rcss-heading">
+      <section id="rcss" class="airport-section" data-code="TSA" data-code-sub="RCSS &middot; Songshan" aria-labelledby="rcss-heading">
         <div class="airport-header">
           <div>
             <h3 id="rcss-heading" class="airport-name">🇹🇼 Taipei Songshan Airport</h3>
@@ -805,17 +835,6 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <p class="airport-description">
           A compact downtown airport in Taipei, especially interesting for domestic flights, business aviation, and close-in spotting with the city as backdrop.
         </p>
-        <div class="airport-map">
-          <button type="button" class="iframe-facade" data-facade-src="https://www.google.com/maps?q=Taipei%20Songshan%20Airport&output=embed" data-facade-title="Map of Taipei Songshan Airport">
-            <svg class="facade-icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Load interactive map</span>
-            <small>Google Maps</small>
-          </button>
-          <a class="airport-map-link" href="https://www.google.com/maps?q=Taipei%20Songshan%20Airport" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Open Map</span>
-          </a>
-        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -943,7 +962,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </div>
       </section>
 
-      <section id="hsinchu-air-base" class="airport-section" aria-labelledby="hsinchu-air-base-heading">
+      <section id="hsinchu-air-base" class="airport-section" data-code="HSZ" data-code-sub="RCPO &middot; Hsinchu AB" aria-labelledby="hsinchu-air-base-heading">
         <div class="airport-header">
           <div>
             <h3 id="hsinchu-air-base-heading" class="airport-name">🇹🇼 Hsinchu Air Base</h3>
@@ -953,17 +972,6 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <p class="airport-description">
           A major Republic of China Air Force base and one of the most recognizable military aviation locations in northern Taiwan.
         </p>
-        <div class="airport-map">
-          <button type="button" class="iframe-facade" data-facade-src="https://www.google.com/maps?q=Hsinchu%20Air%20Base&output=embed" data-facade-title="Map of Hsinchu Air Base">
-            <svg class="facade-icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Load interactive map</span>
-            <small>Google Maps</small>
-          </button>
-          <a class="airport-map-link" href="https://www.google.com/maps?q=Hsinchu%20Air%20Base" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Open Map</span>
-          </a>
-        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -1084,7 +1092,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </div>
       </section>
 
-      <section id="ksfo" class="airport-section" aria-labelledby="ksfo-heading">
+      <section id="ksfo" class="airport-section" data-code="SFO" data-code-sub="KSFO &middot; San Francisco" aria-labelledby="ksfo-heading">
         <div class="airport-header">
           <div>
             <h3 id="ksfo-heading" class="airport-name">🇺🇸 San Francisco International Airport</h3>
@@ -1094,17 +1102,6 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <p class="airport-description">
           A major West Coast gateway for transpacific and transatlantic long-haul traffic, often shaped by the Bay Area's marine layer and dramatic coastline light.
         </p>
-        <div class="airport-map">
-          <button type="button" class="iframe-facade" data-facade-src="https://www.google.com/maps?q=San%20Francisco%20International%20Airport&output=embed" data-facade-title="Map of San Francisco International Airport">
-            <svg class="facade-icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Load interactive map</span>
-            <small>Google Maps</small>
-          </button>
-          <a class="airport-map-link" href="https://www.google.com/maps?q=San%20Francisco%20International%20Airport" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Open Map</span>
-          </a>
-        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -1483,7 +1480,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </div>
       </section>
 
-      <section id="ksjc" class="airport-section" aria-labelledby="ksjc-heading">
+      <section id="ksjc" class="airport-section" data-code="SJC" data-code-sub="KSJC &middot; San Jose" aria-labelledby="ksjc-heading">
         <div class="airport-header">
           <div>
             <h3 id="ksjc-heading" class="airport-name">🇺🇸 Norman Y. Mineta San Jose International Airport</h3>
@@ -1493,17 +1490,6 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <p class="airport-description">
           The South Bay's home airport in the heart of Silicon Valley, mixing domestic mainline traffic with a growing handful of transpacific and international services.
         </p>
-        <div class="airport-map">
-          <button type="button" class="iframe-facade" data-facade-src="https://www.google.com/maps?q=Norman%20Y.%20Mineta%20San%20Jose%20International%20Airport&output=embed" data-facade-title="Map of Norman Y. Mineta San Jose International Airport">
-            <svg class="facade-icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Load interactive map</span>
-            <small>Google Maps</small>
-          </button>
-          <a class="airport-map-link" href="https://www.google.com/maps?q=Norman%20Y.%20Mineta%20San%20Jose%20International%20Airport" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Open Map</span>
-          </a>
-        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -1635,7 +1621,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </div>
       </section>
 
-      <section id="sf-fleet-week" class="airport-section" aria-labelledby="sf-fleet-week-heading">
+      <section id="sf-fleet-week" class="airport-section" data-code="SF BAY" data-code-sub="Fleet Week air show" aria-labelledby="sf-fleet-week-heading">
         <div class="airport-header">
           <div>
             <h3 id="sf-fleet-week-heading" class="airport-name">🇺🇸 San Francisco Fleet Week</h3>
@@ -1645,17 +1631,6 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <p class="airport-description">
           An annual October air show flown along San Francisco's northern waterfront, pairing military demonstration teams and civilian aerobatics with the Golden Gate Bridge as a backdrop.
         </p>
-        <div class="airport-map">
-          <button type="button" class="iframe-facade" data-facade-src="https://www.google.com/maps?q=San%20Francisco%20Bay&output=embed" data-facade-title="Map of San Francisco Bay">
-            <svg class="facade-icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Load interactive map</span>
-            <small>Google Maps</small>
-          </button>
-          <a class="airport-map-link" href="https://www.google.com/maps?q=San%20Francisco%20Bay" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Open Map</span>
-          </a>
-        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -1989,7 +1964,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </div>
       </section>
 
-      <section id="rjtt" class="airport-section" aria-labelledby="rjtt-heading">
+      <section id="rjtt" class="airport-section" data-code="HND" data-code-sub="RJTT &middot; Haneda" aria-labelledby="rjtt-heading">
         <div class="airport-header">
           <div>
             <h3 id="rjtt-heading" class="airport-name">🇯🇵 Tokyo Haneda Airport</h3>
@@ -1999,17 +1974,6 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <p class="airport-description">
           One of Tokyo's busiest airports, with dense domestic traffic, premium international carriers, and constant runway activity throughout the day.
         </p>
-        <div class="airport-map">
-          <button type="button" class="iframe-facade" data-facade-src="https://www.google.com/maps?q=Tokyo%20Haneda%20Airport&output=embed" data-facade-title="Map of Tokyo Haneda Airport">
-            <svg class="facade-icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Load interactive map</span>
-            <small>Google Maps</small>
-          </button>
-          <a class="airport-map-link" href="https://www.google.com/maps?q=Tokyo%20Haneda%20Airport" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Open Map</span>
-          </a>
-        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -2550,7 +2514,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </div>
       </section>
 
-      <section id="rjaa" class="airport-section" aria-labelledby="rjaa-heading">
+      <section id="rjaa" class="airport-section" data-code="NRT" data-code-sub="RJAA &middot; Narita" aria-labelledby="rjaa-heading">
         <div class="airport-header">
           <div>
             <h3 id="rjaa-heading" class="airport-name">🇯🇵 Narita International Airport</h3>
@@ -2560,17 +2524,6 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <p class="airport-description">
           A classic long-haul and cargo hub near Tokyo, well known among spotters for its wide variety of airlines, aircraft types, and spotting locations.
         </p>
-        <div class="airport-map">
-          <button type="button" class="iframe-facade" data-facade-src="https://www.google.com/maps?q=Narita%20International%20Airport&output=embed" data-facade-title="Map of Narita International Airport">
-            <svg class="facade-icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Load interactive map</span>
-            <small>Google Maps</small>
-          </button>
-          <a class="airport-map-link" href="https://www.google.com/maps?q=Narita%20International%20Airport" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Open Map</span>
-          </a>
-        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -2940,7 +2893,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </div>
       </section>
 
-      <section id="rjty" class="airport-section" aria-labelledby="rjty-heading">
+      <section id="rjty" class="airport-section" data-code="OKO" data-code-sub="RJTY &middot; Yokota AB" aria-labelledby="rjty-heading">
         <div class="airport-header">
           <div>
             <h3 id="rjty-heading" class="airport-name">🇯🇵 Yokota Air Base</h3>
@@ -2950,17 +2903,6 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <p class="airport-description">
           A major U.S. Air Force installation in western Tokyo, notable for heavy military aircraft and the unique atmosphere of joint-use aviation in Japan.
         </p>
-        <div class="airport-map">
-          <button type="button" class="iframe-facade" data-facade-src="https://www.google.com/maps?q=Yokota%20Air%20Base&output=embed" data-facade-title="Map of Yokota Air Base">
-            <svg class="facade-icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Load interactive map</span>
-            <small>Google Maps</small>
-          </button>
-          <a class="airport-map-link" href="https://www.google.com/maps?q=Yokota%20Air%20Base" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Open Map</span>
-          </a>
-        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -3075,7 +3017,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </div>
       </section>
 
-      <section id="iruma-air-base" class="airport-section" aria-labelledby="iruma-air-base-heading">
+      <section id="iruma-air-base" class="airport-section" data-code="RJTJ" data-code-sub="Iruma AB" aria-labelledby="iruma-air-base-heading">
         <div class="airport-header">
           <div>
             <h3 id="iruma-air-base-heading" class="airport-name">🇯🇵 Iruma Air Base</h3>
@@ -3085,17 +3027,6 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <p class="airport-description">
           A Japan Air Self-Defense Force base in Saitama, known for military transport aircraft, training activity, and airshow-style viewing opportunities.
         </p>
-        <div class="airport-map">
-          <button type="button" class="iframe-facade" data-facade-src="https://www.google.com/maps?q=Iruma%20Air%20Base&output=embed" data-facade-title="Map of Iruma Air Base">
-            <svg class="facade-icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Load interactive map</span>
-            <small>Google Maps</small>
-          </button>
-          <a class="airport-map-link" href="https://www.google.com/maps?q=Iruma%20Air%20Base" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>
-            <span>Open Map</span>
-          </a>
-        </div>
         <div class="photo-grid">
           <article class="photo-card">
             <div class="photo-frame real-photo">
@@ -3355,13 +3286,127 @@ header_subtitle: "Selected aircraft photography organized by airport."
     </button>
     <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Expanded photo viewer">
       <button class="lightbox-close" type="button" aria-label="Close expanded photo">&times;</button>
-      <img class="lightbox-image" alt="" />
-      <p class="lightbox-caption" aria-live="polite"></p>
+      <div class="lightbox-body">
+        <img class="lightbox-image" alt="" />
+        <div class="lightbox-info" id="lightbox-info" data-variant="pass" hidden></div>
+      </div>
+      <div class="lightbox-bar">
+        <p class="lightbox-caption" aria-live="polite"></p>
+        <button class="lightbox-info-toggle" type="button" aria-expanded="false" aria-controls="lightbox-info" hidden>Details</button>
+      </div>
     </div>
     <button class="lightbox-nav lightbox-next" type="button" aria-label="Next photo">
       <svg class="icon" aria-hidden="true"><use href="#i-chevron-up"/></svg>
     </button>
   </div>
+
+  <script>
+    /* Split-flap sightings board: the newest photo from each airport, each row opening that photo in the lightbox */
+    (function () {
+      var board = document.querySelector('.flap-board');
+      if (!board) return;
+      var ROWS = 5;
+      var WIDTHS = [10, 8, 6, 13, 20];
+      var SPIN = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+
+      var fit = function (str, n) {
+        str = str.toUpperCase();
+        if (str.length <= n) return str;
+        var words = str.split(' ');
+        var out = words[0];
+        for (var i = 1; i < words.length && (out + ' ' + words[i]).length <= n; i++) out += ' ' + words[i];
+        return out.slice(0, n);
+      };
+      // "Lockheed Martin F-35B Lightning II" -> "F-35B": drop the maker, keep the designation, add the name only if it all fits
+      var shortType = function (t) {
+        t = t.replace(/\s*\(.*?\)/g, '').split(/,| & /)[0].replace(/^(Lockheed Martin|McDonnell Douglas|\S+)\s+/, '');
+        return t.length <= WIDTHS[3] ? t : t.split(' ')[0];
+      };
+
+      var entries = Array.prototype.map.call(document.querySelectorAll('.photo-card'), function (card) {
+        var text = function (sel) { var n = card.querySelector(sel); return n ? n.textContent.trim() : ''; };
+        var regs = Array.prototype.map.call(card.querySelectorAll('.reg-chip'), function (n) { return n.textContent.trim(); });
+        var section = card.closest('.airport-section');
+        var livery = text('.livery-tag').replace(/\s+livery$/i, '');
+        var remark = livery
+          || (regs.length > 1 ? 'With ' + regs[1] + (regs.length > 2 ? ' +' + (regs.length - 2) : '') : text('.photo-title').replace(/^\S+\s/, ''));
+        return {
+          card: card,
+          place: section ? section.id : '',
+          hasReg: regs.length > 0,
+          date: text('.photo-date'),
+          cells: [text('.photo-date'), regs[0] || '', section ? section.dataset.code : '', shortType(text('.photo-aircraft')), remark],
+          label: [text('.photo-title'), text('.photo-aircraft'), regs.join(', '), text('.photo-date')].filter(Boolean).join(', ')
+        };
+      }).sort(function (a, b) {
+        if (a.date !== b.date) return a.date < b.date ? 1 : -1;
+        return b.hasReg - a.hasReg;
+      });
+      // one row per airport keeps a single busy day (Fleet Week) from filling the whole board
+      var seen = {};
+      entries = entries.filter(function (e) {
+        if (seen[e.place]) return false;
+        seen[e.place] = true;
+        return true;
+      }).slice(0, ROWS);
+
+      var list = board.querySelector('.flap-rows');
+      var flaps = [];
+      entries.forEach(function (e, r) {
+        var li = document.createElement('li');
+        var row = document.createElement('button');
+        row.type = 'button';
+        row.className = 'flap-row';
+        row.setAttribute('aria-label', 'Open photo: ' + e.label);
+        row.addEventListener('click', function () { e.card.querySelector('.photo-image').click(); });
+        e.cells.forEach(function (value, c) {
+          var col = document.createElement('span');
+          col.className = 'flap-col' + (c >= 3 ? ' flap-wide' : '');
+          col.style.setProperty('--n', WIDTHS[c]);
+          col.setAttribute('aria-hidden', 'true');
+          // only real characters get a tile; the column keeps its width so the rows still line up
+          fit(value, WIDTHS[c]).split('').forEach(function (ch, i) {
+            var cell = document.createElement('span');
+            cell.className = ch === ' ' ? 'flap flap-space' : 'flap';
+            cell.textContent = ' ';
+            if (ch === ' ') { col.appendChild(cell); return; }
+            col.appendChild(cell);
+            flaps.push({ cell: cell, target: ch, turns: 4 + r * 2 + Math.floor((c * 6 + i) / 3) });
+          });
+          row.appendChild(col);
+        });
+        li.appendChild(row);
+        list.appendChild(li);
+      });
+      board.classList.add('is-ready');
+
+      // one shared timer drives every flap; alternating two animation names restarts the flip without forcing a reflow
+      function run() {
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduce) { flaps.forEach(function (f) { f.cell.textContent = f.target; }); return; }
+        var tick = 0;
+        var timer = setInterval(function () {
+          var busy = false;
+          flaps.forEach(function (f) {
+            if (tick > f.turns) return;
+            busy = true;
+            f.cell.textContent = tick === f.turns ? f.target : SPIN.charAt(Math.floor(Math.random() * SPIN.length));
+            f.cell.classList.toggle('flip-a', tick % 2 === 0);
+            f.cell.classList.toggle('flip-b', tick % 2 === 1);
+          });
+          if (!busy) clearInterval(timer);
+          tick++;
+        }, 75);
+      }
+      if (!('IntersectionObserver' in window)) { run(); return; }
+      var io = new IntersectionObserver(function (items) {
+        if (!items[0].isIntersecting) return;
+        io.disconnect();
+        run();
+      }, { threshold: 0.4 });
+      io.observe(board);
+    })();
+  </script>
 
   <script>
     /* Aviation hero slideshow: auto-rotate + dot navigation, honors prefers-reduced-motion */

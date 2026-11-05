@@ -443,7 +443,117 @@ footer {
 .exif-key { color: var(--muted); font-weight: 700; }
 .exif-val { color: var(--text); }
 
+/* =========================
+   Spotting Map (shared by galleries)
+   ========================= */
+.spot-map-wrap { margin: 26px 0 6px; }
+.spot-map-head {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 10px 16px; margin-bottom: 12px;
+}
+.spot-map-title { margin: 0; color: #163453; font-size: 1.1rem; }
+.spot-map-regions { display: flex; flex-wrap: wrap; gap: 8px; }
+.spot-map-regions button {
+  padding: 5px 12px; border-radius: 999px; cursor: pointer;
+  font: inherit; font-size: .82rem; font-weight: 600;
+  color: #1c3550; background: #fff; border: 1px solid rgba(64,118,172,.22);
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
+}
+.spot-map-regions button:hover { background: #eef5ff; }
+.spot-map-regions button.is-active { color: #fff; background: var(--primary-deep); border-color: var(--primary-deep); }
+/* own stacking context so Leaflet's z-indexed panes can't paint over the sticky nav */
+.spot-map {
+  position: relative; z-index: 0; isolation: isolate;
+  height: 380px; border-radius: 20px; overflow: hidden;
+  border: 1px solid rgba(64,118,172,.16);
+  box-shadow: 0 14px 34px rgba(20,44,77,.08);
+  background: #e9eef4;
+}
+.spot-map-hint { margin: 8px 0 0; font-size: .82rem; color: var(--muted); }
+.spot-map .leaflet-tile-pane { filter: saturate(.7); }
+.spot-pin { background: none; border: none; }
+.spot-dot {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 100%; border-radius: 50%; box-sizing: border-box;
+  font-size: .76rem; font-weight: 700; color: #fff;
+  background: rgba(30,79,129,.9); border: 2px solid #fff;
+  box-shadow: 0 6px 16px rgba(20,44,77,.3);
+  transition: transform .18s ease;
+}
+.spot-pin-cluster .spot-dot { background: rgba(201,139,50,.94); }
+.spot-pin:hover .spot-dot, .spot-pin:focus-visible .spot-dot { transform: scale(1.1); }
+.spot-label {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  margin-top: 4px; padding: 1px 7px; border-radius: 6px;
+  white-space: nowrap; font-size: .74rem; font-weight: 700;
+  color: #163453; background: rgba(255,255,255,.92);
+  box-shadow: 0 2px 6px rgba(20,44,77,.15);
+}
+.spot-label.is-hidden { visibility: hidden; }
+.spot-pin:hover .spot-label, .spot-pin:focus-visible .spot-label { visibility: visible; z-index: 1; }
+.spot-pin:hover, .spot-pin:focus-visible { z-index: 1000 !important; }
+@media (max-width: 640px) { .spot-map { height: 300px; } }
+.is-flash { animation: spot-flash 1.8s ease; }
+@keyframes spot-flash {
+  0%, 60% { box-shadow: 0 0 0 3px var(--primary), 0 14px 34px rgba(20,44,77,.18); }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* =========================
+   Lightbox Details Panel (shared by galleries)
+   ========================= */
+.lightbox-dialog { flex-direction: column; }
+.lightbox-body { display: flex; align-items: stretch; gap: 16px; max-width: 100%; }
+/* without align-self the row stretches the photo to a tall details panel and distorts it */
+.lightbox-body .lightbox-image { min-width: 0; max-height: calc(88vh - 52px); align-self: center; object-fit: contain; }
+.lightbox-dialog.info-open .lightbox-image { max-width: calc(min(1200px, 92vw) - 316px); }
+.lightbox-info {
+  flex: none; align-self: flex-start; width: 300px; max-height: calc(88vh - 52px);
+  overflow-y: auto; overscroll-behavior: contain;
+  padding: 2px 18px 16px; border-radius: 16px;
+  background: rgba(12,22,36,.86); color: #e8eef5;
+  box-shadow: 0 24px 60px rgba(0,0,0,.38);
+}
+.lightbox-info[hidden] { display: none; }
+.lightbox-info .exif-group { color: #9cc3ea; }
+.lightbox-info .exif-group::after { background: rgba(255,255,255,.14); }
+.lightbox-info .exif-key { color: #9fb0c3; }
+.lightbox-info .exif-val { color: #e8eef5; }
+.lightbox-bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 8px 12px; margin-top: 14px; max-width: 100%;
+}
+.lightbox-bar:empty { display: none; }
+.lightbox-bar .lightbox-caption { margin: 0; }
+.lightbox-info-toggle {
+  padding: 5px 14px; border-radius: 999px; cursor: pointer;
+  font: inherit; font-size: .74rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: #e8eef5; background: rgba(12,22,36,.7);
+  border: 1px solid rgba(255,255,255,.22);
+  transition: background .18s ease, border-color .18s ease;
+}
+.lightbox-info-toggle:hover { background: rgba(24,41,66,.95); }
+.lightbox-info-toggle[aria-expanded="true"] { background: rgba(110,166,220,.3); border-color: rgba(110,166,220,.6); }
+.lightbox-info-toggle[hidden] { display: none; }
+@media (max-width: 800px) {
+  .lightbox-body { flex-direction: column; align-items: center; }
+  .lightbox-dialog.info-open .lightbox-image { max-width: 100%; max-height: 46vh; }
+  .lightbox-info { width: min(100%, 520px); max-height: calc(88vh - 46vh - 80px); }
+  /* mid-height arrows would sit on top of the panel text, so drop them level with the caption */
+  .lightbox:has(.info-open) .lightbox-nav { top: auto; bottom: 18px; transform: none; }
+}
+
 [data-theme="dark"] .exif-details { border-top-color: var(--border-soft); }
+[data-theme="dark"] .spot-map-title { color: #e8eef5; }
+[data-theme="dark"] .spot-map-regions button { color: var(--text); background: var(--surface-alt); border-color: var(--border); }
+[data-theme="dark"] .spot-map-regions button:hover { background: #223145; }
+[data-theme="dark"] .spot-map-regions button.is-active { color: #0f1b2f; background: var(--primary-deep); border-color: var(--primary-deep); }
+[data-theme="dark"] .spot-map { background: #0f1b2f; border-color: var(--border); box-shadow: 0 14px 34px rgba(0,0,0,.4); }
+/* OSM only ships a light style, so dark mode recolors the tiles instead */
+[data-theme="dark"] .spot-map .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.9) contrast(.9) saturate(.6); }
+[data-theme="dark"] .spot-dot { border-color: #0f1b2f; }
+[data-theme="dark"] .spot-label { color: #e8eef5; background: rgba(15,27,47,.92); }
 [data-theme="dark"] .exif-details summary::before { background: rgba(110,166,220,.14); }
 
 /* =========================
@@ -479,6 +589,51 @@ footer {
 #theme-toggle .i-sun { display: none; }
 [data-theme="dark"] #theme-toggle .i-sun { display: block; }
 [data-theme="dark"] #theme-toggle .i-moon { display: none; }
+
+/* =========================
+   Side Table of Contents (desktop only)
+   ========================= */
+.page-toc {
+  position: fixed;
+  top: calc(var(--nav-offset) + 30px);
+  left: 24px;
+  width: 170px;
+  font-size: .85rem;
+  z-index: 500;
+  display: none;
+}
+@media (min-width: 1500px) { .page-toc { display: block; } }
+.page-toc-title {
+  margin: 0 0 10px; padding-left: 12px;
+  font-size: .7rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted);
+}
+.page-toc ol {
+  list-style: none; padding: 0; margin: 0;
+  border-left: 2px solid rgba(64,118,172,.14);
+}
+.page-toc-link {
+  display: block; padding: 6px 12px;
+  color: var(--muted); text-decoration: none;
+  border-left: 2px solid transparent;
+  margin-left: -2px; line-height: 1.4;
+  transition: color .18s ease, border-color .18s ease, background .18s ease;
+}
+.page-toc-link:hover { color: var(--primary-deep); }
+.page-toc-link.active {
+  color: var(--primary-deep); font-weight: 700;
+  border-left-color: var(--primary-deep);
+  background: rgba(64,118,172,.06);
+}
+
+.page-toc-group {
+  margin: 12px 0 2px; padding-left: 12px;
+  font-size: .66rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted);
+}
+.page-toc-group:first-child { margin-top: 4px; }
 
 /* =========================
    Dark Theme Overrides

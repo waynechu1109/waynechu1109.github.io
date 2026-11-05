@@ -28,10 +28,35 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
              sips -Z 1280 photo.jpg --out photo-1280.jpg
         3. Duplicate one of the <article class="scene-card"> blocks below,
            updating src/srcset/data-full/alt and the .scene-title.
+        4. Set data-place on the card; a new place also needs an entry in
+           #spot-map-data so it shows up on the map.
       -->
 
+      <script type="application/json" id="spot-map-data">
+        {
+          "regions": [
+            { "key": "ca", "label": "🇺🇸 California" },
+            { "key": "ny", "label": "🇺🇸 New York" },
+            { "key": "jp", "label": "🇯🇵 Japan" }
+          ],
+          "spots": [
+            { "label": "Santa Monica", "name": "Santa Monica, CA", "region": "ca", "lat": 34.0094, "lng": -118.4973, "cards": "[data-place=\"santa-monica\"]" },
+            { "label": "Petco Park", "name": "Petco Park, San Diego", "region": "ca", "lat": 32.7073, "lng": -117.1566, "cards": "[data-place=\"petco-park\"]" },
+            { "label": "San Francisco", "name": "San Francisco, CA", "region": "ca", "lat": 37.7749, "lng": -122.4194, "cards": "[data-place=\"san-francisco\"]" },
+            { "label": "Oracle Park", "name": "Oracle Park, San Francisco", "region": "ca", "lat": 37.7786, "lng": -122.3893, "cards": "[data-place=\"oracle-park\"]" },
+            { "label": "Yosemite", "name": "Yosemite, CA", "region": "ca", "lat": 37.7456, "lng": -119.5936, "cards": "[data-place=\"yosemite\"]" },
+            { "label": "New York", "name": "New York, NY", "region": "ny", "lat": 40.758, "lng": -73.9855, "cards": "[data-place=\"new-york\"]" },
+            { "label": "Manhattan Bridge", "name": "Manhattan Bridge, Brooklyn", "region": "ny", "lat": 40.7075, "lng": -73.9908, "cards": "[data-place=\"manhattan-bridge\"]" },
+            { "label": "Yankee Stadium", "name": "Yankee Stadium, New York", "region": "ny", "lat": 40.8296, "lng": -73.9262, "cards": "[data-place=\"yankee-stadium\"]" },
+            { "label": "Tokyo", "name": "Tokyo, Japan", "region": "jp", "lat": 35.6812, "lng": 139.7671, "cards": "[data-place=\"tokyo\"]" },
+            { "label": "Himeji", "name": "Himeji, Japan", "region": "jp", "lat": 34.8394, "lng": 134.6939, "cards": "[data-place=\"himeji\"]" }
+          ]
+        }
+      </script>
+      {% include spot_map.html title="Where these were taken" hint="Pick a region, then click a place to jump to its photos." %}
+
       <div class="scenes-grid">
-        <article class="scene-card">
+        <article class="scene-card" data-place="santa-monica">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/santa_monica/DSC03656-1280.jpg"
@@ -60,7 +85,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="petco-park">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/petco_park/DSC02064-1280.jpg"
@@ -89,7 +114,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="san-francisco">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/sf/DSC04281-1280.jpg"
@@ -118,7 +143,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="san-francisco">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/sf/DSC04359-1280.jpg"
@@ -147,7 +172,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="oracle-park">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/oracle_park/DSC02497-1280.jpg"
@@ -176,7 +201,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="oracle-park">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/oracle_park/DSC02571-1280.jpg"
@@ -205,7 +230,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="tokyo">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/tokyo/DSC06882-1280.jpg"
@@ -234,7 +259,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="tokyo">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/tokyo/DSC08008-1280.jpg"
@@ -263,7 +288,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="tokyo">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/tokyo/DSC08019-1280.jpg"
@@ -292,7 +317,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="tokyo">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/tokyo/DSC08778-1280.jpg"
@@ -321,7 +346,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="himeji">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/himeji/DSC01346-1280.jpg"
@@ -350,7 +375,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="himeji">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/himeji/DSC01354-1280.jpg"
@@ -379,7 +404,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="yosemite">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/yosemite/DSC03092-1280.jpg"
@@ -408,7 +433,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="new-york">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/ny/DSC05248-1280.jpg"
@@ -437,7 +462,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="manhattan-bridge">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/ny/DSC05863-1280.jpg"
@@ -466,7 +491,7 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
           </div>
         </article>
 
-        <article class="scene-card">
+        <article class="scene-card" data-place="yankee-stadium">
           <div class="scene-frame">
             <img
               src="media/gallery/photo_gallery/ny/DSC05706-1280.jpg"
@@ -504,7 +529,13 @@ header_subtitle: "Cities, landscapes, and moments worth remembering."
     </button>
     <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Expanded photo viewer">
       <button class="lightbox-close" type="button" aria-label="Close expanded photo">&times;</button>
-      <img class="lightbox-image" alt="" />
+      <div class="lightbox-body">
+        <img class="lightbox-image" alt="" />
+        <div class="lightbox-info" id="lightbox-info" hidden></div>
+      </div>
+      <div class="lightbox-bar">
+        <button class="lightbox-info-toggle" type="button" aria-expanded="false" aria-controls="lightbox-info" hidden>Details</button>
+      </div>
     </div>
     <button class="lightbox-nav lightbox-next" type="button" aria-label="Next photo">
       <svg class="icon" aria-hidden="true"><use href="#i-chevron-up"/></svg>

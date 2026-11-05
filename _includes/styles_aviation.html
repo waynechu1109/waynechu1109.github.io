@@ -66,36 +66,168 @@
     }
 
     /* =========================
+       Split-flap Stats Board
+       ========================= */
+    /* a departure board is dark in any theme, so these colors are fixed rather than tokens */
+    .flap-board {
+      display: none; margin: 26px 0 4px; padding: 16px 22px 18px;
+      border-radius: 18px; background: linear-gradient(180deg, #1a1e24 0%, #121519 100%);
+      box-shadow: 0 18px 40px rgba(10,16,26,.28), inset 0 1px 0 rgba(255,255,255,.05);
+    }
+    .flap-board.is-ready { display: block; }
+    .flap-board { container-type: inline-size; }
+    @media (max-width: 640px) { .flap-board { padding: 14px 14px 16px; } }
+    .flap-board-head {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 12px; margin-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.08);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+      color: #f5b82e;
+    }
+    /* every flap is sized off the board width, so the full row always fits without scrolling */
+    .flap-table {
+      --chars: 57; --cols: 5; --cg: 2px; --colgap: 12px;
+      --fs: min(18px, calc((100cqw - (var(--cols) - 1) * var(--colgap) - var(--chars) * var(--cg)) / var(--chars) / .9));
+    }
+    .flap-cols, .flap-row { display: flex; gap: var(--colgap); }
+    .flap-cols { margin-bottom: 8px; }
+    .flap-cols span {
+      flex: none; width: calc(var(--n) * (var(--fs) * .9 + var(--cg)) - var(--cg));
+      font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #8d97a3;
+      white-space: nowrap;
+    }
+    .flap-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+    .flap-row {
+      width: 100%; padding: 3px 0; border: 0; border-radius: 6px; cursor: pointer;
+      background: none; text-align: left; transition: background .18s ease;
+    }
+    .flap-row:hover, .flap-row:focus-visible { background: rgba(245,184,46,.08); }
+    .flap-row:focus-visible { outline: 2px solid #f5b82e; outline-offset: 2px; }
+    .flap-col { display: flex; gap: var(--cg); flex: none; width: calc(var(--n) * (var(--fs) * .9 + var(--cg)) - var(--cg)); perspective: 200px; }
+    .flap {
+      position: relative; display: inline-flex; align-items: center; justify-content: center;
+      width: calc(var(--fs) * .9); height: calc(var(--fs) * 1.45); border-radius: 3px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: var(--fs); font-weight: 700; line-height: 1; white-space: pre;
+      color: #f4f0e4; background: linear-gradient(180deg, #2c3139 0%, #262a31 50%, #1f2329 50%, #1b1e23 100%);
+      box-shadow: 0 1px 2px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.05);
+    }
+    .flap::after {
+      content: ""; position: absolute; left: 0; right: 0; top: 50%;
+      height: 1px; background: rgba(0,0,0,.65);
+    }
+    .flap-row .flap-col:nth-child(2) .flap { color: #f5b82e; }
+    .flap-space { visibility: hidden; }
+    .flap.flip-a { animation: flap-a 75ms ease-in; }
+    .flap.flip-b { animation: flap-b 75ms ease-in; }
+    @keyframes flap-a { 50% { transform: rotateX(70deg); filter: brightness(.6); } }
+    @keyframes flap-b { 50% { transform: rotateX(70deg); filter: brightness(.6); } }
+    @container (max-width: 640px) {
+      .flap-table { --chars: 24; --cols: 3; --colgap: 8px; }
+      .flap-wide { display: none !important; }
+    }
+
+    /* =========================
+       Boarding Pass (lightbox details)
+       ========================= */
+    .lightbox-info.is-pass { width: 340px; padding: 0; background: none; box-shadow: none; overflow-y: auto; }
+    .pass {
+      color: #1c2733; font-size: .8rem;
+      filter: drop-shadow(0 18px 36px rgba(0,0,0,.4));
+    }
+    /* the notches are cut with masks so they show whatever is behind the pass */
+    .pass-main, .pass-stub {
+      background: #fbf8f1;
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+      -webkit-mask-size: 51% 100%; mask-size: 51% 100%;
+    }
+    .pass-main {
+      padding: 16px 18px 14px; border-radius: 14px 14px 0 0;
+      -webkit-mask-image: radial-gradient(circle at 0 100%, transparent 9px, #000 9.5px), radial-gradient(circle at 100% 100%, transparent 9px, #000 9.5px);
+      mask-image: radial-gradient(circle at 0 100%, transparent 9px, #000 9.5px), radial-gradient(circle at 100% 100%, transparent 9px, #000 9.5px);
+      -webkit-mask-position: left, right; mask-position: left, right;
+    }
+    .pass-stub {
+      padding: 14px 18px 16px; border-radius: 0 0 14px 14px;
+      border-top: 2px dashed rgba(28,39,51,.22);
+      background: #f3eee2;
+      -webkit-mask-image: radial-gradient(circle at 0 0, transparent 9px, #000 9.5px), radial-gradient(circle at 100% 0, transparent 9px, #000 9.5px);
+      mask-image: radial-gradient(circle at 0 0, transparent 9px, #000 9.5px), radial-gradient(circle at 100% 0, transparent 9px, #000 9.5px);
+      -webkit-mask-position: left, right; mask-position: left, right;
+    }
+    .pass-head {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+      padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid rgba(28,39,51,.12);
+    }
+    .pass-airline { font-weight: 800; font-size: .92rem; color: #163453; }
+    .pass-kind {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .62rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #b07a1f;
+      white-space: nowrap;
+    }
+    .pass-route, .pass-plane { display: flex; justify-content: space-between; gap: 14px; margin-bottom: 12px; }
+    .pass-field { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .pass-right { text-align: right; }
+    .pass-label {
+      font-size: .6rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #7b8794;
+    }
+    .pass-value { font-weight: 700; color: #1c2733; }
+    .pass-code-wrap { display: flex; flex-direction: column; }
+    .pass-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 2.1rem; font-weight: 800; line-height: 1.05; letter-spacing: .02em; color: #163453;
+    }
+    .pass-code-sub { font-size: .7rem; color: #5d6a78; }
+    .pass-reg .pass-value {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 1.05rem; letter-spacing: .04em; color: #163453;
+    }
+    .pass-reg-line { display: block; white-space: nowrap; }
+    .pass-plane .pass-field:last-child { text-align: right; }
+    .pass-sub {
+      margin: 10px 0 4px; font-size: .62rem; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: #b07a1f;
+    }
+    .pass-rows {
+      display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; margin: 0;
+      padding-top: 10px; border-top: 1px solid rgba(28,39,51,.1); font-size: .76rem;
+    }
+    .pass-sub + .pass-rows { padding-top: 4px; border-top: none; }
+    .pass-rows dt { color: #7b8794; font-weight: 700; }
+    .pass-rows dd { margin: 0; color: #1c2733; }
+    .pass-exposure { display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; gap: 8px; }
+    .pass-exposure .pass-value { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .86rem; }
+    .pass-kit { margin: 10px 0 0; font-size: .7rem; color: #5d6a78; }
+    .pass-barcode-row { margin-top: 12px; }
+    .pass-barcode { display: block; width: 100%; height: 38px; fill: #1c2733; }
+    .pass-barcode-text {
+      display: block; margin-top: 4px; text-align: center;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .64rem; letter-spacing: .3em; color: #5d6a78; white-space: pre;
+    }
+    .lightbox-dialog.info-open .lightbox-body .lightbox-image:has(+ .is-pass) { max-width: calc(min(1200px, 92vw) - 356px); }
+    @media (max-width: 800px) {
+      .lightbox-info.is-pass { width: min(100%, 420px); }
+      .lightbox-dialog.info-open .lightbox-body .lightbox-image:has(+ .is-pass) { max-width: 100%; }
+    }
+
+    /* =========================
        Airport Sections
        ========================= */
     .airport-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 10px; }
+    /* the side index takes over once there's room for it */
+    @media (min-width: 1500px) { .airport-links { display: none; } }
     .airport-section {
       margin-top: 34px; padding: 28px; border-radius: 20px;
       background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 45%, #fffaf1 100%);
       border: 1px solid rgba(64,118,172,.16);
       box-shadow: 0 14px 34px rgba(20,44,77,.08);
     }
+    .airport-section { scroll-margin-top: calc(var(--nav-offset) + 16px); }
     .airport-header { display: flex; align-items: flex-end; margin-bottom: 18px; }
     .airport-name { margin: 0; color: #163453; }
     .airport-meta { margin: 0; color: var(--muted); font-style: italic; }
-    .airport-map {
-      width: 100%; margin: 0 0 18px; overflow: hidden;
-      border-radius: 16px; border: 1px solid rgba(64,118,172,.16);
-      box-shadow: 0 10px 24px rgba(20,44,77,.08); background: #fff;
-    }
-    .airport-map iframe { width: 100%; height: 132px; display: block; border: none; }
-    .airport-map .iframe-facade { height: 132px; }
     .airport-description { margin: 0 0 18px; }
-    .airport-map-link {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 10px 12px;
-      font-family: 'Open Sans', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
-      font-size: 13px; font-weight: 700; text-decoration: none;
-      color: var(--primary-deep);
-      background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
-      border-top: 1px solid rgba(64,118,172,.12);
-    }
-    .airport-map-link:hover { background: linear-gradient(135deg, #fff8ed 0%, #ffe6bf 100%); color: #1c3550; }
 
     /* =========================
        Photo Grid
@@ -208,6 +340,8 @@
       box-shadow: 0 12px 26px rgba(0,0,0,.28); cursor: pointer; font-size: 22px; line-height: 1;
     }
     .lightbox-close:hover { background: rgba(24,41,66,.96); }
+    /* the pass panel uses filter, which stacks it above an unlayered close button */
+    .lightbox-close { z-index: 3; }
     .lightbox-nav {
       position: absolute; top: 50%; transform: translateY(-50%);
       width: 48px; height: 48px; border: none; border-radius: 999px;
@@ -249,20 +383,6 @@
     }
     [data-theme="dark"] .airport-name { color: #e8eef5; }
     [data-theme="dark"] .airport-meta { color: var(--muted); }
-    [data-theme="dark"] .airport-map {
-      background: var(--surface);
-      border-color: var(--border);
-      box-shadow: 0 10px 24px rgba(0,0,0,.35);
-    }
-    [data-theme="dark"] .airport-map-link {
-      color: var(--primary-deep);
-      background: linear-gradient(135deg, var(--surface-alt) 0%, #223145 100%);
-      border-top-color: var(--border);
-    }
-    [data-theme="dark"] .airport-map-link:hover {
-      background: linear-gradient(135deg, #3b6a9a 0%, var(--primary) 100%);
-      color: #fff;
-    }
     [data-theme="dark"] .photo-card {
       background: var(--surface-alt);
       border-color: var(--border);
