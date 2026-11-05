@@ -3,6 +3,7 @@
         var lightbox = document.getElementById("photo-lightbox");
         if (!lightbox) return;
         var lightboxImage = lightbox.querySelector(".lightbox-image");
+        var lightboxCaption = lightbox.querySelector(".lightbox-caption");
         var closeBtn = lightbox.querySelector(".lightbox-close");
         var prevBtn = lightbox.querySelector(".lightbox-prev");
         var nextBtn = lightbox.querySelector(".lightbox-next");
@@ -18,10 +19,27 @@
           im.src = srcFor(photoImages[i]);
         }
 
+        function captionFor(img) {
+          var card = img.closest(".photo-card");
+          if (!card) return "";
+          var parts = [];
+          [".photo-title", ".photo-aircraft", ".reg-chip", ".photo-date"].forEach(function (sel) {
+            card.querySelectorAll(sel).forEach(function (el) {
+              var text = el.textContent.trim();
+              if (text) parts.push(text);
+            });
+          });
+          return parts.join(" · ");
+        }
+
         function render() {
           var img = photoImages[current];
           lightboxImage.src = srcFor(img);
           lightboxImage.alt = img.alt || "";
+          if (lightboxCaption) {
+            lightboxCaption.textContent = captionFor(img);
+            lightboxCaption.hidden = !lightboxCaption.textContent;
+          }
           preload(current + 1);
           preload(current - 1);
         }

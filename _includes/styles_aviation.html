@@ -141,6 +141,25 @@
     .photo-title { margin: 0 0 6px; color: #163453; font-size: 1.02rem; }
     .photo-caption { margin: 0; color: var(--muted); font-size: .96rem; }
     .photo-date { margin: 2px 0 0; color: var(--muted); font-size: .82rem; font-style: italic; letter-spacing: .04em; }
+    .photo-aircraft { margin: -2px 0 8px; color: var(--text); font-size: .9rem; font-weight: 600; }
+    .photo-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+    /* negative margin cancels the row gap the empty break item would add */
+    .tag-break { flex-basis: 100%; height: 0; margin-top: -6px; }
+    .reg-chip, .livery-tag {
+      display: inline-flex; align-items: center;
+      padding: 2px 8px; border-radius: 6px;
+      font-size: .76rem; line-height: 1.5;
+    }
+    .reg-chip {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-weight: 700; letter-spacing: .04em;
+      color: #163453; background: #e6eef8;
+      border: 1px solid rgba(64,118,172,.22);
+    }
+    .livery-tag {
+      font-weight: 600; color: #7a4f12;
+      background: #fff3df; border: 1px solid rgba(201,139,50,.3);
+    }
 
     /* =========================
        Portfolio CTA & Lightbox
@@ -170,11 +189,16 @@
     }
     .lightbox.is-open { display: flex; }
     .lightbox-dialog {
-      position: relative; max-width: min(1200px, 92vw); max-height: 88vh;
-      display: flex; align-items: center; justify-content: center;
+      position: relative; max-width: min(1200px, 92vw); max-height: 92vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .lightbox-caption {
+      margin: 14px 0 0; max-width: 100%;
+      color: #e8eef5; font-size: .92rem; font-weight: 600;
+      text-align: center; letter-spacing: .02em;
     }
     .lightbox-image {
-      max-width: 100%; max-height: 88vh; display: block;
+      max-width: 100%; max-height: calc(92vh - 52px); display: block;
       border-radius: 16px; box-shadow: 0 24px 60px rgba(0,0,0,.38); background: #0f1b2f;
     }
     .lightbox-close {
@@ -246,6 +270,14 @@
     }
     [data-theme="dark"] .photo-title { color: #e8eef5; }
     [data-theme="dark"] .photo-caption { color: var(--muted); }
+    [data-theme="dark"] .reg-chip {
+      color: #d7e6f7; background: rgba(110,166,220,.14);
+      border-color: rgba(110,166,220,.3);
+    }
+    [data-theme="dark"] .livery-tag {
+      color: #e0c69a; background: rgba(201,139,50,.12);
+      border-color: rgba(201,139,50,.35);
+    }
     [data-theme="dark"] .portfolio-note {
       background: rgba(201,139,50,.10);
       color: #e0c69a;

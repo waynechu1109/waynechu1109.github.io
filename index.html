@@ -1,7 +1,7 @@
 ---
 layout: default
 page_id: index
-title: "Homepage of Wei-Teng (Wayne) Chu"
+title: "Wei-Teng (Wayne) Chu | Robotics & Computer Vision"
 description: "Wei-Teng (Wayne) Chu's homepage featuring research, work experience, projects, publications, and awards in robotics and computer vision."
 og_title: "Wei-Teng (Wayne) Chu"
 og_url: "https://waynechu1109.github.io/"
@@ -85,15 +85,15 @@ og_url: "https://waynechu1109.github.io/"
           <img src="media/projects/dtu_114_32-1360.jpg"
                srcset="media/projects/dtu_114_32-680.jpg 680w, media/projects/dtu_114_32-1360.jpg 1360w"
                sizes="(max-width: 700px) 90vw, 340px"
-               alt="Autonomous driving and mobility project visual" class="highlight-image" loading="lazy" />
+               alt="Input photo of a ceramic Buddha statue (DTU scan 114) used for FINS single-image reconstruction" class="highlight-image" loading="lazy" />
         </div>
         <div class="highlight-clip-container">
           <div class="clip-wrapper">
-            <video src="media/research/sdf_buddha.mp4" class="highlight-clip" width="800" height="800" autoplay muted loop playsinline preload="metadata" aria-label="FINS signed distance field reconstruction demo"></video>
+            <video src="media/research/sdf_buddha.mp4" class="highlight-clip" width="800" height="800" data-autoplay poster="media/research/sdf_buddha_poster.jpg" muted loop playsinline preload="none" aria-label="FINS signed distance field reconstruction demo"></video>
           </div>
         </div>
         <div class="highlight-internship-media">
-          <video src="media/research/franka_side.mp4" class="highlight-image" width="800" height="567" autoplay muted loop playsinline preload="metadata" aria-label="Robotic arm surface-following demo"></video>
+          <video src="media/research/franka_side.mp4" class="highlight-image" width="800" height="567" data-autoplay poster="media/research/franka_side_poster.jpg" muted loop playsinline preload="none" aria-label="Robotic arm surface-following demo"></video>
         </div>
       </div>
 
@@ -143,6 +143,24 @@ og_url: "https://waynechu1109.github.io/"
       <section class="internships">
         <article class="internship-item">
           <div class="internship-media">
+            <img src="media/logos/SAIL.png" alt="Stanford Artificial Intelligence Laboratory logo" class="internship-image" loading="lazy" />
+          </div>
+          <div class="internship-details">
+            <h3 class="company-name"><a href="https://ai.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford Artificial Intelligence Laboratory (SAIL)</a></h3>
+            <p class="internship-title"><strong>Graduate Researcher @ <a href="https://svl.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford Vision and Learning Lab</a></strong></p>
+            <p class="internship-date">2025-09 - 2026-05, 2026-09 - In Progress</p>
+            <p class="internship-description">
+              I contribute to <a href="https://research.nvidia.com/labs/gear/simfoundry/" target="_blank" rel="noopener noreferrer">SimFoundry</a>, a collaboration between the Stanford Vision and Learning Lab and NVIDIA GEAR that builds digital replicas of real-world scenes from video and automatically generates diverse <em>digital cousins</em> to train and evaluate robot manipulation policies. My contributions include building the <strong>object cousins asset generation pipeline</strong> and a <strong>FoundationPose-based ground-truth pose generation pipeline</strong>, <strong>collecting reconstructed scenes</strong>, developing an <strong>interactive object-cousins hot-swapping script</strong>, and <strong>optimizing the object removal algorithm</strong> in the scene decomposition step. Policies trained on the generated variations improve real-world success rates by 17-40% on average.
+            </p>
+            <div class="resource-links">
+              <a href="https://arxiv.org/abs/2606.28276" class="resource-btn" target="_blank" rel="noopener noreferrer">arXiv</a>
+              <a href="https://research.nvidia.com/labs/gear/simfoundry/" class="resource-btn" target="_blank" rel="noopener noreferrer">Project Page</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="internship-item">
+          <div class="internship-media">
             <img src="media/logos/nimble_logo.png" alt="Nimble logo" class="internship-image" loading="lazy" />
           </div>
           <div class="internship-details">
@@ -157,24 +175,6 @@ og_url: "https://waynechu1109.github.io/"
 
         <article class="internship-item">
           <div class="internship-media">
-            <img src="media/logos/SAIL.png" alt="Stanford Artificial Intelligence Laboratory logo" class="internship-image" loading="lazy" />
-          </div>
-          <div class="internship-details">
-            <h3 class="company-name"><a href="https://ai.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford Artificial Intelligence Laboratory (SAIL)</a></h3>
-            <p class="internship-title"><strong>Graduate Researcher @ <a href="https://svl.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford Vision and Learning Lab</a></strong></p>
-            <p class="internship-date">2025-09 - 2026-05</p>
-            <p class="internship-description">
-              I contribute to <a href="https://research.nvidia.com/labs/gear/simfoundry/" target="_blank" rel="noopener noreferrer">SimFoundry</a>, a collaboration between the Stanford Vision and Learning Lab and NVIDIA GEAR that builds digital replicas of real-world scenes from video and automatically generates diverse <em>digital cousins</em> to train and evaluate robot manipulation policies. My contributions include building the <strong>object cousins asset generation pipeline</strong> and a <strong>FoundationPose-based ground-truth pose generation pipeline</strong>, <strong>collecting reconstructed scenes</strong>, developing an <strong>interactive object-cousins hot-swapping script</strong>, and <strong>optimizing the object removal algorithm</strong> in the scene decomposition step. Policies trained on the generated variations improve real-world success rates by 17-40% on average.
-            </p>
-            <div class="resource-links">
-              <a href="https://arxiv.org/abs/2606.28276" class="resource-btn" target="_blank" rel="noopener noreferrer">arXiv</a>
-              <a href="https://research.nvidia.com/labs/gear/simfoundry/" class="resource-btn" target="_blank" rel="noopener noreferrer">Project Page</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="internship-item">
-          <div class="internship-media">
             <img src="media/logos/ITRI.png" alt="Industrial Technology Research Institute logo" class="internship-image" loading="lazy" />
           </div>
           <div class="internship-details">
@@ -184,14 +184,14 @@ og_url: "https://waynechu1109.github.io/"
             <div class="internship-description">
               <h4>Mask2Former Semantic Segmentation</h4>
               <p>I built a custom semantic segmentation pipeline for robotics and autonomous driving by merging and re-annotating <strong>Mapillary and ADE20k</strong>, converting the data to COCO format, and training <strong>Mask2Former</strong> with <strong>NVIDIA TAO Toolkit</strong>. The final model was deployed in <strong>ROS2</strong> and delivered <strong>real-time inference at about 15 FPS</strong> on robot and vehicle platforms.</p>
-              <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/merged_dog_.mp4" class="internship-clip" width="960" height="540" autoplay muted loop playsinline preload="metadata" aria-label="Semantic segmentation demo on a quadruped robot"></video></div></div>
+              <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/merged_dog_.mp4" class="internship-clip" width="960" height="540" data-autoplay poster="media/demos/merged_dog__poster.jpg" muted loop playsinline preload="none" aria-label="Semantic segmentation demo on a quadruped robot"></video></div></div>
               <h4>Person Re-Identification (Re-ID)</h4>
               <p>I developed a real-time pedestrian detection and re-identification pipeline using <strong>YOLO11n</strong>, <strong>OSNet</strong>, and <strong>cosine-similarity matching</strong>. By exporting models to <strong>ONNX and TensorRT</strong> for acceleration, the system achieved <strong>about 25 FPS</strong> and was suitable for robotics and automotive deployment.</p>
-              <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/reid_tracker_.mp4" class="internship-clip" width="1348" height="779" autoplay muted loop playsinline preload="metadata" aria-label="Person re-identification tracking demo"></video></div></div>
+              <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/reid_tracker_.mp4" class="internship-clip" width="1348" height="779" data-autoplay poster="media/demos/reid_tracker__poster.jpg" muted loop playsinline preload="none" aria-label="Person re-identification tracking demo"></video></div></div>
               
               <h4>Sim2Real Quadruped Robot Terrain Traversal</h4>
               <p>I developed a <strong>sim-to-real terrain traversal</strong> pipeline for the <strong>Unitree Go2</strong> that combined Gazebo simulation, RealSense point clouds, and <strong>elevation mapping</strong> for locomotion over uneven ground. I also integrated point-cloud processing with <strong>reinforcement learning gait policies</strong>, added <strong>VIO</strong> and <strong>forward kinematics</strong> to handle sensor interruptions, and validated the full system on the physical robot.</p>
-              <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/real_go2_walk_.mp4" class="internship-clip" width="981" height="607" autoplay muted loop playsinline preload="metadata" aria-label="Unitree Go2 terrain traversal demo"></video></div></div>
+              <div class="clip-container"><div class="clip-wrapper"><video src="media/demos/real_go2_walk_.mp4" class="internship-clip" width="981" height="607" data-autoplay poster="media/demos/real_go2_walk__poster.jpg" muted loop playsinline preload="none" aria-label="Unitree Go2 terrain traversal demo"></video></div></div>
             </div>
           </div>
         </article>
@@ -218,7 +218,7 @@ og_url: "https://waynechu1109.github.io/"
       
       <article class="featured-research featured-research--nvidia">
         <div class="featured-research-media">
-          <video class="featured-research-image" width="1280" height="720" autoplay muted loop playsinline preload="metadata" poster="media/research/simfoundry_poster.jpg">
+          <video class="featured-research-image" width="1280" height="720" data-autoplay muted loop playsinline preload="none" poster="media/research/simfoundry_poster.jpg">
             <source src="media/research/simfoundry.mp4" type="video/mp4" />
           </video>
         </div>
@@ -244,7 +244,7 @@ og_url: "https://waynechu1109.github.io/"
 
       <article class="featured-research">
         <div class="featured-research-media">
-          <video src="media/research/franka_side.mp4" class="featured-research-image" width="800" height="567" autoplay muted loop playsinline preload="metadata" aria-label="FINS robotic surface-following experiment"></video>
+          <video src="media/research/franka_side.mp4" class="featured-research-image" width="800" height="567" data-autoplay poster="media/research/franka_side_poster.jpg" muted loop playsinline preload="none" aria-label="FINS robotic surface-following experiment"></video>
         </div>
         <div class="featured-research-body">
           <p class="featured-label">Featured Research</p>
@@ -307,7 +307,7 @@ og_url: "https://waynechu1109.github.io/"
         </article>
 
         <article class="project-item ucsd-logo">
-          <div class="project-media"><video src="media/projects/MURO.mp4" class="project-image" width="800" height="502" autoplay muted loop playsinline preload="metadata" aria-label="TurtleBot4 obstacle avoidance demo"></video></div>
+          <div class="project-media"><video src="media/projects/MURO.mp4" class="project-image" width="800" height="502" data-autoplay poster="media/projects/MURO_poster.jpg" muted loop playsinline preload="none" aria-label="TurtleBot4 obstacle avoidance demo"></video></div>
           <div class="project-details">
             <h3 class="project-title">Dodging Dynamical Obstacles Using TurtleBot4 Camera Feed</h3>
             <p class="project-duration">2023-06 - 2023-08</p>
@@ -407,7 +407,7 @@ arXiv preprint arXiv:2606.28276, 2026.
             <a href="paper/2509.20681v3.pdf" class="resource-btn publication-btn">PDF</a>
             <a href="https://ieeexplore.ieee.org/document/11696230" class="resource-btn publication-btn" target="_blank" rel="noopener noreferrer">IEEE <i>Xplore</i></a>
             <a href="media/research/FINS_Poster.pdf" class="resource-btn publication-btn">Poster</a>
-            <a href="https://waynechu1109.github.io/fins.github.io/" class="resource-btn publication-btn">Project Page</a>
+            <a href="https://waynechu1109.github.io/fins.github.io/" class="resource-btn publication-btn" target="_blank" rel="noopener noreferrer">Project Page</a>
           </div>
           <div class="publication-actions">
             <details>

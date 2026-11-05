@@ -428,6 +428,17 @@ footer {
   display: grid; grid-template-columns: auto 1fr; gap: 4px 12px;
   font-size: .8rem;
 }
+.exif-group {
+  display: flex; align-items: center; gap: 8px;
+  margin: 14px 0 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .7rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--primary);
+}
+.exif-group::after {
+  content: ""; flex: 1; height: 1px; background: var(--border);
+}
+.exif-group + .exif-list { margin-top: 6px; }
 .exif-list li { display: contents; }
 .exif-key { color: var(--muted); font-weight: 700; }
 .exif-val { color: var(--text); }

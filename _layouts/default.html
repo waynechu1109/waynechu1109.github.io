@@ -25,13 +25,12 @@
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" />
   </noscript>
-  <link href="css/style.css?v={{ site.time | date: '%s' }}" rel="stylesheet" />
+  <link href="/css/style.css?v={{ site.time | date: '%s' }}" rel="stylesheet" />
 
-  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-128.png" sizes="128x128">
-  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="//www-media.stanford.edu/assets/favicon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/svg+xml" href="/media/favicon/favicon.svg">
+  <link rel="icon" type="image/png" href="/media/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/media/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/media/favicon/apple-touch-icon.png">
 
   {% if page.page_id == 'index' %}{% include styles_index.html %}
   {% elsif page.page_id == 'course_projects' %}{% include styles_course_projects.html %}
@@ -102,15 +101,15 @@
   </svg>
 
   <nav id="table-of-contents" aria-label="Primary">
-    <a href="index.html"{% if page.page_id == 'index' %} aria-current="page"{% endif %}>Home</a>
-    <a href="index.html#education">Education</a>
-    <a href="index.html#internship-experience">Work Experience</a>
-    <a href="index.html#research-and-project">Research &amp; Projects</a>
-    <a href="index.html#publication">Publications</a>
-    <a href="index.html#selected-awards">Awards</a>
-    <a href="course_projects.html"{% if page.page_id == 'course_projects' %} aria-current="page"{% endif %}>Course Projects</a>
-    <a href="aviation_gallery.html"{% if page.page_id == 'aviation' %} aria-current="page"{% endif %}>Aviation Gallery</a>
-    <a href="photo_gallery.html"{% if page.page_id == 'photo_gallery' %} aria-current="page"{% endif %}>Photo Gallery</a>
+    <a href="/"{% if page.page_id == 'index' %} aria-current="page"{% endif %}>Home</a>
+    <a href="/#education">Education</a>
+    <a href="/#internship-experience">Work Experience</a>
+    <a href="/#research-and-project">Research &amp; Projects</a>
+    <a href="/#publication">Publications</a>
+    <a href="/#selected-awards">Awards</a>
+    <a href="/course_projects.html"{% if page.page_id == 'course_projects' %} aria-current="page"{% endif %}>Course Projects</a>
+    <a href="/aviation_gallery.html"{% if page.page_id == 'aviation' %} aria-current="page"{% endif %}>Aviation Gallery</a>
+    <a href="/photo_gallery.html"{% if page.page_id == 'photo_gallery' %} aria-current="page"{% endif %}>Photo Gallery</a>
   </nav>
 
   {% if page.page_id == 'index' %}
@@ -182,21 +181,40 @@
   </script>
 
   <script>
-    /* Honor prefers-reduced-motion for autoplay videos */
+    /* Lazy autoplay: data-autoplay videos use preload="none", so nothing is
+       downloaded until a video nears the viewport. Off-screen videos pause.
+       Under prefers-reduced-motion they stay on the poster with controls. */
     (function () {
-      if (!window.matchMedia) return;
-      var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-      var apply = function () {
-        if (!mq.matches) return;
-        document.querySelectorAll('video[autoplay]').forEach(function (v) {
-          v.pause();
-          v.removeAttribute('autoplay');
-          v.setAttribute('controls', '');
+      var videos = document.querySelectorAll('video[data-autoplay]');
+      if (!videos.length) return;
+      var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+      var reduced = function () { return !!(mq && mq.matches); };
+      var play = function (v) {
+        var p = v.play();
+        if (p && p.catch) p.catch(function () {});
+      };
+      var applyMotion = function () {
+        videos.forEach(function (v) {
+          if (reduced()) { v.pause(); v.setAttribute('controls', ''); }
+          else v.removeAttribute('controls');
         });
       };
-      apply();
-      if (mq.addEventListener) mq.addEventListener('change', apply);
-      else if (mq.addListener) mq.addListener(apply);
+      applyMotion();
+      if (mq && mq.addEventListener) mq.addEventListener('change', applyMotion);
+      else if (mq && mq.addListener) mq.addListener(applyMotion);
+
+      if (!('IntersectionObserver' in window)) {
+        if (!reduced()) videos.forEach(play);
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var v = entry.target;
+          if (entry.isIntersecting) { if (!reduced()) play(v); }
+          else if (!v.paused) v.pause();
+        });
+      }, { rootMargin: '200px 0px' });
+      videos.forEach(function (v) { observer.observe(v); });
     })();
   </script>
 
