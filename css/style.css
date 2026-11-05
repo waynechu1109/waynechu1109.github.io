@@ -446,13 +446,31 @@ footer {
 /* =========================
    Spotting Map (shared by galleries)
    ========================= */
-.spot-map-wrap { margin: 26px 0 6px; }
-.spot-map-head {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-  gap: 10px 16px; margin-bottom: 12px;
+.spot-map-wrap { margin: 18px 0 6px; }
+.spot-map-summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 11px 16px; border-radius: 14px; cursor: pointer; list-style: none;
+  background: var(--surface-alt); border: 1px solid rgba(64,118,172,.16);
+  transition: background .18s ease, border-color .18s ease;
 }
-.spot-map-title { margin: 0; color: #163453; font-size: 1.1rem; }
-.spot-map-regions { display: flex; flex-wrap: wrap; gap: 8px; }
+.spot-map-summary::-webkit-details-marker { display: none; }
+.spot-map-summary:hover { background: #eef5ff; border-color: rgba(64,118,172,.3); }
+.spot-map-title { color: #163453; font-size: 1rem; font-weight: 700; }
+.spot-map-toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--primary-deep); white-space: nowrap;
+}
+.spot-map-toggle::before { content: "Show map"; }
+.spot-map-wrap[open] .spot-map-toggle::before { content: "Hide map"; }
+.spot-map-toggle::after {
+  content: ""; width: 7px; height: 7px; margin-top: -3px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg); transition: transform .2s ease;
+}
+.spot-map-wrap[open] .spot-map-toggle::after { margin-top: 3px; transform: rotate(-135deg); }
+.spot-map-body { padding-top: 12px; }
+.spot-map-regions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 .spot-map-regions button {
   padding: 5px 12px; border-radius: 999px; cursor: pointer;
   font: inherit; font-size: .82rem; font-weight: 600;
@@ -546,6 +564,8 @@ footer {
 
 [data-theme="dark"] .exif-details { border-top-color: var(--border-soft); }
 [data-theme="dark"] .spot-map-title { color: #e8eef5; }
+[data-theme="dark"] .spot-map-summary { border-color: var(--border); }
+[data-theme="dark"] .spot-map-summary:hover { background: #223145; }
 [data-theme="dark"] .spot-map-regions button { color: var(--text); background: var(--surface-alt); border-color: var(--border); }
 [data-theme="dark"] .spot-map-regions button:hover { background: #223145; }
 [data-theme="dark"] .spot-map-regions button.is-active { color: #0f1b2f; background: var(--primary-deep); border-color: var(--primary-deep); }

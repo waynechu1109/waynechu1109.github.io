@@ -1,18 +1,21 @@
-      <section class="spot-map-wrap" aria-label="Map of where these photos were taken">
-        <div class="spot-map-head">
-          <h3 class="spot-map-title">{{ include.title }}</h3>
+      <details class="spot-map-wrap">
+        <summary class="spot-map-summary">
+          <span class="spot-map-title">{{ include.title }}</span>
+          <span class="spot-map-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="spot-map-body">
           <div class="spot-map-regions" role="group" aria-label="Zoom the map to a region"></div>
+          <div id="spot-map" class="spot-map"></div>
+          <p class="spot-map-hint">{{ include.hint }}</p>
         </div>
-        <div id="spot-map" class="spot-map"></div>
-        <p class="spot-map-hint">{{ include.hint }}</p>
-      </section>
+      </details>
 
       <script>
-        /* Spotting map: reads #spot-map-data, and only fetches Leaflet once the map scrolls near the viewport */
+        /* Spotting map: collapsed by default; reads #spot-map-data and only fetches Leaflet the first time it is opened */
         (function () {
           var mapEl = document.getElementById('spot-map');
           var dataEl = document.getElementById('spot-map-data');
-          if (!mapEl || !dataEl || !('IntersectionObserver' in window)) return;
+          if (!mapEl || !dataEl) return;
           var cfg = JSON.parse(dataEl.textContent);
           var CLUSTER_PX = 44;
           var regionLabel = {};
@@ -35,12 +38,13 @@
               if (r.key === 'all') b.className = 'is-active';
               buttons.appendChild(b);
             });
-            var io = new IntersectionObserver(function (entries) {
-              if (!entries[0].isIntersecting) return;
-              io.disconnect();
+            var wrap = mapEl.closest('details');
+            var started = false;
+            wrap.addEventListener('toggle', function () {
+              if (!wrap.open || started) return;
+              started = true;
               load(init);
-            }, { rootMargin: '300px 0px' });
-            io.observe(mapEl);
+            });
           }
 
           function goTo(s) {
