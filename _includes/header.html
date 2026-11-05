@@ -1,4 +1,4 @@
-  <header class="inner-page" id="main-content" tabindex="-1">
+  <header class="inner-page{% unless page.page_id == 'index' %} header-sub{% endunless %}" id="main-content" tabindex="-1">
     <div class="header-flex">
       <div class="header-left">
         <img class="avatar" src="/media/profile/waynechu.jpg" alt="Wayne Chu" {% if page.page_id == 'index' %}fetchpriority="high"{% else %}loading="lazy"{% endif %} />
@@ -16,19 +16,19 @@
         <div class="social-links">
           <a href="https://drive.google.com/file/d/12aR9djsKC7i13ioHceHxEgQeR7XOijMN/view" target="_blank" rel="noopener noreferrer" class="social-btn">
             <svg class="icon" aria-hidden="true"><use href="#i-file-lines"/></svg>
-            <span>Resume</span>
+            <span class="social-label">Resume</span>
           </a>
           <a href="mailto:waynechu@stanford.edu" class="social-btn">
             <svg class="icon" aria-hidden="true"><use href="#i-envelope"/></svg>
-            <span>Email</span>
+            <span class="social-label">Email</span>
           </a>
           <a href="https://linkedin.com/in/waynechu1109" target="_blank" rel="noopener noreferrer" class="social-btn">
             <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
-            <span>LinkedIn</span>
+            <span class="social-label">LinkedIn</span>
           </a>
           <a href="https://github.com/waynechu1109" target="_blank" rel="noopener noreferrer" class="social-btn">
             <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
-            <span>GitHub</span>
+            <span class="social-label">GitHub</span>
           </a>
         </div>
       </div>

@@ -166,6 +166,16 @@
   </script>
 
   <script>
+    /* Phone nav scrolls sideways; start it with the current page's link in view */
+    (function () {
+      var nav = document.getElementById('table-of-contents');
+      var here = nav && nav.querySelector('[aria-current="page"]');
+      if (!here || nav.scrollWidth <= nav.clientWidth) return;
+      nav.scrollLeft = here.offsetLeft - (nav.clientWidth - here.offsetWidth) / 2;
+    })();
+  </script>
+
+  <script>
     /* Dark mode toggle */
     (function () {
       var btn = document.getElementById('theme-toggle');

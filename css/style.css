@@ -398,6 +398,34 @@ footer {
   .footer-social-links .social-btn { width: 100%; }
 }
 
+/* narrow screens: the sticky nav becomes one swipeable row, since wrapping nine links
+   pinned roughly a third of a phone screen; sub-pages also get a compact header */
+@media (max-width: 900px) {
+  :root { --nav-offset: 60px; }
+  #table-of-contents {
+    flex-wrap: nowrap; justify-content: flex-start; gap: 4px;
+    min-height: 0; padding: 8px 12px; font-size: .95rem;
+    overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  #table-of-contents::-webkit-scrollbar { display: none; }
+  #table-of-contents a { flex: none; white-space: nowrap; padding: 8px 12px; }
+  #table-of-contents a:hover { transform: none; }
+
+  .header-sub { padding: 14px 0 4px; }
+  .header-sub .header-flex { flex-direction: row; align-items: center; gap: 14px; padding: 0; }
+  .header-sub .header-left { flex: 0 0 64px; }
+  .header-sub .avatar { width: 64px; height: 64px; border-width: 2px; }
+  .header-sub .header-center { min-width: 0; padding: 0; text-align: left; }
+  .header-sub .header-center h1 { margin: 0 0 2px; font-size: 1.55rem; line-height: 1.2; }
+  .header-sub .header-center p { margin: 0; font-size: .88rem; line-height: 1.35; }
+  .header-sub .social-links { justify-content: flex-start; flex-wrap: nowrap; gap: 6px; margin-top: 8px; }
+  .header-sub .social-btn { width: 34px; height: 34px; min-width: 0; padding: 0; box-shadow: none; }
+  .header-sub .social-label {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+}
+
 /* =========================
    EXIF Pull-down (shared by galleries)
    ========================= */
