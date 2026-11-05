@@ -71,12 +71,13 @@
             var L = window.L;
             // western-hemisphere longitudes get +360 so a Pacific-spanning view stays in one piece
             var pos = function (s) { return L.latLng(s.lat, s.lng < 0 ? s.lng + 360 : s.lng); };
-            var pin = function (text, n, kind) {
-              var d = Math.round((kind === 'cluster' ? 30 : 22) + Math.sqrt(n) * 4);
+            // no photo counts on the pins: the page is a selection, so a number would undersell how much was shot there
+            var pin = function (text, kind) {
+              var d = kind === 'cluster' ? 22 : 16;
               return L.divIcon({
                 className: 'spot-pin spot-pin-' + kind,
                 iconSize: [d, d],
-                html: '<span class="spot-dot">' + n + '</span><span class="spot-label">' + text + '</span>'
+                html: '<span class="spot-dot"></span><span class="spot-label">' + text + '</span>'
               });
             };
 
@@ -96,17 +97,16 @@
 
             var layer = L.layerGroup().addTo(map);
             function addMarker(members) {
-              var n = members.reduce(function (sum, s) { return sum + s.count; }, 0);
               if (members.length === 1) {
                 var s = members[0];
-                L.marker(s.ll, { icon: pin(s.label, n, 'spot'), title: s.name + ', ' + n + ' photos' })
+                L.marker(s.ll, { icon: pin(s.label, 'spot'), title: s.name })
                   .on('click', function () { goTo(s); })
                   .addTo(layer);
                 return;
               }
               var b = L.latLngBounds(members.map(function (m) { return m.ll; }));
               var text = label(members);
-              L.marker(b.getCenter(), { icon: pin(text, n, 'cluster'), title: text + ', ' + n + ' photos' })
+              L.marker(b.getCenter(), { icon: pin(text, 'cluster'), title: text + ' (' + members.length + ' places)' })
                 .on('click', function () { map.flyToBounds(b.pad(0.5), { maxZoom: 14, duration: 0.8 }); })
                 .addTo(layer);
             }

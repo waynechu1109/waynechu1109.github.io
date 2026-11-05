@@ -82,29 +82,57 @@
           return box;
         }
 
-        // bar widths come from the registration's character codes, so each airframe gets a stable pattern
-        function barcode(seed) {
-          var ns = "http://www.w3.org/2000/svg";
-          var svg = document.createElementNS(ns, "svg");
-          var x = 0;
-          for (var i = 0; i < seed.length; i++) {
-            var code = seed.charCodeAt(i) * 7 + i * 13;
-            for (var b = 0; b < 4; b++) {
-              var w = 1 + ((code >> (b * 2)) & 3);
-              if (b % 2 === 0) {
-                var r = document.createElementNS(ns, "rect");
-                r.setAttribute("x", x);
-                r.setAttribute("width", w);
-                r.setAttribute("height", 40);
-                svg.appendChild(r);
-              }
-              x += w;
-            }
+        // Code 128 set B: bar/space widths per symbol value, start B = 104, stop has an extra bar
+        var CODE128 = ("212222 222122 222221 121223 121322 131222 122213 122312 132212 221213 221312 231212 112232 122132 " +
+          "122231 113222 123122 123221 223211 221132 221231 213212 223112 312131 311222 321122 321221 312212 322112 322211 " +
+          "212123 212321 232121 111323 131123 131321 112313 132113 132311 211313 231113 231311 112133 112331 132131 113123 " +
+          "113321 133121 313121 211331 231131 213113 213311 213131 311123 311321 331121 312113 312311 332111 314111 221411 " +
+          "431111 111224 111422 121124 121421 141122 141221 112214 112412 122114 122411 142112 142211 241211 221114 413111 " +
+          "241112 134111 111242 121142 121241 114212 124112 124211 411212 421112 421211 212141 214121 412121 111143 111341 " +
+          "131141 114113 114311 411113 411311 113141 114131 311141 411131 211412 211214 211232 2331112").split(" ");
+
+        function code128Modules(text) {
+          var values = [104];
+          for (var i = 0; i < text.length; i++) {
+            var c = text.charCodeAt(i) - 32;
+            values.push(c >= 0 && c < 95 ? c : 31);
           }
-          svg.setAttribute("viewBox", "0 0 " + x + " 40");
+          var check = values[0];
+          for (var j = 1; j < values.length; j++) check += values[j] * j;
+          values.push(check % 103, 106);
+          var bits = "";
+          values.forEach(function (v) {
+            CODE128[v].split("").forEach(function (w, k) {
+              bits += Array(+w + 1).join(k % 2 === 0 ? "1" : "0");
+            });
+          });
+          return bits;
+        }
+
+        // a real, scannable Code 128 symbol; 2px per module keeps it readable by a phone camera off a screen
+        function barcode(text) {
+          var ns = "http://www.w3.org/2000/svg";
+          var bits = code128Modules(text);
+          var QUIET = 10;
+          var total = bits.length + QUIET * 2;
+          var svg = document.createElementNS(ns, "svg");
+          for (var i = 0; i < bits.length; i++) {
+            if (bits[i] !== "1" || bits[i - 1] === "1") continue;
+            var run = 1;
+            while (bits[i + run] === "1") run++;
+            var r = document.createElementNS(ns, "rect");
+            r.setAttribute("x", i + QUIET);
+            r.setAttribute("width", run);
+            r.setAttribute("height", 40);
+            svg.appendChild(r);
+          }
+          svg.setAttribute("viewBox", "0 0 " + total + " 40");
+          svg.setAttribute("width", total * 2);
           svg.setAttribute("preserveAspectRatio", "none");
+          svg.setAttribute("shape-rendering", "crispEdges");
           svg.setAttribute("class", "pass-barcode");
-          svg.setAttribute("aria-hidden", "true");
+          svg.setAttribute("role", "img");
+          svg.setAttribute("aria-label", "Code 128 barcode: " + text);
           return svg;
         }
 
@@ -177,8 +205,10 @@
           var kit = [shot.Camera, shot.Lens].filter(Boolean).join(" · ");
           if (kit) stub.appendChild(el("p", "pass-kit", kit));
           var code = el("div", "pass-barcode-row");
-          code.appendChild(barcode((regs[0] || text(".photo-title")) + text(".photo-date")));
-          code.appendChild(el("span", "pass-barcode-text", (regs[0] || "") + "  " + text(".photo-date").replace(/-/g, "")));
+          // registration only: adding the date would nearly double the width and shrink the bars below what scans well
+          var payload = regs[0] || (section ? section.dataset.code : "") + " " + text(".photo-date").replace(/-/g, "");
+          code.appendChild(barcode(payload));
+          code.appendChild(el("span", "pass-barcode-text", payload));
           stub.appendChild(code);
           pass.appendChild(stub);
           return pass;

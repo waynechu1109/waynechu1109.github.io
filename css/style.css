@@ -199,6 +199,8 @@ header { padding: 40px 0 20px 0; }
   margin-top: 18px;
 }
 .social-btn {
+  /* the 50%/100% widths on narrow screens assume the padding is included */
+  box-sizing: border-box;
   min-width: 122px;
   padding: 10px 14px;
   font-size: 14px;
@@ -521,8 +523,7 @@ footer {
 .spot-dot {
   display: flex; align-items: center; justify-content: center;
   width: 100%; height: 100%; border-radius: 50%; box-sizing: border-box;
-  font-size: .76rem; font-weight: 700; color: #fff;
-  background: rgba(30,79,129,.9); border: 2px solid #fff;
+  background: rgba(30,79,129,.92); border: 2px solid #fff;
   box-shadow: 0 6px 16px rgba(20,44,77,.3);
   transition: transform .18s ease;
 }
