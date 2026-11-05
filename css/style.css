@@ -337,9 +337,9 @@ footer {
   height: auto;
 }
 
-/* The widget ships one baked-in colour per script url, and two copies of the
+/* The widget ships one baked-in color per script url, and two copies of the
    script cannot coexist (both need id="mapmyvisitors"). So the light build is
-   loaded in the layout and dark mode restates the dark build's two colours:
+   loaded in the layout and dark mode restates the dark build's two colors:
    co=18263c as the container fill, plus the matching generated backdrop.
    !important is required -- the widget writes both as inline styles. */
 [data-theme="dark"] .footer-visitor-map .mapmyvisitors-map-container {
