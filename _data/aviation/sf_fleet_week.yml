@@ -121,11 +121,16 @@
   date: "2026-10-10"
   title: "🇺🇸 U.S. Marine Corps"
   aircraft: "Lockheed Martin F-35B Lightning II"
-  alt: "U.S. Marine Corps F-35B Lightning II in a high-speed pass at San Francisco Fleet Week"
+  regs: ["WF-545"]
+  alt: "U.S. Marine Corps F-35B Lightning II WF-545 of VMFAT-502 in a high-speed pass at San Francisco Fleet Week"
   details:
     - group: "Aircraft"
       rows:
+        - ["Side number", "WF-545"]
         - ["Type", "Lockheed Martin F-35B Lightning II"]
+        - ["Engine", "Pratt &amp; Whitney F135-PW-600"]
+        - ["Unit", "VMFAT-502 &ldquo;Flying Nightmares&rdquo;, MCAS Miramar"]
+        - ["Note", "Flew the Marine Corps F-35B demonstration at Fleet Week 2026"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -191,3 +196,153 @@
         - ["Aperture", "f/8"]
         - ["Shutter", "1/2500"]
         - ["ISO", "160"]
+
+- img: "sf_fleet_week/DSC06909"
+  shot: "2026-10-10 13:21:40"
+  date: "2026-10-10"
+  title: "🇺🇸 Patriots Jet Team"
+  aircraft: "Aero L-39 Albatros"
+  alt: "Six Patriots Jet Team L-39 Albatros jets breaking formation over San Francisco Bay, one inverted, trailing red and white smoke"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Type", "Aero L-39 Albatros"]
+        - ["Note", "Six-ship break, with jet 7 pulling away below the formation"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "385 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+
+- img: "sf_fleet_week/DSC07406"
+  shot: "2026-10-10 13:48:59"
+  date: "2026-10-10"
+  title: "🇺🇸 U.S. Air Force"
+  aircraft: "Lockheed Martin F-22A Raptor"
+  regs: ["04-4073"]
+  alt: "U.S. Air Force F-22 Raptor 04-4073 climbing vertically through a spread of flares over San Francisco Bay"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "04-4073"]
+        - ["Type", "Lockheed Martin F-22A Raptor"]
+        - ["Tail code", "OT"]
+        - ["Variant", "F-22A Block 20"]
+        - ["MSN", "645-4073"]
+        - ["Delivered", "2006-06-30"]
+        - ["Unit", "422nd Test and Evaluation Squadron, Nellis AFB (since 2022)"]
+        - ["History", "94th FS, then 27th FS, then 422nd TES"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "200"]
+
+
+- img: "sf_fleet_week/DSC08042"
+  shot: "2026-10-10 14:45:10"
+  date: "2026-10-10"
+  title: "🇺🇸 United Airlines"
+  aircraft: "Boeing 777-300ER"
+  regs: ["N2352U"]
+  alt: "United Airlines Boeing 777-300ER N2352U banking topside toward the camera against a deep blue sky during the Fleet Week flyover"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N2352U"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-322ER"]
+        - ["MSN", "66592"]
+        - ["Line no.", "1648"]
+        - ["Engines", "GE90-115B"]
+        - ["Delivered", "2020-03"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "166 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "160"]
+
+
+- img: "sf_fleet_week/DSC08047"
+  shot: "2026-10-10 14:45:13"
+  date: "2026-10-10"
+  title: "🇺🇸 United Airlines"
+  aircraft: "Boeing 777-300ER"
+  regs: ["N2352U"]
+  alt: "United Airlines Boeing 777-300ER N2352U in a clean side-on pass over San Francisco Bay during the Fleet Week flyover"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N2352U"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-322ER"]
+        - ["MSN", "66592"]
+        - ["Line no.", "1648"]
+        - ["Engines", "GE90-115B"]
+        - ["Delivered", "2020-03"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "187 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/2000"]
+        - ["ISO", "160"]
+
+
+- img: "sf_fleet_week/DSC08087"
+  shot: "2026-10-10 14:47:52"
+  date: "2026-10-10"
+  title: "🇺🇸 United Airlines"
+  aircraft: "Boeing 777-300ER"
+  regs: ["N2352U"]
+  alt: "United Airlines Boeing 777-300ER N2352U head-on with gear down during a low Fleet Week pass over San Francisco Bay"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N2352U"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-322ER"]
+        - ["MSN", "66592"]
+        - ["Line no.", "1648"]
+        - ["Engines", "GE90-115B"]
+        - ["Delivered", "2020-03"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1250"]
+        - ["ISO", "160"]
+
+- img: "sf_fleet_week/DSC06584"
+  shot: "2026-10-10 13:04:50"
+  date: "2026-10-10"
+  title: "🇺🇸 Patriots Jet Team"
+  aircraft: "Aero L-39 Albatros"
+  alt: "Six Patriots Jet Team L-39 Albatros jets in a diamond-style formation trailing red, white and blue smoke across a deep blue sky over San Francisco Bay"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Type", "Aero L-39 Albatros"]
+        - ["Note", "Six-ship formation trailing red, white and blue smoke"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
