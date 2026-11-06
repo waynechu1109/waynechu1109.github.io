@@ -1,0 +1,465 @@
+- img: "nrt/DSC06510"
+  shot: "2025-03-09 16:45:09"
+  date: "2025-03-09"
+  title: "🇸🇬 Singapore Airlines"
+  aircraft: "Boeing 777-300ER"
+  regs: ["9V-SWM"]
+  liveries: ["Star Alliance livery"]
+  alt: "Singapore Airlines Boeing 777-300ER in Star Alliance livery on approach to Tokyo Narita Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "9V-SWM"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Livery", "Star Alliance livery"]
+        - ["Variant", "777-312(ER)"]
+        - ["MSN", "34578"]
+        - ["Line no.", "701"]
+        - ["Engines", "GE90-115B"]
+        - ["First flight", "2008-02-19"]
+        - ["Delivered", "2008-02"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "342 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/250"]
+        - ["ISO", "250"]
+
+- img: "nrt/DSC05882"
+  shot: "2025-03-09 11:39:18"
+  date: "2025-03-09"
+  title: "🇲🇽 Aeromexico"
+  aircraft: "Boeing 787-8"
+  regs: ["N965AM"]
+  alt: "Aeromexico Boeing 787-8 on approach to Tokyo Narita Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N965AM"]
+        - ["Type", "Boeing 787-8"]
+        - ["Variant", "787-852"]
+        - ["MSN", "35308"]
+        - ["Line no.", "127"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["First flight", "2013-10-11"]
+        - ["Delivered", "2013-10"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "321 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "nrt/DSC06095"
+  shot: "2025-03-09 12:52:38"
+  date: "2025-03-09"
+  title: "🇨🇳 Air China"
+  aircraft: "Airbus A330-300"
+  regs: ["B-6101"]
+  liveries: ["Star Alliance livery"]
+  alt: "Air China Airbus A330-300 in Star Alliance livery on approach to Tokyo Narita Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-6101"]
+        - ["Type", "Airbus A330-300"]
+        - ["Livery", "Star Alliance livery"]
+        - ["Variant", "A330-343"]
+        - ["MSN", "1685"]
+        - ["Engines", "Rolls-Royce Trent 700"]
+        - ["First flight", "2015-10-21"]
+        - ["Delivered", "2015-11"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "288 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "nrt/DSC05671"
+  shot: "2025-03-09 09:39:49"
+  date: "2025-03-09"
+  title: "🇮🇳 Air India"
+  aircraft: "Boeing 787-8"
+  regs: ["VT-ANP"]
+  liveries: ["Mahatma Gandhi tail"]
+  alt: "Air India Boeing 787-8 VT-ANP with the Mahatma Gandhi tail on approach to Narita International Airport over cedar trees"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "VT-ANP"]
+        - ["Type", "Boeing 787-8"]
+        - ["MSN", "36287"]
+        - ["Line no.", "158"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["Delivered", "2014"]
+        - ["Livery", "Mahatma Gandhi tail for the 150th anniversary of his birth, since 2019-12"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "nrt/DSC05779"
+  shot: "2025-03-09 11:08:47"
+  date: "2025-03-09"
+  title: "🇨🇳 Juneyao Air"
+  aircraft: "Boeing 787-9"
+  regs: ["B-208A"]
+  alt: "Juneyao Air Boeing 787-9 B-208A on approach to Narita International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-208A"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "64314"]
+        - ["First flight", "2018-12-06"]
+        - ["Delivered", "2018-12-22"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "276 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "nrt/DSC05942"
+  shot: "2025-03-09 11:51:24"
+  date: "2025-03-09"
+  title: "🇯🇵 ANA Cargo"
+  aircraft: "Boeing 777F"
+  regs: ["JA772F"]
+  alt: "ANA Cargo Boeing 777F JA772F on approach to Narita International Airport under scattered clouds"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA772F"]
+        - ["Type", "Boeing 777F"]
+        - ["Engines", "GE90-110B1L"]
+        - ["Name", "BLUE JAY, the nickname ANA gave its 777Fs"]
+        - ["Note", "One of the two 777Fs that made ANA the first Japanese airline to fly the type, from 2019"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "238 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "nrt/DSC06287"
+  shot: "2025-03-09 15:26:19"
+  date: "2025-03-09"
+  title: "🇮🇱 El Al"
+  aircraft: "Boeing 787-8"
+  regs: ["4X-ERD"]
+  alt: "El Al Boeing 787-8 4X-ERD on approach to Narita International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "4X-ERD"]
+        - ["Type", "Boeing 787-8"]
+        - ["MSN", "63398"]
+        - ["Line no.", "985"]
+        - ["Engines", "Rolls-Royce Trent 1000"]
+        - ["Delivered", "2023-07-31"]
+        - ["Name", "Nof HaGalil"]
+        - ["Note", "El Al&rsquo;s fourth and last 787-8, and the last 787 of its original order"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "336 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "nrt/DSC06570"
+  shot: "2025-03-09 16:53:08"
+  date: "2025-03-09"
+  title: "🇶🇦 Qatar Airways"
+  aircraft: "Boeing 777-300ER"
+  regs: ["A7-BEJ"]
+  alt: "Qatar Airways Boeing 777-300ER A7-BEJ landing at Narita International Airport in late golden light"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "A7-BEJ"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-3DZ(ER)"]
+        - ["MSN", "60336"]
+        - ["Engines", "GE90-115B"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "321 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/80"]
+        - ["ISO", "250"]
+
+- img: "nrt/DSC06804-Enhanced-NR"
+  shot: "2025-03-09 18:52:28"
+  date: "2025-03-09"
+  title: "🇪🇹 Ethiopian Airlines"
+  aircraft: "Boeing 787-8"
+  regs: ["ET-ARE"]
+  alt: "Ethiopian Airlines Boeing 787-8 ET-ARE taxiing at night at Narita International Airport under taxiway lights"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "ET-ARE"]
+        - ["Type", "Boeing 787-8"]
+        - ["MSN", "34751"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "339 mm"]
+        - ["Aperture", "f/5.6"]
+        - ["Shutter", "1/10"]
+        - ["ISO", "10000"]
+- img: "nrt/DSC05926"
+  shot: "2025-03-09 11:47:13"
+  date: "2025-03-09"
+  title: "🇨🇳 China Southern Airlines"
+  aircraft: "Boeing 737-800"
+  regs: ["B-1979"]
+  liveries: ["Hometown Henan"]
+  alt: "China Southern Airlines Boeing 737-800 B-1979 in the Hometown Henan peony livery on approach to Narita International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-1979"]
+        - ["Type", "Boeing 737-800"]
+        - ["Variant", "737-86N"]
+        - ["Engines", "CFM International CFM56-7B"]
+        - ["Livery", "&ldquo;Hometown Henan&rdquo; (老家河南), with Luoyang peonies and Yellow River motifs"]
+        - ["Note", "Flies the Narita to Zhengzhou route, into Henan&rsquo;s capital"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "nrt/DSC06014"
+  shot: "2025-03-09 12:07:43"
+  date: "2025-03-09"
+  title: "🇮🇳 Air India"
+  aircraft: "Boeing 787-8"
+  regs: ["VT-ANP"]
+  liveries: ["Mahatma Gandhi tail"]
+  alt: "Close-up of Air India Boeing 787-8 VT-ANP with its 150 Years of Celebrating the Mahatma logo and ground crew at the nose gear at Narita International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "VT-ANP"]
+        - ["Type", "Boeing 787-8"]
+        - ["MSN", "36287"]
+        - ["Line no.", "158"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["Delivered", "2014"]
+        - ["Livery", "Mahatma Gandhi tail for the 150th anniversary of his birth, since 2019-12; the &ldquo;150 Years of Celebrating the Mahatma&rdquo; logo sits behind the forward door"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "100"]
+
+- img: "nrt/DSC06043"
+  shot: "2025-03-09 12:19:41"
+  date: "2025-03-09"
+  title: "🇦🇪 Etihad Airways"
+  aircraft: "Boeing 777-300ER"
+  regs: ["A6-ETG"]
+  alt: "Etihad Airways Boeing 777-300ER A6-ETG on approach to Narita International Airport under dark clouds"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "A6-ETG"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-3FX(ER)"]
+        - ["MSN", "39681"]
+        - ["Engines", "GE90-115B"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "226 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "nrt/DSC06058"
+  shot: "2025-03-09 12:43:46"
+  date: "2025-03-09"
+  title: "🇯🇵 ZIPAIR"
+  aircraft: "Boeing 787-8"
+  regs: ["JA828J"]
+  alt: "ZIPAIR Boeing 787-8 JA828J on approach to Narita International Airport against a stormy sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA828J"]
+        - ["Type", "Boeing 787-8"]
+        - ["MSN", "34838"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["History", "Flown by Japan Airlines before being refitted for ZIPAIR, which took it in 2024-01 as its 8th aircraft"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "327 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "nrt/DSC06543-Enhanced-NR"
+  shot: "2025-03-09 16:48:21"
+  date: "2025-03-09"
+  title: "🇲🇾 Malaysia Airlines"
+  aircraft: "Airbus A350-900"
+  regs: ["9M-MAG"]
+  liveries: ["Negaraku"]
+  alt: "Malaysia Airlines Airbus A350-900 9M-MAG in the Malaysia Negaraku flag livery taxiing at Narita International Airport in golden evening light"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "9M-MAG"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Livery", "&ldquo;Malaysia Negaraku&rdquo;, a stylized Malaysian flag on the rear fuselage; one of three Malaysia Airlines A350s in it"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "196 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/125"]
+        - ["ISO", "250"]
+
+- img: "nrt/DSC06681-Enhanced-NR"
+  shot: "2025-03-09 17:07:39"
+  date: "2025-03-09"
+  title: "🇰🇷 Asiana Cargo"
+  aircraft: "Boeing 747-400BDSF"
+  regs: ["HL7415"]
+  alt: "Asiana Cargo Boeing 747-400 freighter HL7415 on approach to Narita International Airport at dusk"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "HL7415"]
+        - ["Type", "Boeing 747-400BDSF"]
+        - ["Variant", "747-48E(BDSF)"]
+        - ["MSN", "25777"]
+        - ["Line no.", "946"]
+        - ["Engines", "Pratt &amp; Whitney PW4056"]
+        - ["History", "Delivered to Asiana as a passenger 747-400 in 1992 and later converted to a freighter"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "247 mm"]
+        - ["Aperture", "f/7.1"]
+        - ["Shutter", "1/50"]
+        - ["ISO", "500"]
+
+- img: "nrt/DSC05545"
+  shot: "2025-03-09 09:17:43"
+  date: "2025-03-09"
+  title: "🇪🇸 Iberia"
+  aircraft: "Airbus A350-900"
+  regs: ["EC-NDR"]
+  alt: "Iberia Airbus A350-900 EC-NDR on final approach to Narita International Airport over a line of cedar trees"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "EC-NDR"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["MSN", "312"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "279 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "125"]
+
+- img: "nrt/DSC05804-Enhanced-NR"
+  shot: "2025-03-09 11:11:28"
+  date: "2025-03-09"
+  title: "🇳🇱 KLM / 🇯🇵 Peach"
+  aircraft: "Boeing 777-200ER &amp; Airbus A320neo"
+  regs: ["PH-BQG", "JA218P"]
+  alt: "KLM Boeing 777-200ER PH-BQG taxiing at Narita International Airport as pink Peach Airbus A320neo JA218P lands behind"
+  details:
+    - group: "Aircraft &middot; KLM"
+      rows:
+        - ["Registration", "PH-BQG"]
+        - ["Type", "Boeing 777-200ER"]
+        - ["Variant", "777-206(ER)"]
+        - ["MSN", "32704"]
+        - ["Engines", "GE90-94B"]
+        - ["Name", "Galápagos Islands"]
+    - group: "Aircraft &middot; Peach"
+      rows:
+        - ["Registration", "JA218P"]
+        - ["Type", "Airbus A320neo"]
+        - ["Variant", "A320-251N"]
+        - ["MSN", "12064"]
+        - ["Engines", "CFM International LEAP-1A"]
+        - ["Delivered", "2024-05"]
+        - ["Position", "Landing behind the KLM 777"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "268 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "nrt/DSC06619-Enhanced-NR"
+  shot: "2025-03-09 16:59:00"
+  date: "2025-03-09"
+  title: "🇨🇳 Air China"
+  aircraft: "Airbus A350-900"
+  regs: ["B-308C"]
+  alt: "Air China Airbus A350-900 B-308C about to touch down at Narita International Airport at dusk, panned against blurred trees"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-308C"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["MSN", "295"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "315 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/60"]
+        - ["ISO", "400"]
+

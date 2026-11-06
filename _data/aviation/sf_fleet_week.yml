@@ -1,0 +1,193 @@
+- img: "sf_fleet_week/DSC05942"
+  shot: "2026-10-10 12:17:25"
+  date: "2026-10-10"
+  title: "🇺🇸 United Airlines"
+  aircraft: "Boeing 777-300ER"
+  regs: ["N2352U"]
+  alt: "United Airlines Boeing 777-300ER banking past the Golden Gate Bridge during the Fleet Week flyover"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N2352U"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-322ER"]
+        - ["MSN", "66592"]
+        - ["Line no.", "1648"]
+        - ["Engines", "GE90-115B"]
+        - ["Delivered", "2020-03"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "sf_fleet_week/DSC06461"
+  shot: "2026-10-10 13:02:13"
+  date: "2026-10-10"
+  title: "🇺🇸 Patriots Jet Team"
+  aircraft: "Aero L-39 Albatros"
+  alt: "Patriots Jet Team L-39 Albatros formation trailing red, white, and blue smoke over San Francisco Bay"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Type", "Aero L-39 Albatros"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "238 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "sf_fleet_week/DSC07037"
+  shot: "2026-10-10 13:41:24"
+  date: "2026-10-10"
+  title: "🇺🇸 U.S. Air Force"
+  aircraft: "Lockheed Martin F-22A Raptor"
+  regs: ["04-4073"]
+  alt: "U.S. Air Force F-22 Raptor banking overhead at San Francisco Fleet Week"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "04-4073"]
+        - ["Type", "Lockheed Martin F-22A Raptor"]
+        - ["Tail code", "OT"]
+        - ["Variant", "F-22A Block 20"]
+        - ["MSN", "645-4073"]
+        - ["Delivered", "2006-06-30"]
+        - ["Unit", "422nd Test and Evaluation Squadron, Nellis AFB (since 2022)"]
+        - ["History", "94th FS, then 27th FS, then 422nd TES"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "160"]
+
+- img: "sf_fleet_week/DSC07272"
+  shot: "2026-10-10 13:46:06"
+  date: "2026-10-10"
+  title: "🇺🇸 U.S. Air Force"
+  aircraft: "Lockheed Martin F-22A Raptor"
+  regs: ["04-4073"]
+  alt: "U.S. Air Force F-22 Raptor releasing flares over San Francisco Bay"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "04-4073"]
+        - ["Type", "Lockheed Martin F-22A Raptor"]
+        - ["Tail code", "OT"]
+        - ["Variant", "F-22A Block 20"]
+        - ["MSN", "645-4073"]
+        - ["Delivered", "2006-06-30"]
+        - ["Unit", "422nd Test and Evaluation Squadron, Nellis AFB (since 2022)"]
+        - ["History", "94th FS, then 27th FS, then 422nd TES"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "160"]
+
+- img: "sf_fleet_week/DSC07643"
+  shot: "2026-10-10 14:09:45"
+  date: "2026-10-10"
+  title: "🇺🇸 U.S. Navy"
+  aircraft: "Boeing E-6B Mercury"
+  alt: "U.S. Navy Boeing E-6B Mercury passing overhead at San Francisco Fleet Week"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Type", "Boeing E-6B Mercury"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "200"]
+
+- img: "sf_fleet_week/DSC07844"
+  shot: "2026-10-10 14:21:22"
+  date: "2026-10-10"
+  title: "🇺🇸 U.S. Marine Corps"
+  aircraft: "Lockheed Martin F-35B Lightning II"
+  alt: "U.S. Marine Corps F-35B Lightning II in a high-speed pass at San Francisco Fleet Week"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Type", "Lockheed Martin F-35B Lightning II"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "200"]
+
+- img: "sf_fleet_week/DSC08603"
+  shot: "2026-10-10 15:15:23"
+  date: "2026-10-10"
+  title: "🇺🇸 U.S. Navy Blue Angels"
+  aircraft: "Boeing F/A-18E/F Super Hornet"
+  alt: "U.S. Navy Blue Angels F/A-18 Super Hornets in echelon over San Francisco Bay"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Type", "Boeing F/A-18E/F Super Hornet"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "160"]
+
+- img: "sf_fleet_week/DSC08952"
+  shot: "2026-10-10 15:41:00"
+  date: "2026-10-10"
+  title: "🇺🇸 U.S. Navy Blue Angels"
+  aircraft: "Boeing F/A-18E/F Super Hornet"
+  alt: "U.S. Navy Blue Angels six-ship delta climbing with smoke on over San Francisco Bay"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Type", "Boeing F/A-18E/F Super Hornet"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "160"]
+
+- img: "sf_fleet_week/DSC08966"
+  shot: "2026-10-10 15:42:47"
+  date: "2026-10-10"
+  title: "🇺🇸 U.S. Navy Blue Angels"
+  aircraft: "Boeing F/A-18E/F Super Hornet"
+  alt: "U.S. Navy Blue Angels delta formation passing the Golden Gate Bridge"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Type", "Boeing F/A-18E/F Super Hornet"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/2500"]
+        - ["ISO", "160"]

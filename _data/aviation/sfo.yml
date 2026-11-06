@@ -1,0 +1,394 @@
+- img: "sfo/DSC04651"
+  shot: "2026-09-06 17:22:45"
+  date: "2026-09-06"
+  title: "🇦🇺 Qantas"
+  aircraft: "Boeing 787-9"
+  regs: ["VH-ZNC"]
+  alt: "Qantas Boeing 787-9 VH-ZNC seen from directly below with sunlight glinting off the fuselage"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "VH-ZNC"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "39040"]
+        - ["Line no.", "655"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["Delivered", "2018-01"]
+        - ["Name", "Quokka"]
+        - ["Note", "Qantas&rsquo; third 787-9"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "sfo/DSC04992"
+  shot: "2026-09-06 19:12:09"
+  date: "2026-09-06"
+  title: "🇩🇪 Lufthansa"
+  aircraft: "Airbus A380-841"
+  regs: ["D-AIML"]
+  alt: "Lufthansa Airbus A380 on approach to San Francisco International Airport in golden evening light"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "D-AIML"]
+        - ["Type", "Airbus A380-841"]
+        - ["MSN", "149"]
+        - ["Engines", "Rolls-Royce Trent 970"]
+        - ["First flight", "2013-12-02"]
+        - ["Delivered", "2014-05-05"]
+        - ["Name", "Hamburg (2014; name later reassigned to A350 D-AIVB)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "320"]
+
+- img: "sfo/DSC04058"
+  shot: "2026-07-18 17:10:24"
+  date: "2026-07-18"
+  title: "🇯🇵 ANA"
+  aircraft: "Boeing 777-300ER"
+  regs: ["JA784A"]
+  liveries: ["Eevee Jet NH"]
+  alt: "ANA Boeing 777-300ER JA784A in Eevee Jet NH Pokémon livery on approach to San Francisco International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA784A"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-381(ER)"]
+        - ["MSN", "37950"]
+        - ["Line no.", "833"]
+        - ["Engines", "GE90-115B"]
+        - ["Delivered", "2010-01"]
+        - ["Livery", "Eevee Jet NH (Pokémon Air Adventures), since 2023-09"]
+        - ["Note", "Flies ANA&rsquo;s Haneda long-haul routes to London and the U.S."]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "327 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "sfo/DSC02801"
+  shot: "2026-06-28 16:32:03"
+  date: "2026-06-28"
+  title: "🇺🇸 United Airlines"
+  aircraft: "Boeing 787-9"
+  regs: ["N24988"]
+  liveries: ["The Future is SAF"]
+  alt: "United Airlines Boeing 787-9 N24988 in The Future is SAF livery on approach to San Francisco International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N24988"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "37449"]
+        - ["Line no.", "1208"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["Delivered", "2024-11"]
+        - ["Livery", "&ldquo;The Future is SAF&rdquo;, promoting sustainable aviation fuel, since delivery"]
+        - ["Note", "United&rsquo;s first 787 delivery in 20 months"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "sfo/DSC02966"
+  shot: "2026-06-28 16:58:22"
+  date: "2026-06-28"
+  title: "🇬🇧 British Airways"
+  aircraft: "Boeing 777-300ER"
+  regs: ["G-STBN"]
+  liveries: ["GREAT Futures"]
+  alt: "British Airways Boeing 777-300ER G-STBN with the GREAT Futures sticker on approach to San Francisco International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "G-STBN"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-336(ER)"]
+        - ["MSN", "66583"]
+        - ["Engines", "GE90-115B"]
+        - ["First flight", "2020-10-23"]
+        - ["Delivered", "2020-11"]
+        - ["Livery", "GREAT Futures sticker for the UK&ndash;Saudi Arabia partnership, with the Saudi Vision 2030 logo; seen since 2024"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "312 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "sfo/DSC01500"
+  shot: "2026-06-21 15:22:01"
+  date: "2026-06-21"
+  title: "🇬🇧 Virgin Atlantic"
+  aircraft: "Airbus A350-1000"
+  regs: ["G-VJAM"]
+  alt: "Virgin Atlantic Airbus A350-1000 on approach to San Francisco International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "G-VJAM"]
+        - ["Type", "Airbus A350-1000"]
+        - ["Variant", "A350-1041"]
+        - ["MSN", "336"]
+        - ["Engines", "Rolls-Royce Trent XWB-97"]
+        - ["First flight", "2019-07-23"]
+        - ["Delivered", "2019-09-27"]
+        - ["Name", "Queen of Hearts"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "300 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "sfo/DSC02209"
+  shot: "2026-06-21 17:01:55"
+  date: "2026-06-21"
+  title: "🇨🇭 SWISS"
+  aircraft: "Boeing 777-300ER"
+  regs: ["HB-JNB"]
+  alt: "SWISS Boeing 777-300ER on approach to San Francisco International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "HB-JNB"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-3DE(ER)"]
+        - ["MSN", "44583"]
+        - ["Engines", "GE90-115B"]
+        - ["First flight", "2016-03-08"]
+        - ["Delivered", "2016-03"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "sfo/DSC01932"
+  shot: "2026-06-21 16:14:10"
+  date: "2026-06-21"
+  title: "🇹🇷 Turkish Airlines"
+  aircraft: "Airbus A350-900"
+  regs: ["TC-LHD"]
+  alt: "Turkish Airlines Airbus A350-900 on approach to San Francisco International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "TC-LHD"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["MSN", "725"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Delivered", "2025-04"]
+        - ["Note", "From the TC-LHx batch of Turkish&rsquo;s 2023 A350 order"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "sfo/DSC00759"
+  shot: "2026-05-06 10:20:51"
+  date: "2026-05-06"
+  title: "🇮🇳 Air India"
+  aircraft: "Boeing 777-300ER"
+  regs: ["VT-ALS"]
+  alt: "Air India Boeing 777-300ER VT-ALS taxiing past the international terminal at San Francisco International Airport under dark clouds"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "VT-ALS"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-337(ER)"]
+        - ["MSN", "36317"]
+        - ["Engines", "GE90-115B"]
+        - ["Delivered", "2010-04"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "215 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+- img: "sfo/DSC03815"
+  shot: "2026-07-18 16:43:20"
+  date: "2026-07-18"
+  title: "🇵🇹 TAP Air Portugal"
+  aircraft: "Airbus A330-900"
+  regs: ["CS-TUM"]
+  liveries: ["It’s Portugal Time"]
+  alt: "TAP Air Portugal Airbus A330-900 CS-TUM with Portuguese national football team decals on approach to San Francisco International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "CS-TUM"]
+        - ["Type", "Airbus A330-900"]
+        - ["Variant", "A330-941"]
+        - ["Engines", "Rolls-Royce Trent 7000"]
+        - ["Name", "Nuno Álvares Pereira"]
+        - ["Livery", "&ldquo;It&rsquo;s Portugal Time&rdquo;, Portuguese Football Federation decals for the 2026 World Cup"]
+        - ["Note", "Flew the Portugal national team to the 2026 World Cup"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "352 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "sfo/DSC02732"
+  shot: "2026-06-28 16:26:27"
+  date: "2026-06-28"
+  title: "🇺🇸 United Airlines"
+  aircraft: "Boeing 777-200ER"
+  regs: ["N77022"]
+  liveries: ["Star Alliance"]
+  alt: "United Airlines Boeing 777-200ER N77022 in Star Alliance livery on approach to San Francisco International Airport under a deep blue sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N77022"]
+        - ["Type", "Boeing 777-200ER"]
+        - ["Variant", "777-224(ER)"]
+        - ["Engines", "GE90-94B"]
+        - ["Livery", "Star Alliance"]
+        - ["Note", "Built for Continental Airlines"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "345 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "sfo/DSC00463"
+  shot: "2026-06-18 14:11:54"
+  date: "2026-06-18"
+  title: "🇵🇱 LOT Polish Airlines"
+  aircraft: "Boeing 787-9"
+  regs: ["SP-LSC"]
+  liveries: ["Proud of Poland’s Independence"]
+  alt: "LOT Polish Airlines Boeing 787-9 SP-LSC in the red and white Proud of Poland's Independence livery landing at San Francisco International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "SP-LSC"]
+        - ["Type", "Boeing 787-9"]
+        - ["Delivered", "2018"]
+        - ["Livery", "&ldquo;Proud of Poland&rsquo;s Independence&rdquo; (Dumni z Niepodległości Polski), marking 100 years of Polish independence, since delivery"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "sfo/DSC00396"
+  shot: "2026-06-18 14:06:14"
+  date: "2026-06-18"
+  title: "🇩🇪 Condor"
+  aircraft: "Airbus A330-900"
+  regs: ["D-ANRD"]
+  alt: "Condor Airbus A330-900 D-ANRD in green and white stripes landing at San Francisco International Airport over the bay"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "D-ANRD"]
+        - ["Type", "Airbus A330-900"]
+        - ["Variant", "A330-941"]
+        - ["Engines", "Rolls-Royce Trent 7000"]
+        - ["Livery", "Condor striped livery in green (&ldquo;Island&rdquo;)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "sfo/DSC00245"
+  shot: "2026-05-06 08:20:15"
+  date: "2026-05-06"
+  title: "🇺🇸 United Airlines"
+  aircraft: "Boeing 787-9"
+  regs: ["N61101"]
+  liveries: ["100 Years"]
+  alt: "United Airlines Boeing 787-9 N61101 in the 100 Years livery taxiing at San Francisco International Airport as another United Boeing 777 lands behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N61101"]
+        - ["Type", "Boeing 787-9"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["Livery", "&ldquo;100 Years&rdquo;, marking United&rsquo;s centennial in 2026"]
+        - ["Background", "Another United Boeing 777 landing"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "212 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "125"]
+
+- img: "sfo/DSC03890"
+  shot: "2026-07-18 16:54:19"
+  date: "2026-07-18"
+  title: "🇩🇪 Lufthansa"
+  aircraft: "Boeing 747-8"
+  regs: ["D-ABYS"]
+  alt: "Lufthansa Boeing 747-8 D-ABYS Dresden on approach to San Francisco International Airport against a clear blue sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "D-ABYS"]
+        - ["Type", "Boeing 747-8"]
+        - ["Variant", "747-830"]
+        - ["MSN", "37843"]
+        - ["Line no.", "1512"]
+        - ["Engines", "GE GEnx-2B67"]
+        - ["Delivered", "2015-02"]
+        - ["Name", "Dresden"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "333 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+

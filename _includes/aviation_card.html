@@ -1,0 +1,34 @@
+{%- assign p = include.p -%}
+{%- assign base = "media/gallery/aviation_gallery/" | append: p.img -%}
+          <article class="photo-card" id="p-{{ p.img | replace: '/', '-' }}">
+            <div class="photo-frame real-photo">
+              <img
+                src="{{ base }}-1280.jpg"
+                srcset="{{ base }}-640.jpg 640w, {{ base }}-1280.jpg 1280w, {{ base }}-2560.jpg 2560w"
+                sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 330px"
+                data-full="{{ base }}-2560.jpg"
+                alt="{{ p.alt }}"
+                class="photo-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-body">
+              <h4 class="photo-title">{{ p.title }}</h4>
+              <p class="photo-aircraft">{{ p.aircraft }}</p>
+              {%- if p.regs or p.liveries %}
+              <p class="photo-tags">{% for r in p.regs %}<span class="reg-chip">{{ r }}</span>{% endfor %}{% if p.livery_break %}<span class="tag-break"></span>{% endif %}{% for l in p.liveries %}<span class="livery-tag">{{ l }}</span>{% endfor %}</p>
+              {%- endif %}
+              <p class="photo-date"><time datetime="{{ p.date }}">{{ p.date }}</time></p>
+              <details class="exif-details">
+                <summary>Details</summary>
+                {%- for g in p.details %}
+                <p class="exif-group">{{ g.group }}</p>
+                <ul class="exif-list">
+                  {%- for row in g.rows %}
+                  <li><span class="exif-key">{{ row[0] }}</span><span class="exif-val">{{ row[1] }}</span></li>
+                  {%- endfor %}
+                </ul>
+                {%- endfor %}
+              </details>
+            </div>
+          </article>

@@ -212,6 +212,38 @@
     }
 
     /* =========================
+       Search & Filter
+       ========================= */
+    .photo-filter {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px;
+      margin: 18px 0 4px;
+    }
+    .photo-search {
+      flex: 1 1 280px; min-width: 0; padding: 10px 14px; border-radius: 12px;
+      font: inherit; font-size: .92rem; color: var(--text);
+      background: var(--surface-alt); border: 1px solid rgba(64,118,172,.22);
+    }
+    .photo-search:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
+    .photo-filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .photo-filter-chips button {
+      padding: 6px 12px; border-radius: 999px; cursor: pointer;
+      font: inherit; font-size: .82rem; font-weight: 600;
+      color: #1c3550; background: #fff; border: 1px solid rgba(64,118,172,.22);
+      transition: background .18s ease, color .18s ease, border-color .18s ease;
+    }
+    .photo-filter-chips button:hover { background: #eef5ff; }
+    .photo-filter-chips button[aria-pressed="true"] { color: #fff; background: var(--primary-deep); border-color: var(--primary-deep); }
+    .photo-filter-count { flex-basis: 100%; margin: 0; min-height: 1em; font-size: .8rem; color: var(--muted); }
+    .photo-filter-count:empty { display: none; }
+    .photo-filter-empty { margin: 18px 0; padding: 18px; border-radius: 14px; text-align: center; color: var(--muted); background: var(--surface-alt); }
+    .photo-card[hidden], .airport-section[hidden] { display: none !important; }
+    .page-toc-link.is-empty, .airport-links a.is-empty { opacity: .4; }
+    .photo-card { scroll-margin-top: calc(var(--nav-offset) + 16px); }
+    .spotted-link { color: var(--primary-deep); font-weight: 700; text-decoration: none; border-bottom: 1px dotted currentColor; }
+    .spotted-link:hover { border-bottom-style: solid; }
+    .pass-rows .spotted-link { color: #163453; }
+
+    /* =========================
        Airport Sections
        ========================= */
     /* one swipeable row instead of a wrapped block, so the buttons don't push the photos down on narrow screens */
@@ -390,6 +422,10 @@
       box-shadow: 0 14px 34px rgba(0,0,0,.4);
     }
     [data-theme="dark"] .airport-name { color: #e8eef5; }
+    [data-theme="dark"] .photo-search { border-color: var(--border); }
+    [data-theme="dark"] .photo-filter-chips button { color: var(--text); background: var(--surface-alt); border-color: var(--border); }
+    [data-theme="dark"] .photo-filter-chips button:hover { background: #223145; }
+    [data-theme="dark"] .photo-filter-chips button[aria-pressed="true"] { color: #0f1b2f; background: var(--primary-deep); border-color: var(--primary-deep); }
     [data-theme="dark"] .airport-meta { color: var(--muted); }
     [data-theme="dark"] .photo-card {
       background: var(--surface-alt);

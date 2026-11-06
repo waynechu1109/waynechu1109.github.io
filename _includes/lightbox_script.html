@@ -142,7 +142,8 @@
             var list = head.nextElementSibling;
             var rows = [];
             if (list) list.querySelectorAll("li").forEach(function (li) {
-              rows.push({ key: li.querySelector(".exif-key").textContent, val: li.querySelector(".exif-val").textContent });
+              var v = li.querySelector(".exif-val");
+              rows.push({ key: li.querySelector(".exif-key").textContent, val: v.textContent, node: v.querySelector("a") ? v : null });
             });
             groups.push({ name: head.textContent.trim(), rows: rows });
           });
@@ -190,7 +191,9 @@
             var list = el("dl", "pass-rows");
             rows.forEach(function (r) {
               list.appendChild(el("dt", null, r.key));
-              list.appendChild(el("dd", null, r.val));
+              var dd = el("dd", null, r.node ? null : r.val);
+              if (r.node) Array.prototype.forEach.call(r.node.childNodes, function (n) { dd.appendChild(n.cloneNode(true)); });
+              list.appendChild(dd);
             });
             main.appendChild(list);
           });
@@ -244,9 +247,13 @@
           if (toFocus && toFocus.focus) toFocus.focus();
         }
 
+        // photos hidden by the gallery filter are skipped
         function move(delta) {
           if (current < 0) return;
-          current = (current + delta + photoImages.length) % photoImages.length;
+          for (var n = 0; n < photoImages.length; n++) {
+            current = (current + delta + photoImages.length) % photoImages.length;
+            if (!photoImages[current].closest("[hidden]")) break;
+          }
           render();
         }
 
@@ -269,6 +276,13 @@
 
         lightbox.addEventListener("click", function (event) {
           if (event.target === lightbox) closeLightbox();
+          var link = event.target.closest(".spotted-link");
+          if (!link) return;
+          event.preventDefault();
+          var card = document.getElementById(link.getAttribute("href").slice(1));
+          var img = card && card.querySelector(".photo-image");
+          var i = photoImages.indexOf(img);
+          if (i !== -1) { current = i; render(); }
         });
 
         document.addEventListener("keydown", function (event) {

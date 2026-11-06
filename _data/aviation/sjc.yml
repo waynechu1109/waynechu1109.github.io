@@ -1,0 +1,81 @@
+- img: "sjc/DSC04442"
+  shot: "2026-09-05 18:34:36"
+  date: "2026-09-05"
+  title: "🇺🇸 American Airlines"
+  aircraft: "Boeing 737 MAX 8"
+  regs: ["N336RU"]
+  alt: "American Airlines Boeing 737 MAX 8 N336RU taxiing at San Jose International Airport with hills behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N336RU"]
+        - ["Type", "Boeing 737 MAX 8"]
+        - ["Fleet no.", "3RU"]
+        - ["MSN", "44460"]
+        - ["Line no.", "7190"]
+        - ["Engines", "CFM LEAP-1B"]
+        - ["First flight", "2018-11"]
+        - ["Delivered", "2018-12"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]
+
+- img: "sjc/DSC04515"
+  shot: "2026-09-05 18:39:32"
+  date: "2026-09-05"
+  title: "🇺🇸 Alaska Airlines"
+  aircraft: "Embraer E175"
+  regs: ["N671QX"]
+  alt: "Alaska Airlines Embraer E175 N671QX climbing over golden hills at San Jose International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N671QX"]
+        - ["Type", "Embraer E175"]
+        - ["Variant", "ERJ 170-200 LR"]
+        - ["MSN", "17001034"]
+        - ["Engines", "GE CF34-8E"]
+        - ["Operator", "Horizon Air"]
+        - ["Delivered", "2026-07"]
+        - ["Note", "About two months old when photographed"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "200"]
+
+- img: "sjc/DSC04595"
+  shot: "2026-09-05 18:50:26"
+  date: "2026-09-05"
+  title: "🇺🇸 Southwest Airlines"
+  aircraft: "Boeing 737 MAX 8"
+  regs: ["N8702L"]
+  alt: "Southwest Airlines Boeing 737 MAX 8 N8702L climbing out of San Jose International Airport at golden hour"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N8702L"]
+        - ["Type", "Boeing 737 MAX 8"]
+        - ["Fleet no.", "8702 (ETOPS)"]
+        - ["MSN", "36989"]
+        - ["Line no.", "5668"]
+        - ["Engines", "CFM LEAP-1B"]
+        - ["First flight", "2016-03-04"]
+        - ["Delivered", "2018-10"]
+        - ["History", "Boeing&rsquo;s second 737 MAX 8 flight test aircraft (1A002); delivered to Southwest after the test program"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1250"]
+        - ["ISO", "400"]

@@ -1,0 +1,234 @@
+# Photo Gallery content. Photos show in the order listed here.
+
+# srcset widths for landscape photos; portrait entries override with "widths"
+default_widths: [640, 1280, 2560]
+
+regions:
+  - { key: "ca", label: "🇺🇸 California" }
+  - { key: "ny", label: "🇺🇸 New York" }
+  - { key: "jp", label: "🇯🇵 Japan" }
+
+# Map pins; each photo's "place" must match one of these ids.
+places:
+  - { id: "santa-monica", label: "Santa Monica", name: "Santa Monica, CA", region: "ca", lat: 34.0094, lng: -118.4973 }
+  - { id: "petco-park", label: "Petco Park", name: "Petco Park, San Diego", region: "ca", lat: 32.7073, lng: -117.1566 }
+  - { id: "san-francisco", label: "San Francisco", name: "San Francisco, CA", region: "ca", lat: 37.7749, lng: -122.4194 }
+  - { id: "oracle-park", label: "Oracle Park", name: "Oracle Park, San Francisco", region: "ca", lat: 37.7786, lng: -122.3893 }
+  - { id: "yosemite", label: "Yosemite", name: "Yosemite, CA", region: "ca", lat: 37.7456, lng: -119.5936 }
+  - { id: "new-york", label: "New York", name: "New York, NY", region: "ny", lat: 40.758, lng: -73.9855 }
+  - { id: "manhattan-bridge", label: "Manhattan Bridge", name: "Manhattan Bridge, Brooklyn", region: "ny", lat: 40.7075, lng: -73.9908 }
+  - { id: "yankee-stadium", label: "Yankee Stadium", name: "Yankee Stadium, New York", region: "ny", lat: 40.8296, lng: -73.9262 }
+  - { id: "tokyo", label: "Tokyo", name: "Tokyo, Japan", region: "jp", lat: 35.6812, lng: 139.7671 }
+  - { id: "himeji", label: "Himeji", name: "Himeji, Japan", region: "jp", lat: 34.8394, lng: 134.6939 }
+
+photos:
+  - img: "santa_monica/DSC03656"
+    place: "santa-monica"
+    title: "🇺🇸 Santa Monica, CA"
+    date: "2026-07-06"
+    alt: "Lifeguard boat crossing Santa Monica Bay with the hazy Santa Monica Mountains behind"
+    exif:
+      - ["Camera", "Sony α6700"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "37 mm"]
+      - ["Aperture", "f/8"]
+      - ["Shutter", "1/500"]
+      - ["ISO", "100"]
+
+  - img: "petco_park/DSC02064"
+    place: "petco-park"
+    title: "🇺🇸 Petco Park, San Diego"
+    date: "2023-07-05"
+    alt: "Packed stands at Petco Park during a San Diego Padres game"
+    exif:
+      - ["Camera", "Sony α6000"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "50 mm"]
+      - ["Aperture", "f/8"]
+      - ["Shutter", "1/400"]
+      - ["ISO", "100"]
+
+  - img: "sf/DSC04281"
+    place: "san-francisco"
+    title: "🇺🇸 San Francisco, CA"
+    date: "2026-08-16"
+    alt: "Golden Gate Bridge seen from a grassy hillside under heavy clouds"
+    exif:
+      - ["Camera", "Sony α6700"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "50 mm"]
+      - ["Aperture", "f/10"]
+      - ["Shutter", "1/400"]
+      - ["ISO", "100"]
+
+  - img: "sf/DSC04359"
+    place: "san-francisco"
+    title: "🇺🇸 San Francisco, CA"
+    date: "2026-08-17"
+    widths: [426, 853, 1706]  # portrait: actual pixel widths of the -640/-1280/-2560 files
+    alt: "Steep San Francisco street dropping toward the bay with the Bay Bridge in the distance"
+    exif:
+      - ["Camera", "Sony α6700"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "50 mm"]
+      - ["Aperture", "f/8"]
+      - ["Shutter", "1/400"]
+      - ["ISO", "100"]
+
+  - img: "oracle_park/DSC02497"
+    place: "oracle-park"
+    title: "🇺🇸 Oracle Park, San Francisco"
+    date: "2026-05-10"
+    alt: "San Francisco Giants batter swinging at a pitch at Oracle Park, seen through the backstop net"
+    exif:
+      - ["Camera", "Sony α6000"]
+      - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+      - ["Focal", "215 mm"]
+      - ["Aperture", "f/5.6"]
+      - ["Shutter", "1/800"]
+      - ["ISO", "100"]
+
+  - img: "oracle_park/DSC02571"
+    place: "oracle-park"
+    title: "🇺🇸 Oracle Park, San Francisco"
+    date: "2026-05-10"
+    alt: "San Francisco Giants infielder in a ready crouch on the Oracle Park grass"
+    exif:
+      - ["Camera", "Sony α6000"]
+      - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+      - ["Focal", "400 mm"]
+      - ["Aperture", "f/5.6"]
+      - ["Shutter", "1/1000"]
+      - ["ISO", "100"]
+
+  - img: "tokyo/DSC06882"
+    place: "tokyo"
+    title: "🇯🇵 Tokyo, Japan"
+    date: "2025-03-10"
+    alt: "Tokyo Skytree lit up at night at the end of a narrow street, with light trails from a passing bus"
+    exif:
+      - ["Camera", "Sony α6000"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "50 mm"]
+      - ["Aperture", "f/14"]
+      - ["Shutter", "6 s"]
+      - ["ISO", "100"]
+
+  - img: "tokyo/DSC08008"
+    place: "tokyo"
+    title: "🇯🇵 Tokyo, Japan"
+    date: "2025-03-12"
+    alt: "Sensō-ji Hōzōmon gate and five-story pagoda lit up at night in Asakusa"
+    exif:
+      - ["Camera", "Sony α6000"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "16 mm"]
+      - ["Aperture", "f/8"]
+      - ["Shutter", "1/6"]
+      - ["ISO", "1000"]
+
+  - img: "tokyo/DSC08019"
+    place: "tokyo"
+    title: "🇯🇵 Tokyo, Japan"
+    date: "2025-03-12"
+    alt: "Kaminarimon gate and its giant red lantern at night on a rain-wet street in Asakusa"
+    exif:
+      - ["Camera", "Sony α6000"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "16 mm"]
+      - ["Aperture", "f/18"]
+      - ["Shutter", "4 s"]
+      - ["ISO", "100"]
+
+  - img: "tokyo/DSC08778"
+    place: "tokyo"
+    title: "🇯🇵 Tokyo, Japan"
+    date: "2025-03-14"
+    alt: "Tokyo Tower framed between dark buildings against a clear blue sky"
+    exif:
+      - ["Camera", "Sony α6000"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "16 mm"]
+      - ["Aperture", "f/8"]
+      - ["Shutter", "1/250"]
+      - ["ISO", "100"]
+
+  - img: "himeji/DSC01346"
+    place: "himeji"
+    title: "🇯🇵 Himeji, Japan"
+    date: "2023-01-17"
+    alt: "White main keep of Himeji Castle against a cloudy blue sky"
+    exif:
+      - ["Camera", "Sony α6000"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "28 mm"]
+      - ["Aperture", "f/8"]
+      - ["Shutter", "1/500"]
+      - ["ISO", "100"]
+
+  - img: "himeji/DSC01354"
+    place: "himeji"
+    title: "🇯🇵 Himeji, Japan"
+    date: "2023-01-17"
+    alt: "View from Himeji Castle down the tree-lined Otemae-dori into Himeji city"
+    exif:
+      - ["Camera", "Sony α6000"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "50 mm"]
+      - ["Aperture", "f/8"]
+      - ["Shutter", "1/320"]
+      - ["ISO", "100"]
+
+  - img: "yosemite/DSC03092"
+    place: "yosemite"
+    title: "🇺🇸 Yosemite, CA"
+    date: "2026-05-24"
+    alt: "Last sunlight on a granite cliff ridge above a dark forest in Yosemite Valley"
+    exif:
+      - ["Camera", "Sony α6000"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "28 mm"]
+      - ["Aperture", "f/8"]
+      - ["Shutter", "1/40"]
+      - ["ISO", "100"]
+
+  - img: "ny/DSC05248"
+    place: "new-york"
+    title: "🇺🇸 New York, NY"
+    date: "2026-09-23"
+    alt: "Aerial view over Lower Manhattan and the Hudson River under heavy clouds"
+    exif:
+      - ["Camera", "Sony α6700"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "16 mm"]
+      - ["Aperture", "f/8"]
+      - ["Shutter", "1/1000"]
+      - ["ISO", "100"]
+
+  - img: "ny/DSC05863"
+    place: "manhattan-bridge"
+    title: "🇺🇸 Manhattan Bridge, Brooklyn"
+    date: "2026-09-26"
+    widths: [426, 853, 1706]  # portrait: actual pixel widths of the -640/-1280/-2560 files
+    alt: "Black and white view of the Manhattan Bridge framed by buildings in DUMBO, with the Empire State Building beyond"
+    exif:
+      - ["Camera", "Sony α6700"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "50 mm"]
+      - ["Aperture", "f/8"]
+      - ["Shutter", "1/100"]
+      - ["ISO", "200"]
+
+  - img: "ny/DSC05706"
+    place: "yankee-stadium"
+    title: "🇺🇸 Yankee Stadium, New York"
+    date: "2026-09-24"
+    widths: [426, 853, 1707]  # portrait: actual pixel widths of the -640/-1280/-2560 files
+    alt: "Night game at Yankee Stadium viewed through a concourse tunnel onto the floodlit field"
+    exif:
+      - ["Camera", "Sony α6700"]
+      - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+      - ["Focal", "29 mm"]
+      - ["Aperture", "f/8"]
+      - ["Shutter", "1/50"]
+      - ["ISO", "500"]

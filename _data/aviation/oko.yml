@@ -1,0 +1,64 @@
+- img: "oko/DSC08041"
+  shot: "2025-03-13 10:19:21"
+  date: "2025-03-13"
+  title: "🇺🇸 U.S. Air Force"
+  aircraft: "Lockheed Martin C-130J-30 Super Hercules"
+  alt: "U.S. Air Force C-130J Super Hercules with gear down at Yokota Air Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Type", "Lockheed Martin C-130J-30 Super Hercules"]
+        - ["Tail code", "YJ"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "100 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "oko/DSC08659"
+  shot: "2025-03-13 15:15:57"
+  date: "2025-03-13"
+  title: "🇺🇸 U.S. Air Force"
+  aircraft: "Boeing KC-46A Pegasus"
+  alt: "Head-on view of a U.S. Air Force Boeing KC-46A Pegasus on approach to Yokota Air Base with landing lights on"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Type", "Boeing KC-46A Pegasus"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "109 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "100"]
+
+- img: "oko/DSC08737"
+  shot: "2025-03-13 15:25:53"
+  date: "2025-03-13"
+  title: "🇺🇸 U.S. Air Force"
+  aircraft: "Bell UH-1N Twin Huey"
+  regs: ["69-6614"]
+  alt: "U.S. Air Force UH-1N Huey helicopter flying over Yokota Air Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "69-6614"]
+        - ["Type", "Bell UH-1N Twin Huey"]
+        - ["Variant", "UH-1N-BF"]
+        - ["MSN", "31020"]
+        - ["Delivered", "1970-11"]
+        - ["Unit", "459th Airlift Squadron, Yokota AB"]
+        - ["History", "Flew in Vietnam in 1971; retired 2025-09 and now a static display at Yokota"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "168 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]

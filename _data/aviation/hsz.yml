@@ -1,0 +1,70 @@
+- img: "hsz/DSC04724-2"
+  shot: "2025-02-25 14:34:24"
+  date: "2025-02-25"
+  title: "🇹🇼 Republic of China Air Force"
+  aircraft: "Dassault Mirage 2000-5 (pair)"
+  regs: ["2057", "2044"]
+  alt: "Pair of Republic of China Air Force Mirage 2000 fighters in formation over Hsinchu"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "2057 / 2044"]
+        - ["Type", "Dassault Mirage 2000-5 (pair)"]
+        - ["2057", "Mirage 2000-5Di (two-seat), c/n Di07"]
+        - ["2044", "Mirage 2000-5Ei (single-seat), c/n Ei44"]
+        - ["Unit", "499th Tactical Fighter Wing, Hsinchu"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "100"]
+
+- img: "hsz/DSC04768"
+  shot: "2025-02-25 14:47:50"
+  date: "2025-02-25"
+  title: "🇹🇼 Republic of China Air Force"
+  aircraft: "Dassault Mirage 2000-5"
+  regs: ["2013"]
+  alt: "Republic of China Air Force Mirage 2000-5 serial 2013 banking hard with wingtip vapor trails"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "2013"]
+        - ["Type", "Dassault Mirage 2000-5"]
+        - ["Variant", "Mirage 2000-5Ei (single-seat)"]
+        - ["MSN", "Ei13"]
+        - ["Unit", "499th Tactical Fighter Wing, Hsinchu"]
+        - ["Note", "One of 48 single-seat 2000-5Ei among the 60 Mirages Taiwan received in 1997&ndash;1998"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "hsz/DSC01183"
+  shot: "2024-10-10 09:39:59"
+  date: "2024-10-10"
+  title: "🇹🇼 Republic of China Air Force"
+  aircraft: "AIDC T-5 Brave Eagle"
+  regs: ["1126"]
+  alt: "Republic of China Air Force AIDC T-5 Brave Eagle trainer with gear down at Hsinchu Air Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "1126"]
+        - ["Type", "AIDC T-5 Brave Eagle"]
+        - ["Note", "One of 66 T-5s; production finished 2026-09"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "183 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "160"]

@@ -1,0 +1,143 @@
+- img: "rjtj/DSC08129"
+  shot: "2025-03-13 12:18:36"
+  date: "2025-03-13"
+  title: "🇯🇵 Japan Air Self-Defense Force"
+  aircraft: "Kawasaki C-2"
+  regs: ["18-1213"]
+  alt: "Japan Air Self-Defense Force Kawasaki C-2 transport seen head-on at Iruma Air Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "18-1213"]
+        - ["Type", "Kawasaki C-2"]
+        - ["Unit", "402nd Squadron, Iruma"]
+        - ["Received", "2021"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "324 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "rjtj/DSC08191"
+  shot: "2025-03-13 12:20:26"
+  date: "2025-03-13"
+  title: "🇯🇵 Japan Air Self-Defense Force"
+  aircraft: "Kawasaki T-4"
+  regs: ["76-5755"]
+  alt: "Japan Air Self-Defense Force Kawasaki T-4 trainer taxiing at Iruma Air Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "76-5755"]
+        - ["Type", "Kawasaki T-4"]
+        - ["Received", "1997"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "rjtj/DSC08254"
+  shot: "2025-03-13 12:22:50"
+  date: "2025-03-13"
+  title: "🇯🇵 Japan Air Self-Defense Force"
+  aircraft: "NAMC YS-11EB"
+  regs: ["02-1159"]
+  alt: "Japan Air Self-Defense Force NAMC YS-11EB 02-1159 electronic intelligence aircraft taxiing at Iruma Air Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "02-1159"]
+        - ["Type", "NAMC YS-11EB"]
+        - ["Role", "Electronic intelligence (SIGINT)"]
+        - ["Unit", "Electronic Intelligence Squadron, Iruma"]
+        - ["Engines", "IHI T64-IHI-10J"]
+        - ["Received", "1970"]
+        - ["Note", "Re-engined from the original Rolls-Royce Darts, which earned these jets the nickname &ldquo;Super YS&rdquo;"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "119 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "rjtj/DSC08398"
+  shot: "2025-03-13 12:44:15"
+  date: "2025-03-13"
+  title: "🇯🇵 Japan Air Self-Defense Force"
+  aircraft: "Kawasaki EC-1"
+  regs: ["78-1021"]
+  alt: "Japan Air Self-Defense Force Kawasaki EC-1 78-1021 electronic warfare aircraft taxiing head-on at Iruma Air Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "78-1021"]
+        - ["Type", "Kawasaki EC-1"]
+        - ["Role", "Electronic warfare training"]
+        - ["Unit", "Electronic Warfare Squadron, Iruma"]
+        - ["Engines", "Pratt &amp; Whitney JT8D-M-9"]
+        - ["History", "Built as the 21st C-1 transport; converted under a 1983 contract and first flew as the EC-1 in 1984-12"]
+        - ["Note", "The only EC-1 ever built"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/400"]
+        - ["ISO", "100"]
+
+- img: "rjtj/DSC08562"
+  shot: "2025-03-13 12:56:13"
+  date: "2025-03-13"
+  title: "🇯🇵 Japan Air Self-Defense Force"
+  aircraft: "Gulfstream U-4"
+  regs: ["95-3254"]
+  alt: "Japan Air Self-Defense Force Gulfstream U-4 landing at Iruma Air Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "95-3254"]
+        - ["Type", "Gulfstream U-4"]
+        - ["Variant", "Gulfstream IV SP"]
+        - ["MSN", "1326"]
+        - ["Received", "1999"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "212 mm"]
+        - ["Aperture", "f/10"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "100"]
+
+- img: "rjtj/DSC08592"
+  shot: "2025-03-13 13:00:48"
+  date: "2025-03-13"
+  title: "🇯🇵 Japan Air Self-Defense Force"
+  aircraft: "Kawasaki T-4"
+  regs: ["96-5622"]
+  alt: "Japan Air Self-Defense Force Kawasaki T-4 96-5622 landing at Iruma Air Base, panned against a blurred background"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "96-5622"]
+        - ["Type", "Kawasaki T-4"]
+        - ["Engines", "IHI F3-IHI-30"]
+        - ["Received", "1989"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "265 mm"]
+        - ["Aperture", "f/20"]
+        - ["Shutter", "1/30"]
+        - ["ISO", "100"]

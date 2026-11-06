@@ -1,0 +1,164 @@
+- img: "tsa/DSC05527_1"
+  shot: "2020-08-12 16:24:49"
+  date: "2020-08-12"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Airbus A321"
+  regs: ["B-16218"]
+  alt: "EVA Air Airbus A321 touching down on a wet runway at Taipei Songshan Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16218"]
+        - ["Type", "Airbus A321"]
+        - ["Variant", "A321-211 (ceo, sharklets)"]
+        - ["MSN", "6653"]
+        - ["Engines", "CFM56-5B"]
+        - ["Delivered", "2015-06"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "300 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "250"]
+
+- img: "tsa/DSC05332_2"
+  shot: "2020-08-12 16:07:19"
+  date: "2020-08-12"
+  title: "🇹🇼 Tigerair Taiwan"
+  aircraft: "Airbus A320"
+  regs: ["B-50005"]
+  alt: "Tigerair Taiwan Airbus A320 kicking up spray on a wet runway with Taipei 101 behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-50005"]
+        - ["Type", "Airbus A320"]
+        - ["Variant", "A320-232 (ceo, sharklets)"]
+        - ["MSN", "6522"]
+        - ["Engines", "IAE V2500"]
+        - ["First flight", "2015-03-09"]
+        - ["Delivered", "2015-03"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "100 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "250"]
+
+- img: "tsa/DSC05281"
+  shot: "2020-08-12 16:06:28"
+  date: "2020-08-12"
+  title: "🇹🇼 Republic of China Air Force"
+  aircraft: "Fokker 50"
+  regs: ["5001"]
+  alt: "Republic of China Air Force Fokker 50 5001 being towed on the apron at Songshan Air Force Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "5001"]
+        - ["Type", "Fokker 50"]
+        - ["MSN", "20229"]
+        - ["Received", "1992"]
+        - ["Unit", "Songshan Air Base Command, Taipei"]
+        - ["Role", "VIP and administrative transport; one of three ROCAF Fokker 50s"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "339 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "250"]
+
+- img: "tsa/DSC05263"
+  shot: "2020-08-12 16:04:07"
+  date: "2020-08-12"
+  title: "🇹🇼 Mandarin Airlines"
+  aircraft: "ATR 72-600"
+  regs: ["B-16851"]
+  alt: "Mandarin Airlines ATR 72-600 B-16851 rolling down the runway at Taipei Songshan Airport with UNI Air ATRs parked behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16851"]
+        - ["Type", "ATR 72-600"]
+        - ["Variant", "ATR 72-212A"]
+        - ["MSN", "1460"]
+        - ["Engines", "Pratt &amp; Whitney Canada PW127M"]
+        - ["Delivered", "2017-11"]
+        - ["Note", "Mandarin Airlines&rsquo; first ATR 72-600"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "250"]
+
+- img: "tsa/DSC00250"
+  shot: "2016-04-16 16:56:19"
+  date: "2016-04-16"
+  title: "🇯🇵 ANA"
+  aircraft: "Boeing 787-9"
+  regs: ["JA873A"]
+  liveries: ["R2-D2 Star Wars livery"]
+  alt: "ANA Boeing 787-9 in R2-D2 Star Wars livery climbing out of Taipei Songshan Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA873A"]
+        - ["Type", "Boeing 787-9"]
+        - ["Variant", "787-9"]
+        - ["MSN", "34530"]
+        - ["Engines", "Rolls-Royce Trent 1000"]
+        - ["First flight", "2015-09-02"]
+        - ["Delivered", "2015-10"]
+        - ["Livery", "R2-D2 ANA JET, 2015-10 to 2025-08; the first of ANA&rsquo;s Star Wars jets"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α5000"]
+        - ["Lens", "E 55-210mm F4.5-6.3 OSS"]
+        - ["Focal", "173 mm"]
+        - ["Aperture", "f/13"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "500"]
+
+- img: "tsa/DSC05867"
+  shot: "2015-11 ~01"
+  date: "2015-11"
+  title: "🇯🇵 ANA / 🇯🇵 JAL"
+  aircraft: "Boeing 787-8 &amp; Boeing 777-200ER"
+  regs: ["JA802A", "JA708J"]
+  liveries: ["787 launch livery", "oneworld livery"]
+  livery_break: true
+  alt: "ANA Boeing 787-8 JA802A in its original 787 launch livery taxiing past a JAL Boeing 777 in oneworld livery at Taipei Songshan Airport"
+  details:
+    - group: "Aircraft &middot; ANA"
+      rows:
+        - ["Registration", "JA802A"]
+        - ["Type", "Boeing 787-8"]
+        - ["MSN", "34497"]
+        - ["Engines", "Rolls-Royce Trent 1000"]
+        - ["Delivered", "2011"]
+        - ["Livery", "Special 787 launch livery with large &ldquo;787&rdquo; titles, worn from delivery until a repaint in 2017"]
+        - ["Note", "One of ANA&rsquo;s first two 787s, alongside JA801A"]
+    - group: "Aircraft &middot; JAL"
+      rows:
+        - ["Registration", "JA708J"]
+        - ["Type", "Boeing 777-200ER"]
+        - ["Variant", "777-246(ER)"]
+        - ["MSN", "32895"]
+        - ["Livery", "oneworld alliance livery"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Lens", "E 55-210mm F4.5-6.3 OSS"]
+        - ["Focal", "126 mm"]
+        - ["Aperture", "f/9"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]

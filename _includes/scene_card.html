@@ -1,0 +1,28 @@
+{%- assign p = include.p -%}
+{%- assign base = "media/gallery/photo_gallery/" | append: p.img -%}
+{%- assign w = p.widths | default: site.data.photo_gallery.default_widths -%}
+        <article class="scene-card" data-place="{{ p.place }}">
+          <div class="scene-frame">
+            <img
+              src="{{ base }}-1280.jpg"
+              srcset="{{ base }}-640.jpg {{ w[0] }}w, {{ base }}-1280.jpg {{ w[1] }}w, {{ base }}-2560.jpg {{ w[2] }}w"
+              sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 340px"
+              data-full="{{ base }}-2560.jpg"
+              alt="{{ p.alt }}"
+              class="photo-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="scene-body">
+            <h3 class="scene-title">{{ p.title }}</h3>
+            <p class="scene-date"><time datetime="{{ p.date }}">{{ p.date }}</time></p>
+            <details class="exif-details">
+              <summary>Photo info</summary>
+              <ul class="exif-list">
+                {%- for row in p.exif %}
+                <li><span class="exif-key">{{ row[0] }}</span><span class="exif-val">{{ row[1] }}</span></li>
+                {%- endfor %}
+              </ul>
+            </details>
+          </div>
+        </article>

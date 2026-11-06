@@ -1,0 +1,755 @@
+- img: "hnd/DSC08840-Enhanced-NR"
+  shot: "2025-03-15 08:34:31"
+  date: "2025-03-15"
+  title: "🇫🇷 Air France / 🇯🇵 ANA"
+  aircraft: "Boeing 777-300ER, 737-800 &amp; 787-9"
+  regs: ["F-GZNK", "JA85AN", "JA888A"]
+  alt: "Air France Boeing 777-300ER F-GZNK taxiing between an ANA Boeing 737-800 JA85AN and an ANA Boeing 787-9 JA888A at Tokyo Haneda Airport with the terminal and city skyline behind"
+  details:
+    - group: "Aircraft &middot; Air France"
+      rows:
+        - ["Registration", "F-GZNK"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-328(ER)"]
+        - ["MSN", "39971"]
+        - ["Line no.", "931"]
+        - ["Engines", "GE90-115B"]
+        - ["First flight", "2011-04"]
+        - ["Delivered", "2011-05"]
+    - group: "Aircraft &middot; ANA 737"
+      rows:
+        - ["Registration", "JA85AN"]
+        - ["Type", "Boeing 737-800"]
+        - ["Variant", "737-881"]
+        - ["MSN", "62640"]
+        - ["Line no.", "5766"]
+        - ["Engines", "CFM56-7B"]
+        - ["Delivered", "2016"]
+        - ["Operator", "ANA Wings"]
+    - group: "Aircraft &middot; ANA 787"
+      rows:
+        - ["Registration", "JA888A"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "43864"]
+        - ["Engines", "Rolls-Royce Trent 1000"]
+        - ["Delivered", "2016-11"]
+        - ["Operator", "Air Japan"]
+        - ["Position", "Background, at the terminal"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "187 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]
+
+- img: "hnd/DSC08878"
+  shot: "2025-03-15 08:36:56"
+  date: "2025-03-15"
+  title: "🇯🇵 Skymark Airlines"
+  aircraft: "Boeing 737-800"
+  regs: ["JA73AB"]
+  liveries: ["Pikachu Jet BC1"]
+  alt: "Skymark Airlines Boeing 737-800 JA73AB in yellow Pikachu Jet BC1 Pokémon livery taxiing at Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA73AB"]
+        - ["Type", "Boeing 737-800"]
+        - ["Variant", "737-8AL"]
+        - ["Engines", "CFM56-7B"]
+        - ["Livery", "&ldquo;Pikachu Jet BC1&rdquo; (Pokémon Air Adventures), since 2021-06-21"]
+        - ["Note", "Skymark&rsquo;s first Pikachu Jet; renamed BC1 when the second one, BC2, arrived in 2022"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "154 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]
+
+- img: "hnd/DSC09430"
+  shot: "2025-03-15 12:56:12"
+  date: "2025-03-15"
+  title: "🇯🇵 Japan Transocean Air"
+  aircraft: "Boeing 737-800"
+  regs: ["JA06RK"]
+  liveries: ["Sakura Jinbei"]
+  alt: "Japan Transocean Air Boeing 737-800 JA06RK in pink Sakura Jinbei whale shark livery taking off from Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA06RK"]
+        - ["Type", "Boeing 737-800"]
+        - ["Variant", "737-8Q3"]
+        - ["MSN", "61480"]
+        - ["Engines", "CFM56-7B"]
+        - ["First flight", "2017-12-16"]
+        - ["Livery", "&ldquo;Sakura Jinbei&rdquo; pink whale shark, supporting the Okinawa Churaumi Aquarium"]
+        - ["Note", "The second pink Sakura Jinbei, after a JTA 737-400 unveiled in 2014"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "355 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/250"]
+        - ["ISO", "160"]
+
+- img: "hnd/DSC09459"
+  shot: "2025-03-15 13:01:10"
+  date: "2025-03-15"
+  title: "🇩🇪 Lufthansa"
+  aircraft: "Boeing 747-8"
+  regs: ["D-ABYP"]
+  liveries: ["1500th 747"]
+  alt: "Lufthansa Boeing 747-8 D-ABYP, the 1,500th Boeing 747 built, taking off from Tokyo Haneda Airport past container cranes"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "D-ABYP"]
+        - ["Type", "Boeing 747-8"]
+        - ["Variant", "747-830"]
+        - ["MSN", "37839"]
+        - ["Engines", "GE GEnx-2B67"]
+        - ["Delivered", "2014-06-28"]
+        - ["Livery", "Small &ldquo;1500&rdquo; sticker marking the 1,500th 747 built"]
+        - ["Note", "The 1,500th Boeing 747 and Lufthansa&rsquo;s 14th 747-8"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "259 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "200"]
+
+- img: "hnd/DSC09530"
+  shot: "2025-03-15 13:18:17"
+  date: "2025-03-15"
+  title: "🇯🇵 Japan Airlines"
+  aircraft: "Airbus A350-900"
+  regs: ["JA03XJ"]
+  liveries: ["Green A350 titles"]
+  alt: "Japan Airlines Airbus A350-900 JA03XJ with green A350 titles taking off from Tokyo Haneda Airport with Tokyo Skytree behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA03XJ"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["MSN", "343"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Delivered", "2019"]
+        - ["Livery", "Green &ldquo;AIRBUS A350&rdquo; titles, which JAL said stand for eco"]
+        - ["Note", "JAL&rsquo;s third A350-900; its first three each wear a different color of A350 titles"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "318 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "250"]
+
+- img: "hnd/DSC06918"
+  shot: "2025-03-11 06:33:19"
+  date: "2025-03-11"
+  title: "🇯🇵 AIR DO"
+  aircraft: "Boeing 767-300ER"
+  regs: ["JA607A"]
+  liveries: ["Pokémon Rokon Jet"]
+  alt: "AIR DO Boeing 767-300ER JA607A in Pokémon Rokon Jet livery under tow at Tokyo Haneda Airport with the Tokyo Gate Bridge behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA607A"]
+        - ["Type", "Boeing 767-300ER"]
+        - ["Variant", "767-381(ER)"]
+        - ["MSN", "32976"]
+        - ["Line no.", "884"]
+        - ["Engines", "GE CF6-80C2B6"]
+        - ["Livery", "Pokémon &ldquo;Rokon Jet&rdquo; (Vulpix and Alolan Vulpix), since 2021-12"]
+        - ["History", "Flown by ANA before moving to AIR DO, where it was repainted for the Rokon Jet in 2021"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "125 mm"]
+        - ["Aperture", "f/7.1"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "200"]
+
+- img: "hnd/DSC06970-Enhanced-NR"
+  shot: "2025-03-11 07:06:37"
+  date: "2025-03-11"
+  title: "🇯🇵 Japan Airlines"
+  aircraft: "Boeing 767-300ER"
+  regs: ["JA622J"]
+  liveries: ["Fantastic Journey Express"]
+  alt: "Japan Airlines Boeing 767-300ER JA622J in Tokyo DisneySea Fantasy Springs livery taxiing at Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA622J"]
+        - ["Type", "Boeing 767-300ER"]
+        - ["Variant", "767-346(ER)"]
+        - ["MSN", "37549"]
+        - ["Line no.", "977"]
+        - ["Delivered", "2009-05"]
+        - ["Livery", "&ldquo;JAL Fantastic Journey Express&rdquo; for Tokyo DisneySea Fantasy Springs, 2024-10 to late 2025"]
+        - ["Note", "The sixth JAL and Tokyo DisneySea special livery"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "114 mm"]
+        - ["Aperture", "f/7.1"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "160"]
+
+- img: "hnd/DSC07002"
+  shot: "2025-03-11 07:08:07"
+  date: "2025-03-11"
+  title: "🇯🇵 Japan Airlines"
+  aircraft: "Airbus A350-900"
+  regs: ["JA08XJ"]
+  liveries: ["DREAM SHO JET"]
+  alt: "Japan Airlines Airbus A350-900 JA08XJ in DREAM SHO JET Shohei Ohtani livery taxiing at Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA08XJ"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["MSN", "476"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Delivered", "2020-12"]
+        - ["Livery", "&ldquo;DREAM SHO JET&rdquo; featuring Shohei Ohtani, 2024-09-29 to 2026-06-10"]
+        - ["Note", "Flew 2,720 flights in the livery, then went to Xiamen for heavy maintenance and a repaint into standard JAL colors"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "125 mm"]
+        - ["Aperture", "f/7.1"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "160"]
+
+- img: "hnd/DSC07359-Enhanced-NR-2"
+  shot: "2025-03-11 09:48:22"
+  date: "2025-03-11"
+  title: "🇩🇪 Lufthansa / 🇯🇵 ANA"
+  aircraft: "Boeing 777-200ER &amp; Boeing 747-8"
+  regs: ["JA743A", "D-ABYT"]
+  liveries: ["C-3PO Star Wars", "Lufthansa Retro"]
+  livery_break: true
+  alt: "ANA Boeing 777-200ER in C-3PO Star Wars livery taxiing past the Lufthansa retro-livery Boeing 747-8 at Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft &middot; ANA"
+      rows:
+        - ["Registration", "JA743A"]
+        - ["Type", "Boeing 777-200ER"]
+        - ["Variant", "777-281(ER)"]
+        - ["MSN", "40902"]
+        - ["Line no.", "1090"]
+        - ["Engines", "Pratt &amp; Whitney PW4000"]
+        - ["First flight", "2013-03-21"]
+        - ["Delivered", "2013-03"]
+        - ["Livery", "C-3PO ANA JET, 2017-03 to 2026-01"]
+    - group: "Aircraft &middot; Lufthansa"
+      rows:
+        - ["Registration", "D-ABYT"]
+        - ["Type", "Boeing 747-8"]
+        - ["Variant", "747-830"]
+        - ["MSN", "37844"]
+        - ["Engines", "GE GEnx-2B67"]
+        - ["Delivered", "2015"]
+        - ["Livery", "Lufthansa retro livery, since delivery"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "250 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/200"]
+        - ["ISO", "100"]
+
+- img: "hnd/DSC07496"
+  shot: "2025-03-11 10:34:41"
+  date: "2025-03-11"
+  title: "🇯🇵 Japan Airlines"
+  aircraft: "Boeing 737-800"
+  regs: ["JA342J"]
+  liveries: ["JAL Gundam JET"]
+  alt: "Japan Airlines Boeing 737-800 JA342J in Expo 2025 Gundam livery taking off from Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA342J"]
+        - ["Type", "Boeing 737-800"]
+        - ["Variant", "737-846"]
+        - ["MSN", "39191"]
+        - ["Line no.", "4002"]
+        - ["Engines", "CFM56-7B24"]
+        - ["Delivered", "2012-04 (to JAL Express)"]
+        - ["Livery", "&ldquo;JAL Gundam JET&rdquo; for Expo 2025 Osaka, Kansai, 2025-03-03 to late 2025"]
+        - ["Note", "Photographed eight days after the livery&rsquo;s first flight"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/400"]
+        - ["ISO", "100"]
+
+- img: "hnd/DSC07672"
+  shot: "2025-03-11 12:50:39"
+  date: "2025-03-11"
+  title: "🇬🇧 British Airways"
+  aircraft: "Boeing 787-8"
+  regs: ["G-ZBJK"]
+  alt: "British Airways Boeing 787-8 lifting off at Tokyo Haneda Airport with Tokyo Bay behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "G-ZBJK"]
+        - ["Type", "Boeing 787-8"]
+        - ["Variant", "787-8"]
+        - ["MSN", "60630"]
+        - ["Line no.", "733"]
+        - ["Engines", "Rolls-Royce Trent 1000"]
+        - ["First flight", "2018-08-29"]
+        - ["Delivered", "2018-09-13"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "229 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "200"]
+
+- img: "hnd/DSC07755"
+  shot: "2025-03-11 13:08:38"
+  date: "2025-03-11"
+  title: "🇮🇹 ITA Airways"
+  aircraft: "Airbus A350-900"
+  regs: ["EI-IFE"]
+  alt: "ITA Airways Airbus A350-900 lifting off at Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "EI-IFE"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["MSN", "285"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Delivered", "2022-09-14"]
+        - ["Name", "Alessandro Del Piero"]
+        - ["Note", "Built in 2019 for Hainan Airlines but never taken up; stored until ITA took it in 2022"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "250 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "200"]
+- img: "hnd/DSC06921"
+  shot: "2025-03-11 06:38:37"
+  date: "2025-03-11"
+  title: "🇯🇵 AIR DO"
+  aircraft: "Boeing 767-300ER"
+  regs: ["JA607A"]
+  liveries: ["Pokémon Rokon Jet"]
+  alt: "AIR DO Boeing 767-300ER JA607A in Pokémon Rokon Jet livery taxiing at Tokyo Haneda Airport with Tokyo Bay and an ANA Airbus in the foreground"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA607A"]
+        - ["Type", "Boeing 767-300ER"]
+        - ["Variant", "767-381(ER)"]
+        - ["MSN", "32976"]
+        - ["Line no.", "884"]
+        - ["Engines", "GE CF6-80C2B6"]
+        - ["Livery", "Pokémon &ldquo;Rokon Jet&rdquo; (Vulpix and Alolan Vulpix), since 2021-12"]
+        - ["History", "Flown by ANA before moving to AIR DO, where it was repainted for the Rokon Jet in 2021"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "152 mm"]
+        - ["Aperture", "f/7.1"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "200"]
+
+- img: "hnd/DSC07011"
+  shot: "2025-03-11 07:08:39"
+  date: "2025-03-11"
+  title: "🇯🇵 J-AIR"
+  aircraft: "Embraer E190"
+  regs: ["JA252J"]
+  liveries: ["Myaku-Myaku Jet"]
+  alt: "J-AIR Embraer E190 JA252J in the Expo 2025 Osaka Myaku-Myaku livery taxiing at Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA252J"]
+        - ["Type", "Embraer E190"]
+        - ["Variant", "ERJ-190-100STD"]
+        - ["Engines", "GE CF34-10E"]
+        - ["Operator", "J-AIR, a Japan Airlines subsidiary"]
+        - ["Livery", "&ldquo;JAL Myaku-Myaku JET&rdquo; for Expo 2025 Osaka, Kansai, 2023-11 to 2025-10-13"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "229 mm"]
+        - ["Aperture", "f/7.1"]
+        - ["Shutter", "1/400"]
+        - ["ISO", "160"]
+
+- img: "hnd/DSC07552"
+  shot: "2025-03-11 10:54:53"
+  date: "2025-03-11"
+  title: "🇯🇵 Japan Airlines"
+  aircraft: "Airbus A350-1000"
+  regs: ["JA01WJ"]
+  alt: "Japan Airlines Airbus A350-1000 JA01WJ with large A350-1000 titles taking off from Tokyo Haneda Airport over an ANA Airbus A321neo under tow"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA01WJ"]
+        - ["Type", "Airbus A350-1000"]
+        - ["Variant", "A350-1041"]
+        - ["MSN", "610"]
+        - ["Engines", "Rolls-Royce Trent XWB-97"]
+        - ["Delivered", "2023-12"]
+        - ["Note", "Japan Airlines&rsquo; first A350-1000"]
+        - ["Background", "ANA Airbus A321neo under tow"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "215 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "hnd/DSC07692"
+  shot: "2025-03-11 12:54:22"
+  date: "2025-03-11"
+  title: "🇩🇪 Lufthansa"
+  aircraft: "Boeing 747-8"
+  regs: ["D-ABYT"]
+  liveries: ["Lufthansa Retro"]
+  alt: "Lufthansa Boeing 747-8 D-ABYT in the retro livery rolling on the runway at Tokyo Haneda Airport with Tokyo Bay and a Ferris wheel behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "D-ABYT"]
+        - ["Type", "Boeing 747-8"]
+        - ["Variant", "747-830"]
+        - ["MSN", "37844"]
+        - ["Engines", "GE GEnx-2B67"]
+        - ["Delivered", "2015"]
+        - ["Livery", "Lufthansa retro livery, since delivery"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "200 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "200"]
+
+- img: "hnd/DSC08919"
+  shot: "2025-03-15 08:51:49"
+  date: "2025-03-15"
+  title: "🇯🇵 ANA / 🇯🇵 JAL"
+  aircraft: "Boeing 787-8 &amp; Boeing 787-9"
+  regs: ["JA874A", "JA878J"]
+  liveries: ["ANA Future Promise"]
+  livery_break: true
+  alt: "ANA Boeing 787-8 JA874A in the green ANA Future Promise livery with SAF Flight Initiative titles landing at Tokyo Haneda Airport as a Japan Airlines Boeing 787-9 waits behind"
+  details:
+    - group: "Aircraft &middot; ANA"
+      rows:
+        - ["Registration", "JA874A"]
+        - ["Type", "Boeing 787-8"]
+        - ["Engines", "Rolls-Royce Trent 1000"]
+        - ["Livery", "ANA Future Promise &ldquo;Green Jet&rdquo;, with SAF Flight Initiative titles on the right side"]
+    - group: "Aircraft &middot; JAL"
+      rows:
+        - ["Registration", "JA878J"]
+        - ["Type", "Boeing 787-9"]
+        - ["Engines", "GE GEnx-1B"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "300 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]
+
+- img: "hnd/DSC09087"
+  shot: "2025-03-15 10:28:20"
+  date: "2025-03-15"
+  title: "🇯🇵 Japan Airlines"
+  aircraft: "Airbus A350-900"
+  regs: ["JA15XJ"]
+  liveries: ["oneworld"]
+  alt: "Japan Airlines Airbus A350-900 JA15XJ in oneworld livery touching down with tire smoke at Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA15XJ"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Livery", "oneworld alliance livery, since delivery"]
+        - ["Note", "Entered service 2022-02-21 on Haneda to Naha"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "265 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "160"]
+
+- img: "hnd/DSC09160"
+  shot: "2025-03-15 10:34:55"
+  date: "2025-03-15"
+  title: "🇩🇪 Lufthansa"
+  aircraft: "Boeing 747-8"
+  regs: ["D-ABYP"]
+  liveries: ["1500th 747"]
+  alt: "Lufthansa Boeing 747-8 D-ABYP, the 1,500th Boeing 747 built, on short final to Tokyo Haneda Airport over the water with an elevated highway behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "D-ABYP"]
+        - ["Type", "Boeing 747-8"]
+        - ["Variant", "747-830"]
+        - ["MSN", "37839"]
+        - ["Engines", "GE GEnx-2B67"]
+        - ["Delivered", "2014-06-28"]
+        - ["Livery", "Small &ldquo;1500&rdquo; sticker marking the 1,500th 747 built"]
+        - ["Note", "The 1,500th Boeing 747 and Lufthansa&rsquo;s 14th 747-8"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "160"]
+
+- img: "hnd/DSC09400-Enhanced-NR"
+  shot: "2025-03-15 12:35:53"
+  date: "2025-03-15"
+  title: "🇺🇸 American Airlines"
+  aircraft: "Boeing 787-8"
+  regs: ["N881BK"]
+  alt: "American Airlines Boeing 787-8 N881BK climbing out of Tokyo Haneda Airport with Tokyo Skytree and city towers in the haze"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N881BK"]
+        - ["Type", "Boeing 787-8"]
+        - ["MSN", "66001"]
+        - ["Line no.", "1103"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["Background", "Tokyo Skytree"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "324 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "160"]
+
+- img: "hnd/DSC07432-Enhanced-NR"
+  shot: "2025-03-11 10:24:25"
+  date: "2025-03-11"
+  title: "🇯🇵 ANA"
+  aircraft: "Boeing 787-9"
+  regs: ["JA894A"]
+  liveries: ["Pikachu Jet NH"]
+  alt: "ANA Boeing 787-9 JA894A in the Pikachu Jet NH Pokémon livery with Rayquaza along the fuselage climbing out of Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA894A"]
+        - ["Type", "Boeing 787-9"]
+        - ["Engines", "Rolls-Royce Trent 1000"]
+        - ["Livery", "&ldquo;Pikachu Jet NH&rdquo; for Pokémon Air Adventures, with Rayquaza across the fuselage alongside Pikachu, Charizard, Latias, Latios and Vivillon, since 2023"]
+        - ["Note", "Flies ANA international routes from Haneda"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]
+
+- img: "hnd/DSC07847"
+  shot: "2025-03-11 15:32:25"
+  date: "2025-03-11"
+  title: "🇯🇵 Japan Airlines"
+  aircraft: "Boeing 787-9"
+  regs: ["JA870J"]
+  alt: "Visitors on the JAL hangar tour watching Japan Airlines Boeing 787-9 JA870J being towed on the apron at Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA870J"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "35425"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["Delivered", "2017-09"]
+        - ["Note", "Seen from the JAL Sky Museum hangar tour apron"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+        - ["Focal", "35 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/100"]
+        - ["ISO", "160"]
+
+- img: "hnd/DSC07889"
+  shot: "2025-03-11 15:48:33"
+  date: "2025-03-11"
+  title: "🇯🇵 Japan Airlines"
+  aircraft: "Airbus A350-900"
+  regs: ["JA06XJ"]
+  alt: "Japan Airlines Airbus A350-900 JA06XJ in the JAL maintenance hangar at Tokyo Haneda Airport with its engine cowling open and work platforms in place"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA06XJ"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Note", "Under maintenance in the JAL hangar, engine cowling open"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+        - ["Focal", "25 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/50"]
+        - ["ISO", "1600"]
+
+- img: "hnd/DSC07940"
+  shot: "2025-03-12 15:25:13"
+  date: "2025-03-12"
+  title: "🇯🇵 ANA"
+  aircraft: "Airbus A320neo"
+  regs: ["JA219A"]
+  alt: "ANA Airbus A320neo JA219A under maintenance in the ANA hangar at Tokyo Haneda Airport with an engine cowling open"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA219A"]
+        - ["Type", "Airbus A320neo"]
+        - ["Engines", "Pratt &amp; Whitney PW1100G"]
+        - ["Delivered", "2019"]
+        - ["Note", "Under maintenance in the ANA hangar, engine cowling open"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+        - ["Focal", "16 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/60"]
+        - ["ISO", "1250"]
+
+- img: "hnd/DSC07948"
+  shot: "2025-03-12 15:28:24"
+  date: "2025-03-12"
+  title: "🇯🇵 ANA"
+  aircraft: "Boeing 737-500"
+  regs: ["JA301K"]
+  liveries: ["ANA Technical Training"]
+  alt: "ANA Technical Training Boeing 737-500 JA301K, a retired Super Dolphin kept as a maintenance trainer, in the ANA hangar at Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA301K"]
+        - ["Type", "Boeing 737-500"]
+        - ["Variant", "737-54K"]
+        - ["Engines", "CFM International CFM56-3"]
+        - ["Livery", "ANA Technical Training titles"]
+        - ["History", "Retired from ANA&rsquo;s &ldquo;Super Dolphin&rdquo; 737-500 fleet in 2018 and kept at Haneda as a maintenance training airframe"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+        - ["Focal", "36 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/60"]
+        - ["ISO", "1600"]
+
+- img: "hnd/DSC07877"
+  shot: "2025-03-11 15:40:37"
+  date: "2025-03-11"
+  title: "🇯🇵 Japan Airlines"
+  aircraft: "Boeing 777-300ER"
+  regs: ["JA741J"]
+  alt: "Japan Airlines Boeing 777-300ER JA741J parked under storm clouds at Tokyo Haneda Airport with service trucks alongside and another JAL jet taking off"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA741J"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-346(ER)"]
+        - ["MSN", "36128"]
+        - ["Engines", "GE90-115B"]
+        - ["Delivered", "2009-09"]
+        - ["Note", "Seen from the JAL Sky Museum hangar tour apron"]
+        - ["Background", "Another Japan Airlines jet taking off"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+        - ["Focal", "40 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/125"]
+        - ["ISO", "160"]
+
+- img: "hnd/DSC07929"
+  shot: "2025-03-12 15:20:05"
+  date: "2025-03-12"
+  title: "🇯🇵 ANA"
+  aircraft: "Boeing 737-500"
+  regs: ["JA301K"]
+  liveries: ["ANA Technical Training"]
+  alt: "Close-up of the CFM56 engine and ANA Technical Training titles on Boeing 737-500 JA301K inside the ANA hangar at Tokyo Haneda Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA301K"]
+        - ["Type", "Boeing 737-500"]
+        - ["Variant", "737-54K"]
+        - ["Engines", "CFM International CFM56-3"]
+        - ["Livery", "ANA Technical Training titles"]
+        - ["History", "Retired from ANA&rsquo;s &ldquo;Super Dolphin&rdquo; 737-500 fleet in 2018 and kept at Haneda as a maintenance training airframe"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+        - ["Focal", "27 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/60"]
+        - ["ISO", "1600"]
+

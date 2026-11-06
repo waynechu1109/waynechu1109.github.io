@@ -1,0 +1,722 @@
+- img: "tpe/DSC09972"
+  shot: "2025-08-14 17:51:15"
+  date: "2025-08-14"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Airbus A330-300"
+  regs: ["B-16332"]
+  liveries: ["Sanrio Characters livery"]
+  alt: "EVA Air Airbus A330-300 in Sanrio Characters livery climbing out at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16332"]
+        - ["Type", "Airbus A330-300"]
+        - ["Variant", "A330-302"]
+        - ["MSN", "1268"]
+        - ["Engines", "GE CF6-80E1"]
+        - ["First flight", "2011-10-27"]
+        - ["Delivered", "2011-11"]
+        - ["Livery", "Sanrio Characters &ldquo;Joyful Dream&rdquo;, since 2017-04"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC09837"
+  shot: "2025-08-14 16:48:28"
+  date: "2025-08-14"
+  title: "🇲🇾 Malaysia Airlines"
+  aircraft: "Boeing 737-800"
+  regs: ["9M-MXC"]
+  liveries: ["oneworld Negaraku"]
+  alt: "Malaysia Airlines Boeing 737-800 9M-MXC in oneworld Negaraku livery climbing out of Taiwan Taoyuan International Airport past high-rise towers"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "9M-MXC"]
+        - ["Type", "Boeing 737-800"]
+        - ["Variant", "737-8H6"]
+        - ["MSN", "40130"]
+        - ["Engines", "CFM56-7B26"]
+        - ["Delivered", "2010-12"]
+        - ["Livery", "Negaraku (Malaysian flag) scheme with oneworld titles"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1250"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC05267"
+  shot: "2025-02-28 10:22:53"
+  date: "2025-02-28"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Airbus A321-200"
+  regs: ["B-16217"]
+  liveries: ["Hello Kitty Pinky Jet"]
+  alt: "EVA Air Airbus A321 B-16217 in Hello Kitty Pinky Jet livery taking off at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16217"]
+        - ["Type", "Airbus A321-200"]
+        - ["Variant", "A321-211 (sharklets)"]
+        - ["MSN", "6585"]
+        - ["Engines", "CFM56-5B"]
+        - ["First flight", "2015-04"]
+        - ["Delivered", "2015-05"]
+        - ["Livery", "Hello Kitty &ldquo;Pinky Jet&rdquo; (Sanrio Characters)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC04683"
+  shot: "2025-02-21 12:12:00"
+  date: "2025-02-21"
+  title: "🇧🇪 TUI fly Belgium"
+  aircraft: "Boeing 787-8"
+  regs: ["OO-JDL"]
+  alt: "TUI fly Belgium Boeing 787-8 OO-JDL on approach to Taiwan Taoyuan International Airport under overcast skies"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "OO-JDL"]
+        - ["Type", "Boeing 787-8"]
+        - ["MSN", "34425"]
+        - ["Line no.", "137"]
+        - ["First flight", "2013-11"]
+        - ["Delivered", "2013-12"]
+        - ["Note", "Jetairfly&rsquo;s first 787 (Jetairfly became TUI fly Belgium); later moved to TUI Airways in the UK as G-TUIP"]
+        - ["At TPE", "Likely visiting Evergreen Aviation Technologies (EGAT) for maintenance; a TUI 787 tail was in the EGAT hangar on 2025-02-01"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "130 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "160"]
+
+- img: "tpe/DSC04181"
+  shot: "2025-02-06 07:28:29"
+  date: "2025-02-06"
+  title: "🇹🇼 Tigerair Taiwan"
+  aircraft: "Airbus A320neo"
+  regs: ["B-50021"]
+  liveries: ["Airbus A320neo titles"]
+  alt: "Tigerair Taiwan Airbus A320neo B-50021 with Airbus A320neo titles taxiing past EVA Air jets at Taiwan Taoyuan International Airport at dusk"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-50021"]
+        - ["Type", "Airbus A320neo"]
+        - ["Variant", "A320-271N"]
+        - ["MSN", "10682"]
+        - ["Engines", "Pratt &amp; Whitney PW1100G"]
+        - ["Delivered", "2021-04"]
+        - ["Livery", "Tiger-stripe tail with Airbus &ldquo;A320neo&rdquo; titles"]
+        - ["Note", "Tigerair Taiwan&rsquo;s first A320neo; arrived at TPE on 2021-04-02"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/80"]
+        - ["ISO", "1250"]
+
+- img: "tpe/DSC04046"
+  shot: "2025-02-01 10:32:00"
+  date: "2025-02-01"
+  title: "🇹🇼 China Airlines"
+  aircraft: "Boeing 777-300ER"
+  regs: ["B-18007"]
+  liveries: ["Boeing co-branded livery"]
+  alt: "China Airlines Boeing 777-300ER in Boeing co-branded livery taking off at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18007"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-309(ER)"]
+        - ["MSN", "43982"]
+        - ["Engines", "GE90-115B"]
+        - ["First flight", "2016-05-04"]
+        - ["Delivered", "2016-05"]
+        - ["Livery", "Boeing co-branded, carried since delivery for Boeing&rsquo;s centennial"]
+        - ["Note", "China Airlines&rsquo; 10th 777"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "282 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC03888"
+  shot: "2025-02-01 09:04:03"
+  date: "2025-02-01"
+  title: "🇦🇹 Austrian Airlines"
+  aircraft: "Boeing 777-200ER"
+  regs: ["OE-LPB"]
+  alt: "Austrian Airlines Boeing 777-200ER OE-LPB being towed past the Evergreen hangar at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "OE-LPB"]
+        - ["Type", "Boeing 777-200ER"]
+        - ["Variant", "777-2Z9(ER)"]
+        - ["MSN", "28699"]
+        - ["Built", "1998"]
+        - ["History", "Delivered to Lauda Air; later flown by Austrian Airlines"]
+        - ["Note", "Photographed under tow outside the Evergreen Aviation Technologies (EGAT) maintenance hangar"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "262 mm"]
+        - ["Aperture", "f/9"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC03687-2"
+  shot: "2025-02-01 08:32:31"
+  date: "2025-02-01"
+  title: "🇹🇼 STARLUX Airlines"
+  aircraft: "Airbus A330-900"
+  regs: ["B-58305"]
+  alt: "STARLUX Airlines Airbus A330-900 taxiing at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-58305"]
+        - ["Type", "Airbus A330-900"]
+        - ["Variant", "A330-941"]
+        - ["MSN", "2066"]
+        - ["Engines", "Rolls-Royce Trent 7000"]
+        - ["Delivered", "2024-07"]
+        - ["Note", "STARLUX&rsquo;s 5th A330-900"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/9"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC03365-Enhanced-NR"
+  shot: "2025-02-01 07:30:40"
+  date: "2025-02-01"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 777-300ER"
+  regs: ["B-16740"]
+  liveries: ["Sanrio Characters"]
+  alt: "EVA Air Boeing 777-300ER B-16740 in Sanrio Characters livery on approach to Taiwan Taoyuan International Airport under morning clouds"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16740"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-35E(ER)"]
+        - ["MSN", "63529"]
+        - ["Engines", "GE90-115B"]
+        - ["Livery", "Sanrio Characters (Hello Kitty, My Melody, Kuromi, Cinnamoroll and friends)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "100 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/200"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC03344"
+  shot: "2025-01-17 15:33:57"
+  date: "2025-01-17"
+  title: "🇦🇪 Emirates"
+  aircraft: "Airbus A380-800"
+  regs: ["A6-EEU"]
+  liveries: ["Destination Dubai"]
+  alt: "Emirates Airbus A380 A6-EEU in Destination Dubai livery on approach to Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "A6-EEU"]
+        - ["Type", "Airbus A380-800"]
+        - ["Variant", "A380-861"]
+        - ["MSN", "147"]
+        - ["Engines", "Engine Alliance GP7200"]
+        - ["Livery", "&ldquo;Destination Dubai&rdquo;, with &ldquo;Fly Better&rdquo; on the engines"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "100 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC03207"
+  shot: "2025-01-17 14:28:00"
+  date: "2025-01-17"
+  title: "🇹🇼 China Airlines"
+  aircraft: "Airbus A330-300"
+  regs: ["B-18311"]
+  liveries: ["SkyTeam"]
+  alt: "China Airlines Airbus A330-300 B-18311 in SkyTeam livery climbing out of Taiwan Taoyuan International Airport into a blue sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18311"]
+        - ["Type", "Airbus A330-300"]
+        - ["Variant", "A330-302"]
+        - ["MSN", "752"]
+        - ["Livery", "SkyTeam alliance livery, since 2012-06"]
+        - ["Previous livery", "Taiwanese Fruits, 2006 to 2012"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "212 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC03168"
+  shot: "2025-01-17 14:17:16"
+  date: "2025-01-17"
+  title: "🇰🇷 Asiana Airlines"
+  aircraft: "Airbus A380-800"
+  regs: ["HL7634"]
+  alt: "Asiana Airlines Airbus A380 HL7634 climbing out of Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "HL7634"]
+        - ["Type", "Airbus A380-800"]
+        - ["Variant", "A380-841"]
+        - ["MSN", "179"]
+        - ["Engines", "Rolls-Royce Trent 970"]
+        - ["Delivered", "2015-05-07"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "100 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC02055"
+  shot: "2024-12-31 09:23:07"
+  date: "2024-12-31"
+  title: "🇺🇸 FedEx Express"
+  aircraft: "Boeing 777F"
+  regs: ["N844FD"]
+  alt: "FedEx Express Boeing 777F N844FD on approach to Taiwan Taoyuan International Airport under blue-gray clouds"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N844FD"]
+        - ["Type", "Boeing 777F"]
+        - ["Variant", "777-FHT"]
+        - ["Fleet no.", "844"]
+        - ["MSN", "37138"]
+        - ["Line no.", "977"]
+        - ["Engines", "GE90-110B1L"]
+        - ["Delivered", "2017-02"]
+        - ["History", "Previously registered in Belgium as OO-TSC"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "232 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "160"]
+
+- img: "tpe/DSC01574"
+  shot: "2024-11-02 15:02:13"
+  date: "2024-11-02"
+  title: "🇸🇬 Scoot"
+  aircraft: "Boeing 787-9"
+  regs: ["9V-OJJ"]
+  liveries: ["Pikachu Jet TR"]
+  alt: "Scoot Boeing 787-9 9V-OJJ in Pikachu Jet TR Pokémon livery climbing out under gray skies at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "9V-OJJ"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "37131"]
+        - ["Engines", "Rolls-Royce Trent 1000"]
+        - ["Livery", "Pikachu Jet TR (Pokémon), since 2022-07"]
+        - ["Note", "The first Pokémon Jet flown by an airline outside Japan"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "100 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC00556"
+  shot: "2024-09-17 16:19:13"
+  date: "2024-09-17"
+  title: "🇲🇾 Malaysia Airlines"
+  aircraft: "Airbus A330-300"
+  regs: ["9M-MTG"]
+  liveries: ["Harimau Malaya"]
+  alt: "Malaysia Airlines Airbus A330-300 9M-MTG in the yellow Harimau Malaya tiger livery climbing out of Taiwan Taoyuan International Airport over green hills"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "9M-MTG"]
+        - ["Type", "Airbus A330-300"]
+        - ["Variant", "A330-323"]
+        - ["Engines", "Pratt &amp; Whitney PW4000"]
+        - ["Livery", "&ldquo;Malaysia Negaraku&rdquo; Harimau Malaya, supporting the Malaysian national football team, since 2020"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1250"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC00278"
+  shot: "2024-09-17 15:30:32"
+  date: "2024-09-17"
+  title: "🇯🇵 Peach"
+  aircraft: "Airbus A320"
+  regs: ["JA824P"]
+  liveries: ["Unari-kun Jet"]
+  alt: "Peach Airbus A320 JA824P with the Unari-kun Jet Narita 70th anniversary decal climbing out of Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA824P"]
+        - ["Type", "Airbus A320"]
+        - ["Variant", "A320-214 (ceo)"]
+        - ["Engines", "CFM International CFM56-5B"]
+        - ["Livery", "&ldquo;Unari-kun Jet&rdquo;, marking 70 years of Narita as a city, with mascot Unari-kun on the rear fuselage, since 2024-06-20"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC00198"
+  shot: "2024-09-17 15:18:26"
+  date: "2024-09-17"
+  title: "🇹🇼 China Airlines"
+  aircraft: "Airbus A321neo"
+  regs: ["B-18101"]
+  liveries: ["Pikachu Jet CI"]
+  alt: "China Airlines Airbus A321neo B-18101 in the Pikachu Jet CI Pokémon livery climbing out of Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18101"]
+        - ["Type", "Airbus A321neo"]
+        - ["Variant", "A321-271NX"]
+        - ["Engines", "Pratt &amp; Whitney PW1100G"]
+        - ["Delivered", "2021-11"]
+        - ["Livery", "&ldquo;Pikachu Jet CI&rdquo; Pokémon livery, since 2022-09"]
+        - ["Note", "China Airlines&rsquo; first A321neo"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "274 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC09582"
+  shot: "2024-08-30 06:59:04"
+  date: "2024-08-30"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 777-300ER"
+  regs: ["B-16722"]
+  liveries: ["Hello Kitty Besties Jet"]
+  alt: "EVA Air Boeing 777-300ER B-16722 in Hello Kitty Besties Jet Sanrio livery under tow at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16722"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-36N(ER)"]
+        - ["MSN", "42107"]
+        - ["Line no.", "1302"]
+        - ["Engines", "GE90-115B"]
+        - ["Delivered", "2015-05"]
+        - ["Livery", "Hello Kitty &ldquo;Besties Jet&rdquo; with My Melody and Kuromi, since 2024-08-28"]
+        - ["Previous livery", "Hello Kitty &ldquo;Shining Star&rdquo;, 2015-06 to 2024"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC08309"
+  shot: "2024-06-08 14:54:35"
+  date: "2024-06-08"
+  title: "🇺🇸 Delta Air Lines"
+  aircraft: "Airbus A330-900"
+  regs: ["N411DX"]
+  liveries: ["Team USA"]
+  alt: "Delta Air Lines Airbus A330-900 N411DX in Team USA livery landing at Taiwan Taoyuan International Airport in front of the Evergreen hangar"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N411DX"]
+        - ["Type", "Airbus A330-900"]
+        - ["Engines", "Rolls-Royce Trent 7000"]
+        - ["Livery", "Team USA, marking Delta&rsquo;s partnership as official airline of Team USA through the LA28 Games"]
+        - ["Background", "Evergreen Aviation Technologies (EGAT) hangar"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "265 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC07985"
+  shot: "2024-03-03 16:06:14"
+  date: "2024-03-03"
+  title: "🇦🇪 Emirates"
+  aircraft: "Airbus A380-800"
+  regs: ["A6-EOT"]
+  liveries: ["Destination Dubai"]
+  alt: "Emirates Airbus A380 A6-EOT in the blue Destination Dubai livery with a See You There message taxiing at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "A6-EOT"]
+        - ["Type", "Airbus A380-800"]
+        - ["Variant", "A380-861"]
+        - ["Engines", "Engine Alliance GP7200"]
+        - ["Livery", "&ldquo;Destination Dubai&rdquo;, with a cabin crew member holding a &ldquo;See you there&rdquo; sign"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "268 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "200"]
+
+- img: "tpe/DSC06648"
+  shot: "2024-01-23 17:12:19"
+  date: "2024-01-23"
+  title: "🇹🇼 China Airlines"
+  aircraft: "Airbus A350-900"
+  regs: ["B-18918"]
+  liveries: ["Airbus carbon fiber"]
+  alt: "China Airlines Airbus A350-900 B-18918 in the Airbus carbon fiber livery taking off from a wet Taiwan Taoyuan International Airport at dusk"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18918"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["MSN", "239"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Delivered", "2018-10"]
+        - ["Livery", "Co-branded Airbus carbon fiber scheme, the first Airbus livery shared with an airline"]
+        - ["Note", "The 14th and last A350-900 of China Airlines&rsquo; original order; the other 2024-01-23 photo shows it earlier the same day"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "179 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/80"]
+        - ["ISO", "1000"]
+
+- img: "tpe/DSC06582"
+  shot: "2024-01-23 17:02:20"
+  date: "2024-01-23"
+  title: "🇹🇼 China Airlines"
+  aircraft: "Airbus A350-900"
+  regs: ["B-18918"]
+  liveries: ["Airbus carbon fiber"]
+  alt: "China Airlines Airbus A350-900 B-18918 in Airbus carbon fiber livery taxiing on a wet evening at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18918"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["MSN", "239"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Delivered", "2018-10"]
+        - ["Livery", "Co-branded Airbus carbon fiber scheme, the first Airbus livery shared with an airline"]
+        - ["Note", "The 14th and last A350-900 of China Airlines&rsquo; original order"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "100 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/100"]
+        - ["ISO", "1000"]
+
+- img: "tpe/DSC04982"
+  shot: "2024-01-13 16:42:47"
+  date: "2024-01-13"
+  title: "🇳🇿 Air New Zealand"
+  aircraft: "Boeing 787-9"
+  regs: ["ZK-NZI"]
+  alt: "Air New Zealand Boeing 787-9 ZK-NZI on final approach to Taiwan Taoyuan International Airport over silver grass with the city and mountains behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "ZK-NZI"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "37965"]
+        - ["Line no.", "456"]
+        - ["Engines", "Rolls-Royce Trent 1000"]
+        - ["First flight", "2016"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "309 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC02776"
+  shot: "2023-12-27 15:11:22"
+  date: "2023-12-27"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 777-300ER"
+  regs: ["B-16722"]
+  liveries: ["Hello Kitty Shining Star"]
+  alt: "EVA Air Boeing 777-300ER B-16722 in the earlier Hello Kitty Shining Star Sanrio livery taxiing at Taiwan Taoyuan International Airport with a STARLUX A321neo behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16722"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-36N(ER)"]
+        - ["MSN", "42107"]
+        - ["Line no.", "1302"]
+        - ["Engines", "GE90-115B"]
+        - ["Delivered", "2015-05"]
+        - ["Livery", "Hello Kitty &ldquo;Shining Star&rdquo; with Little Twin Stars and friends, 2015-06 to 2024"]
+        - ["Note", "Repainted into the Hello Kitty &ldquo;Besties Jet&rdquo; livery in 2024; the 2024-08-30 photo above shows the new scheme"]
+        - ["Background", "STARLUX Airbus A321neo"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "111 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/200"]
+        - ["ISO", "125"]
+
+- img: "tpe/DSC06068_2"
+  shot: "2020-09-03 16:11:43"
+  date: "2020-09-03"
+  title: "🇺🇸 Polar Air Cargo"
+  aircraft: "Boeing 767-300F"
+  regs: ["N644GT"]
+  liveries: ["Polar / DHL hybrid livery"]
+  alt: "Polar Air Cargo Boeing 767-300F N644GT in the Polar and DHL hybrid livery on approach to Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N644GT"]
+        - ["Type", "Boeing 767-300F"]
+        - ["Variant", "767-3JH(F)"]
+        - ["MSN", "37810"]
+        - ["Line no.", "1041"]
+        - ["Livery", "Polar Air Cargo forward fuselage with DHL yellow tail section"]
+        - ["Operator", "Polar Air Cargo, an Atlas Air subsidiary, flying for DHL"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "123 mm"]
+        - ["Aperture", "f/10"]
+        - ["Shutter", "1/400"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC04668_1"
+  shot: "2020-08-06 16:04:51"
+  date: "2020-08-06"
+  title: "🇹🇼 China Airlines"
+  aircraft: "Airbus A350-900"
+  regs: ["B-18901"]
+  liveries: ["Mikado Pheasant livery"]
+  alt: "China Airlines Airbus A350-900 B-18901 in the Mikado Pheasant livery on approach to Taiwan Taoyuan International Airport under building clouds"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18901"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["MSN", "049"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Delivered", "2016"]
+        - ["Livery", "帝雉號 (Mikado Pheasant, <i>Syrmaticus mikado</i>), the first of China Airlines&rsquo; Taiwan endemic bird liveries, since delivery in 2016"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "145 mm"]
+        - ["Aperture", "f/11"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC00862"
+  shot: "2020-01-23 14:20:58"
+  date: "2020-01-23"
+  title: "🇹🇼 China Airlines"
+  aircraft: "Boeing 747-400"
+  regs: ["B-18210"]
+  liveries: ["60th Anniversary"]
+  alt: "China Airlines Boeing 747-400 B-18210 with 60th anniversary titles taxiing at Taiwan Taoyuan International Airport as another China Airlines 747 rolls behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18210"]
+        - ["Type", "Boeing 747-400"]
+        - ["Variant", "747-409"]
+        - ["Livery", "China Airlines 60th anniversary titles"]
+        - ["Note", "One of the last four 747-400s in China Airlines&rsquo; passenger fleet in 2020"]
+        - ["Background", "Another China Airlines 747-400"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "E 55-210mm F4.5-6.3 OSS"]
+        - ["Focal", "70 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
