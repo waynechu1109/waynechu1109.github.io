@@ -68,3 +68,72 @@
         - ["Aperture", "f/8"]
         - ["Shutter", "1/1600"]
         - ["ISO", "160"]
+- img: "hsz/DSC04930-2"
+  shot: "2025-02-25 14:57:01"
+  date: "2025-02-25"
+  title: "🇹🇼 Republic of China Air Force"
+  aircraft: "Dassault Mirage 2000-5"
+  regs: ["2015"]
+  alt: "Republic of China Air Force Mirage 2000-5 serial 2015 with drop tanks and missiles on approach to Hsinchu Air Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "2015"]
+        - ["Type", "Dassault Mirage 2000-5"]
+        - ["Variant", "Mirage 2000-5Ei (single-seat)"]
+        - ["MSN", "Ei15"]
+        - ["Unit", "499th Tactical Fighter Wing, Hsinchu"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "130 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "hsz/DSC01257"
+  shot: "2024-10-10 09:41:37"
+  date: "2024-10-10"
+  title: "🇹🇼 Republic of China Air Force"
+  aircraft: "AIDC T-5 Brave Eagle"
+  regs: ["1132"]
+  alt: "Republic of China Air Force AIDC T-5 Brave Eagle trainer 1132 in red, white and blue on approach to Hsinchu Air Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "1132"]
+        - ["Type", "AIDC T-5 Brave Eagle"]
+        - ["Note", "Photographed two minutes after T-5 1126 on the same morning"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "114 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "200"]
+
+- img: "hsz/DSC09606"
+  shot: "2021-07-06 16:36:14"
+  date: "2021-07-06"
+  title: "🇹🇼 Republic of China Air Force"
+  aircraft: "Dassault Mirage 2000-5"
+  regs: ["2037"]
+  alt: "Republic of China Air Force Mirage 2000-5 serial 2037 head-on with landing light on, gear down under grey clouds at Hsinchu Air Base"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Serial", "2037"]
+        - ["Type", "Dassault Mirage 2000-5"]
+        - ["Variant", "Mirage 2000-5Ei (single-seat)"]
+        - ["Unit", "499th Tactical Fighter Wing, Hsinchu"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "160"]
+
