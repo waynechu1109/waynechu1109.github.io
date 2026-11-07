@@ -153,3 +153,80 @@
         - ["Shutter", "1/1600"]
         - ["ISO", "200"]
 
+- img: "sjc/DSC09115"
+  shot: "2026-11-06 14:12:27"
+  date: "2026-11-06"
+  title: "🇺🇸 Alaska Airlines"
+  aircraft: "Boeing 737 MAX 9"
+  regs: ["N982AK"]
+  alt: "Alaska Airlines Boeing 737 MAX 9 N982AK climbing out of San Jose Mineta International Airport against the dry golden hills"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N982AK"]
+        - ["Type", "Boeing 737 MAX 9"]
+        - ["Variant", "737-9"]
+        - ["MSN", "67422"]
+        - ["Engines", "CFM International LEAP-1B"]
+        - ["Built", "2023"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "330 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/2000"]
+        - ["ISO", "200"]
+
+- img: "sjc/DSC09314"
+  shot: "2026-11-06 14:35:17"
+  date: "2026-11-06"
+  title: "🇺🇸 United Airlines"
+  aircraft: "Boeing 737-800"
+  regs: ["N37277"]
+  alt: "United Airlines Boeing 737-800 N37277 with split scimitar winglets and gear down on approach to San Jose Mineta International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N37277"]
+        - ["Type", "Boeing 737-800"]
+        - ["Variant", "737-824"]
+        - ["MSN", "31595"]
+        - ["Engines", "CFM International CFM56-7B"]
+        - ["Built", "2002"]
+        - ["Note", "Built for Continental Airlines, whose Boeing customer code was 24"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "238 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "200"]
+
+- img: "sjc/DSC09360"
+  shot: "2026-11-06 14:39:13"
+  date: "2026-11-06"
+  title: "🇺🇸 Flexjet"
+  aircraft: "Embraer Praetor 500"
+  regs: ["N446FX"]
+  alt: "Flexjet Embraer Praetor 500 N446FX seen from below on approach to San Jose Mineta International Airport, registration on the engine nacelle"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N446FX"]
+        - ["Type", "Embraer Praetor 500"]
+        - ["Variant", "EMB-545"]
+        - ["MSN", "55010096"]
+        - ["Engines", "Honeywell HTF7500E"]
+        - ["Built", "2022"]
+        - ["Operator", "Flexjet, a fractional ownership operator"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "253 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "200"]
+
