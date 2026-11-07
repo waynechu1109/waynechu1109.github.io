@@ -170,7 +170,8 @@
           var route = el("div", "pass-route");
           var at = el("div", "pass-code-wrap");
           at.appendChild(el("span", "pass-code", section ? section.dataset.code : ""));
-          at.appendChild(el("span", "pass-code-sub", section ? section.dataset.codeSub : ""));
+          // a card's own spotting location is more specific than its section's
+          at.appendChild(el("span", "pass-code-sub", card.dataset.spotted ? "Over " + card.dataset.spotted : (section ? section.dataset.codeSub : "")));
           route.appendChild(field("Spotted at", at));
           route.appendChild(field("Date", text(".photo-date"), "pass-right"));
           main.appendChild(route);

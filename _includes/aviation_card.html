@@ -1,6 +1,6 @@
 {%- assign p = include.p -%}
 {%- assign base = "media/gallery/aviation_gallery/" | append: p.img -%}
-          <article class="photo-card" id="p-{{ p.img | replace: '/', '-' }}">
+          <article class="photo-card" id="p-{{ p.img | replace: '/', '-' }}"{% if p.spotted %} data-spotted="{{ p.spotted }}"{% endif %}>
             <div class="photo-frame real-photo">
               <img
                 src="{{ base }}-1280.jpg"
@@ -15,6 +15,12 @@
             <div class="photo-body">
               <h4 class="photo-title">{{ p.title }}</h4>
               <p class="photo-aircraft">{{ p.aircraft }}</p>
+              {%- if p.route %}
+              <p class="photo-route"><span class="route-code">{{ p.route.from }}</span><span class="route-arrow" aria-label="to">&rarr;</span><span class="route-code">{{ p.route.to }}</span></p>
+              {%- endif %}
+              {%- if p.spotted %}
+              <p class="photo-spotted"><svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>Spotted over {{ p.spotted }}</p>
+              {%- endif %}
               {%- if p.regs or p.liveries %}
               <p class="photo-tags">{% for r in p.regs %}<span class="reg-chip">{{ r }}</span>{% endfor %}{% if p.livery_break %}<span class="tag-break"></span>{% endif %}{% for l in p.liveries %}<span class="livery-tag">{{ l }}</span>{% endfor %}</p>
               {%- endif %}

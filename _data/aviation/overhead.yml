@@ -1,0 +1,28 @@
+- img: "overhead/DSC09014"
+  shot: "2026-10-26 15:51:21"
+  date: "2026-10-26"
+  title: "🇰🇷 Korean Air Cargo"
+  aircraft: "Boeing 747-8F"
+  regs: ["HL7629"]
+  route: { from: "ANC", to: "LAX" }
+  spotted: "Stanford, CA"
+  alt: "Korean Air Cargo Boeing 747-8F HL7629 at cruise altitude trailing four contrails across a deep blue sky over Stanford, California on its way from Anchorage to Los Angeles"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "HL7629"]
+        - ["Type", "Boeing 747-8F"]
+        - ["Variant", "747-8B5F"]
+        - ["MSN", "37657"]
+        - ["Engines", "GE GEnx-2B67"]
+        - ["Route", "Anchorage (ANC) &rarr; Los Angeles (LAX)"]
+        - ["Departed", "2026-10-26 19:20 UTC"]
+        - ["Note", "At cruise altitude over the Bay Area about three and a half hours into the flight, one contrail streaming from each engine"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "100"]

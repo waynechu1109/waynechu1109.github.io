@@ -163,6 +163,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
             { "label": "SFO", "name": "San Francisco International Airport", "region": "us", "lat": 37.619, "lng": -122.3749, "cards": "#ksfo .photo-card", "href": "ksfo" },
             { "label": "SJC", "name": "San Jose Mineta International Airport", "region": "us", "lat": 37.3626, "lng": -121.9291, "cards": "#ksjc .photo-card", "href": "ksjc" },
             { "label": "Fleet Week", "name": "SF Fleet Week", "region": "us", "lat": 37.808, "lng": -122.437, "cards": "#sf-fleet-week .photo-card", "href": "sf-fleet-week" },
+            { "label": "Overhead", "name": "Overhead, Stanford", "region": "us", "lat": 37.4275, "lng": -122.1697, "cards": "#overhead .photo-card", "href": "overhead" },
             { "label": "HND", "name": "Tokyo Haneda Airport", "region": "jp", "lat": 35.5523, "lng": 139.7797, "cards": "#rjtt .photo-card", "href": "rjtt" },
             { "label": "NRT", "name": "Narita International Airport", "region": "jp", "lat": 35.7647, "lng": 140.3864, "cards": "#rjaa .photo-card", "href": "rjaa" },
             { "label": "OKO", "name": "Yokota Air Base", "region": "jp", "lat": 35.7485, "lng": 139.3485, "cards": "#rjty .photo-card", "href": "rjty" },
@@ -179,6 +180,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <a href="#ksfo" class="resource-btn">🇺🇸 KSFO / SFO</a>
         <a href="#ksjc" class="resource-btn">🇺🇸 KSJC / SJC</a>
         <a href="#sf-fleet-week" class="resource-btn">🇺🇸 SF Fleet Week</a>
+        <a href="#overhead" class="resource-btn">🇺🇸 Overhead</a>
         <a href="#rjtt" class="resource-btn">🇯🇵 RJTT / HND</a>
         <a href="#rjaa" class="resource-btn">🇯🇵 RJAA / NRT</a>
         <a href="#rjty" class="resource-btn">🇯🇵 RJTY / OKO</a>
@@ -302,6 +304,22 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.sf_fleet_week | sort: "shot" | reverse %}
+          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+        </div>
+      </section>
+
+      <section id="overhead" class="airport-section" data-code="OVHD" data-code-sub="Overhead &middot; Stanford" aria-labelledby="overhead-heading">
+        <div class="airport-header">
+          <div>
+            <h3 id="overhead-heading" class="airport-name">🇺🇸 Overhead</h3>
+            <p class="airport-meta">San Francisco Bay Area &middot; In flight</p>
+          </div>
+        </div>
+        <p class="airport-description">
+          Aircraft caught high above the Bay Area, away from any airport: long-haul flights passing overhead, some at cruise altitude with contrails trailing behind.
+        </p>
+        <div class="photo-grid">
+          {% assign photos = site.data.aviation.overhead | sort: "shot" | reverse %}
           {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
         </div>
       </section>

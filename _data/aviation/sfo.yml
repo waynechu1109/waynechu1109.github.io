@@ -392,3 +392,27 @@
         - ["Shutter", "1/1000"]
         - ["ISO", "100"]
 
+- img: "sfo/DSC08970"
+  shot: "2026-10-26 15:46:54"
+  date: "2026-10-26"
+  title: "🇬🇧 British Airways"
+  aircraft: "Airbus A380-800"
+  regs: ["G-XLEK"]
+  alt: "British Airways Airbus A380 G-XLEK seen from directly below on approach to San Francisco International Airport, registration on the underside of the left wing"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "G-XLEK"]
+        - ["Type", "Airbus A380-800"]
+        - ["Variant", "A380-841"]
+        - ["MSN", "194"]
+        - ["Engines", "Rolls-Royce Trent 970"]
+        - ["Delivered", "2016-02"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "100"]

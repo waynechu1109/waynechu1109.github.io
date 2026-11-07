@@ -720,3 +720,53 @@
         - ["Aperture", "f/8"]
         - ["Shutter", "1/640"]
         - ["ISO", "100"]
+
+- img: "tpe/DSC02378"
+  shot: "2020-05-31 09:07:21"
+  date: "2020-05-31"
+  title: "🇭🇰 Hong Kong Air Cargo"
+  aircraft: "Airbus A330-200F"
+  regs: ["B-LNY"]
+  alt: "Hong Kong Air Cargo Airbus A330-200F B-LNY climbing out of Taiwan Taoyuan International Airport under grey clouds, registration on the underside of the wing"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-LNY"]
+        - ["Type", "Airbus A330-200F"]
+        - ["Variant", "A330-243F"]
+        - ["MSN", "1062"]
+        - ["Engines", "Rolls-Royce Trent 772B"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "285 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC03186"
+  shot: "2023-12-27 16:16:47"
+  date: "2023-12-27"
+  title: "🇹🇭 Thai Vietjet Air"
+  aircraft: "Airbus A320"
+  regs: ["HS-VKE"]
+  liveries: ["SkyBoss"]
+  alt: "Thai Vietjet Air Airbus A320 HS-VKE in the red and yellow SkyBoss livery taxiing at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "HS-VKE"]
+        - ["Type", "Airbus A320"]
+        - ["Variant", "A320-214"]
+        - ["MSN", "4512"]
+        - ["Engines", "CFM International CFM56-5B"]
+        - ["Livery", "SkyBoss, promoting Vietjet&rsquo;s premium SkyBoss fare class"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/9"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "500"]

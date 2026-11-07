@@ -314,6 +314,14 @@
     .photo-caption { margin: 0; color: var(--muted); font-size: .96rem; }
     .photo-date { margin: 2px 0 0; color: var(--muted); font-size: .82rem; font-style: italic; letter-spacing: .04em; }
     .photo-aircraft { margin: -2px 0 8px; color: var(--text); font-size: .9rem; font-weight: 600; }
+    .photo-route {
+      display: flex; align-items: center; gap: 6px; margin: -4px 0 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .8rem; font-weight: 700; letter-spacing: .06em; color: var(--primary-deep);
+    }
+    .route-arrow { color: var(--muted); font-weight: 400; }
+    .photo-spotted { display: flex; align-items: center; gap: 5px; margin: -4px 0 8px; font-size: .8rem; color: var(--muted); }
+    .photo-spotted .icon { width: 11px; height: 11px; fill: currentColor; flex: none; }
     .photo-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
     /* negative margin cancels the row gap the empty break item would add */
     .tag-break { flex-basis: 100%; height: 0; margin-top: -6px; }
