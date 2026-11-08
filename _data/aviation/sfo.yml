@@ -416,3 +416,30 @@
         - ["Aperture", "f/8"]
         - ["Shutter", "1/320"]
         - ["ISO", "100"]
+
+- img: "sfo/DSC02538"
+  shot: "2026-06-28 15:54:39"
+  date: "2026-06-28"
+  title: "🇺🇸 Frontier Airlines"
+  aircraft: "Airbus A321neo"
+  regs: ["N612FR"]
+  alt: "Frontier Airlines Airbus A321neo N612FR with a fisher on its tail on approach to San Francisco International Airport against a deep blue sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N612FR"]
+        - ["Type", "Airbus A321neo"]
+        - ["Variant", "A321-271NX"]
+        - ["MSN", "11259"]
+        - ["Engines", "Pratt &amp; Whitney PW1133G"]
+        - ["Built", "2023"]
+        - ["Name", "Kari the Fisher"]
+        - ["Note", "Like every Frontier jet, it carries a different animal on the tail and its name by the nose"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
