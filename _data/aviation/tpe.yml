@@ -770,3 +770,28 @@
         - ["Aperture", "f/9"]
         - ["Shutter", "1/500"]
         - ["ISO", "500"]
+
+- img: "tpe/DSC07197"
+  shot: "2024-03-03 14:31:43"
+  date: "2024-03-03"
+  title: "🇨🇳 China Eastern Airlines"
+  aircraft: "Airbus A330-200"
+  regs: ["B-5943"]
+  liveries: ["Eastday.com"]
+  alt: "China Eastern Airlines Airbus A330-200 B-5943 in the light blue Eastday.com livery taxiing head-on at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-5943"]
+        - ["Type", "Airbus A330-200"]
+        - ["Variant", "A330-243"]
+        - ["Engines", "Rolls-Royce Trent 772B"]
+        - ["Livery", "Eastday.com (东方网), advertising the Shanghai online news service, with a blue, purple, yellow and red wave along the fuselage"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "218 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/400"]
+        - ["ISO", "125"]
