@@ -443,3 +443,32 @@
         - ["Aperture", "f/8"]
         - ["Shutter", "1/800"]
         - ["ISO", "100"]
+
+- img: "sfo/DSC04203"
+  shot: "2026-07-18 17:35:10"
+  date: "2026-07-18"
+  title: "🇺🇸 Alaska Airlines"
+  aircraft: "Embraer E175"
+  regs: ["N659QX"]
+  liveries: ["Toy Story 5"]
+  alt: "Alaska Airlines Embraer E175 N659QX operated by Horizon Air in the Toy Story 5 livery with Buzz Lightyear and Lilypad on approach to San Francisco International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N659QX"]
+        - ["Type", "Embraer E175"]
+        - ["Variant", "ERJ 170-200 LR"]
+        - ["MSN", "17000947"]
+        - ["Engines", "GE CF34-8E5"]
+        - ["Built", "2023"]
+        - ["Operator", "Horizon Air, for Alaska Airlines"]
+        - ["Name", "To 45 and Beyond"]
+        - ["Livery", "Toy Story 5, with Woody, Buzz Lightyear, Jessie and the new tech toys such as Lilypad; Forky and Karen Beverly on the winglets. Unveiled 2026-05 for Horizon&rsquo;s 45th anniversary, the first special livery on Horizon&rsquo;s E175 fleet"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
