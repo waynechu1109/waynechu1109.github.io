@@ -10,6 +10,7 @@ regions:
 
 # Map pins; each photo's "place" must match one of these ids.
 places:
+  - { id: "stanford", label: "Stanford", name: "Stanford, CA", region: "ca", lat: 37.4275, lng: -122.1697 }
   - { id: "santa-monica", label: "Santa Monica", name: "Santa Monica, CA", region: "ca", lat: 34.0094, lng: -118.4973 }
   - { id: "petco-park", label: "Petco Park", name: "Petco Park, San Diego", region: "ca", lat: 32.7073, lng: -117.1566 }
   - { id: "san-francisco", label: "San Francisco", name: "San Francisco, CA", region: "ca", lat: 37.7749, lng: -122.4194 }
@@ -22,6 +23,20 @@ places:
   - { id: "himeji", label: "Himeji", name: "Himeji, Japan", region: "jp", lat: 34.8394, lng: 134.6939 }
 
 photos:
+  - img: "stanford/DSC09538"
+    place: "stanford"
+    title: "🇺🇸 Stanford, CA"
+    date: "2026-11-10"
+    widths: [426, 853, 1706]  # portrait: actual pixel widths of the -640/-1280/-2560 files
+    alt: "Autumn tree in golden and orange leaves on the Stanford campus with the sun bursting through its branches into a starburst"
+    exif:
+      - ["Camera", "Sony α6700"]
+      - ["Lens", "FE 20mm F1.8 G"]
+      - ["Focal", "20 mm"]
+      - ["Aperture", "f/22"]
+      - ["Shutter", "1/20"]
+      - ["ISO", "100"]
+
   - img: "santa_monica/DSC03656"
     place: "santa-monica"
     title: "🇺🇸 Santa Monica, CA"
