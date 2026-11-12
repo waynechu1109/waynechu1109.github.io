@@ -472,3 +472,125 @@
         - ["Aperture", "f/8"]
         - ["Shutter", "1/800"]
         - ["ISO", "100"]
+
+- img: "sfo/DSC09715"
+  shot: "2026-11-12 12:29:47"
+  date: "2026-11-12"
+  title: "🇺🇸 United Airlines"
+  aircraft: "Boeing 787-9"
+  regs: ["N71108"]
+  alt: "United Airlines Boeing 787-9 N71108 seen from below against a deep blue sky streaked with thin clouds near San Francisco International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N71108"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "68654"]
+        - ["Engines", "GE GEnx-1B76A"]
+        - ["Built", "2026"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "125"]
+
+- img: "sfo/DSC00183"
+  shot: "2026-11-12 13:44:43"
+  date: "2026-11-12"
+  title: "🇦🇪 Emirates"
+  aircraft: "Airbus A380-800"
+  regs: ["A6-EVP"]
+  alt: "Emirates Airbus A380 A6-EVP with gear down on approach to San Francisco International Airport as a gull flies past and another jet crosses high above"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "A6-EVP"]
+        - ["Type", "Airbus A380-800"]
+        - ["Variant", "A380-842"]
+        - ["Engines", "Rolls-Royce Trent 900"]
+        - ["Background", "A gull in the foreground and another jet passing high above"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "327 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "125"]
+
+- img: "sfo/DSC09835"
+  shot: "2026-11-12 13:04:42"
+  date: "2026-11-12"
+  title: "🇯🇵 ZIPAIR"
+  aircraft: "Boeing 787-8"
+  regs: ["JA828J"]
+  alt: "ZIPAIR Boeing 787-8 JA828J with gear down on approach to San Francisco International Airport against a blue sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "JA828J"]
+        - ["Type", "Boeing 787-8"]
+        - ["MSN", "34838"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["History", "Flown by Japan Airlines before being refitted for ZIPAIR, which took it in 2024-01 as its 8th aircraft"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1250"]
+        - ["ISO", "125"]
+
+- img: "sfo/DSC00085"
+  shot: "2026-11-12 13:37:04"
+  date: "2026-11-12"
+  title: "🇩🇪 Lufthansa"
+  aircraft: "Airbus A350-900"
+  regs: ["D-AIXD"]
+  alt: "Lufthansa Airbus A350-900 D-AIXD Bonn with gear down on approach to San Francisco International Airport against a blue sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "D-AIXD"]
+        - ["Type", "Airbus A350-900"]
+        - ["Variant", "A350-941"]
+        - ["MSN", "127"]
+        - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Name", "Bonn"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1250"]
+        - ["ISO", "125"]
+
+- img: "sfo/DSC09815"
+  shot: "2026-11-12 13:01:37"
+  date: "2026-11-12"
+  title: "🇮🇹 ITA Airways"
+  aircraft: "Airbus A330-900"
+  regs: ["EI-TYB"]
+  alt: "ITA Airways Airbus A330-900neo EI-TYB in the metallic Savoia blue livery with gear down on approach to San Francisco International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "EI-TYB"]
+        - ["Type", "Airbus A330-900"]
+        - ["Variant", "A330-941"]
+        - ["MSN", "2051"]
+        - ["Engines", "Rolls-Royce Trent 7000"]
+        - ["History", "First registered I-ITYB, then moved to the Irish register as EI-TYB"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "288 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1250"]
+        - ["ISO", "125"]
