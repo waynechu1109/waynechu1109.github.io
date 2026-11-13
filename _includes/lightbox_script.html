@@ -243,9 +243,40 @@
           lightbox.setAttribute("aria-hidden", "true");
           lightboxImage.removeAttribute("src");
           lightboxImage.alt = "";
+          if (lens) lens.style.display = "none";
           document.body.style.overflow = "";
           var toFocus = photoImages[current] || lastFocused;
           if (toFocus && toFocus.focus) toFocus.focus();
+        }
+
+        // Magnifier: a lens over the full-size image that shows the area under the cursor at 2x.
+        // The lightbox loads the 2560px file but draws it near half that, so 2x is real detail.
+        var ZOOM = 2;
+        var LENS = 200;
+        var canHover = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+        var lens = null;
+        if (canHover) {
+          lens = document.createElement("div");
+          lens.className = "lightbox-lens";
+          lens.setAttribute("aria-hidden", "true");
+          lightbox.appendChild(lens);
+          lightboxImage.classList.add("has-lens");
+          var hideLens = function () { lens.style.display = "none"; };
+          lightboxImage.addEventListener("mousemove", function (e) {
+            if (!lightboxImage.complete || !lightboxImage.naturalWidth) return hideLens();
+            var r = lightboxImage.getBoundingClientRect();
+            var x = e.clientX - r.left;
+            var y = e.clientY - r.top;
+            if (x < 0 || y < 0 || x > r.width || y > r.height) return hideLens();
+            lens.style.display = "block";
+            lens.style.left = (e.clientX - LENS / 2) + "px";
+            lens.style.top = (e.clientY - LENS / 2) + "px";
+            lens.style.backgroundImage = 'url("' + lightboxImage.currentSrc + '")';
+            lens.style.backgroundSize = (r.width * ZOOM) + "px " + (r.height * ZOOM) + "px";
+            lens.style.backgroundPosition = (LENS / 2 - x * ZOOM) + "px " + (LENS / 2 - y * ZOOM) + "px";
+          });
+          lightboxImage.addEventListener("mouseleave", hideLens);
+          lightboxImage.addEventListener("load", hideLens);
         }
 
         // photos hidden by the gallery filter are skipped
