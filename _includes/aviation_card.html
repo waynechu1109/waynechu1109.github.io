@@ -1,11 +1,13 @@
 {%- assign p = include.p -%}
 {%- assign base = "media/gallery/aviation_gallery/" | append: p.img -%}
-          <article class="photo-card" id="p-{{ p.img | replace: '/', '-' }}"{% if p.spotted %} data-spotted="{{ p.spotted }}"{% endif %}>
+{%- if include.n >= 3 %}{% assign cap = 7 %}{% else %}{% assign cap = 6 %}{% endif -%}
+{%- if include.i == 1 and include.n >= 3 %}{% assign lead = true %}{% else %}{% assign lead = false %}{% endif -%}
+          <article class="photo-card{% if lead %} is-lead{% endif %}{% if include.i > cap %} is-extra{% endif %}" id="p-{{ p.img | replace: '/', '-' }}"{% if p.spotted %} data-spotted="{{ p.spotted }}"{% endif %}>
             <div class="photo-frame real-photo">
               <img
                 src="{{ base }}-1280.jpg"
                 srcset="{{ base }}-640.jpg 640w, {{ base }}-1280.jpg 1280w, {{ base }}-2560.jpg 2560w"
-                sizes="(max-width: 640px) 92vw, (max-width: 900px) 46vw, 330px"
+                sizes="{% if lead %}(max-width: 900px) 92vw, 680px{% else %}(max-width: 640px) 92vw, (max-width: 900px) 46vw, 330px{% endif %}"
                 data-full="{{ base }}-2560.jpg"
                 alt="{{ p.alt }}"
                 class="photo-image"
@@ -25,6 +27,26 @@
               <p class="photo-tags">{% for r in p.regs %}<span class="reg-chip">{{ r }}</span>{% endfor %}{% if p.livery_break %}<span class="tag-break"></span>{% endif %}{% for l in p.liveries %}<span class="livery-tag">{{ l }}</span>{% endfor %}</p>
               {%- endif %}
               <p class="photo-date"><time datetime="{{ p.date }}">{{ p.date }}</time></p>
+              {%- if lead %}
+              {%- assign multi = false %}{% assign ac = 0 %}
+              {%- for g in p.details %}{% assign g0 = g.group | slice: 0, 8 %}{% if g0 == "Aircraft" %}{% assign ac = ac | plus: 1 %}{% endif %}{% endfor %}
+              {%- if ac > 1 %}{% assign multi = true %}{% endif %}
+              <div class="lead-facts">
+                {%- for g in p.details %}
+                {%- assign g0 = g.group | slice: 0, 8 %}
+                {%- if g0 == "Aircraft" %}
+                {%- if multi %}<p class="lead-facts-group">{{ g.group | remove_first: "Aircraft &middot; " }}</p>{% endif %}
+                <dl>
+                  {%- for row in g.rows %}{% unless row[0] == "Registration" or row[0] == "Type" or row[0] == "Serial" %}
+                  <dt>{{ row[0] }}</dt><dd>{{ row[1] }}</dd>
+                  {%- endunless %}{% endfor %}
+                </dl>
+                {%- elsif g.group == "Photo" %}
+                <p class="lead-shot">{% for row in g.rows %}{% if row[0] != "Lens" %}{% if row[0] == "ISO" %}ISO&nbsp;{% endif %}{{ row[1] }}{% unless forloop.last %} &middot; {% endunless %}{% endif %}{% endfor %}</p>
+                {%- endif %}
+                {%- endfor %}
+              </div>
+              {%- endif %}
               <details class="exif-details">
                 <summary>Details</summary>
                 {%- for g in p.details %}

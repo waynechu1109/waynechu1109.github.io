@@ -224,7 +224,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.tpe | sort: "shot" | reverse %}
-          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
 
@@ -240,7 +240,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.tsa | sort: "shot" | reverse %}
-          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
 
@@ -256,7 +256,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.hsz | sort: "shot" | reverse %}
-          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
 
@@ -272,7 +272,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.sfo | sort: "shot" | reverse %}
-          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
 
@@ -288,7 +288,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.sjc | sort: "shot" | reverse %}
-          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
 
@@ -304,7 +304,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.sf_fleet_week | sort: "shot" | reverse %}
-          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
 
@@ -320,7 +320,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.overhead | sort: "shot" | reverse %}
-          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
 
@@ -336,7 +336,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.hnd | sort: "shot" | reverse %}
-          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
 
@@ -352,7 +352,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.nrt | sort: "shot" | reverse %}
-          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
 
@@ -368,7 +368,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.oko | sort: "shot" | reverse %}
-          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
 
@@ -384,7 +384,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </p>
         <div class="photo-grid">
           {% assign photos = site.data.aviation.rjtj | sort: "shot" | reverse %}
-          {%- for p in photos %}{% include aviation_card.html p=p %}{% endfor %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
 
@@ -422,6 +422,56 @@ header_subtitle: "Selected aircraft photography organized by airport."
       <svg class="icon" aria-hidden="true"><use href="#i-chevron-up"/></svg>
     </button>
   </div>
+
+  <script>
+    /* Long sections start with six photos; the rest sit behind a toggle so the page stays scannable */
+    (function () {
+      var sections = document.querySelectorAll('.airport-section');
+      sections.forEach(function (section) {
+        var extras = section.querySelectorAll('.photo-card.is-extra');
+        if (!extras.length) return;
+        var total = section.querySelectorAll('.photo-card').length;
+        section.classList.add('is-collapsible');
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'section-more';
+        btn.setAttribute('aria-expanded', 'false');
+        var label = function () {
+          var open = section.classList.contains('is-expanded');
+          btn.textContent = open ? 'Show fewer' : 'Show all ' + total + ' photos';
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        };
+        btn.addEventListener('click', function () {
+          var open = section.classList.toggle('is-expanded');
+          label();
+          // collapsing from far down the list would strand the reader below the section
+          if (!open && section.getBoundingClientRect().top < 0) section.scrollIntoView({ block: 'start' });
+        });
+        label();
+        section.querySelector('.photo-grid').insertAdjacentElement('afterend', btn);
+      });
+
+      function reveal(id) {
+        var card = id && document.getElementById(id);
+        var section = card && card.classList.contains('is-extra') && card.closest('.airport-section');
+        if (!section || section.classList.contains('is-expanded')) return;
+        section.classList.add('is-expanded');
+        var btn = section.querySelector('.section-more');
+        if (btn) { btn.textContent = 'Show fewer'; btn.setAttribute('aria-expanded', 'true'); }
+      }
+      // runs in the capture phase so the section opens before the browser scrolls to the anchor
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href^="#p-"]');
+        if (a) reveal(a.getAttribute('href').slice(1));
+      }, true);
+      window.addEventListener('hashchange', function () { reveal(location.hash.slice(1)); });
+      if (location.hash.indexOf('#p-') === 0) {
+        reveal(location.hash.slice(1));
+        var t = document.getElementById(location.hash.slice(1));
+        if (t) t.scrollIntoView();
+      }
+    })();
+  </script>
 
   <script>
     /* "Also spotted": cards that share a registration link to each other, in the card details and the boarding pass */
@@ -537,6 +587,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           a.classList.toggle('is-empty', !!(target && target.hidden));
         });
         var active = q || filter !== 'all';
+        document.body.classList.toggle('is-filtering', !!active);
         count.textContent = active ? shown + ' of ' + items.length + ' photos' : '';
         empty.hidden = shown > 0;
       }

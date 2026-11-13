@@ -239,6 +239,15 @@
     .photo-card[hidden], .airport-section[hidden] { display: none !important; }
     .page-toc-link.is-empty, .airport-links a.is-empty { opacity: .4; }
     .photo-card { scroll-margin-top: calc(var(--nav-offset) + 16px); }
+    body:not(.is-filtering) .is-collapsible:not(.is-expanded) .photo-card.is-extra { display: none; }
+    .section-more {
+      display: block; margin: 18px auto 0; padding: 8px 18px; border-radius: 999px; cursor: pointer;
+      font: inherit; font-size: .85rem; font-weight: 700; color: var(--primary-deep);
+      background: #fff; border: 1px solid rgba(64,118,172,.25);
+      transition: background .18s ease, border-color .18s ease;
+    }
+    .section-more:hover { background: #eef5ff; border-color: rgba(64,118,172,.4); }
+    .is-filtering .section-more { display: none; }
     .spotted-link { color: var(--primary-deep); font-weight: 700; text-decoration: none; border-bottom: 1px dotted currentColor; }
     .spotted-link:hover { border-bottom-style: solid; }
     .pass-rows .spotted-link { color: #163453; }
@@ -299,6 +308,25 @@
     .photo-frame.real-photo { aspect-ratio: auto; display: block; background: #0f1b2f; }
     .photo-frame.real-photo::before, .photo-frame.real-photo::after { content: none; }
     .photo-image { width: 100%; height: auto; display: block; cursor: zoom-in; }
+    /* the newest photo in each section runs the full row at its own aspect ratio, with the text
+       beside it; seven visible cards then fill the lead row plus two rows of three */
+    .photo-card.is-lead { grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 1fr; align-items: center; }
+    .photo-card.is-lead .photo-body { padding: 22px 24px; }
+    .photo-card.is-lead .photo-title { font-size: 1.2rem; }
+    .photo-card.is-lead .photo-aircraft { font-size: 1rem; }
+    .lead-facts { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(64,118,172,.14); font-size: .82rem; }
+    .lead-facts dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; }
+    .lead-facts dt { color: var(--muted); font-weight: 700; }
+    .lead-facts dd { margin: 0; color: var(--text); }
+    .lead-facts-group {
+      margin: 10px 0 4px; font-size: .68rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--primary);
+    }
+    .lead-facts-group:first-child { margin-top: 0; }
+    .lead-shot {
+      margin: 12px 0 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .74rem; color: var(--muted);
+    }
     .photo-card:nth-child(2) .photo-frame.placeholder-photo {
       background:
         radial-gradient(circle at 26% 18%, rgba(255,199,146,.92) 0 10%, rgba(255,199,146,0) 28%),
@@ -309,7 +337,10 @@
         radial-gradient(circle at 58% 20%, rgba(230,244,255,.92) 0 11%, rgba(230,244,255,0) 26%),
         linear-gradient(180deg, #091421 0%, #24405c 46%, #7aa3c7 100%);
     }
-    .photo-body { padding: 16px 16px 18px; }
+    .photo-body { padding: 14px 16px 16px; }
+    /* the boarding pass in the lightbox shows these details, so the card keeps the markup (search and
+       the lightbox read it) but not the toggle */
+    .photo-card .exif-details { display: none; }
     .photo-title { margin: 0 0 6px; color: #163453; font-size: 1.02rem; }
     .photo-caption { margin: 0; color: var(--muted); font-size: .96rem; }
     .photo-date { margin: 2px 0 0; color: var(--muted); font-size: .82rem; font-style: italic; letter-spacing: .04em; }
@@ -414,6 +445,8 @@
        ========================= */
     @media (max-width: 900px) {
       .photo-grid { grid-template-columns: 1fr 1fr; }
+      .photo-card.is-lead { grid-template-columns: 1fr; }
+      .photo-card.is-lead .photo-body { padding: 14px 16px 16px; }
     }
 
     @media (max-width: 640px) {
@@ -431,6 +464,8 @@
     }
     [data-theme="dark"] .airport-name { color: #e8eef5; }
     [data-theme="dark"] .photo-search { border-color: var(--border); }
+    [data-theme="dark"] .section-more { background: var(--surface-alt); border-color: var(--border); }
+    [data-theme="dark"] .section-more:hover { background: #223145; }
     [data-theme="dark"] .photo-filter-chips button { color: var(--text); background: var(--surface-alt); border-color: var(--border); }
     [data-theme="dark"] .photo-filter-chips button:hover { background: #223145; }
     [data-theme="dark"] .photo-filter-chips button[aria-pressed="true"] { color: #0f1b2f; background: var(--primary-deep); border-color: var(--primary-deep); }
