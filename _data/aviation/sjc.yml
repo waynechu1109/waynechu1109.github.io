@@ -230,3 +230,28 @@
         - ["Shutter", "1/1000"]
         - ["ISO", "200"]
 
+
+- img: "sjc/DSC09468"
+  shot: "2026-11-06 14:51:37"
+  date: "2026-11-06"
+  title: "🇺🇸 Private"
+  aircraft: "Dassault Falcon 900"
+  regs: ["N884BB"]
+  alt: "Dassault Falcon 900 trijet N884BB with gear down and landing light on, on approach to San Jose Mineta International Airport against a deep blue sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "N884BB"]
+        - ["Type", "Dassault Falcon 900"]
+        - ["Variant", "Mystère-Falcon 900"]
+        - ["MSN", "17"]
+        - ["Engines", "Honeywell TFE731, three of them"]
+        - ["Built", "1987"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6700"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1250"]
+        - ["ISO", "200"]
