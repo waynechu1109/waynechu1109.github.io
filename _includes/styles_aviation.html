@@ -228,7 +228,7 @@
     .photo-filter-chips button {
       padding: 6px 12px; border-radius: 999px; cursor: pointer;
       font: inherit; font-size: .82rem; font-weight: 600;
-      color: #1c3550; background: #fff; border: 1px solid rgba(64,118,172,.22);
+      color: #1c3550; background: var(--surface); border: 1px solid rgba(64,118,172,.22);
       transition: background .18s ease, color .18s ease, border-color .18s ease;
     }
     .photo-filter-chips button:hover { background: #eef5ff; }
@@ -243,7 +243,7 @@
     .section-more {
       display: block; margin: 18px auto 0; padding: 8px 18px; border-radius: 999px; cursor: pointer;
       font: inherit; font-size: .85rem; font-weight: 700; color: var(--primary-deep);
-      background: #fff; border: 1px solid rgba(64,118,172,.25);
+      background: var(--surface); border: 1px solid rgba(64,118,172,.25);
       transition: background .18s ease, border-color .18s ease;
     }
     .section-more:hover { background: #eef5ff; border-color: rgba(64,118,172,.4); }
@@ -268,13 +268,13 @@
     @media (min-width: 1500px) { .airport-links { display: none; } }
     .airport-section {
       margin-top: 34px; padding: 28px; border-radius: 20px;
-      background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 45%, #fffaf1 100%);
+      background: linear-gradient(135deg, #fffdf8 0%, #faf5ea 55%, #fdf3e3 100%);
       border: 1px solid rgba(64,118,172,.16);
       box-shadow: 0 14px 34px rgba(20,44,77,.08);
     }
     .airport-section { scroll-margin-top: calc(var(--nav-offset) + 16px); }
     .airport-header { display: flex; align-items: flex-end; margin-bottom: 18px; }
-    .airport-name { margin: 0; color: #163453; }
+    .airport-name { margin: 0; color: var(--ink); }
     .airport-meta { margin: 0; color: var(--muted); font-style: italic; }
     .airport-description { margin: 0 0 18px; }
 
@@ -283,7 +283,7 @@
        ========================= */
     .photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
     .photo-card {
-      overflow: hidden; border-radius: 16px; background: #fff;
+      overflow: hidden; border-radius: 16px; background: var(--surface);
       border: 1px solid rgba(64,118,172,.12);
       box-shadow: 0 10px 24px rgba(20,44,77,.08);
     }
@@ -341,7 +341,7 @@
     /* the boarding pass in the lightbox shows these details, so the card keeps the markup (search and
        the lightbox read it) but not the toggle */
     .photo-card .exif-details { display: none; }
-    .photo-title { margin: 0 0 6px; color: #163453; font-size: 1.02rem; }
+    .photo-title { margin: 0 0 6px; color: var(--ink); font-size: 1.12rem; }
     .photo-caption { margin: 0; color: var(--muted); font-size: .96rem; }
     .photo-date { margin: 2px 0 0; color: var(--muted); font-size: .82rem; font-style: italic; letter-spacing: .04em; }
     .photo-aircraft { margin: -2px 0 8px; color: var(--text); font-size: .9rem; font-weight: 600; }
@@ -384,7 +384,7 @@
     .instagram-btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 12px;
       padding: 14px 22px; border-radius: 999px;
-      font-family: 'Open Sans', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+      font-family: 'Source Sans 3', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
       font-size: 15px; font-weight: 700; color: #fff; text-decoration: none;
       background: linear-gradient(135deg, #d88a4a 0%, #e8c37a 18%, #bf5f8b 52%, #765292 78%, #5d69b5 100%);
       box-shadow: 0 14px 28px rgba(118,82,146,.2);

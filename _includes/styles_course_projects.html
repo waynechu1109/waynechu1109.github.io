@@ -5,7 +5,7 @@
     .course-projects { display: flex; flex-direction: column; gap: 24px; margin-top: 20px; }
     .project-item {
       display: flex; align-items: flex-start; gap: 24px;
-      background: #f9f9f9; padding: 20px; border-radius: 16px;
+      background: var(--surface-alt); padding: 20px; border-radius: 16px;
       box-shadow: 2px 2px 10px rgba(0,0,0,.1); transition: transform .3s;
     }
     .project-item:hover { transform: scale(1.02); }
@@ -13,7 +13,7 @@
     .media-frame {
       width: 100%; overflow: hidden;
       border: none; border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(20,44,77,.12); background: #fff;
+      box-shadow: 0 8px 24px rgba(20,44,77,.12); background: var(--surface);
     }
     .media-frame.square { aspect-ratio: 1 / 1; }
     .media-frame.landscape { aspect-ratio: 4 / 3; }
