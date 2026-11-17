@@ -2,3 +2,9 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .DS_Store
+
+# Camera originals stay local; only the resized versions the pages use are published
+media/gallery/**/*.jpg
+!media/gallery/**/*-640.jpg
+!media/gallery/**/*-1280.jpg
+!media/gallery/**/*-2560.jpg
