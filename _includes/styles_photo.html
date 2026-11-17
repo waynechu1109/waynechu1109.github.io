@@ -19,11 +19,11 @@
       overflow: hidden;
       border-radius: 16px;
       background: var(--surface);
-      border: 1px solid rgba(64,118,172,.12);
-      box-shadow: 0 10px 24px rgba(20,44,77,.08);
+      border: 1px solid rgba(var(--line-rgb),.12);
+      box-shadow: 0 10px 24px rgba(var(--shadow-rgb),.08);
       transition: transform .25s ease, box-shadow .25s ease;
     }
-    .scene-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(20,44,77,.12); }
+    .scene-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(var(--shadow-rgb),.12); }
     .scene-frame { display: block; overflow: hidden; }
     .scene-frame .photo-image { width: 100%; height: auto; display: block; cursor: zoom-in; }
 

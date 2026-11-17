@@ -4,7 +4,11 @@
 :root {
   --primary: #4076ac;
   --primary-deep: #1e4f81;
-  --primary-soft: #eef5ff;
+  --primary-soft: #efe7d8;
+  /* warm line, shadow and hover tones for the paper theme; dark mode redefines them below */
+  --line-rgb: 120,95,60;
+  --shadow-rgb: 70,50,25;
+  --hover: #f3ecdf;
   --accent: #f3b15d;
   --text: #2e2e2e;
   --ink: #1f2328;
@@ -21,10 +25,10 @@
   --surface: #fffdf8;
   --surface-alt: #fcf9f2;
   --surface-soft: #faf6ee;
-  --border: rgba(64,118,172,.18);
-  --border-soft: rgba(64,118,172,.12);
+  --border: rgba(var(--line-rgb),.18);
+  --border-soft: rgba(var(--line-rgb),.12);
   --nav-bg: #f7f3ea;
-  --link: #463F5C;
+  --link: #1e4f81;
 }
 
 [data-theme="dark"] {
@@ -32,6 +36,9 @@
   --primary: #6ea6dc;
   --primary-deep: #a8c9ec;
   --primary-soft: #1e2a3d;
+  --line-rgb: 150,200,255;
+  --shadow-rgb: 0,0,0;
+  --hover: #223145;
   --accent: #f3b15d;
   --text: #dfe6ef;
   --ink: #e8eef5;
@@ -211,8 +218,8 @@ header { padding: 40px 0 20px 0; }
   font-size: 14px;
   color: var(--primary-deep);
   background: linear-gradient(135deg, var(--surface) 0%, var(--primary-soft) 100%);
-  border: 1px solid rgba(64,118,172,.22);
-  box-shadow: 0 12px 24px rgba(64,118,172,.12);
+  border: 1px solid rgba(var(--line-rgb),.22);
+  box-shadow: 0 12px 24px rgba(var(--line-rgb),.12);
 }
 .icon {
   width: 1em;
@@ -232,7 +239,7 @@ header { padding: 40px 0 20px 0; }
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 8px; width: 100%; padding: 16px; border: none; cursor: pointer;
   font: inherit; font-weight: 700; text-align: center; color: var(--primary-deep);
-  background: linear-gradient(135deg, #eef5ff 0%, #f8fbff 100%);
+  background: linear-gradient(135deg, var(--hover) 0%, #f8fbff 100%);
   transition: background .25s ease, color .25s ease;
 }
 .iframe-facade:hover { background: linear-gradient(135deg, #fff8ed 0%, #ffe6bf 100%); color: #1c3550; }
@@ -253,8 +260,8 @@ header { padding: 40px 0 20px 0; }
   font-size: 14px;
   color: var(--primary-deep);
   background: var(--surface);
-  border: 1px solid rgba(64,118,172,.22);
-  box-shadow: 0 6px 16px rgba(20,44,77,.08);
+  border: 1px solid rgba(var(--line-rgb),.22);
+  box-shadow: 0 6px 16px rgba(var(--shadow-rgb),.08);
 }
 .resource-btn:hover {
   color: #1c3550;
@@ -298,7 +305,7 @@ header { padding: 40px 0 20px 0; }
    Footer
    ========================= */
 footer {
-  background: #2f6296;
+  background: #23364a;
   padding: 34px 0 24px;
   text-align: center;
   font-size: 13px;
@@ -440,7 +447,7 @@ footer {
 .exif-details {
   margin-top: 8px;
   padding-top: 8px;
-  border-top: 1px solid rgba(64,118,172,.12);
+  border-top: 1px solid rgba(var(--line-rgb),.12);
 }
 .exif-details summary {
   cursor: pointer;
@@ -455,7 +462,7 @@ footer {
   content: "+";
   display: inline-flex; align-items: center; justify-content: center;
   width: 16px; height: 16px; border-radius: 999px;
-  background: rgba(64,118,172,.12); font-size: 12px; line-height: 1;
+  background: rgba(var(--line-rgb),.12); font-size: 12px; line-height: 1;
 }
 .exif-details[open] summary::before { content: "−"; }
 .exif-details summary::-webkit-details-marker { display: none; }
@@ -486,11 +493,11 @@ footer {
 .spot-map-summary {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
   padding: 11px 16px; border-radius: 14px; cursor: pointer; list-style: none;
-  background: var(--surface-alt); border: 1px solid rgba(64,118,172,.16);
+  background: var(--surface-alt); border: 1px solid rgba(var(--line-rgb),.16);
   transition: background .18s ease, border-color .18s ease;
 }
 .spot-map-summary::-webkit-details-marker { display: none; }
-.spot-map-summary:hover { background: #eef5ff; border-color: rgba(64,118,172,.3); }
+.spot-map-summary:hover { background: var(--hover); border-color: rgba(var(--line-rgb),.3); }
 .spot-map-title { color: #163453; font-size: 1rem; font-weight: 700; }
 .spot-map-toggle {
   display: inline-flex; align-items: center; gap: 8px;
@@ -510,17 +517,17 @@ footer {
 .spot-map-regions button {
   padding: 5px 12px; border-radius: 999px; cursor: pointer;
   font: inherit; font-size: .82rem; font-weight: 600;
-  color: #1c3550; background: var(--surface); border: 1px solid rgba(64,118,172,.22);
+  color: #1c3550; background: var(--surface); border: 1px solid rgba(var(--line-rgb),.22);
   transition: background .18s ease, border-color .18s ease, color .18s ease;
 }
-.spot-map-regions button:hover { background: #eef5ff; }
+.spot-map-regions button:hover { background: var(--hover); }
 .spot-map-regions button.is-active { color: #fff; background: var(--primary-deep); border-color: var(--primary-deep); }
 /* own stacking context so Leaflet's z-indexed panes can't paint over the sticky nav */
 .spot-map {
   position: relative; z-index: 0; isolation: isolate;
   height: 380px; border-radius: 20px; overflow: hidden;
-  border: 1px solid rgba(64,118,172,.16);
-  box-shadow: 0 14px 34px rgba(20,44,77,.08);
+  border: 1px solid rgba(var(--line-rgb),.16);
+  box-shadow: 0 14px 34px rgba(var(--shadow-rgb),.08);
   background: #e9eef4;
 }
 .spot-map-hint { margin: 8px 0 0; font-size: .82rem; color: var(--muted); }
@@ -530,7 +537,7 @@ footer {
   display: flex; align-items: center; justify-content: center;
   width: 100%; height: 100%; border-radius: 50%; box-sizing: border-box;
   background: rgba(30,79,129,.92); border: 2px solid #fff;
-  box-shadow: 0 6px 16px rgba(20,44,77,.3);
+  box-shadow: 0 6px 16px rgba(var(--shadow-rgb),.3);
   transition: transform .18s ease;
 }
 .spot-pin-cluster .spot-dot { background: rgba(201,139,50,.94); }
@@ -540,7 +547,7 @@ footer {
   margin-top: 4px; padding: 1px 7px; border-radius: 6px;
   white-space: nowrap; font-size: .74rem; font-weight: 700;
   color: #163453; background: rgba(255,255,255,.92);
-  box-shadow: 0 2px 6px rgba(20,44,77,.15);
+  box-shadow: 0 2px 6px rgba(var(--shadow-rgb),.15);
 }
 .spot-label.is-hidden { visibility: hidden; }
 .spot-pin:hover .spot-label, .spot-pin:focus-visible .spot-label { visibility: visible; z-index: 1; }
@@ -548,7 +555,7 @@ footer {
 @media (max-width: 640px) { .spot-map { height: 300px; } }
 .is-flash { animation: spot-flash 1.8s ease; }
 @keyframes spot-flash {
-  0%, 60% { box-shadow: 0 0 0 3px var(--primary), 0 14px 34px rgba(20,44,77,.18); }
+  0%, 60% { box-shadow: 0 0 0 3px var(--primary), 0 14px 34px rgba(var(--shadow-rgb),.18); }
   100% { box-shadow: 0 0 0 0 transparent; }
 }
 
@@ -674,7 +681,7 @@ footer {
 }
 .page-toc ol {
   list-style: none; padding: 0; margin: 0;
-  border-left: 2px solid rgba(64,118,172,.14);
+  border-left: 2px solid rgba(var(--line-rgb),.14);
 }
 .page-toc-link {
   display: block; padding: 6px 12px;

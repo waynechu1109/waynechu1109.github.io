@@ -17,8 +17,8 @@
       overflow: hidden;
       aspect-ratio: 16 / 8;
       background: var(--photo-bg);
-      border: 1px solid rgba(64,118,172,.16);
-      box-shadow: 0 20px 45px rgba(20,44,77,.15);
+      border: 1px solid rgba(var(--line-rgb),.16);
+      box-shadow: 0 20px 45px rgba(var(--shadow-rgb),.15);
     }
     .aviation-hero-track { position: relative; width: 100%; height: 100%; }
     .aviation-hero-slide {
@@ -221,17 +221,17 @@
     .photo-search {
       flex: 1 1 280px; min-width: 0; padding: 10px 14px; border-radius: 12px;
       font: inherit; font-size: .92rem; color: var(--text);
-      background: var(--surface-alt); border: 1px solid rgba(64,118,172,.22);
+      background: var(--surface-alt); border: 1px solid rgba(var(--line-rgb),.22);
     }
     .photo-search:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
     .photo-filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
     .photo-filter-chips button {
       padding: 6px 12px; border-radius: 999px; cursor: pointer;
       font: inherit; font-size: .82rem; font-weight: 600;
-      color: #1c3550; background: var(--surface); border: 1px solid rgba(64,118,172,.22);
+      color: #1c3550; background: var(--surface); border: 1px solid rgba(var(--line-rgb),.22);
       transition: background .18s ease, color .18s ease, border-color .18s ease;
     }
-    .photo-filter-chips button:hover { background: #eef5ff; }
+    .photo-filter-chips button:hover { background: var(--hover); }
     .photo-filter-chips button[aria-pressed="true"] { color: #fff; background: var(--primary-deep); border-color: var(--primary-deep); }
     .photo-filter-count { flex-basis: 100%; margin: 0; min-height: 1em; font-size: .8rem; color: var(--muted); }
     .photo-filter-count:empty { display: none; }
@@ -243,10 +243,10 @@
     .section-more {
       display: block; margin: 18px auto 0; padding: 8px 18px; border-radius: 999px; cursor: pointer;
       font: inherit; font-size: .85rem; font-weight: 700; color: var(--primary-deep);
-      background: var(--surface); border: 1px solid rgba(64,118,172,.25);
+      background: var(--surface); border: 1px solid rgba(var(--line-rgb),.25);
       transition: background .18s ease, border-color .18s ease;
     }
-    .section-more:hover { background: #eef5ff; border-color: rgba(64,118,172,.4); }
+    .section-more:hover { background: var(--hover); border-color: rgba(var(--line-rgb),.4); }
     .is-filtering .section-more { display: none; }
     .spotted-link { color: var(--primary-deep); font-weight: 700; text-decoration: none; border-bottom: 1px dotted currentColor; }
     .spotted-link:hover { border-bottom-style: solid; }
@@ -269,8 +269,8 @@
     .airport-section {
       margin-top: 34px; padding: 28px; border-radius: 20px;
       background: linear-gradient(135deg, #fffdf8 0%, #faf5ea 55%, #fdf3e3 100%);
-      border: 1px solid rgba(64,118,172,.16);
-      box-shadow: 0 14px 34px rgba(20,44,77,.08);
+      border: 1px solid rgba(var(--line-rgb),.16);
+      box-shadow: 0 14px 34px rgba(var(--shadow-rgb),.08);
     }
     .airport-section { scroll-margin-top: calc(var(--nav-offset) + 16px); }
     .airport-header { display: flex; align-items: flex-end; margin-bottom: 18px; }
@@ -284,8 +284,8 @@
     .photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
     .photo-card {
       overflow: hidden; border-radius: 16px; background: var(--surface);
-      border: 1px solid rgba(64,118,172,.12);
-      box-shadow: 0 10px 24px rgba(20,44,77,.08);
+      border: 1px solid rgba(var(--line-rgb),.12);
+      box-shadow: 0 10px 24px rgba(var(--shadow-rgb),.08);
     }
     .photo-frame { position: relative; overflow: hidden; }
     .photo-frame.placeholder-photo {
@@ -314,7 +314,7 @@
     .photo-card.is-lead .photo-body { padding: 22px 24px; }
     .photo-card.is-lead .photo-title { font-size: 1.2rem; }
     .photo-card.is-lead .photo-aircraft { font-size: 1rem; }
-    .lead-facts { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(64,118,172,.14); font-size: .82rem; }
+    .lead-facts { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(var(--line-rgb),.14); font-size: .82rem; }
     .lead-facts dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; }
     .lead-facts dt { color: var(--muted); font-weight: 700; }
     .lead-facts dd { margin: 0; color: var(--text); }
