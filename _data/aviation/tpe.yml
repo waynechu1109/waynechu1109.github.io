@@ -795,3 +795,103 @@
         - ["Aperture", "f/8"]
         - ["Shutter", "1/400"]
         - ["ISO", "125"]
+
+- img: "tpe/DSC02494"
+  shot: "2020-05-31 09:16:13"
+  date: "2020-05-31"
+  title: "🇱🇺 Cargolux"
+  aircraft: "Boeing 747-8F"
+  regs: ["LX-VCN"]
+  alt: "Cargolux Boeing 747-8F LX-VCN climbing out of Taiwan Taoyuan International Airport with its gear retracting under a grey sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "LX-VCN"]
+        - ["Type", "Boeing 747-8F"]
+        - ["Variant", "747-8R7F"]
+        - ["MSN", "38076"]
+        - ["Line no.", "1534"]
+        - ["Engines", "GE GEnx-2B67"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "355 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC02856"
+  shot: "2020-05-31 10:48:59"
+  date: "2020-05-31"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 777-300ER"
+  regs: ["B-16707"]
+  alt: "EVA Air Boeing 777-300ER B-16707 in the previous EVA livery, climbing out of Taiwan Taoyuan International Airport with its gear retracting against a clear blue sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16707"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-35E(ER)"]
+        - ["MSN", "33751"]
+        - ["Line no.", "634"]
+        - ["Engines", "GE90-115B"]
+        - ["Livery", "The previous EVA livery, with a white upper fuselage, green belly and the globe logo on the tail; the aircraft has since been repainted in EVA&rsquo;s current livery"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "192 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC02871"
+  shot: "2020-05-31 10:53:09"
+  date: "2020-05-31"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 787-9"
+  regs: ["B-17882"]
+  liveries: ["787 livery"]
+  alt: "EVA Air Boeing 787-9 B-17882 in the 787 livery with large 787 titles climbing out of Taiwan Taoyuan International Airport, gear retracting"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-17882"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "39298"]
+        - ["Line no.", "757"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["Livery", "787 livery, with large &ldquo;787&rdquo; titles on the forward fuselage"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC04466"
+  shot: "2020-08-06 15:08:48"
+  date: "2020-08-06"
+  title: "🇹🇼 China Airlines Cargo"
+  aircraft: "Boeing 747-400F"
+  regs: ["B-18709"]
+  alt: "China Airlines Cargo Boeing 747-400F B-18709 with the plum blossom tail and gear down on approach to Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18709"]
+        - ["Type", "Boeing 747-400F"]
+        - ["Variant", "747-409F(SCD)"]
+        - ["Engines", "General Electric CF6-80C2"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "154 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1000"]
+        - ["ISO", "100"]
