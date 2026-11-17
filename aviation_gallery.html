@@ -209,7 +209,9 @@ header_subtitle: "Selected aircraft photography organized by airport."
         2. Add an entry to that airport's .yml. "shot" is the capture date and
            time ("2025-01-17 14:28:00"); sections sort on it, newest first, so
            entries can go anywhere in the file.
-        3. "regs" and "liveries" become the chips; "details" groups become the
+        3. Add "featured: true" to pin a photo as the section's large lead card;
+           otherwise the newest photo leads.
+        4. "regs" and "liveries" become the chips; "details" groups become the
            Aircraft / Photo lists and the lightbox boarding pass.
       -->
       <section id="rctp" class="airport-section" data-code="TPE" data-code-sub="RCTP &middot; Taoyuan" aria-labelledby="rctp-heading">
@@ -223,7 +225,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           Taiwan's main international gateway, known for long-haul traffic, widebody operations, and a strong mix of Taiwanese and international carriers.
         </p>
         <div class="photo-grid">
-          {% assign photos = site.data.aviation.tpe | sort: "shot" | reverse %}
+          {% assign sorted = site.data.aviation.tpe | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
           {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
@@ -239,7 +241,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           A compact downtown airport in Taipei, especially interesting for domestic flights, business aviation, and close-in spotting with the city as backdrop.
         </p>
         <div class="photo-grid">
-          {% assign photos = site.data.aviation.tsa | sort: "shot" | reverse %}
+          {% assign sorted = site.data.aviation.tsa | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
           {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
@@ -255,7 +257,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           A major Republic of China Air Force base and one of the most recognizable military aviation locations in northern Taiwan.
         </p>
         <div class="photo-grid">
-          {% assign photos = site.data.aviation.hsz | sort: "shot" | reverse %}
+          {% assign sorted = site.data.aviation.hsz | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
           {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
@@ -271,7 +273,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           A major West Coast gateway for transpacific and transatlantic long-haul traffic, often shaped by the Bay Area's marine layer and dramatic coastline light.
         </p>
         <div class="photo-grid">
-          {% assign photos = site.data.aviation.sfo | sort: "shot" | reverse %}
+          {% assign sorted = site.data.aviation.sfo | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
           {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
@@ -287,7 +289,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           The South Bay's home airport in the heart of Silicon Valley, mixing domestic mainline traffic with a growing handful of transpacific and international services.
         </p>
         <div class="photo-grid">
-          {% assign photos = site.data.aviation.sjc | sort: "shot" | reverse %}
+          {% assign sorted = site.data.aviation.sjc | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
           {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
@@ -303,7 +305,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           An annual October air show flown along San Francisco's northern waterfront, pairing military demonstration teams and civilian aerobatics with the Golden Gate Bridge as a backdrop.
         </p>
         <div class="photo-grid">
-          {% assign photos = site.data.aviation.sf_fleet_week | sort: "shot" | reverse %}
+          {% assign sorted = site.data.aviation.sf_fleet_week | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
           {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
@@ -319,7 +321,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           Aircraft caught high above the Bay Area, away from any airport: long-haul flights passing overhead, some at cruise altitude with contrails trailing behind.
         </p>
         <div class="photo-grid">
-          {% assign photos = site.data.aviation.overhead | sort: "shot" | reverse %}
+          {% assign sorted = site.data.aviation.overhead | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
           {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
@@ -335,7 +337,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           One of Tokyo's busiest airports, with dense domestic traffic, premium international carriers, and constant runway activity throughout the day.
         </p>
         <div class="photo-grid">
-          {% assign photos = site.data.aviation.hnd | sort: "shot" | reverse %}
+          {% assign sorted = site.data.aviation.hnd | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
           {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
@@ -351,7 +353,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           A classic long-haul and cargo hub near Tokyo, well known among spotters for its wide variety of airlines, aircraft types, and spotting locations.
         </p>
         <div class="photo-grid">
-          {% assign photos = site.data.aviation.nrt | sort: "shot" | reverse %}
+          {% assign sorted = site.data.aviation.nrt | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
           {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
@@ -367,7 +369,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           A major U.S. Air Force installation in western Tokyo, notable for heavy military aircraft and the unique atmosphere of joint-use aviation in Japan.
         </p>
         <div class="photo-grid">
-          {% assign photos = site.data.aviation.oko | sort: "shot" | reverse %}
+          {% assign sorted = site.data.aviation.oko | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
           {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
@@ -383,7 +385,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           A Japan Air Self-Defense Force base in Saitama, known for military transport aircraft, training activity, and airshow-style viewing opportunities.
         </p>
         <div class="photo-grid">
-          {% assign photos = site.data.aviation.rjtj | sort: "shot" | reverse %}
+          {% assign sorted = site.data.aviation.rjtj | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
           {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
         </div>
       </section>
