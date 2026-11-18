@@ -7,3 +7,4 @@ exclude:
   - "*.sh"
   - _site
   - .jekyll-cache
+  - scripts

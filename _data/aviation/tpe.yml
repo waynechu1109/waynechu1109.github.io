@@ -971,6 +971,8 @@
         - ["MSN", "30766"]
         - ["Delivered", "2002-02-04"]
         - ["Status", "With China Airlines Cargo in the latest fleet listings, but no 2026 flight record found; China Airlines is selling four of its eight 747-400Fs to Cargolux for removal in 2027, and which four has not been made public"]
+      watch:
+        - ["2027-01", "China Airlines hands four 747-400Fs to Cargolux during 2027; check whether this is one of them"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -1047,6 +1049,9 @@
         - ["Line no.", "481"]
         - ["Livery", "Star Alliance"]
         - ["Status", "Still flying with Asiana Airlines (seen 2026-10); Asiana leaves Star Alliance on 2026-12-16"]
+      watch:
+        - ["2026-12-16", "Asiana leaves Star Alliance; drop the Star Alliance tag and update the status"]
+        - ["2026-12-17", "Asiana merges into Korean Air; check the operator, registration and title"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
