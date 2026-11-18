@@ -16,6 +16,7 @@
         - ["Engines", "GE90-115B"]
         - ["First flight", "2011-04"]
         - ["Delivered", "2011-05"]
+        - ["Status", "Still flying with Air France (seen 2026-10)"]
     - group: "Aircraft &middot; ANA 737"
       rows:
         - ["Registration", "JA85AN"]
@@ -26,6 +27,7 @@
         - ["Engines", "CFM56-7B"]
         - ["Delivered", "2016"]
         - ["Operator", "ANA Wings"]
+        - ["Status", "Last recorded with ANA in 2025-12; no 2026 record found"]
     - group: "Aircraft &middot; ANA 787"
       rows:
         - ["Registration", "JA888A"]
@@ -35,6 +37,7 @@
         - ["Delivered", "2016-11"]
         - ["Operator", "Air Japan"]
         - ["Position", "Background, at the terminal"]
+        - ["Status", "Still flying with Air Japan (seen 2026-01)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -61,6 +64,7 @@
         - ["Engines", "CFM56-7B"]
         - ["Livery", "&ldquo;Pikachu Jet BC1&rdquo; (Pokémon Air Adventures), since 2021-06-21"]
         - ["Note", "Skymark&rsquo;s first Pikachu Jet; renamed BC1 when the second one, BC2, arrived in 2022"]
+        - ["Status", "Still flying with Skymark in the Pikachu Jet livery (seen 2026-07)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -89,6 +93,7 @@
         - ["First flight", "2017-12-16"]
         - ["Livery", "&ldquo;Sakura Jinbei&rdquo; pink whale shark, supporting the Okinawa Churaumi Aquarium"]
         - ["Note", "The second pink Sakura Jinbei, after a JTA 737-400 unveiled in 2014"]
+        - ["Status", "Still flying with JTA in the Sakura Jinbei livery (seen 2026-01)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -117,6 +122,7 @@
         - ["Delivered", "2014-06-28"]
         - ["Livery", "Small &ldquo;1500&rdquo; sticker marking the 1,500th 747 built"]
         - ["Note", "The 1,500th Boeing 747 and Lufthansa&rsquo;s 14th 747-8"]
+        - ["Status", "Still with Lufthansa (seen 2026-06)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -145,6 +151,7 @@
         - ["Delivered", "2019"]
         - ["Livery", "Green &ldquo;AIRBUS A350&rdquo; titles, which JAL said stand for eco"]
         - ["Note", "JAL&rsquo;s third A350-900; its first three each wear a different color of A350 titles"]
+        - ["Status", "Still flying with JAL (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -173,6 +180,7 @@
         - ["Engines", "GE CF6-80C2B6"]
         - ["Livery", "Pokémon &ldquo;Rokon Jet&rdquo; (Vulpix and Alolan Vulpix), since 2021-12"]
         - ["History", "Flown by ANA before moving to AIR DO, where it was repainted for the Rokon Jet in 2021"]
+        - ["Status", "Still flying with AIR DO, now presented as the &ldquo;Rokon Jet Hokkaido&rdquo; (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -201,6 +209,7 @@
         - ["Delivered", "2009-05"]
         - ["Livery", "&ldquo;JAL Fantastic Journey Express&rdquo; for Tokyo DisneySea Fantasy Springs, 2024-10 to late 2025"]
         - ["Note", "The sixth JAL and Tokyo DisneySea special livery"]
+        - ["Status", "Still flying with JAL; its Fantastic Journey Express livery ended in 2025-11 (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -229,6 +238,7 @@
         - ["Delivered", "2020-12"]
         - ["Livery", "&ldquo;DREAM SHO JET&rdquo; featuring Shohei Ohtani, 2024-09-29 to 2026-06-10"]
         - ["Note", "Flew 2,720 flights in the livery, then went to Xiamen for heavy maintenance and a repaint into standard JAL colors"]
+        - ["Status", "Still with JAL; the DREAM SHO JET livery ended in 2026-06 and it is back in standard colors"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -259,6 +269,7 @@
         - ["First flight", "2013-03-21"]
         - ["Delivered", "2013-03"]
         - ["Livery", "C-3PO ANA JET, 2017-03 to 2026-01"]
+        - ["Status", "Still with ANA; its C-3PO livery was retired in 2026-01"]
     - group: "Aircraft &middot; Lufthansa"
       rows:
         - ["Registration", "D-ABYT"]
@@ -268,6 +279,7 @@
         - ["Engines", "GE GEnx-2B67"]
         - ["Delivered", "2015"]
         - ["Livery", "Lufthansa retro livery, since delivery"]
+        - ["Status", "Still flying with Lufthansa in its retro livery (seen 2026-09)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -297,6 +309,7 @@
         - ["Delivered", "2012-04 (to JAL Express)"]
         - ["Livery", "&ldquo;JAL Gundam JET&rdquo; for Expo 2025 Osaka, Kansai, 2025-03-03 to late 2025"]
         - ["Note", "Photographed eight days after the livery&rsquo;s first flight"]
+        - ["Status", "Still flying with JAL (seen 2026-08)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -324,6 +337,7 @@
         - ["Engines", "Rolls-Royce Trent 1000"]
         - ["First flight", "2018-08-29"]
         - ["Delivered", "2018-09-13"]
+        - ["Status", "Still flying with British Airways (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -351,6 +365,7 @@
         - ["Delivered", "2022-09-14"]
         - ["Name", "Alessandro Del Piero"]
         - ["Note", "Built in 2019 for Hainan Airlines but never taken up; stored until ITA took it in 2022"]
+        - ["Status", "Still flying with ITA Airways (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -378,6 +393,7 @@
         - ["Engines", "GE CF6-80C2B6"]
         - ["Livery", "Pokémon &ldquo;Rokon Jet&rdquo; (Vulpix and Alolan Vulpix), since 2021-12"]
         - ["History", "Flown by ANA before moving to AIR DO, where it was repainted for the Rokon Jet in 2021"]
+        - ["Status", "Still flying with AIR DO, now presented as the &ldquo;Rokon Jet Hokkaido&rdquo; (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -404,6 +420,7 @@
         - ["Engines", "GE CF34-10E"]
         - ["Operator", "J-AIR, a Japan Airlines subsidiary"]
         - ["Livery", "&ldquo;JAL Myaku-Myaku JET&rdquo; for Expo 2025 Osaka, Kansai, 2023-11 to 2025-10-13"]
+        - ["Status", "Still flying with J-AIR (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -431,6 +448,7 @@
         - ["Delivered", "2023-12"]
         - ["Note", "Japan Airlines&rsquo; first A350-1000"]
         - ["Background", "ANA Airbus A321neo under tow"]
+        - ["Status", "Still flying with JAL (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -458,6 +476,7 @@
         - ["Engines", "GE GEnx-2B67"]
         - ["Delivered", "2015"]
         - ["Livery", "Lufthansa retro livery, since delivery"]
+        - ["Status", "Still flying with Lufthansa in its retro livery (seen 2026-09)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -483,11 +502,13 @@
         - ["Type", "Boeing 787-8"]
         - ["Engines", "Rolls-Royce Trent 1000"]
         - ["Livery", "ANA Future Promise &ldquo;Green Jet&rdquo;, with SAF Flight Initiative titles on the right side"]
+        - ["Status", "Still flying with ANA (seen 2026-10)"]
     - group: "Aircraft &middot; JAL"
       rows:
         - ["Registration", "JA878J"]
         - ["Type", "Boeing 787-9"]
         - ["Engines", "GE GEnx-1B"]
+        - ["Status", "Still flying with JAL (seen 2026-09)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -514,6 +535,7 @@
         - ["Engines", "Rolls-Royce Trent XWB-84"]
         - ["Livery", "oneworld alliance livery, since delivery"]
         - ["Note", "Entered service 2022-02-21 on Haneda to Naha"]
+        - ["Status", "Still flying with JAL (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -542,6 +564,7 @@
         - ["Delivered", "2014-06-28"]
         - ["Livery", "Small &ldquo;1500&rdquo; sticker marking the 1,500th 747 built"]
         - ["Note", "The 1,500th Boeing 747 and Lufthansa&rsquo;s 14th 747-8"]
+        - ["Status", "Still with Lufthansa (seen 2026-06)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -567,6 +590,7 @@
         - ["Line no.", "1103"]
         - ["Engines", "GE GEnx-1B"]
         - ["Background", "Tokyo Skytree"]
+        - ["Status", "Still flying with American Airlines (seen 2026-08)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -592,6 +616,7 @@
         - ["Engines", "Rolls-Royce Trent 1000"]
         - ["Livery", "&ldquo;Pikachu Jet NH&rdquo; for Pokémon Air Adventures, with Rayquaza across the fuselage alongside Pikachu, Charizard, Latias, Latios and Vivillon, since 2023"]
         - ["Note", "Flies ANA international routes from Haneda"]
+        - ["Status", "Still flying with ANA in the Pikachu Jet NH livery (ANA, 2026-02)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -617,6 +642,7 @@
         - ["Engines", "GE GEnx-1B"]
         - ["Delivered", "2017-09"]
         - ["Note", "Seen from the JAL Sky Museum hangar tour apron"]
+        - ["Status", "Still flying with Japan Airlines (seen 2026-08)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -641,6 +667,7 @@
         - ["Variant", "A350-941"]
         - ["Engines", "Rolls-Royce Trent XWB-84"]
         - ["Note", "Under maintenance in the JAL hangar, engine cowling open"]
+        - ["Status", "Still flying with Japan Airlines (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -665,6 +692,7 @@
         - ["Engines", "Pratt &amp; Whitney PW1100G"]
         - ["Delivered", "2019"]
         - ["Note", "Under maintenance in the ANA hangar, engine cowling open"]
+        - ["Status", "Still flying with ANA (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -718,6 +746,7 @@
         - ["Delivered", "2009-09"]
         - ["Note", "Seen from the JAL Sky Museum hangar tour apron"]
         - ["Background", "Another Japan Airlines jet taking off"]
+        - ["Status", "Still flying with Japan Airlines (seen 2026-02)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]

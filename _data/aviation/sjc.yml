@@ -16,6 +16,7 @@
         - ["Engines", "CFM LEAP-1B"]
         - ["First flight", "2018-11"]
         - ["Delivered", "2018-12"]
+        - ["Status", "Still flying with American Airlines (seen 2026-09)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -43,6 +44,7 @@
         - ["Operator", "Horizon Air"]
         - ["Delivered", "2026-07"]
         - ["Note", "About two months old when photographed"]
+        - ["Status", "Still flying with Horizon Air for Alaska (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -71,6 +73,7 @@
         - ["First flight", "2016-03-04"]
         - ["Delivered", "2018-10"]
         - ["History", "Boeing&rsquo;s second 737 MAX 8 flight test aircraft (1A002); delivered to Southwest after the test program"]
+        - ["Status", "Still flying with Southwest (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -95,6 +98,7 @@
         - ["Engines", "Pratt &amp; Whitney PW1100G"]
         - ["Delivered", "2026-05"]
         - ["Note", "Volaris&rsquo; 156th aircraft, assembled at Airbus Mobile, Alabama"]
+        - ["Status", "Still flying with Volaris (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -145,6 +149,7 @@
         - ["MSN", "30082"]
         - ["Engines", "CFM International CFM56-7B"]
         - ["Built", "2000"]
+        - ["Status", "Still flying with American (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -170,6 +175,7 @@
         - ["MSN", "67422"]
         - ["Engines", "CFM International LEAP-1B"]
         - ["Built", "2023"]
+        - ["Status", "Still flying with Alaska Airlines (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -196,6 +202,7 @@
         - ["Engines", "CFM International CFM56-7B"]
         - ["Built", "2002"]
         - ["Note", "Built for Continental Airlines, whose Boeing customer code was 24"]
+        - ["Status", "Still flying with United (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -222,6 +229,7 @@
         - ["Engines", "Honeywell HTF7500E"]
         - ["Built", "2022"]
         - ["Operator", "Flexjet, a fractional ownership operator"]
+        - ["Status", "Still flying with Flexjet (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -248,6 +256,7 @@
         - ["MSN", "17"]
         - ["Engines", "Honeywell TFE731, three of them"]
         - ["Built", "1987"]
+        - ["Status", "Still flying (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]

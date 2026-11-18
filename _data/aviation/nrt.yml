@@ -18,6 +18,7 @@
         - ["Engines", "GE90-115B"]
         - ["First flight", "2008-02-19"]
         - ["Delivered", "2008-02"]
+        - ["Status", "Still flying with Singapore Airlines (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -45,6 +46,7 @@
         - ["Engines", "GE GEnx-1B"]
         - ["First flight", "2013-10-11"]
         - ["Delivered", "2013-10"]
+        - ["Status", "Still flying with Aeromexico (seen 2026-09)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -73,6 +75,7 @@
         - ["Engines", "Rolls-Royce Trent 700"]
         - ["First flight", "2015-10-21"]
         - ["Delivered", "2015-11"]
+        - ["Status", "Still flying with Air China (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -100,6 +103,7 @@
         - ["Engines", "GE GEnx-1B"]
         - ["Delivered", "2014"]
         - ["Livery", "Mahatma Gandhi tail for the 150th anniversary of his birth, since 2019-12"]
+        - ["Status", "Still flying with Air India; repainted in the new Air India livery in 2026-05"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -124,6 +128,7 @@
         - ["MSN", "64314"]
         - ["First flight", "2018-12-06"]
         - ["Delivered", "2018-12-22"]
+        - ["Status", "Still flying with Juneyao Air (seen 2026-09)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -148,6 +153,7 @@
         - ["Engines", "GE90-110B1L"]
         - ["Name", "BLUE JAY, the nickname ANA gave its 777Fs"]
         - ["Note", "One of the two 777Fs that made ANA the first Japanese airline to fly the type, from 2019"]
+        - ["Status", "Still flying with ANA Cargo (seen 2026-02)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -175,6 +181,7 @@
         - ["Delivered", "2023-07-31"]
         - ["Name", "Nof HaGalil"]
         - ["Note", "El Al&rsquo;s fourth and last 787-8, and the last 787 of its original order"]
+        - ["Status", "Still flying with El Al (seen 2026-03)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -199,6 +206,7 @@
         - ["Variant", "777-3DZ(ER)"]
         - ["MSN", "60336"]
         - ["Engines", "GE90-115B"]
+        - ["Status", "Still flying with Qatar Airways (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -221,6 +229,7 @@
         - ["Registration", "ET-ARE"]
         - ["Type", "Boeing 787-8"]
         - ["MSN", "34751"]
+        - ["Status", "Last recorded with Ethiopian Airlines in 2025-12; no 2026 record found"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -246,6 +255,7 @@
         - ["Engines", "CFM International CFM56-7B"]
         - ["Livery", "&ldquo;Hometown Henan&rdquo; (老家河南), with Luoyang peonies and Yellow River motifs"]
         - ["Note", "Flies the Narita to Zhengzhou route, into Henan&rsquo;s capital"]
+        - ["Status", "Still flying with China Southern in Hometown Henan livery (seen 2026-03)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -273,6 +283,7 @@
         - ["Engines", "GE GEnx-1B"]
         - ["Delivered", "2014"]
         - ["Livery", "Mahatma Gandhi tail for the 150th anniversary of his birth, since 2019-12; the &ldquo;150 Years of Celebrating the Mahatma&rdquo; logo sits behind the forward door"]
+        - ["Status", "Still flying with Air India; repainted in the new Air India livery in 2026-05"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -297,6 +308,7 @@
         - ["Variant", "777-3FX(ER)"]
         - ["MSN", "39681"]
         - ["Engines", "GE90-115B"]
+        - ["Status", "Still flying with Etihad Airways (seen 2026-09)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -321,6 +333,7 @@
         - ["MSN", "34838"]
         - ["Engines", "GE GEnx-1B"]
         - ["History", "Flown by Japan Airlines before being refitted for ZIPAIR, which took it in 2024-01 as its 8th aircraft"]
+        - ["Status", "Still flying with ZIPAIR (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -347,6 +360,7 @@
         - ["Variant", "A350-941"]
         - ["Engines", "Rolls-Royce Trent XWB-84"]
         - ["Livery", "&ldquo;Malaysia Negaraku&rdquo;, a stylized Malaysian flag on the rear fuselage; one of three Malaysia Airlines A350s in it"]
+        - ["Status", "Still flying with Malaysia Airlines in Negaraku livery (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -373,6 +387,7 @@
         - ["Line no.", "946"]
         - ["Engines", "Pratt &amp; Whitney PW4056"]
         - ["History", "Delivered to Asiana as a passenger 747-400 in 1992 and later converted to a freighter"]
+        - ["Status", "Last recorded with Asiana Cargo in 2025-07; no 2026 record found"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -397,6 +412,7 @@
         - ["Variant", "A350-941"]
         - ["MSN", "312"]
         - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Status", "Still flying with Iberia (seen 2026-05)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -422,6 +438,7 @@
         - ["MSN", "32704"]
         - ["Engines", "GE90-94B"]
         - ["Name", "Galápagos Islands"]
+        - ["Status", "Still flying with KLM (seen 2026-11)"]
     - group: "Aircraft &middot; Peach"
       rows:
         - ["Registration", "JA218P"]
@@ -431,6 +448,7 @@
         - ["Engines", "CFM International LEAP-1A"]
         - ["Delivered", "2024-05"]
         - ["Position", "Landing behind the KLM 777"]
+        - ["Status", "Still flying with Peach (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -455,6 +473,7 @@
         - ["Variant", "A350-941"]
         - ["MSN", "295"]
         - ["Engines", "Rolls-Royce Trent XWB-84"]
+        - ["Status", "Still flying with Air China (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]

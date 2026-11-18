@@ -16,6 +16,7 @@
         - ["Delivered", "2018-01"]
         - ["Name", "Quokka"]
         - ["Note", "Qantas&rsquo; third 787-9"]
+        - ["Status", "Still flying with Qantas (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -42,6 +43,7 @@
         - ["First flight", "2013-12-02"]
         - ["Delivered", "2014-05-05"]
         - ["Name", "Hamburg (2014; name later reassigned to A350 D-AIVB)"]
+        - ["Status", "Still flying with Lufthansa (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -71,6 +73,7 @@
         - ["Delivered", "2010-01"]
         - ["Livery", "Eevee Jet NH (Pokémon Air Adventures), since 2023-09"]
         - ["Note", "Flies ANA&rsquo;s Haneda long-haul routes to London and the U.S."]
+        - ["Status", "Still flying with ANA in Eevee Jet livery (seen 2026-08)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -99,6 +102,7 @@
         - ["Delivered", "2024-11"]
         - ["Livery", "&ldquo;The Future is SAF&rdquo;, promoting sustainable aviation fuel, since delivery"]
         - ["Note", "United&rsquo;s first 787 delivery in 20 months"]
+        - ["Status", "Still flying with United in &ldquo;The Future is SAF&rdquo; livery (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -127,6 +131,7 @@
         - ["First flight", "2020-10-23"]
         - ["Delivered", "2020-11"]
         - ["Livery", "GREAT Futures sticker for the UK&ndash;Saudi Arabia partnership, with the Saudi Vision 2030 logo; seen since 2024"]
+        - ["Status", "Still flying with British Airways (seen 2026-06)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -154,6 +159,7 @@
         - ["First flight", "2019-07-23"]
         - ["Delivered", "2019-09-27"]
         - ["Name", "Queen of Hearts"]
+        - ["Status", "Still flying with Virgin Atlantic (seen 2026-07)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -180,6 +186,7 @@
         - ["Engines", "GE90-115B"]
         - ["First flight", "2016-03-08"]
         - ["Delivered", "2016-03"]
+        - ["Status", "Still flying with SWISS (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -206,6 +213,7 @@
         - ["Engines", "Rolls-Royce Trent XWB-84"]
         - ["Delivered", "2025-04"]
         - ["Note", "From the TC-LHx batch of Turkish&rsquo;s 2023 A350 order"]
+        - ["Status", "Still flying with Turkish Airlines (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -231,6 +239,7 @@
         - ["MSN", "36317"]
         - ["Engines", "GE90-115B"]
         - ["Delivered", "2010-04"]
+        - ["Status", "Still flying with Air India (seen 2026-05)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -257,6 +266,7 @@
         - ["Name", "Nuno Álvares Pereira"]
         - ["Livery", "&ldquo;It&rsquo;s Portugal Time&rdquo;, Portuguese Football Federation decals for the 2026 World Cup"]
         - ["Note", "Flew the Portugal national team to the 2026 World Cup"]
+        - ["Status", "Still flying with TAP Air Portugal (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -283,6 +293,7 @@
         - ["Engines", "GE90-94B"]
         - ["Livery", "Star Alliance"]
         - ["Note", "Built for Continental Airlines"]
+        - ["Status", "Still flying with United Airlines (seen 2026-06)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -307,6 +318,7 @@
         - ["Type", "Boeing 787-9"]
         - ["Delivered", "2018"]
         - ["Livery", "&ldquo;Proud of Poland&rsquo;s Independence&rdquo; (Dumni z Niepodległości Polski), marking 100 years of Polish independence, since delivery"]
+        - ["Status", "Still flying with LOT Polish Airlines (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -331,6 +343,7 @@
         - ["Variant", "A330-941"]
         - ["Engines", "Rolls-Royce Trent 7000"]
         - ["Livery", "Condor striped livery in green (&ldquo;Island&rdquo;)"]
+        - ["Status", "Still flying with Condor (seen 2026-06)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -356,6 +369,7 @@
         - ["Engines", "GE GEnx-1B"]
         - ["Livery", "&ldquo;100 Years&rdquo;, marking United&rsquo;s centennial in 2026"]
         - ["Background", "Another United Boeing 777 landing"]
+        - ["Status", "Still flying with United (seen 2026-09)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -383,6 +397,7 @@
         - ["Engines", "GE GEnx-2B67"]
         - ["Delivered", "2015-02"]
         - ["Name", "Dresden"]
+        - ["Status", "Still flying with Lufthansa (seen 2026-08)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -408,6 +423,7 @@
         - ["MSN", "194"]
         - ["Engines", "Rolls-Royce Trent 970"]
         - ["Delivered", "2016-02"]
+        - ["Status", "Still flying with British Airways (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -435,6 +451,7 @@
         - ["Built", "2023"]
         - ["Name", "Kari the Fisher"]
         - ["Note", "Like every Frontier jet, it carries a different animal on the tail and its name by the nose"]
+        - ["Status", "Still flying with Frontier (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -464,6 +481,7 @@
         - ["Operator", "Horizon Air, for Alaska Airlines"]
         - ["Name", "To 45 and Beyond"]
         - ["Livery", "Toy Story 5, with Woody, Buzz Lightyear, Jessie and the new tech toys such as Lilypad; Forky and Karen Beverly on the winglets. Unveiled 2026-05 for Horizon&rsquo;s 45th anniversary, the first special livery on Horizon&rsquo;s E175 fleet"]
+        - ["Status", "Still flying with Horizon Air for Alaska; wears Toy Story 5 livery (unveiled June 2026) (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -488,6 +506,7 @@
         - ["MSN", "68654"]
         - ["Engines", "GE GEnx-1B76A"]
         - ["Built", "2026"]
+        - ["Status", "Still flying with United; new delivery, entered service July 2026 (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -512,6 +531,7 @@
         - ["Variant", "A380-842"]
         - ["Engines", "Rolls-Royce Trent 900"]
         - ["Background", "A gull in the foreground and another jet passing high above"]
+        - ["Status", "Still flying with Emirates (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -536,6 +556,7 @@
         - ["MSN", "34838"]
         - ["Engines", "GE GEnx-1B"]
         - ["History", "Flown by Japan Airlines before being refitted for ZIPAIR, which took it in 2024-01 as its 8th aircraft"]
+        - ["Status", "Still flying with ZIPAIR (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -561,6 +582,7 @@
         - ["MSN", "127"]
         - ["Engines", "Rolls-Royce Trent XWB-84"]
         - ["Name", "Bonn"]
+        - ["Status", "Still flying with Lufthansa (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -586,6 +608,7 @@
         - ["MSN", "2051"]
         - ["Engines", "Rolls-Royce Trent 7000"]
         - ["History", "First registered I-ITYB, then moved to the Irish register as EI-TYB"]
+        - ["Status", "Still flying with ITA Airways (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -612,6 +635,7 @@
         - ["Engines", "Pratt &amp; Whitney PW4000"]
         - ["Built", "1997"]
         - ["Note", "Fleet number 195 on the tail and nose gear door"]
+        - ["Status", "Still flying with Delta (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -635,6 +659,7 @@
         - ["Type", "Boeing 777-300ER"]
         - ["Variant", "777-328(ER)"]
         - ["Engines", "GE90-115B"]
+        - ["Status", "Still flying with Air France (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
