@@ -1,0 +1,6 @@
+{%- comment %} a re-registered airframe is tracked under its newest registration, since the old page stops updating {% endcomment -%}
+{%- if include.now and include.now != "" -%}
+<a class="track-link" href="https://www.flightradar24.com/data/aircraft/{{ include.now | downcase }}" target="_blank" rel="noopener">Flightradar24 &#8599;</a> <span class="track-note">({{ include.label }} {{ include.now }})</span>
+{%- else -%}
+<a class="track-link" href="https://www.flightradar24.com/data/aircraft/{{ include.reg | downcase }}" target="_blank" rel="noopener">Flightradar24 &#8599;</a>
+{%- endif -%}

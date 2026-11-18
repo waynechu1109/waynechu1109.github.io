@@ -55,6 +55,11 @@
                   {%- for row in g.rows %}{% unless row[0] == "Registration" or row[0] == "Type" or row[0] == "Serial" %}
                   <dt>{{ row[0] }}</dt><dd>{{ row[1] }}</dd>
                   {%- endunless %}{% endfor %}
+                  {%- assign reg = "" %}{% assign now = "" %}
+                  {%- for row in g.rows %}{% if row[0] == "Registration" %}{% assign reg = row[1] %}{% elsif row[0] == "Now registered" %}{% assign now = row[1] %}{% assign nowlabel = "tracked as" %}{% elsif row[0] == "Last registered" %}{% assign now = row[1] %}{% assign nowlabel = "last registered as" %}{% endif %}{% endfor %}
+                  {%- if reg != "" %}
+                  <dt>Track</dt><dd>{% include fr24_link.html reg=reg now=now label=nowlabel %}</dd>
+                  {%- endif %}
                 </dl>
                 {%- elsif g.group == "Photo" %}
                 <p class="lead-shot">{% for row in g.rows %}{% if row[0] != "Lens" %}{% if row[0] == "ISO" %}ISO&nbsp;{% endif %}{{ row[1] }}{% unless forloop.last %} &middot; {% endunless %}{% endif %}{% endfor %}</p>
@@ -66,9 +71,14 @@
                 <summary>Details</summary>
                 {%- for g in p.details %}
                 <p class="exif-group">{{ g.group }}</p>
+                {%- assign now = "" %}{% for row in g.rows %}{% if row[0] == "Now registered" %}{% assign now = row[1] %}{% assign nowlabel = "tracked as" %}{% elsif row[0] == "Last registered" %}{% assign now = row[1] %}{% assign nowlabel = "last registered as" %}{% endif %}{% endfor %}
                 <ul class="exif-list">
                   {%- for row in g.rows %}
                   <li><span class="exif-key">{{ row[0] }}</span><span class="exif-val">{{ row[1] }}</span></li>
+                  {%- comment %} military cards carry a Serial instead, which Flightradar24 does not index {% endcomment %}
+                  {%- if row[0] == "Registration" %}
+                  <li><span class="exif-key">Track</span><span class="exif-val">{% assign reg = row[1] %}{% include fr24_link.html reg=reg now=now label=nowlabel %}</span></li>
+                  {%- endif %}
                   {%- endfor %}
                 </ul>
                 {%- endfor %}

@@ -155,6 +155,7 @@
     - group: "Aircraft &middot; JAL"
       rows:
         - ["Registration", "JA708J"]
+        - ["Now registered", "N778LG"]
         - ["Type", "Boeing 777-200ER"]
         - ["Variant", "777-246(ER)"]
         - ["MSN", "32895"]

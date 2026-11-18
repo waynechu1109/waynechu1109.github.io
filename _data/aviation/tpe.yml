@@ -95,6 +95,7 @@
     - group: "Aircraft"
       rows:
         - ["Registration", "OO-JDL"]
+        - ["Now registered", "G-TUIP"]
         - ["Type", "Boeing 787-8"]
         - ["MSN", "34425"]
         - ["Line no.", "137"]
@@ -677,6 +678,7 @@
     - group: "Aircraft"
       rows:
         - ["Registration", "N644GT"]
+        - ["Now registered", "G-DHLK"]
         - ["Type", "Boeing 767-300F"]
         - ["Variant", "767-3JH(F)"]
         - ["MSN", "37810"]
@@ -726,19 +728,29 @@
   date: "2020-01-23"
   title: "🇹🇼 China Airlines"
   aircraft: "Boeing 747-400"
-  regs: ["B-18210"]
+  regs: ["B-18210", "B-18215"]
   liveries: ["60th Anniversary"]
-  alt: "China Airlines Boeing 747-400 B-18210 with 60th anniversary titles taxiing at Taiwan Taoyuan International Airport as another China Airlines 747 rolls behind"
+  alt: "China Airlines Boeing 747-400 B-18210 with 60th anniversary titles taxiing at Taiwan Taoyuan International Airport as China Airlines 747-400 B-18215 rolls behind"
   details:
-    - group: "Aircraft"
+    - group: "Aircraft &middot; Foreground"
       rows:
         - ["Registration", "B-18210"]
+        - ["Now registered", "N337JX"]
         - ["Type", "Boeing 747-400"]
         - ["Variant", "747-409"]
+        - ["MSN", "33734"]
         - ["Livery", "China Airlines 60th anniversary titles"]
         - ["Note", "One of the last four 747-400s in China Airlines&rsquo; passenger fleet in 2020"]
-        - ["Background", "Another China Airlines 747-400"]
-        - ["Status", "Retired in early 2021 with China Airlines&rsquo; last passenger 747-400s"]
+        - ["Status", "Retired in early 2021 with China Airlines&rsquo; last passenger 747-400s; registered to JetOneX in the US as N337JX since 2021-07"]
+    - group: "Aircraft &middot; Background"
+      rows:
+        - ["Registration", "B-18215"]
+        - ["Last registered", "N733JX"]
+        - ["Type", "Boeing 747-400"]
+        - ["Variant", "747-409"]
+        - ["MSN", "33737"]
+        - ["Note", "Boeing&rsquo;s last-built passenger 747-400, delivered in 2005-04; flew China Airlines&rsquo; 747-400 farewell flight CI2747 on 2021-03-20"]
+        - ["Status", "Retired by China Airlines in 2021; registered to JetOneX in the US as N733JX until the registration was cancelled after a reported sale on 2024-08-05; no later registration found"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
