@@ -567,6 +567,64 @@ header_subtitle: "Selected aircraft photography organized by airport."
   </script>
 
   <script>
+    /* Age when shot: the photo date against the airframe's delivery, first flight or build date, added to the card details and lead facts */
+    (function () {
+      var BASIS = ['Delivered', 'First flight', 'Built'];
+      function parse(text) {
+        var m = /^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?/.exec(text || '');
+        return m ? { y: +m[1], m: m[2] ? +m[2] : 0, d: m[3] ? +m[3] : 0 } : null;
+      }
+      function age(from, at) {
+        // a bare year on either side only supports a whole-year estimate
+        if (!from.m || !at.m) {
+          var yrs = at.y - from.y;
+          if (yrs < 1) return null;
+          return 'about ' + yrs + (yrs === 1 ? ' year' : ' years');
+        }
+        var months = (at.y - from.y) * 12 + (at.m - from.m) - (from.d && at.d && at.d < from.d ? 1 : 0);
+        if (months < 0) return null;
+        if (months < 1) return 'under a month';
+        if (months < 12) return months + (months === 1 ? ' month' : ' months');
+        var y = Math.floor(months / 12);
+        return y + (y === 1 ? ' year' : ' years');
+      }
+      document.querySelectorAll('.photo-card').forEach(function (card) {
+        var at = parse(card.querySelector('.photo-date time').getAttribute('datetime'));
+        if (!at) return;
+        var leadLists = card.querySelectorAll('.lead-facts dl');
+        var n = 0;
+        card.querySelectorAll('.exif-details .exif-group').forEach(function (head) {
+          if (head.textContent.indexOf('Aircraft') !== 0) return;
+          var list = head.nextElementSibling;
+          var leadList = leadLists[n++];
+          var rows = Array.prototype.slice.call(list.querySelectorAll('li'));
+          var basis = null;
+          BASIS.some(function (key) {
+            basis = rows.filter(function (li) { return li.querySelector('.exif-key').textContent === key; })[0];
+            return basis;
+          });
+          if (!basis) return;
+          var key = basis.querySelector('.exif-key').textContent;
+          var value = age(parse(basis.querySelector('.exif-val').textContent), at);
+          if (!value) return;
+          var li = document.createElement('li');
+          li.innerHTML = '<span class="exif-key">Age when shot</span><span class="exif-val"></span>';
+          li.lastChild.textContent = value;
+          basis.insertAdjacentElement('afterend', li);
+          if (!leadList) return;
+          var dt = Array.prototype.filter.call(leadList.querySelectorAll('dt'), function (d) { return d.textContent === key; })[0];
+          if (!dt) return;
+          var ldt = document.createElement('dt'), ldd = document.createElement('dd');
+          ldt.textContent = 'Age when shot';
+          ldd.textContent = value;
+          dt.nextElementSibling.insertAdjacentElement('afterend', ldt);
+          ldt.insertAdjacentElement('afterend', ldd);
+        });
+      });
+    })();
+  </script>
+
+  <script>
     /* "Also spotted": cards that share a registration link to each other, in the card details and the boarding pass */
     (function () {
       var cards = Array.prototype.slice.call(document.querySelectorAll('.photo-card'));

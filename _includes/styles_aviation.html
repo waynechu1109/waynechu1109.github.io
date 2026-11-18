@@ -195,6 +195,30 @@
     .pass-sub + .pass-rows { padding-top: 4px; border-top: none; }
     .pass-rows dt { color: #7b8794; font-weight: 700; }
     .pass-rows dd { margin: 0; color: #1c2733; }
+    .pass-timeline {
+      list-style: none; margin: 10px 0 0; padding: 10px 0 0 2px;
+      border-top: 1px solid rgba(28,39,51,.1); font-size: .74rem;
+    }
+    .pass-timeline li {
+      position: relative; display: grid; grid-template-columns: 80px 1fr; gap: 8px;
+      padding: 0 0 7px 14px;
+    }
+    /* the rail runs between dots, so it stops at the last event */
+    .pass-timeline li::before {
+      content: ""; position: absolute; left: 3px; top: 5px; width: 7px; height: 7px;
+      border-radius: 50%; background: #fbf8f1; border: 1.5px solid #7b8794;
+    }
+    .pass-timeline li:not(:last-child)::after {
+      content: ""; position: absolute; left: 6.25px; top: 13px; bottom: -4px; width: 1.5px; background: rgba(123,135,148,.45);
+    }
+    .pass-timeline li.is-photo::before { background: #b07a1f; border-color: #b07a1f; box-shadow: 0 0 0 3px rgba(176,122,31,.2); }
+    .pass-timeline li.is-photo .pass-tl-text { color: #b07a1f; font-weight: 700; }
+    .pass-timeline li.is-shot::before { border-color: #b07a1f; }
+    .pass-timeline li.is-shot .pass-tl-text { color: #8a6420; }
+    .pass-timeline li.is-reported .pass-tl-text { color: #6b7784; font-style: italic; }
+    .pass-timeline li.is-reported::before { border-style: dashed; }
+    .pass-tl-date { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .68rem; color: #5d6a78; white-space: nowrap; }
+    .pass-tl-text { color: #1c2733; }
     .pass-exposure { display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; gap: 8px; }
     .pass-exposure .pass-value { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .86rem; }
     .pass-kit { margin: 10px 0 0; font-size: .7rem; color: #5d6a78; }
@@ -342,7 +366,8 @@
     .is-filtering .section-more { display: none; }
     .spotted-link { color: var(--primary-deep); font-weight: 700; text-decoration: none; border-bottom: 1px dotted currentColor; }
     .spotted-link:hover { border-bottom-style: solid; }
-    .pass-rows .spotted-link { color: #163453; }
+    .pass-rows .spotted-link, .pass-rows .track-link { color: #163453; }
+    .pass-rows .track-note { color: #5d6a78; }
 
     /* =========================
        Airport Sections

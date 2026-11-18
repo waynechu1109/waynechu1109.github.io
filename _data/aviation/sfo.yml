@@ -44,6 +44,9 @@
         - ["Delivered", "2014-05-05"]
         - ["Name", "Hamburg (2014; name later reassigned to A350 D-AIVB)"]
         - ["Status", "Still flying with Lufthansa (seen 2026-10)"]
+      history:
+        - ["2014-06-05", "Named Hamburg at a ceremony at Hamburg Airport"]
+        - ["2026-08-17", "Touched down short of Munich runway 26L on LH459 from San Francisco; a serious incident under BFU investigation"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -71,9 +74,11 @@
         - ["Line no.", "833"]
         - ["Engines", "GE90-115B"]
         - ["Delivered", "2010-01"]
-        - ["Livery", "Eevee Jet NH (Pokémon Air Adventures), since 2023-09"]
+        - ["Livery", "Eevee Jet NH (Pokémon Air Adventures), since 2023-09-01"]
         - ["Note", "Flies ANA&rsquo;s Haneda long-haul routes to London and the U.S."]
         - ["Status", "Still flying with ANA in Eevee Jet livery (seen 2026-08)"]
+      history:
+        - ["2023-09-01", "Began flying in the Eevee Jet NH livery"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -132,6 +137,8 @@
         - ["Delivered", "2020-11"]
         - ["Livery", "GREAT Futures sticker for the UK&ndash;Saudi Arabia partnership, with the Saudi Vision 2030 logo; seen since 2024"]
         - ["Status", "Still flying with British Airways (seen 2026-06)"]
+      history:
+        - ["2024", "Seen with the GREAT Futures sticker"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -267,6 +274,8 @@
         - ["Livery", "&ldquo;It&rsquo;s Portugal Time&rdquo;, Portuguese Football Federation decals for the 2026 World Cup"]
         - ["Note", "Flew the Portugal national team to the 2026 World Cup"]
         - ["Status", "Still flying with TAP Air Portugal (seen 2026-10)"]
+      history:
+        - ["2026-06-12", "Flew the Portugal national team to the World Cup"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -480,8 +489,10 @@
         - ["Built", "2023"]
         - ["Operator", "Horizon Air, for Alaska Airlines"]
         - ["Name", "To 45 and Beyond"]
-        - ["Livery", "Toy Story 5, with Woody, Buzz Lightyear, Jessie and the new tech toys such as Lilypad; Forky and Karen Beverly on the winglets. Unveiled 2026-05 for Horizon&rsquo;s 45th anniversary, the first special livery on Horizon&rsquo;s E175 fleet"]
-        - ["Status", "Still flying with Horizon Air for Alaska; wears Toy Story 5 livery (unveiled June 2026) (seen 2026-11)"]
+        - ["Livery", "Toy Story 5, with Woody, Buzz Lightyear, Jessie and the new tech toys such as Lilypad; Forky and Karen Beverly on the winglets. Unveiled 2026-05-29 for Horizon&rsquo;s 45th anniversary, the first special livery on Horizon&rsquo;s E175 fleet"]
+        - ["Status", "Still flying with Horizon Air for Alaska; wears Toy Story 5 livery (unveiled 2026-05-29) (seen 2026-11)"]
+      history:
+        - ["2026-05-29", "Toy Story 5 livery unveiled at Portland for Horizon&rsquo;s 45th anniversary"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -507,6 +518,8 @@
         - ["Engines", "GE GEnx-1B76A"]
         - ["Built", "2026"]
         - ["Status", "Still flying with United; new delivery, entered service July 2026 (seen 2026-11)"]
+      history:
+        - ["2026-07-30", "First revenue flight with United as a new delivery"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -557,6 +570,8 @@
         - ["Engines", "GE GEnx-1B"]
         - ["History", "Flown by Japan Airlines before being refitted for ZIPAIR, which took it in 2024-01 as its 8th aircraft"]
         - ["Status", "Still flying with ZIPAIR (seen 2026-11)"]
+      history:
+        - ["2024-01-03", "Arrived at Narita to join ZIPAIR as its 8th aircraft, after flying for Japan Airlines"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]

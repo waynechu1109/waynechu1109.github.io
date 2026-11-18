@@ -119,10 +119,13 @@
         - ["Variant", "787-9"]
         - ["MSN", "34530"]
         - ["Engines", "Rolls-Royce Trent 1000"]
-        - ["First flight", "2015-09-02"]
-        - ["Delivered", "2015-10"]
+        - ["Delivered", "2015-09 (reported)"]
         - ["Livery", "R2-D2 ANA JET, 2015-10 to 2025-08; the first of ANA&rsquo;s Star Wars jets"]
         - ["Status", "Still with ANA; the R2-D2 livery came off after its last flight on 2025-08-06"]
+      history:
+        - ["2015-10-01", "Delivery flight to Haneda"]
+        - ["2015-10-18", "Entered service on Haneda to Vancouver"]
+        - ["2025-08-06", "Last flight in the R2-D2 livery"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α5000"]
@@ -152,6 +155,10 @@
         - ["Livery", "Special 787 launch livery with large &ldquo;787&rdquo; titles, worn from delivery until a repaint in 2017"]
         - ["Note", "One of ANA&rsquo;s first two 787s, alongside JA801A"]
         - ["Status", "Moved to ANA&rsquo;s AirJapan brand in 2025-11; AirJapan flights ended 2026-03"]
+      history:
+        - ["2017-09-28", "Last flight in the 787 launch livery; repainted by 2017-10-23"]
+        - ["2025-11", "Moved to ANA&rsquo;s AirJapan brand"]
+        - ["2026-03", "AirJapan flights ended"]
     - group: "Aircraft &middot; JAL"
       rows:
         - ["Registration", "JA708J"]
@@ -160,7 +167,9 @@
         - ["Variant", "777-246(ER)"]
         - ["MSN", "32895"]
         - ["Livery", "oneworld alliance livery"]
-        - ["Status", "Retired by JAL in 2023 and re-registered N778LG"]
+        - ["Status", "Retired by JAL; registered to Logistic Air in the US as N778LG since 2022-05, with no flights confirmed since"]
+      history:
+        - ["2022-05-04", "Registered N778LG to Logistic Air in the US after leaving JAL"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony NEX-5R"]

@@ -86,6 +86,11 @@
         - ["Engines", "Pratt &amp; Whitney JT8D-M-9"]
         - ["History", "Built as the 21st C-1 transport; converted under a 1983 contract and first flew as the EC-1 in 1984-12"]
         - ["Note", "The only EC-1 ever built"]
+        - ["Status", "Retired; made its final flight on 2025-03-13, the day of this photo"]
+      history:
+        - ["1983", "Contracted for conversion from a C-1 transport"]
+        - ["1984-12", "First flew as the EC-1"]
+        - ["2025-03-13", "Final flight; retired as the only EC-1"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]

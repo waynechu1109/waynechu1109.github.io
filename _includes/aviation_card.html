@@ -81,6 +81,14 @@
                   {%- endif %}
                   {%- endfor %}
                 </ul>
+                {%- if g.history %}
+                <p class="exif-group">{{ g.group | replace_first: "Aircraft", "History" }}</p>
+                <ul class="exif-list exif-history">
+                  {%- for h in g.history %}
+                  <li><span class="exif-key">{{ h[0] }}</span><span class="exif-val">{{ h[1] }}</span></li>
+                  {%- endfor %}
+                </ul>
+                {%- endif %}
                 {%- endfor %}
               </details>
             </div>

@@ -152,6 +152,85 @@
           return groups;
         }
 
+        // every photo of each airframe on the page, keyed by registration or serial, so a timeline can show all sightings
+        var sightings = null;
+        var ID_KEYS = ["Registration", "Serial", "Side number"];
+        function whereOf(card) {
+          var section = card.closest(".airport-section");
+          return card.dataset.spotted ? "over " + card.dataset.spotted : "at " + (section ? section.dataset.code : "");
+        }
+        function sightingsOf(id) {
+          if (!sightings) {
+            sightings = {};
+            document.querySelectorAll(".photo-card").forEach(function (c) {
+              var date = c.querySelector(".photo-date time").getAttribute("datetime");
+              c.querySelectorAll(".exif-details .exif-key").forEach(function (k) {
+                if (ID_KEYS.indexOf(k.textContent) === -1) return;
+                var v = k.nextElementSibling.textContent.trim();
+                (sightings[v] = sightings[v] || []).push({ card: c, date: date });
+              });
+            });
+          }
+          return sightings[id] || [];
+        }
+
+        // "late 2025" and "early 2025" sort inside their year; anything in brackets after a date is a comment
+        function dateKey(d) {
+          var m = /^(early|late) (\d{4})$/.exec(d);
+          if (m) return m[2] + (m[1] === "late" ? "-12-31" : "-01-00");
+          return (d.replace(/ \(.*\)$/, "") + "-00-00").slice(0, 10);
+        }
+
+        // an airframe's life on one line: its own milestones, the researched history, its last verified status,
+        // and every photo of it here, with the open one marked
+        var MILESTONES = { "First flight": "First flight", "Delivered": "Delivered", "Built": "Built", "Received": "Received" };
+        function timeline(g, history, card) {
+          var events = [];
+          var id = "";
+          g.rows.forEach(function (r) {
+            if (MILESTONES[r.key]) {
+              // a bracketed remark after the date ("to JAL Express", "reported; ...") belongs with the event, not the date
+              var remark = / \((.*)\)$/.exec(r.val);
+              events.push({ date: r.val, text: MILESTONES[r.key] + (remark ? " (" + remark[1] + ")" : "") });
+            }
+            if (!id && ID_KEYS.indexOf(r.key) !== -1) id = r.val;
+            if (r.key === "Status") {
+              var seen = /\(seen (\d{4}-\d{2})\)/.exec(r.val);
+              var last = /^Last recorded with (.+?) in (\d{4}-\d{2})/.exec(r.val);
+              if (seen) events.push({ date: seen[1], text: r.val.split(";")[0].replace(/ \(seen [^)]*\)/, "").trim() });
+              else if (last) events.push({ date: last[2], text: "Last recorded with " + last[1] });
+            }
+          });
+          if (history) history.rows.forEach(function (r) { events.push({ date: r.key, text: r.val }); });
+          var shots = id ? sightingsOf(id) : [];
+          if (!shots.length) shots = [{ card: card, date: card.querySelector(".photo-date time").getAttribute("datetime") }];
+          if (!events.length) return null;
+          // photos from the same day and place read as one visit, marked if the open photo is among them
+          var visits = {};
+          shots.forEach(function (sh) {
+            var k = sh.date + "|" + whereOf(sh.card);
+            if (!visits[k]) events.push(visits[k] = { date: sh.date, where: whereOf(sh.card), n: 0, mine: false, shot: true });
+            visits[k].n++;
+            if (sh.card === card) visits[k].mine = true;
+          });
+          Object.keys(visits).forEach(function (k) {
+            var v = visits[k];
+            v.text = "Photographed " + v.where + (v.n > 1 ? " (" + v.n + " photos)" : "");
+          });
+          // the open photo wins ties, since it is the reason the pass exists
+          var key = function (e) { return dateKey(e.date) + (e.mine ? "1" : "0"); };
+          events.sort(function (a, b) { return key(a) < key(b) ? -1 : key(a) > key(b) ? 1 : 0; });
+          var list = el("ol", "pass-timeline");
+          events.forEach(function (e) {
+            var reported = /^Reportedly|\(reported/.test(e.text);
+            var li = el("li", e.mine ? "is-photo" : e.shot ? "is-shot" : reported ? "is-reported" : null);
+            li.appendChild(el("span", "pass-tl-date", e.date.replace(/ \(.*\)$/, "")));
+            li.appendChild(el("span", "pass-tl-text", e.text));
+            list.appendChild(li);
+          });
+          return list;
+        }
+
         function buildPass(card, details) {
           var text = function (sel) { var n = card.querySelector(sel); return n ? n.textContent.trim() : ""; };
           var section = card.closest(".airport-section");
@@ -199,6 +278,9 @@
               list.appendChild(dd);
             });
             main.appendChild(list);
+            var history = groups.filter(function (h) { return h.name === g.name.replace(/^Aircraft/, "History"); })[0];
+            var line = timeline(g, history, card);
+            if (line) main.appendChild(line);
           });
           pass.appendChild(main);
 

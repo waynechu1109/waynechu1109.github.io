@@ -17,7 +17,11 @@
         - ["First flight", "2011-10-27"]
         - ["Delivered", "2011-11"]
         - ["Livery", "Sanrio Characters &ldquo;Joyful Dream&rdquo;, since 2017-04"]
+        - ["Previous livery", "Hello Kitty &ldquo;Loves Apples&rdquo;, 2011-12 to 2017-04"]
         - ["Status", "Still flying with EVA Air in Sanrio &ldquo;Joyful Dream&rdquo; livery (seen 2026-04)"]
+      history:
+        - ["2011-12", "Began flying in the Hello Kitty &ldquo;Loves Apples&rdquo; livery"]
+        - ["2017-04-10", "Debuted in the Sanrio Characters &ldquo;Joyful Dream&rdquo; livery"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -133,6 +137,8 @@
         - ["Livery", "Tiger-stripe tail with Airbus &ldquo;A320neo&rdquo; titles"]
         - ["Note", "Tigerair Taiwan&rsquo;s first A320neo; arrived at TPE on 2021-04-02"]
         - ["Status", "Still flying with Tigerair Taiwan (seen 2026-06)"]
+      history:
+        - ["2021-04-02", "Arrived at TPE as Tigerair Taiwan&rsquo;s first A320neo"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -295,9 +301,12 @@
         - ["Type", "Airbus A330-300"]
         - ["Variant", "A330-302"]
         - ["MSN", "752"]
-        - ["Livery", "SkyTeam alliance livery, since 2012-06"]
+        - ["Livery", "SkyTeam alliance livery, since 2012"]
         - ["Previous livery", "Taiwanese Fruits, 2006 to 2012"]
         - ["Status", "Still flying with China Airlines in SkyTeam livery (seen 2026-06)"]
+      history:
+        - ["2006-06", "Began flying in the Taiwanese Fruits livery"]
+        - ["2012", "Repainted in SkyTeam alliance livery"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -380,6 +389,8 @@
         - ["Livery", "Pikachu Jet TR (Pokémon), since 2022-07"]
         - ["Note", "The first Pokémon Jet flown by an airline outside Japan"]
         - ["Status", "Still flying with Scoot in Pikachu Jet livery (seen 2026-07)"]
+      history:
+        - ["2022-07-17", "Unveiled in the Pikachu Jet TR livery"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -406,6 +417,9 @@
         - ["Engines", "Pratt &amp; Whitney PW4000"]
         - ["Livery", "&ldquo;Malaysia Negaraku&rdquo; Harimau Malaya, supporting the Malaysian national football team, since 2020"]
         - ["Status", "Still flying with Malaysia Airlines in Harimau Malaya livery (seen 2026-02)"]
+      history:
+        - ["2020-10", "Reportedly first seen in the Harimau Malaya livery (enthusiast forums)"]
+        - ["2022-02-08", "Harimau Malaya livery officially unveiled at KLIA"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -430,8 +444,11 @@
         - ["Type", "Airbus A320"]
         - ["Variant", "A320-214 (ceo)"]
         - ["Engines", "CFM International CFM56-5B"]
-        - ["Livery", "&ldquo;Unari-kun Jet&rdquo;, marking 70 years of Narita as a city, with mascot Unari-kun on the rear fuselage, since 2024-06-20"]
+        - ["Livery", "&ldquo;Unari-kun Jet&rdquo;, marking 70 years of Narita as a city, with mascot Unari-kun on the rear fuselage, 2024-06-20 to 2024-12-12"]
         - ["Status", "Still flying with Peach (seen 2026-09)"]
+      history:
+        - ["2024-06-20", "Began flying in the Unari-kun Jet livery"]
+        - ["2024-12-12", "Unari-kun Jet decals came off"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -460,6 +477,8 @@
         - ["Livery", "&ldquo;Pikachu Jet CI&rdquo; Pokémon livery, since 2022-09"]
         - ["Note", "China Airlines&rsquo; first A321neo"]
         - ["Status", "Still flying with China Airlines in Pikachu Jet CI livery (seen 2026-07)"]
+      history:
+        - ["2022-09-28", "Unveiled in the Pikachu Jet CI livery"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -490,6 +509,9 @@
         - ["Livery", "Hello Kitty &ldquo;Besties Jet&rdquo; with My Melody and Kuromi, since 2024-08-28"]
         - ["Previous livery", "Hello Kitty &ldquo;Shining Star&rdquo;, 2015-06 to 2024"]
         - ["Status", "Still flying with EVA Air in the Hello Kitty Besties Jet livery (seen 2026-07)"]
+      history:
+        - ["2015-06-19", "Debuted in the Hello Kitty &ldquo;Shining Star&rdquo; livery"]
+        - ["2024-08-28", "Debuted as the Hello Kitty &ldquo;Besties Jet&rdquo;"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -657,6 +679,9 @@
         - ["Note", "Repainted into the Hello Kitty &ldquo;Besties Jet&rdquo; livery in 2024; the 2024-08-30 photo above shows the new scheme"]
         - ["Background", "STARLUX Airbus A321neo"]
         - ["Status", "Still flying with EVA Air in the Hello Kitty Besties Jet livery (seen 2026-07)"]
+      history:
+        - ["2015-06-19", "Debuted in the Hello Kitty &ldquo;Shining Star&rdquo; livery"]
+        - ["2024-08-28", "Debuted as the Hello Kitty &ldquo;Besties Jet&rdquo;"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -740,8 +765,12 @@
         - ["Variant", "747-409"]
         - ["MSN", "33734"]
         - ["Livery", "China Airlines 60th anniversary titles"]
-        - ["Note", "One of the last four 747-400s in China Airlines&rsquo; passenger fleet in 2020"]
+        - ["Note", "One of the last four 747-400s in China Airlines&rsquo; passenger fleet in 2020; reportedly withdrawn and stored during 2020, per a fleet database and forum posts"]
         - ["Status", "Retired in early 2021 with China Airlines&rsquo; last passenger 747-400s; registered to JetOneX in the US as N337JX since 2021-07"]
+      history:
+        - ["2020", "Reportedly withdrawn from service and stored (fleet database and forum posts)"]
+        - ["2021-03-20", "China Airlines ended its passenger 747-400 service"]
+        - ["2021-07-01", "Registered N337JX to JetOneX in the US"]
     - group: "Aircraft &middot; Background"
       rows:
         - ["Registration", "B-18215"]
@@ -749,8 +778,12 @@
         - ["Type", "Boeing 747-400"]
         - ["Variant", "747-409"]
         - ["MSN", "33737"]
-        - ["Note", "Boeing&rsquo;s last-built passenger 747-400, delivered in 2005-04; flew China Airlines&rsquo; 747-400 farewell flight CI2747 on 2021-03-20"]
-        - ["Status", "Retired by China Airlines in 2021; registered to JetOneX in the US as N733JX until the registration was cancelled after a reported sale on 2024-08-05; no later registration found"]
+        - ["Delivered", "2005-04"]
+        - ["Note", "Boeing&rsquo;s last-built passenger 747-400, and the aircraft on China Airlines&rsquo; 747-400 farewell flight CI2747"]
+        - ["Status", "Retired by China Airlines in 2021; registered to JetOneX in the US as N733JX until the registration was cancelled after a reported sale on 2024-08-05; no later registration found, and forum posts say it was broken up at Taoyuan around 2023&ndash;24"]
+      history:
+        - ["2021-03-20", "Flew CI2747, China Airlines&rsquo; 747-400 farewell flight"]
+        - ["2024-08-05", "US registration N733JX cancelled after a reported sale"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -803,6 +836,9 @@
         - ["Engines", "CFM International CFM56-5B"]
         - ["Livery", "SkyBoss, promoting Vietjet&rsquo;s premium SkyBoss fare class"]
         - ["Status", "Still registered to Thai Vietjet Air (2026-01); last flight record found 2025-09"]
+      history:
+        - ["2025-09", "Last flight record found"]
+        - ["2026-01", "Still registered to Thai Vietjet Air"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -1032,8 +1068,12 @@
         - ["Variant", "A320-214"]
         - ["MSN", "2529"]
         - ["Engines", "CFM International CFM56-5B"]
-        - ["History", "Delivered new to Niki in 2005 as OE-LEA"]
-        - ["Status", "Royal Air Philippines suspended all flights on 2026-01-04; the aircraft&rsquo;s later fate is unknown"]
+        - ["History", "Delivered new to Niki in 2005 as OE-LEA; per one fleet database, later D-ASPG with Small Planet Airlines Germany (2016), XU-127 and XU-991 with Lanmei Airlines, and wet-leased to Bamboo Airways in 2024"]
+        - ["Status", "Royal Air Philippines suspended its scheduled passenger flights on 2026-01-04; the aircraft&rsquo;s later fate is unknown"]
+      history:
+        - ["2005-09-27", "Delivered new to Niki as OE-LEA"]
+        - ["2016", "Reportedly re-registered D-ASPG for Small Planet Airlines Germany (fleet database)"]
+        - ["2026-01-04", "Royal Air Philippines suspended its scheduled passenger flights"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]

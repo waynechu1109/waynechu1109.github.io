@@ -62,6 +62,8 @@
         - ["Delivered", "2006-06-30"]
         - ["Unit", "422nd Test and Evaluation Squadron, Nellis AFB (since 2022)"]
         - ["History", "94th FS, then 27th FS, then 422nd TES"]
+      history:
+        - ["2022-05", "First recorded with the 422nd Test and Evaluation Squadron at Nellis AFB"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -89,6 +91,8 @@
         - ["Delivered", "2006-06-30"]
         - ["Unit", "422nd Test and Evaluation Squadron, Nellis AFB (since 2022)"]
         - ["History", "94th FS, then 27th FS, then 422nd TES"]
+      history:
+        - ["2022-05", "First recorded with the 422nd Test and Evaluation Squadron at Nellis AFB"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -237,6 +241,8 @@
         - ["Delivered", "2006-06-30"]
         - ["Unit", "422nd Test and Evaluation Squadron, Nellis AFB (since 2022)"]
         - ["History", "94th FS, then 27th FS, then 422nd TES"]
+      history:
+        - ["2022-05", "First recorded with the 422nd Test and Evaluation Squadron at Nellis AFB"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]
@@ -413,6 +419,8 @@
         - ["Delivered", "2006-06-30"]
         - ["Unit", "422nd Test and Evaluation Squadron, Nellis AFB (since 2022)"]
         - ["History", "94th FS, then 27th FS, then 422nd TES"]
+      history:
+        - ["2022-05", "First recorded with the 422nd Test and Evaluation Squadron at Nellis AFB"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6700"]

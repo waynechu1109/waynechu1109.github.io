@@ -65,6 +65,9 @@
         - ["Livery", "&ldquo;Pikachu Jet BC1&rdquo; (Pokémon Air Adventures), since 2021-06-21"]
         - ["Note", "Skymark&rsquo;s first Pikachu Jet; renamed BC1 when the second one, BC2, arrived in 2022"]
         - ["Status", "Still flying with Skymark in the Pikachu Jet livery (seen 2026-07)"]
+      history:
+        - ["2021-06-21", "Began flying as Skymark&rsquo;s first Pikachu Jet"]
+        - ["2022-05-30", "Renamed Pikachu Jet BC1 when BC2 arrived"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -178,9 +181,11 @@
         - ["MSN", "32976"]
         - ["Line no.", "884"]
         - ["Engines", "GE CF6-80C2B6"]
-        - ["Livery", "Pokémon &ldquo;Rokon Jet&rdquo; (Vulpix and Alolan Vulpix), since 2021-12"]
+        - ["Livery", "Pokémon &ldquo;Rokon Jet Hokkaido&rdquo; (Vulpix and Alolan Vulpix), since 2021-12-01; reportedly planned to run until about 2026-12"]
         - ["History", "Flown by ANA before moving to AIR DO, where it was repainted for the Rokon Jet in 2021"]
-        - ["Status", "Still flying with AIR DO, now presented as the &ldquo;Rokon Jet Hokkaido&rdquo; (seen 2026-10)"]
+        - ["Status", "Still flying with AIR DO in the Rokon Jet Hokkaido livery (seen 2026-10)"]
+      history:
+        - ["2021-12-01", "Began flying as the Pok&eacute;mon Rokon Jet Hokkaido at AIR DO"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -207,9 +212,12 @@
         - ["MSN", "37549"]
         - ["Line no.", "977"]
         - ["Delivered", "2009-05"]
-        - ["Livery", "&ldquo;JAL Fantastic Journey Express&rdquo; for Tokyo DisneySea Fantasy Springs, 2024-10 to late 2025"]
+        - ["Livery", "&ldquo;JAL Fantastic Journey Express&rdquo; for Tokyo DisneySea Fantasy Springs, 2024-10-21 to 2025-11-01"]
         - ["Note", "The sixth JAL and Tokyo DisneySea special livery"]
         - ["Status", "Still flying with JAL; its Fantastic Journey Express livery ended in 2025-11 (seen 2026-11)"]
+      history:
+        - ["2024-10-21", "Began flying in the JAL Fantastic Journey Express livery"]
+        - ["2025-11-01", "Fantastic Journey Express livery ended"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -238,7 +246,11 @@
         - ["Delivered", "2020-12"]
         - ["Livery", "&ldquo;DREAM SHO JET&rdquo; featuring Shohei Ohtani, 2024-09-29 to 2026-06-10"]
         - ["Note", "Flew 2,720 flights in the livery, then went to Xiamen for heavy maintenance and a repaint into standard JAL colors"]
-        - ["Status", "Still with JAL; the DREAM SHO JET livery ended in 2026-06 and it is back in standard colors"]
+        - ["Status", "Still with JAL; the DREAM SHO JET livery ended on 2026-06-10 and it went to Xiamen for a repaint into standard colors"]
+      history:
+        - ["2024-09-29", "DREAM SHO JET livery debuted"]
+        - ["2026-06-10", "Last flight in the DREAM SHO JET livery, JL326 Fukuoka to Haneda"]
+        - ["2026-06-11", "Ferried to Xiamen for heavy maintenance and a repaint into standard JAL colors"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -266,10 +278,12 @@
         - ["MSN", "40902"]
         - ["Line no.", "1090"]
         - ["Engines", "Pratt &amp; Whitney PW4000"]
-        - ["First flight", "2013-03-21"]
         - ["Delivered", "2013-03"]
-        - ["Livery", "C-3PO ANA JET, 2017-03 to 2026-01"]
+        - ["Livery", "C-3PO ANA JET, 2017-03-21 to 2026-01-09"]
         - ["Status", "Still with ANA; its C-3PO livery was retired in 2026-01"]
+      history:
+        - ["2017-03-21", "Began flying in the C-3PO ANA JET livery"]
+        - ["2026-01-09", "Last flight in the C-3PO livery"]
     - group: "Aircraft &middot; Lufthansa"
       rows:
         - ["Registration", "D-ABYT"]
@@ -307,9 +321,11 @@
         - ["Line no.", "4002"]
         - ["Engines", "CFM56-7B24"]
         - ["Delivered", "2012-04 (to JAL Express)"]
-        - ["Livery", "&ldquo;JAL Gundam JET&rdquo; for Expo 2025 Osaka, Kansai, 2025-03-03 to late 2025"]
+        - ["Livery", "&ldquo;JAL Gundam JET&rdquo; for Expo 2025 Osaka, Kansai, since 2025-03-03"]
         - ["Note", "Photographed eight days after the livery&rsquo;s first flight"]
         - ["Status", "Still flying with JAL (seen 2026-08)"]
+      history:
+        - ["2025-03-03", "Began wearing the JAL Gundam JET livery for Expo 2025"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -362,10 +378,13 @@
         - ["Variant", "A350-941"]
         - ["MSN", "285"]
         - ["Engines", "Rolls-Royce Trent XWB-84"]
-        - ["Delivered", "2022-09-14"]
+        - ["Delivered", "2022-09-15"]
         - ["Name", "Alessandro Del Piero"]
         - ["Note", "Built in 2019 for Hainan Airlines but never taken up; stored until ITA took it in 2022"]
         - ["Status", "Still flying with ITA Airways (seen 2026-11)"]
+      history:
+        - ["2019-02-21", "Reportedly first flew as F-WZNZ, built for Hainan Airlines but never taken up (forum)"]
+        - ["2021-04", "Reportedly stored at Teruel (forum)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -391,9 +410,11 @@
         - ["MSN", "32976"]
         - ["Line no.", "884"]
         - ["Engines", "GE CF6-80C2B6"]
-        - ["Livery", "Pokémon &ldquo;Rokon Jet&rdquo; (Vulpix and Alolan Vulpix), since 2021-12"]
+        - ["Livery", "Pokémon &ldquo;Rokon Jet Hokkaido&rdquo; (Vulpix and Alolan Vulpix), since 2021-12-01; reportedly planned to run until about 2026-12"]
         - ["History", "Flown by ANA before moving to AIR DO, where it was repainted for the Rokon Jet in 2021"]
-        - ["Status", "Still flying with AIR DO, now presented as the &ldquo;Rokon Jet Hokkaido&rdquo; (seen 2026-10)"]
+        - ["Status", "Still flying with AIR DO in the Rokon Jet Hokkaido livery (seen 2026-10)"]
+      history:
+        - ["2021-12-01", "Began flying as the Pok&eacute;mon Rokon Jet Hokkaido at AIR DO"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -419,8 +440,11 @@
         - ["Variant", "ERJ-190-100STD"]
         - ["Engines", "GE CF34-10E"]
         - ["Operator", "J-AIR, a Japan Airlines subsidiary"]
-        - ["Livery", "&ldquo;JAL Myaku-Myaku JET&rdquo; for Expo 2025 Osaka, Kansai, 2023-11 to 2025-10-13"]
+        - ["Livery", "&ldquo;JAL Myaku-Myaku JET&rdquo; for Expo 2025 Osaka, Kansai, 2023-11-28 to 2025-10-13"]
         - ["Status", "Still flying with J-AIR (seen 2026-11)"]
+      history:
+        - ["2023-11-28", "Began flying in the JAL Myaku-Myaku JET livery for Expo 2025"]
+        - ["2025-10-13", "Myaku-Myaku JET livery ended"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -536,6 +560,8 @@
         - ["Livery", "oneworld alliance livery, since delivery"]
         - ["Note", "Entered service 2022-02-21 on Haneda to Naha"]
         - ["Status", "Still flying with JAL (seen 2026-11)"]
+      history:
+        - ["2022-02-21", "Entered service on Haneda to Naha"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -617,6 +643,9 @@
         - ["Livery", "&ldquo;Pikachu Jet NH&rdquo; for Pokémon Air Adventures, with Rayquaza across the fuselage alongside Pikachu, Charizard, Latias, Latios and Vivillon, since 2023"]
         - ["Note", "Flies ANA international routes from Haneda"]
         - ["Status", "Still flying with ANA in the Pikachu Jet NH livery (ANA, 2026-02)"]
+      history:
+        - ["2023-06-04", "Began flying in the Pikachu Jet NH livery"]
+        - ["2026-02", "Still flying with ANA in the Pikachu Jet NH livery"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -719,6 +748,9 @@
         - ["Engines", "CFM International CFM56-3"]
         - ["Livery", "ANA Technical Training titles"]
         - ["History", "Retired from ANA&rsquo;s &ldquo;Super Dolphin&rdquo; 737-500 fleet in 2018 and kept at Haneda as a maintenance training airframe"]
+      history:
+        - ["2018-02-01", "Last revenue flight with ANA&rsquo;s 737-500 fleet"]
+        - ["2018-07", "Began use as a maintenance training airframe at Haneda"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -773,6 +805,9 @@
         - ["Engines", "CFM International CFM56-3"]
         - ["Livery", "ANA Technical Training titles"]
         - ["History", "Retired from ANA&rsquo;s &ldquo;Super Dolphin&rdquo; 737-500 fleet in 2018 and kept at Haneda as a maintenance training airframe"]
+      history:
+        - ["2018-02-01", "Last revenue flight with ANA&rsquo;s 737-500 fleet"]
+        - ["2018-07", "Began use as a maintenance training airframe at Haneda"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
