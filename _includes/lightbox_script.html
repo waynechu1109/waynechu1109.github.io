@@ -241,10 +241,22 @@
           history.replaceState(history.state, "", location.pathname + location.search + (id ? "#" + id : ""));
         }
 
+        // opening adds a history entry so the phone back gesture closes the viewer instead of leaving the page;
+        // a deep-linked photo first drops its hash from the entry underneath, so back lands on the plain gallery
+        var pushed = false;
+        function pushEntry() {
+          if (!shareBtn || pushed) return;
+          var base = location.pathname + location.search;
+          if (location.hash.indexOf("#p-") === 0) history.replaceState(history.state, "", base);
+          history.pushState({ lightbox: true }, "", base);
+          pushed = true;
+        }
+
         function openLightbox(i) {
           current = i;
           infoOpen = true;
           lastFocused = document.activeElement;
+          pushEntry();
           render();
           lightbox.classList.add("is-open");
           lightbox.setAttribute("aria-hidden", "false");
@@ -253,6 +265,12 @@
         }
 
         function closeLightbox() {
+          // drop our own history entry too, or a later back press would land on a closed viewer
+          if (pushed) { pushed = false; history.back(); }
+          hideLightbox();
+        }
+
+        function hideLightbox() {
           lightbox.classList.remove("is-open");
           lightbox.setAttribute("aria-hidden", "true");
           lightboxImage.removeAttribute("src");
@@ -320,13 +338,28 @@
         prevBtn.addEventListener("click", function () { move(-1); });
         nextBtn.addEventListener("click", function () { move(1); });
         if (infoToggle) infoToggle.addEventListener("click", function () { setInfo(!infoOpen); });
+        window.addEventListener("popstate", function () {
+          if (!pushed) return;
+          pushed = false;
+          if (lightbox.classList.contains("is-open")) hideLightbox();
+        });
+
+        // touch devices get the system share sheet; desktops copy, since their share sheets are rarely where links go
+        var useShare = !!navigator.share && window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+        var shareLabel = useShare ? "Share" : "Copy link";
+        if (shareBtn) shareBtn.textContent = shareLabel;
         if (shareBtn) shareBtn.addEventListener("click", function () {
           var done = function (label) {
             shareBtn.textContent = label;
-            setTimeout(function () { shareBtn.textContent = "Copy link"; }, 1600);
+            setTimeout(function () { shareBtn.textContent = shareLabel; }, 1600);
           };
-          if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(function () { done("Copied"); }, function () { done("Copy failed"); });
-          else done("Copy failed");
+          if (useShare) {
+            navigator.share({ title: lightboxCaption ? lightboxCaption.textContent : document.title, url: location.href }).catch(function () {});
+          } else if (navigator.clipboard) {
+            navigator.clipboard.writeText(location.href).then(function () { done("Copied"); }, function () { done("Copy failed"); });
+          } else {
+            done("Copy failed");
+          }
         });
 
         lightbox.addEventListener("click", function (event) {

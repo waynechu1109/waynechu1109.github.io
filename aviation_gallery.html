@@ -622,7 +622,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
       var filter = 'all';
       var tocLinks = document.querySelectorAll('.page-toc-link, .airport-links a');
 
-      function apply() {
+      function apply(push) {
         var q = input.value.trim().toLowerCase();
         var sq = squash(q);
         var shown = 0;
@@ -649,12 +649,14 @@ header_subtitle: "Selected aircraft photography organized by airport."
         document.body.classList.toggle('is-filtering', !!active);
         count.textContent = active ? shown + ' of ' + items.length + ' photos' : '';
         empty.hidden = shown > 0;
-        writeQuery();
+        writeQuery(push);
       }
 
-      // the query string mirrors the filters so any filtered view can be shared; replaceState keeps typing out of history
+      // the query string mirrors the filters so any filtered view can be shared. Clicks, picks and chips push an
+      // entry so back undoes them; typing only replaces, or every keystroke would become a step
       var PARAMS = { q: input, airline: airlineSelect, type: typeSelect };
-      function writeQuery() {
+      var lastSearch = location.search;
+      function writeQuery(push) {
         var params = new URLSearchParams(location.search);
         Object.keys(PARAMS).forEach(function (k) {
           var v = PARAMS[k].value.trim();
@@ -662,25 +664,39 @@ header_subtitle: "Selected aircraft photography organized by airport."
         });
         if (filter !== 'all') params.set('filter', filter); else params.delete('filter');
         var qs = params.toString();
-        history.replaceState(history.state, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+        var url = location.pathname + (qs ? '?' + qs : '') + location.hash;
+        if (push && (qs ? '?' + qs : '') !== location.search) {
+          // remember where the reader was so going back returns them to the card they clicked from
+          history.replaceState(Object.assign({}, history.state, { scrollY: window.scrollY }), '');
+          history.pushState({ filters: true }, '', url);
+        } else {
+          history.replaceState(history.state, '', url);
+        }
+        lastSearch = location.search;
       }
       function readQuery() {
         var params = new URLSearchParams(location.search);
         Object.keys(PARAMS).forEach(function (k) {
-          if (params.has(k)) PARAMS[k].value = params.get(k);
+          PARAMS[k].value = params.get(k) || '';
         });
-        var chip = chips.filter(function (c) { return c.dataset.filter === params.get('filter'); })[0];
-        if (chip) {
-          filter = chip.dataset.filter;
-          chips.forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
-        }
+        var chip = chips.filter(function (c) { return c.dataset.filter === params.get('filter'); })[0] || chips[0];
+        filter = chip.dataset.filter;
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
       }
+      window.addEventListener('popstate', function () {
+        // closing the lightbox also pops an entry, but leaves the query alone; nothing to restore then
+        if (location.search === lastSearch) return;
+        readQuery();
+        apply();
+        var y = history.state && history.state.scrollY;
+        if (typeof y === 'number') requestAnimationFrame(function () { window.scrollTo(0, y); });
+      });
 
       // airline names and single-type aircraft lines on the cards act as shortcuts into the dropdowns
       var filterBar = document.querySelector('.photo-filter');
       function pick(select, value) {
         select.value = value;
-        apply();
+        apply(true);
         filterBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
       function shortcut(label, attr, value) {
@@ -718,12 +734,12 @@ header_subtitle: "Selected aircraft photography organized by airport."
         b.addEventListener('click', function () {
           filter = b.dataset.filter;
           chips.forEach(function (c) { c.setAttribute('aria-pressed', c === b ? 'true' : 'false'); });
-          apply();
+          apply(true);
         });
       });
-      input.addEventListener('input', apply);
-      airlineSelect.addEventListener('change', apply);
-      typeSelect.addEventListener('change', apply);
+      input.addEventListener('input', function () { apply(); });
+      airlineSelect.addEventListener('change', function () { apply(true); });
+      typeSelect.addEventListener('change', function () { apply(true); });
       input.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && input.value) { input.value = ''; apply(); }
       });
