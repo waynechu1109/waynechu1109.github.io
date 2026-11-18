@@ -194,6 +194,11 @@ header_subtitle: "Selected aircraft photography organized by airport."
           <button type="button" data-filter="livery" aria-pressed="false">Special liveries</button>
           <button type="button" data-filter="airliner" aria-pressed="false">Airliners</button>
           <button type="button" data-filter="military" aria-pressed="false">Military</button>
+          <button type="button" data-filter="retired" aria-pressed="false">Retired or moved on</button>
+        </div>
+        <div class="photo-browse">
+          <select id="browse-airline" aria-label="Browse by airline or operator"><option value="">All airlines &amp; operators</option></select>
+          <select id="browse-type" aria-label="Browse by aircraft type"><option value="">All aircraft types</option></select>
         </div>
         <p class="photo-filter-count" aria-live="polite"></p>
       </div>
@@ -561,10 +566,58 @@ header_subtitle: "Selected aircraft photography organized by airport."
             text: text.join(' ').toLowerCase(),
             squashed: squash(text.join(' ')),
             livery: !!card.querySelector('.livery-tag'),
-            military: MILITARY.test(title)
+            military: MILITARY.test(title),
+            gone: /retired|moved/.test(card.dataset.status || '')
           });
         });
       });
+      var airlineSelect = document.getElementById('browse-airline');
+      var typeSelect = document.getElementById('browse-type');
+      // shared-frame titles use the short name to fit, so fold it into the one the solo cards use
+      var ALIAS = { 'JAL': 'Japan Airlines' };
+      var AIRLINER = /^(Boeing 7\d7|Airbus|Embraer E1|ATR|Fokker)/;
+      // "Boeing 777-300ER, 737-800 & 787-9" lists three types; bare model numbers borrow the maker named before them
+      function families(aircraft) {
+        var maker = '';
+        return aircraft.replace(/\s*\(pair\)/, '').split(/\s*(?:,|&)\s*/).map(function (t) {
+          var m = t.match(/^(Airbus|Boeing)\s/);
+          if (m) maker = m[1]; else if (maker && /^[A7]\d/.test(t)) t = maker + ' ' + t;
+          var fam = t.match(/^Boeing 7\d7/) || t.match(/^Airbus A3\d\d/);
+          return fam ? fam[0] : t;
+        }).filter(function (t, i, all) { return all.indexOf(t) === i; });
+      }
+      function fill(select, groups) {
+        groups.forEach(function (g) {
+          var names = Object.keys(g.counts).sort(function (a, b) { return a.localeCompare(b); });
+          if (!names.length) return;
+          var og = document.createElement('optgroup');
+          og.label = g.label;
+          names.forEach(function (n) {
+            var o = document.createElement('option');
+            o.value = n;
+            o.textContent = n + ' (' + g.counts[n] + ')';
+            og.appendChild(o);
+          });
+          select.appendChild(og);
+        });
+      }
+      var airlineCounts = { civil: {}, military: {} };
+      var typeCounts = { airliner: {}, military: {}, other: {} };
+      var bump = function (map, k) { map[k] = (map[k] || 0) + 1; };
+      items.forEach(function (it) {
+        var title = it.card.querySelector('.photo-title').textContent;
+        // flags are regional-indicator pairs; strip them so "🇯🇵 ANA" files under ANA
+        it.airlines = title.split(' / ').map(function (n) {
+          n = n.replace(/[\u{1F1E6}-\u{1F1FF}]/gu, '').trim();
+          return ALIAS[n] || n;
+        });
+        it.types = families(it.card.querySelector('.photo-aircraft').textContent);
+        it.airlines.forEach(function (n) { bump(it.military ? airlineCounts.military : airlineCounts.civil, n); });
+        it.types.forEach(function (t) { bump(it.military ? typeCounts.military : AIRLINER.test(t) ? typeCounts.airliner : typeCounts.other, t); });
+      });
+      fill(airlineSelect, [{ label: 'Civil', counts: airlineCounts.civil }, { label: 'Military', counts: airlineCounts.military }]);
+      fill(typeSelect, [{ label: 'Airliners', counts: typeCounts.airliner }, { label: 'Military', counts: typeCounts.military }, { label: 'Business & other', counts: typeCounts.other }]);
+
       var filter = 'all';
       var tocLinks = document.querySelectorAll('.page-toc-link, .airport-links a');
 
@@ -576,7 +629,10 @@ header_subtitle: "Selected aircraft photography organized by airport."
           var ok = (filter === 'all')
             || (filter === 'livery' && it.livery)
             || (filter === 'military' && it.military)
-            || (filter === 'airliner' && !it.military);
+            || (filter === 'airliner' && !it.military)
+            || (filter === 'retired' && it.gone);
+          if (ok && airlineSelect.value) ok = it.airlines.indexOf(airlineSelect.value) !== -1;
+          if (ok && typeSelect.value) ok = it.types.indexOf(typeSelect.value) !== -1;
           if (ok && q) ok = it.text.indexOf(q) !== -1 || (sq && it.squashed.indexOf(sq) !== -1);
           it.card.hidden = !ok;
           if (ok) shown++;
@@ -588,7 +644,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
           var target = document.getElementById(a.getAttribute('href').slice(1));
           a.classList.toggle('is-empty', !!(target && target.hidden));
         });
-        var active = q || filter !== 'all';
+        var active = q || filter !== 'all' || airlineSelect.value || typeSelect.value;
         document.body.classList.toggle('is-filtering', !!active);
         count.textContent = active ? shown + ' of ' + items.length + ' photos' : '';
         empty.hidden = shown > 0;
@@ -602,6 +658,8 @@ header_subtitle: "Selected aircraft photography organized by airport."
         });
       });
       input.addEventListener('input', apply);
+      airlineSelect.addEventListener('change', apply);
+      typeSelect.addEventListener('change', apply);
       input.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && input.value) { input.value = ''; apply(); }
       });

@@ -2,7 +2,22 @@
 {%- assign base = "media/gallery/aviation_gallery/" | append: p.img -%}
 {%- if include.n >= 3 %}{% assign cap = 7 %}{% else %}{% assign cap = 6 %}{% endif -%}
 {%- if include.i == 1 and include.n >= 3 %}{% assign lead = true %}{% else %}{% assign lead = false %}{% endif -%}
-          <article class="photo-card{% if lead %} is-lead{% endif %}{% if include.i > cap %} is-extra{% endif %}" id="p-{{ p.img | replace: '/', '-' }}"{% if p.spotted %} data-spotted="{{ p.spotted }}"{% endif %}>
+{%- assign states = "" %}{% assign pairs = "" -%}
+{%- for g in p.details %}{% assign g0 = g.group | slice: 0, 8 %}{% if g0 == "Aircraft" %}{% for row in g.rows %}{% if row[0] == "Registration" or row[0] == "Side number" %}{% assign reg = row[1] %}{% endif %}{% if row[0] == "Status" -%}
+{%- assign s = row[1] %}{% assign s7 = s | slice: 0, 7 %}{% assign s8 = s | slice: 0, 8 -%}
+{%- comment %} an airline shutting down or a brand ending says nothing certain about the airframe itself {% endcomment -%}
+{%- if s contains "suspended" or s contains "ended" %}{% assign k = "unconfirmed" -%}
+{%- elsif s8 == "Still fl" or s8 == "Still wi" %}{% assign k = "flying" -%}
+{%- elsif s7 == "Retired" %}{% assign k = "retired" -%}
+{%- elsif s8 == "Moved to" or s8 == "Now with" %}{% assign k = "moved" -%}
+{%- else %}{% assign k = "unconfirmed" %}{% endif -%}
+{%- unless states contains k %}{% assign states = states | append: k | append: " " %}{% endunless -%}
+{%- assign pairs = pairs | append: reg | append: "|" | append: k | append: ";" -%}
+{%- endif %}{% endfor %}{% endif %}{% endfor -%}
+{%- assign states = states | strip -%}
+{%- comment %} one badge when every aircraft shares a state, otherwise one per registration so the two can be told apart {% endcomment -%}
+{%- if states contains " " %}{% assign badges = pairs | split: ";" %}{% else %}{% assign badges = states | split: " " %}{% endif -%}
+          <article class="photo-card{% if lead %} is-lead{% endif %}{% if include.i > cap %} is-extra{% endif %}" id="p-{{ p.img | replace: '/', '-' }}"{% if p.spotted %} data-spotted="{{ p.spotted }}"{% endif %}{% if states != "" %} data-status="{{ states }}"{% endif %}>
             <div class="photo-frame real-photo">
               <img
                 src="{{ base }}-1280.jpg"
@@ -26,7 +41,7 @@
               {%- if p.regs or p.liveries %}
               <p class="photo-tags">{% for r in p.regs %}<span class="reg-chip">{{ r }}</span>{% endfor %}{% if p.livery_break %}<span class="tag-break"></span>{% endif %}{% for l in p.liveries %}<span class="livery-tag">{{ l }}</span>{% endfor %}</p>
               {%- endif %}
-              <p class="photo-date"><time datetime="{{ p.date }}">{{ p.date }}</time></p>
+              <p class="photo-date"><time datetime="{{ p.date }}">{{ p.date }}</time>{% for b in badges %}{% assign bp = b | split: "|" %}{% assign k = bp | last %}<span class="status status-{{ k }}">{% if bp.size > 1 %}{{ bp[0] }} {% endif %}{% case k %}{% when "flying" %}Still flying{% when "retired" %}Retired{% when "moved" %}Moved on{% else %}Unconfirmed{% endcase %}</span>{% endfor %}</p>
               {%- if lead %}
               {%- assign multi = false %}{% assign ac = 0 %}
               {%- for g in p.details %}{% assign g0 = g.group | slice: 0, 8 %}{% if g0 == "Aircraft" %}{% assign ac = ac | plus: 1 %}{% endif %}{% endfor %}

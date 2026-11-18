@@ -233,6 +233,13 @@
     }
     .photo-filter-chips button:hover { background: var(--hover); }
     .photo-filter-chips button[aria-pressed="true"] { color: #fff; background: var(--primary-deep); border-color: var(--primary-deep); }
+    .photo-browse { display: flex; flex-wrap: wrap; gap: 10px; flex-basis: 100%; }
+    .photo-browse select {
+      flex: 1 1 220px; min-width: 0; padding: 8px 12px; border-radius: 12px; cursor: pointer;
+      font: inherit; font-size: .88rem; color: var(--text);
+      background: var(--surface-alt); border: 1px solid rgba(var(--line-rgb),.22);
+    }
+    .photo-browse select:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
     .photo-filter-count { flex-basis: 100%; margin: 0; min-height: 1em; font-size: .8rem; color: var(--muted); }
     .photo-filter-count:empty { display: none; }
     .photo-filter-empty { margin: 18px 0; padding: 18px; border-radius: 14px; text-align: center; color: var(--muted); background: var(--surface-alt); }
@@ -344,6 +351,11 @@
     .photo-title { margin: 0 0 6px; color: var(--ink); font-size: 1.12rem; }
     .photo-caption { margin: 0; color: var(--muted); font-size: .96rem; }
     .photo-date { margin: 2px 0 0; color: var(--muted); font-size: .82rem; font-style: italic; letter-spacing: .04em; }
+    .status { display: inline-flex; align-items: center; gap: 5px; margin-left: 10px; font-style: normal; font-size: .76rem; letter-spacing: .02em; }
+    .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--dot); }
+    .status-flying { --dot: #2f8f4e; }
+    .status-retired, .status-moved { --dot: #9a9286; }
+    .status-unconfirmed { --dot: #d39a2c; }
     .photo-aircraft { margin: -2px 0 8px; color: var(--text); font-size: .9rem; font-weight: 600; }
     .photo-route {
       display: flex; align-items: center; gap: 6px; margin: -4px 0 8px;
@@ -464,6 +476,7 @@
     }
     [data-theme="dark"] .airport-name { color: #e8eef5; }
     [data-theme="dark"] .photo-search { border-color: var(--border); }
+    [data-theme="dark"] .photo-browse select { border-color: var(--border); }
     [data-theme="dark"] .section-more { background: var(--surface-alt); border-color: var(--border); }
     [data-theme="dark"] .section-more:hover { background: #223145; }
     [data-theme="dark"] .photo-filter-chips button { color: var(--text); background: var(--surface-alt); border-color: var(--border); }
@@ -481,6 +494,9 @@
       color: #d7e6f7; background: rgba(110,166,220,.14);
       border-color: rgba(110,166,220,.3);
     }
+    [data-theme="dark"] .status-flying { --dot: #5cc27f; }
+    [data-theme="dark"] .status-retired, [data-theme="dark"] .status-moved { --dot: #8a96a6; }
+    [data-theme="dark"] .status-unconfirmed { --dot: #e6b252; }
     [data-theme="dark"] .livery-tag {
       color: #e0c69a; background: rgba(201,139,50,.12);
       border-color: rgba(201,139,50,.35);
