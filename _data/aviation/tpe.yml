@@ -1348,3 +1348,161 @@
         - ["Aperture", "f/8"]
         - ["Shutter", "1/40"]
         - ["ISO", "400"]
+
+- img: "tpe/20250201_IT217_L"
+  video: "tpe/videos/20250201_IT217_L-720.mp4"
+  shot: "2025-02-01 13:43:37"
+  date: "2025-02-01"
+  title: "🇹🇼 Tigerair Taiwan"
+  aircraft: "Airbus A320"
+  regs: ["B-50008"]
+  alt: "Tigerair Taiwan Airbus A320 B-50008 with its tiger-stripe tail touching down at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-50008"]
+        - ["Type", "Airbus A320"]
+        - ["Variant", "A320-232 (sharklets)"]
+        - ["MSN", "6700"]
+        - ["Built", "2015"]
+        - ["Flight", "IT217"]
+        - ["Status", "Last recorded with Tigerair Taiwan in 2025-02; no 2026 record found"]
+    - group: "Photo"
+      rows:
+        - ["Format", "Video clip, approach and touchdown"]
+        - ["Length", "12 s loop"]
+        - ["Frame rate", "30 fps"]
+        - ["Resolution", "1920&times;1080 (16:9)"]
+
+- img: "tpe/BR201_B-16740"
+  video: "tpe/videos/BR201_B-16740-720.mp4"
+  shot: "2025-02-06 13:00:09"
+  date: "2025-02-06"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 777-300ER"
+  regs: ["B-16740"]
+  liveries: ["Sanrio Characters"]
+  alt: "EVA Air Boeing 777-300ER B-16740 in the Sanrio Characters Lolly Jet livery taxiing onto the runway at Taiwan Taoyuan International Airport as flight BR201"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16740"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-35E(ER)"]
+        - ["MSN", "63529"]
+        - ["Engines", "GE90-115B"]
+        - ["Livery", "Sanrio Characters (Hello Kitty, My Melody, Kuromi, Cinnamoroll and friends)"]
+        - ["Flight", "BR201"]
+        - ["Status", "Still flying with EVA Air (seen 2026-07)"]
+    - group: "Photo"
+      rows:
+        - ["Format", "Video clip, taxi and lining up"]
+        - ["Length", "42 s loop"]
+        - ["Frame rate", "30 fps"]
+        - ["Resolution", "1920&times;1080 (16:9)"]
+
+- img: "tpe/CI130_B-18007"
+  video: "tpe/videos/CI130_B-18007-720.mp4"
+  shot: "2025-02-06 13:04:16"
+  date: "2025-02-06"
+  title: "🇹🇼 China Airlines"
+  aircraft: "Boeing 777-300ER"
+  regs: ["B-18007"]
+  liveries: ["Boeing co-branded livery"]
+  alt: "China Airlines Boeing 777-300ER B-18007 in the blue Boeing co-branded livery taxiing at Taiwan Taoyuan International Airport as flight CI130"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18007"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-309(ER)"]
+        - ["MSN", "43982"]
+        - ["Engines", "GE90-115B"]
+        - ["First flight", "2016-05-04"]
+        - ["Delivered", "2016-05"]
+        - ["Livery", "Boeing co-branded, carried since delivery for Boeing&rsquo;s centennial"]
+        - ["Flight", "CI130"]
+        - ["Status", "Still flying with China Airlines in Boeing co-branded livery (seen 2026-07)"]
+    - group: "Photo"
+      rows:
+        - ["Format", "Video clip, taxi and turn onto the runway"]
+        - ["Length", "24 s loop"]
+        - ["Frame rate", "30 fps"]
+        - ["Resolution", "1920&times;1080 (16:9)"]
+
+- img: "tpe/CX464_B-HPG"
+  video: "tpe/videos/CX464_B-HPG-720.mp4"
+  shot: "2025-02-06 15:19:46"
+  date: "2025-02-06"
+  title: "🇭🇰 Cathay Pacific"
+  aircraft: "Airbus A321neo"
+  regs: ["B-HPG"]
+  alt: "Cathay Pacific Airbus A321neo B-HPG on final approach and touching down with tyre smoke at Taiwan Taoyuan International Airport as flight CX464"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-HPG"]
+        - ["Type", "Airbus A321neo"]
+        - ["Variant", "A321-251NX"]
+        - ["Flight", "CX464"]
+        - ["Status", "Still flying with Cathay Pacific (seen 2026-02)"]
+    - group: "Photo"
+      rows:
+        - ["Format", "Video clip, approach and touchdown"]
+        - ["Length", "8 s loop"]
+        - ["Frame rate", "30 fps"]
+        - ["Resolution", "1920&times;1080 (16:9)"]
+
+- img: "tpe/CX488_B-HNW"
+  video: "tpe/videos/CX488_B-HNW-720.mp4"
+  shot: "2025-02-06 15:31:08"
+  date: "2025-02-06"
+  title: "🇭🇰 Cathay Pacific"
+  aircraft: "Boeing 777-300"
+  regs: ["B-HNW"]
+  alt: "Cathay Pacific Boeing 777-300 B-HNW on a long final and landing at Taiwan Taoyuan International Airport as flight CX488"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-HNW"]
+        - ["Type", "Boeing 777-300"]
+        - ["Variant", "777-31H"]
+        - ["MSN", "32697"]
+        - ["History", "Built for Emirates as A6-EMQ before joining Cathay Pacific"]
+        - ["Flight", "CX488"]
+        - ["Status", "Still flying with Cathay Pacific (seen 2026-01)"]
+    - group: "Photo"
+      rows:
+        - ["Format", "Video clip, approach and touchdown"]
+        - ["Length", "15 s loop"]
+        - ["Frame rate", "30 fps"]
+        - ["Resolution", "1920&times;1080 (16:9)"]
+
+- img: "tpe/IT217_B-50018"
+  video: "tpe/videos/IT217_B-50018-720.mp4"
+  shot: "2025-02-06 15:52:31"
+  date: "2025-02-06"
+  title: "🇹🇼 Tigerair Taiwan"
+  aircraft: "Airbus A320"
+  regs: ["B-50018"]
+  liveries: ["Rakuten Monkeys livery"]
+  alt: "Tigerair Taiwan Airbus A320 B-50018 in the Rakuten Monkeys baseball livery, with the team mascot on the rear fuselage, landing at Taiwan Taoyuan International Airport as flight IT217"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-50018"]
+        - ["Type", "Airbus A320"]
+        - ["Variant", "A320-232 (sharklets)"]
+        - ["MSN", "7982"]
+        - ["Livery", "Rakuten Monkeys (樂天桃猿) baseball team, the second Tigerair Taiwan &times; Rakuten Monkeys jet, since 2023-12-08"]
+        - ["Flight", "IT217"]
+        - ["Status", "Last recorded with Tigerair Taiwan in 2025-02; no 2026 record found"]
+      history:
+        - ["2023-12-08", "Debuted in the Rakuten Monkeys livery on IT228 Taoyuan to Niigata"]
+    - group: "Photo"
+      rows:
+        - ["Format", "Video clip, approach and touchdown"]
+        - ["Length", "11 s loop"]
+        - ["Frame rate", "30 fps"]
+        - ["Resolution", "1920&times;1080 (16:9)"]
+

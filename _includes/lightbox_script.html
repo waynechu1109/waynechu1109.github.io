@@ -11,6 +11,31 @@
         var info = lightbox.querySelector(".lightbox-info");
         var infoToggle = lightbox.querySelector(".lightbox-info-toggle");
         var shareBtn = lightbox.querySelector(".lightbox-share");
+        // cards with a clip play it silently in place of the still; built here so pages without clips carry no element
+        var lightboxVideo = document.createElement("video");
+        lightboxVideo.className = "lightbox-image lightbox-video";
+        lightboxVideo.muted = true;
+        lightboxVideo.loop = true;
+        lightboxVideo.playsInline = true;
+        lightboxVideo.setAttribute("playsinline", "");
+        lightboxVideo.hidden = true;
+        lightboxImage.parentNode.insertBefore(lightboxVideo, lightboxImage);
+        function showMedia(img) {
+          var clip = img.dataset.video;
+          lightboxImage.hidden = !!clip;
+          lightboxVideo.hidden = !clip;
+          if (clip) {
+            lightboxVideo.poster = srcFor(img);
+            lightboxVideo.setAttribute("aria-label", img.alt || "");
+            if (lightboxVideo.getAttribute("src") !== clip) lightboxVideo.src = clip;
+            var playing = lightboxVideo.play();
+            if (playing && playing.catch) playing.catch(function () {});
+          } else {
+            lightboxVideo.pause();
+            lightboxVideo.removeAttribute("src");
+            lightboxVideo.load();
+          }
+        }
         var infoOpen = true;
         var photoImages = Array.prototype.slice.call(document.querySelectorAll(".photo-image"));
         var current = -1;
@@ -41,6 +66,7 @@
           var img = photoImages[current];
           lightboxImage.src = srcFor(img);
           lightboxImage.alt = img.alt || "";
+          showMedia(img);
           if (lightboxCaption) {
             lightboxCaption.textContent = captionFor(img);
             lightboxCaption.hidden = !lightboxCaption.textContent;
@@ -286,7 +312,11 @@
 
           var stub = el("div", "pass-stub");
           var exp = el("div", "pass-exposure");
-          [["Focal", "Focal"], ["Aperture", "Aperture"], ["Shutter", "Shutter"], ["ISO", "ISO"]].forEach(function (k) {
+          // a clip has no single exposure, so its stub shows the clip's own numbers instead
+          var exposure = shot.Length
+            ? [["Length", "Length"], ["Frame rate", "Frame rate"], ["Resolution", "Resolution"]]
+            : [["Focal", "Focal"], ["Aperture", "Aperture"], ["Shutter", "Shutter"], ["ISO", "ISO"]];
+          exposure.forEach(function (k) {
             exp.appendChild(field(k[0], shot[k[1]] || "—"));
           });
           stub.appendChild(exp);
@@ -356,6 +386,7 @@
           lightbox.classList.remove("is-open");
           lightbox.setAttribute("aria-hidden", "true");
           lightboxImage.removeAttribute("src");
+          lightboxVideo.pause();
           setHash("");
           lightboxImage.alt = "";
           if (lens) lens.style.display = "none";

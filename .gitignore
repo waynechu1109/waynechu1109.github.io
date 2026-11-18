@@ -8,3 +8,6 @@ media/gallery/**/*.jpg
 !media/gallery/**/*-640.jpg
 !media/gallery/**/*-1280.jpg
 !media/gallery/**/*-2560.jpg
+# Video originals stay local too; only the compressed 720p loops are published
+media/gallery/**/videos/*
+!media/gallery/**/videos/*-720.mp4

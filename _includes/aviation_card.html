@@ -18,16 +18,21 @@
 {%- comment %} one badge when every aircraft shares a state, otherwise one per registration so the two can be told apart {% endcomment -%}
 {%- if states contains " " %}{% assign badges = pairs | split: ";" %}{% else %}{% assign badges = states | split: " " %}{% endif -%}
           <article class="photo-card{% if lead %} is-lead{% endif %}{% if include.i > cap %} is-extra{% endif %}" id="p-{{ p.img | replace: '/', '-' }}"{% if p.spotted %} data-spotted="{{ p.spotted }}"{% endif %}{% if states != "" %} data-status="{{ states }}"{% endif %}>
-            <div class="photo-frame real-photo">
+            <div class="photo-frame real-photo{% if p.video %} has-video{% endif %}">
               <img
                 src="{{ base }}-1280.jpg"
                 srcset="{{ base }}-640.jpg 640w, {{ base }}-1280.jpg 1280w, {{ base }}-2560.jpg 2560w"
                 sizes="{% if lead %}(max-width: 900px) 92vw, 680px{% else %}(max-width: 640px) 92vw, (max-width: 900px) 46vw, 330px{% endif %}"
                 data-full="{{ base }}-2560.jpg"
+                {%- if p.video %} data-video="media/gallery/aviation_gallery/{{ p.video }}"{% endif %}
                 alt="{{ p.alt }}"
                 class="photo-image"
                 loading="lazy"
               />
+              {%- if p.video %}
+              <video class="card-video" muted loop playsinline preload="none" poster="{{ base }}-1280.jpg" data-src="media/gallery/aviation_gallery/{{ p.video }}" aria-hidden="true"></video>
+              <span class="video-badge"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Video</span>
+              {%- endif %}
             </div>
             <div class="photo-body">
               <h4 class="photo-title">{{ p.title }}</h4>

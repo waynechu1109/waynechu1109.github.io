@@ -567,6 +567,28 @@ header_subtitle: "Selected aircraft photography organized by airport."
   </script>
 
   <script>
+    /* Card clips: load and play only while on screen, and never for readers who ask for reduced motion */
+    (function () {
+      var clips = document.querySelectorAll('.card-video');
+      if (!clips.length || !('IntersectionObserver' in window)) return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var seen = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var v = e.target;
+          if (e.isIntersecting) {
+            if (!v.getAttribute('src')) v.src = v.dataset.src;
+            var playing = v.play();
+            if (playing && playing.then) playing.then(function () { v.parentNode.classList.add('is-playing'); }, function () {});
+          } else {
+            v.pause();
+          }
+        });
+      }, { threshold: 0.5 });
+      clips.forEach(function (v) { seen.observe(v); });
+    })();
+  </script>
+
+  <script>
     /* Age when shot: the photo date against the airframe's delivery, first flight or build date, added to the card details and lead facts */
     (function () {
       var BASIS = ['Delivered', 'First flight', 'Built'];
