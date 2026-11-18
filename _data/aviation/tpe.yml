@@ -968,6 +968,9 @@
         - ["Type", "Boeing 747-400F"]
         - ["Variant", "747-409F(SCD)"]
         - ["Engines", "General Electric CF6-80C2"]
+        - ["MSN", "30766"]
+        - ["Delivered", "2002-02-04"]
+        - ["Status", "With China Airlines Cargo in the latest fleet listings, but no 2026 flight record found; China Airlines is selling four of its eight 747-400Fs to Cargolux for removal in 2027, and which four has not been made public"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]

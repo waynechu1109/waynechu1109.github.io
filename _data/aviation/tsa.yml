@@ -154,11 +154,11 @@
         - ["Delivered", "2011"]
         - ["Livery", "Special 787 launch livery with large &ldquo;787&rdquo; titles, worn from delivery until a repaint in 2017"]
         - ["Note", "One of ANA&rsquo;s first two 787s, alongside JA801A"]
-        - ["Status", "Moved to ANA&rsquo;s AirJapan brand in 2025-11; AirJapan flights ended 2026-03"]
+        - ["Status", "Still with ANA as a non-revenue aircraft for pilot training and spare engines, since AirJapan closed (seen 2026-05)"]
       history:
         - ["2017-09-28", "Last flight in the 787 launch livery; repainted by 2017-10-23"]
-        - ["2025-11", "Moved to ANA&rsquo;s AirJapan brand"]
-        - ["2026-03", "AirJapan flights ended"]
+        - ["2025-11-23", "First flight for ANA&rsquo;s AirJapan brand"]
+        - ["2026-03-28", "Last AirJapan flight, after 126 days in service"]
     - group: "Aircraft &middot; JAL"
       rows:
         - ["Registration", "JA708J"]
