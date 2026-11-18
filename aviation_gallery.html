@@ -423,6 +423,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
       <div class="lightbox-bar">
         <p class="lightbox-caption" aria-live="polite"></p>
         <button class="lightbox-info-toggle" type="button" aria-expanded="false" aria-controls="lightbox-info" hidden>Details</button>
+        <button class="lightbox-share" type="button" hidden>Copy link</button>
       </div>
     </div>
     <button class="lightbox-nav lightbox-next" type="button" aria-label="Next photo">
@@ -493,7 +494,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
       });
       var label = function (card) {
         var section = card.closest('.airport-section');
-        var date = card.querySelector('.photo-date');
+        var date = card.querySelector('.photo-date time');
         return [section ? section.dataset.code : '', date ? date.textContent.trim() : ''].filter(Boolean).join(' · ');
       };
       Object.keys(byReg).forEach(function (reg) {
@@ -648,7 +649,70 @@ header_subtitle: "Selected aircraft photography organized by airport."
         document.body.classList.toggle('is-filtering', !!active);
         count.textContent = active ? shown + ' of ' + items.length + ' photos' : '';
         empty.hidden = shown > 0;
+        writeQuery();
       }
+
+      // the query string mirrors the filters so any filtered view can be shared; replaceState keeps typing out of history
+      var PARAMS = { q: input, airline: airlineSelect, type: typeSelect };
+      function writeQuery() {
+        var params = new URLSearchParams(location.search);
+        Object.keys(PARAMS).forEach(function (k) {
+          var v = PARAMS[k].value.trim();
+          if (v) params.set(k, v); else params.delete(k);
+        });
+        if (filter !== 'all') params.set('filter', filter); else params.delete('filter');
+        var qs = params.toString();
+        history.replaceState(history.state, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+      }
+      function readQuery() {
+        var params = new URLSearchParams(location.search);
+        Object.keys(PARAMS).forEach(function (k) {
+          if (params.has(k)) PARAMS[k].value = params.get(k);
+        });
+        var chip = chips.filter(function (c) { return c.dataset.filter === params.get('filter'); })[0];
+        if (chip) {
+          filter = chip.dataset.filter;
+          chips.forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
+        }
+      }
+
+      // airline names and single-type aircraft lines on the cards act as shortcuts into the dropdowns
+      var filterBar = document.querySelector('.photo-filter');
+      function pick(select, value) {
+        select.value = value;
+        apply();
+        filterBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      function shortcut(label, attr, value) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'card-shortcut';
+        b.setAttribute(attr, value);
+        b.textContent = label;
+        b.title = 'Show all ' + value;
+        return b;
+      }
+      items.forEach(function (it) {
+        var titleEl = it.card.querySelector('.photo-title');
+        var parts = titleEl.textContent.split(' / ');
+        titleEl.textContent = '';
+        parts.forEach(function (part, i) {
+          if (i) titleEl.appendChild(document.createTextNode(' / '));
+          titleEl.appendChild(shortcut(part, 'data-airline', it.airlines[i]));
+        });
+        if (it.types.length === 1) {
+          var typeEl = it.card.querySelector('.photo-aircraft');
+          var label = typeEl.textContent;
+          typeEl.textContent = '';
+          typeEl.appendChild(shortcut(label, 'data-type', it.types[0]));
+        }
+      });
+      document.addEventListener('click', function (e) {
+        var b = e.target.closest('.card-shortcut');
+        if (!b) return;
+        if (b.dataset.airline) pick(airlineSelect, b.dataset.airline);
+        else pick(typeSelect, b.dataset.type);
+      });
 
       chips.forEach(function (b) {
         b.addEventListener('click', function () {
@@ -663,6 +727,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
       input.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && input.value) { input.value = ''; apply(); }
       });
+      readQuery();
       apply();
     })();
   </script>
@@ -701,9 +766,9 @@ header_subtitle: "Selected aircraft photography organized by airport."
           card: card,
           place: section ? section.id : '',
           hasReg: regs.length > 0,
-          date: text('.photo-date'),
-          cells: [text('.photo-date'), regs[0] || '', section ? section.dataset.code : '', shortType(text('.photo-aircraft')), remark],
-          label: [text('.photo-title'), text('.photo-aircraft'), regs.join(', '), text('.photo-date')].filter(Boolean).join(', ')
+          date: text('.photo-date time'),
+          cells: [text('.photo-date time'), regs[0] || '', section ? section.dataset.code : '', shortType(text('.photo-aircraft')), remark],
+          label: [text('.photo-title'), text('.photo-aircraft'), regs.join(', '), text('.photo-date time')].filter(Boolean).join(', ')
         };
       }).sort(function (a, b) {
         if (a.date !== b.date) return a.date < b.date ? 1 : -1;

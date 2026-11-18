@@ -233,6 +233,13 @@
     }
     .photo-filter-chips button:hover { background: var(--hover); }
     .photo-filter-chips button[aria-pressed="true"] { color: #fff; background: var(--primary-deep); border-color: var(--primary-deep); }
+    .card-shortcut {
+      padding: 0; border: 0; background: none; cursor: pointer;
+      font: inherit; color: inherit; text-align: inherit;
+      text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px;
+      transition: text-decoration-color .18s ease;
+    }
+    .card-shortcut:hover, .card-shortcut:focus-visible { text-decoration-color: currentColor; }
     .photo-browse { display: flex; flex-wrap: wrap; gap: 10px; flex-basis: 100%; }
     .photo-browse select {
       flex: 1 1 220px; min-width: 0; padding: 8px 12px; border-radius: 12px; cursor: pointer;

@@ -10,6 +10,7 @@
         var dialog = lightbox.querySelector(".lightbox-dialog");
         var info = lightbox.querySelector(".lightbox-info");
         var infoToggle = lightbox.querySelector(".lightbox-info-toggle");
+        var shareBtn = lightbox.querySelector(".lightbox-share");
         var infoOpen = true;
         var photoImages = Array.prototype.slice.call(document.querySelectorAll(".photo-image"));
         var current = -1;
@@ -27,7 +28,7 @@
           var card = img.closest(".photo-card");
           if (!card) return "";
           var parts = [];
-          [".photo-title", ".photo-aircraft", ".reg-chip", ".photo-date"].forEach(function (sel) {
+          [".photo-title", ".photo-aircraft", ".reg-chip", ".photo-date time"].forEach(function (sel) {
             card.querySelectorAll(sel).forEach(function (el) {
               var text = el.textContent.trim();
               if (text) parts.push(text);
@@ -45,6 +46,7 @@
             lightboxCaption.hidden = !lightboxCaption.textContent;
           }
           renderInfo(img);
+          setHash(cardIdFor(img));
           preload(current + 1);
           preload(current - 1);
         }
@@ -173,7 +175,7 @@
           // a card's own spotting location is more specific than its section's
           at.appendChild(el("span", "pass-code-sub", card.dataset.spotted ? "Over " + card.dataset.spotted : (section ? section.dataset.codeSub : "")));
           route.appendChild(field("Spotted at", at));
-          route.appendChild(field("Date", text(".photo-date"), "pass-right"));
+          route.appendChild(field("Date", text(".photo-date time"), "pass-right"));
           main.appendChild(route);
 
           var plane = el("div", "pass-plane");
@@ -210,7 +212,7 @@
           if (kit) stub.appendChild(el("p", "pass-kit", kit));
           var code = el("div", "pass-barcode-row");
           // registration only: adding the date would nearly double the width and shrink the bars below what scans well
-          var payload = regs[0] || (section ? section.dataset.code : "") + " " + text(".photo-date").replace(/-/g, "");
+          var payload = regs[0] || (section ? section.dataset.code : "") + " " + text(".photo-date time").replace(/-/g, "");
           code.appendChild(barcode(payload));
           code.appendChild(el("span", "pass-barcode-text", payload));
           stub.appendChild(code);
@@ -225,6 +227,18 @@
           info.hidden = !shown;
           infoToggle.setAttribute("aria-expanded", shown ? "true" : "false");
           dialog.classList.toggle("info-open", shown);
+        }
+
+        // the open photo's card id rides in the hash so the address bar always points at what is on screen
+        function cardIdFor(img) {
+          var card = img.closest("[id^='p-']");
+          return card ? card.id : "";
+        }
+        function setHash(id) {
+          // only the aviation page has linkable cards; elsewhere leave the address alone
+          if (!shareBtn) return;
+          shareBtn.hidden = !id;
+          history.replaceState(history.state, "", location.pathname + location.search + (id ? "#" + id : ""));
         }
 
         function openLightbox(i) {
@@ -242,6 +256,7 @@
           lightbox.classList.remove("is-open");
           lightbox.setAttribute("aria-hidden", "true");
           lightboxImage.removeAttribute("src");
+          setHash("");
           lightboxImage.alt = "";
           if (lens) lens.style.display = "none";
           document.body.style.overflow = "";
@@ -305,6 +320,14 @@
         prevBtn.addEventListener("click", function () { move(-1); });
         nextBtn.addEventListener("click", function () { move(1); });
         if (infoToggle) infoToggle.addEventListener("click", function () { setInfo(!infoOpen); });
+        if (shareBtn) shareBtn.addEventListener("click", function () {
+          var done = function (label) {
+            shareBtn.textContent = label;
+            setTimeout(function () { shareBtn.textContent = "Copy link"; }, 1600);
+          };
+          if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(function () { done("Copied"); }, function () { done("Copy failed"); });
+          else done("Copy failed");
+        });
 
         lightbox.addEventListener("click", function (event) {
           if (event.target === lightbox) closeLightbox();
@@ -330,6 +353,7 @@
           } else if (event.key === "Tab") {
             var focusables = [prevBtn, closeBtn, nextBtn];
             if (infoToggle && !infoToggle.hidden) focusables.splice(2, 0, infoToggle);
+            if (shareBtn && !shareBtn.hidden) focusables.splice(focusables.length - 1, 0, shareBtn);
             var idx = focusables.indexOf(document.activeElement);
             if (idx === -1) idx = 0;
             event.preventDefault();
@@ -339,5 +363,11 @@
             focusables[nextIdx].focus();
           }
         });
+
+        if (location.hash.indexOf("#p-") === 0) {
+          var linked = document.getElementById(location.hash.slice(1));
+          var linkedImg = linked && linked.querySelector(".photo-image");
+          if (linkedImg && photoImages.indexOf(linkedImg) !== -1) openLightbox(photoImages.indexOf(linkedImg));
+        }
       })();
     </script>
