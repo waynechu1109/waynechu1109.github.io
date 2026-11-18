@@ -212,6 +212,83 @@
     }
 
     /* =========================
+       Spotting passport
+       ========================= */
+    .passport-wrap .spot-map-toggle::before { content: "Open"; }
+    .passport-wrap[open] .spot-map-toggle::before { content: "Close"; }
+    .passport {
+      margin-top: 10px; padding: 18px 20px 14px; border-radius: 14px;
+      border: 1px solid rgba(var(--line-rgb),.22);
+      /* faint guilloche lines, like the security print on a real passport page */
+      background:
+        repeating-radial-gradient(circle at 18% 30%, transparent 0 9px, rgba(30,79,129,.045) 9px 10px),
+        repeating-radial-gradient(circle at 82% 70%, transparent 0 11px, rgba(178,58,72,.035) 11px 12px),
+        var(--surface);
+    }
+    .passport-head {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline;
+      padding-bottom: 10px; margin-bottom: 6px; border-bottom: 1px dashed rgba(var(--line-rgb),.3);
+    }
+    .passport-kicker { font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+    .passport-summary { font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .passport-stamps {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px 14px; justify-items: center; padding: 14px 0 4px;
+    }
+    .stamp {
+      --ink: #1e4f81;
+      display: block; text-decoration: none; color: var(--ink);
+      transform: rotate(var(--tilt, 0deg)); transition: transform .2s ease;
+    }
+    .stamp:hover, .stamp:focus-visible { transform: rotate(0deg) scale(1.06); }
+    .stamp:focus-visible { outline: none; }
+    .stamp:focus-visible .stamp-ink { box-shadow: 0 0 0 3px rgba(var(--line-rgb),.35); }
+    .stamp-ink {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+      text-align: center; line-height: 1.1; opacity: .86;
+      filter: url(#stamp-rough); mix-blend-mode: multiply;
+      font-family: "Source Sans 3", system-ui, sans-serif; font-weight: 700; text-transform: uppercase;
+    }
+    .stamp-round .stamp-ink {
+      width: 132px; height: 132px; border-radius: 50%; padding: 12px;
+      border: 3px solid var(--ink); box-shadow: inset 0 0 0 4px var(--surface), inset 0 0 0 5.5px var(--ink);
+    }
+    .stamp-box .stamp-ink {
+      width: 148px; min-height: 104px; border-radius: 8px; padding: 10px 12px;
+      border: 2.5px dashed var(--ink); outline: 1.5px solid var(--ink); outline-offset: -8px;
+    }
+    .stamp-country { font-size: .56rem; letter-spacing: .22em; }
+    .stamp-code { font-family: "Source Serif 4", Georgia, serif; font-size: 1.7rem; letter-spacing: .04em; }
+    .stamp-place { font-size: .62rem; letter-spacing: .08em; max-width: 100%; }
+    .stamp-date {
+      margin-top: 3px; padding: 1px 6px; font-size: .66rem; letter-spacing: .1em;
+      border-top: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+    .stamp-count { font-size: .6rem; letter-spacing: .14em; }
+    .stamp-tw { --ink: #b23a48; }
+    .stamp-us { --ink: #1e4f81; }
+    .stamp-jp { --ink: #6a3f8f; }
+    [data-theme="dark"] .stamp-ink { mix-blend-mode: screen; opacity: .9; }
+    [data-theme="dark"] .stamp-tw { --ink: #ef8a95; }
+    [data-theme="dark"] .stamp-us { --ink: #7fb2e5; }
+    [data-theme="dark"] .stamp-jp { --ink: #c19be3; }
+    [data-theme="dark"] .passport {
+      background:
+        repeating-radial-gradient(circle at 18% 30%, transparent 0 9px, rgba(127,178,229,.05) 9px 10px),
+        repeating-radial-gradient(circle at 82% 70%, transparent 0 11px, rgba(239,138,149,.04) 11px 12px),
+        var(--surface);
+    }
+    @media (max-width: 480px) {
+      .passport { padding: 14px 12px 10px; }
+      .passport-stamps { grid-template-columns: repeat(2, 1fr); gap: 8px 6px; }
+      .stamp-round .stamp-ink { width: 118px; height: 118px; padding: 10px; }
+      .stamp-box .stamp-ink { width: 130px; min-height: 96px; }
+      .stamp-code { font-size: 1.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { .stamp { transition: none; } }
+
+    /* =========================
        Search & Filter
        ========================= */
     .photo-filter {

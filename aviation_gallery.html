@@ -173,6 +173,91 @@ header_subtitle: "Selected aircraft photography organized by airport."
       </script>
       {% include spot_map.html title="Where these were shot" hint="Pick a region, then click an airport to jump to its photos." %}
 
+      <details class="spot-map-wrap passport-wrap">
+        <summary class="spot-map-summary">
+          <span class="spot-map-title">Spotting passport</span>
+          <span class="spot-map-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="passport">
+          <div class="passport-head">
+            <span class="passport-kicker">Entries &amp; visas</span>
+            <span class="passport-summary"></span>
+          </div>
+          <div class="passport-stamps"></div>
+          <p class="spot-map-hint">Stamps are in order of first visit. Click one to jump to its photos.</p>
+        </div>
+        <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+          <filter id="stamp-rough"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="1.5"/></filter>
+        </svg>
+      </details>
+      <script>
+        /* Spotting passport: one stamp per section, built from the cards so new photos and airports stamp themselves */
+        document.addEventListener('DOMContentLoaded', function () {
+          var wrap = document.querySelector('.passport-stamps');
+          if (!wrap) return;
+          var COUNTRY = { TW: 'Taiwan', US: 'United States', JP: 'Japan' };
+          var MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+          // flags are two regional-indicator letters; turning them back into ASCII gives the ISO country code
+          function countryOf(text) {
+            var m = text.match(/[\u{1F1E6}-\u{1F1FF}]{2}/u);
+            if (!m) return '';
+            return Array.from(m[0]).map(function (c) { return String.fromCharCode(c.codePointAt(0) - 0x1F1E6 + 65); }).join('');
+          }
+          function stampDate(d) {
+            var p = d.split('-');
+            var mon = MONTHS[parseInt(p[1], 10) - 1];
+            return p[2] ? parseInt(p[2], 10) + ' ' + mon + ' ' + p[0] : mon + ' ' + p[0];
+          }
+          var total = 0;
+          var entries = Array.prototype.map.call(document.querySelectorAll('.airport-section'), function (section) {
+            var dates = Array.prototype.map.call(section.querySelectorAll('.photo-date time'), function (t) { return t.getAttribute('datetime'); }).sort();
+            var sub = (section.dataset.codeSub || '').split(' \u00b7 ');
+            var cc = countryOf(section.querySelector('.airport-name').textContent);
+            total += dates.length;
+            return {
+              id: section.id,
+              code: section.dataset.code,
+              icao: /^[A-Z]{4}$/.test(sub[0]) ? sub[0] : '',
+              place: sub[sub.length - 1],
+              country: cc,
+              first: dates[0],
+              count: dates.length
+            };
+          }).filter(function (e) { return e.count; });
+          entries.sort(function (a, b) { return a.first < b.first ? -1 : a.first > b.first ? 1 : 0; });
+          entries.forEach(function (e, i) {
+            var a = document.createElement('a');
+            a.href = '#' + e.id;
+            // airports with an ICAO code get the round entry stamp; events and bases get the boxed one
+            a.className = 'stamp ' + (e.icao ? 'stamp-round' : 'stamp-box') + ' stamp-' + (e.country || 'xx').toLowerCase();
+            // a fixed tilt per stamp, so the page looks hand-stamped but the same on every visit
+            var tilt = ((e.code.charCodeAt(0) * 7 + e.code.length * 13 + i * 5) % 19) - 9;
+            a.style.setProperty('--tilt', tilt + 'deg');
+            a.setAttribute('aria-label', e.code + ', first visited ' + e.first + ', ' + e.count + ' photo' + (e.count === 1 ? '' : 's'));
+            var parts = [
+              ['stamp-country', (COUNTRY[e.country] || e.country).toUpperCase()],
+              ['stamp-code', e.code],
+              ['stamp-place', e.icao ? e.icao + ' \u00b7 ' + e.place : e.place],
+              ['stamp-date', stampDate(e.first)],
+              ['stamp-count', e.count + (e.count === 1 ? ' PHOTO' : ' PHOTOS')]
+            ];
+            var ink = document.createElement('span');
+            ink.className = 'stamp-ink';
+            ink.setAttribute('aria-hidden', 'true');
+            parts.forEach(function (p) {
+              var s = document.createElement('span');
+              s.className = p[0];
+              s.textContent = p[1];
+              ink.appendChild(s);
+            });
+            a.appendChild(ink);
+            wrap.appendChild(a);
+          });
+          var since = entries.length ? entries[0].first.slice(0, 4) : '';
+          document.querySelector('.passport-summary').textContent = entries.length + ' stamps \u00b7 ' + total + ' photos \u00b7 since ' + since;
+        });
+      </script>
+
       <div class="airport-links" aria-label="Airport categories">
         <a href="#rctp" class="resource-btn">🇹🇼 RCTP / TPE</a>
         <a href="#rcss" class="resource-btn">🇹🇼 RCSS / TSA</a>
