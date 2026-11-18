@@ -103,7 +103,7 @@
         - ["Engines", "GE GEnx-1B"]
         - ["Delivered", "2014"]
         - ["Livery", "Mahatma Gandhi tail for the 150th anniversary of his birth, since 2019-12"]
-        - ["Status", "Still flying with Air India; reportedly repainted in the new Air India livery in 2026-05, per a spotter report not yet confirmed by Air India"]
+        - ["Status", "Still flying with Air India, reportedly in the new Air India livery since about 2026-05 per enthusiast and Airways Magazine posts that Air India has not confirmed (seen 2026-06)"]
       history:
         - ["2019-12", "Mahatma Gandhi 150th anniversary tail applied"]
         - ["2026-05", "Reportedly repainted in the new Air India livery after a cabin retrofit at Victorville (spotter report)"]
@@ -156,7 +156,7 @@
         - ["Engines", "GE90-110B1L"]
         - ["Name", "BLUE JAY, the nickname ANA gave its 777Fs"]
         - ["Note", "One of the two 777Fs that made ANA the first Japanese airline to fly the type, from 2019"]
-        - ["Status", "Still flying with ANA Cargo (seen 2026-02)"]
+        - ["Status", "Still flying with ANA Cargo (seen 2026-08)"]
       history:
         - ["2019-07-02", "Entered service as one of the first two 777Fs flown by a Japanese airline"]
     - group: "Photo"
@@ -186,7 +186,7 @@
         - ["Delivered", "2023-07-31"]
         - ["Name", "Nof HaGalil"]
         - ["Note", "El Al&rsquo;s fourth and last 787-8, and the last 787 of its original order"]
-        - ["Status", "Still flying with El Al (seen 2026-03)"]
+        - ["Status", "Still flying with El Al (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -288,7 +288,7 @@
         - ["Engines", "GE GEnx-1B"]
         - ["Delivered", "2014"]
         - ["Livery", "Mahatma Gandhi tail for the 150th anniversary of his birth, since 2019-12; the &ldquo;150 Years of Celebrating the Mahatma&rdquo; logo sits behind the forward door"]
-        - ["Status", "Still flying with Air India; reportedly repainted in the new Air India livery in 2026-05, per a spotter report not yet confirmed by Air India"]
+        - ["Status", "Still flying with Air India, reportedly in the new Air India livery since about 2026-05 per enthusiast and Airways Magazine posts that Air India has not confirmed (seen 2026-06)"]
       history:
         - ["2019-12", "Mahatma Gandhi 150th anniversary tail applied"]
         - ["2026-05", "Reportedly repainted in the new Air India livery after a cabin retrofit at Victorville (spotter report)"]
@@ -391,17 +391,19 @@
     - group: "Aircraft"
       rows:
         - ["Registration", "HL7415"]
+        - ["Last registered", "N271KP"]
         - ["Type", "Boeing 747-400BDSF"]
         - ["Variant", "747-48E(BDSF)"]
         - ["MSN", "25777"]
         - ["Line no.", "946"]
         - ["Engines", "Pratt &amp; Whitney PW4056"]
         - ["History", "Delivered to Asiana as a passenger 747-400 in 1992 and later converted to a freighter"]
-        - ["Status", "Last recorded with Asiana Cargo in 2025-07; reportedly retired in 2025 and listed by one fleet database as N271KP with KP Aviation, which the FAA does not confirm"]
+        - ["Status", "Left Asiana Cargo on 2025-12-14 as N271KP, reported as the last Asiana 747-400 to go, and listed for KP Aviation; the FAA now shows N271KP only as a cancelled reservation"]
       history:
         - ["1992-12-03", "Delivered to Asiana as a passenger 747-400"]
         - ["2007-10", "Converted to a freighter for Asiana Cargo"]
         - ["2025-08-01", "Asiana Cargo&rsquo;s freighter business passed to AirZeta"]
+        - ["2025-12-14", "Left Asiana Cargo as N271KP"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -426,7 +428,7 @@
         - ["Variant", "A350-941"]
         - ["MSN", "312"]
         - ["Engines", "Rolls-Royce Trent XWB-84"]
-        - ["Status", "Still flying with Iberia (seen 2026-05)"]
+        - ["Status", "Still flying with Iberia (seen 2026-07)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]

@@ -93,7 +93,9 @@
         - ["Engines", "Pratt &amp; Whitney Canada PW127M"]
         - ["Delivered", "2017-11"]
         - ["Note", "Mandarin Airlines&rsquo; first ATR 72-600"]
-        - ["Status", "Still flying with Mandarin Airlines (seen 2026-03)"]
+        - ["Status", "Returned to its lessor by Mandarin Airlines in 2025-08 and ferried to Ho Chi Minh City for a return check; next operator not yet known"]
+      history:
+        - ["2025-08", "Returned to its lessor; ferried from Songshan to Ho Chi Minh City as AE6851"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -121,11 +123,12 @@
         - ["Engines", "Rolls-Royce Trent 1000"]
         - ["Delivered", "2015-09 (reported)"]
         - ["Livery", "R2-D2 ANA JET, 2015-10 to 2025-08; the first of ANA&rsquo;s Star Wars jets"]
-        - ["Status", "Still with ANA; the R2-D2 livery came off after its last flight on 2025-08-06"]
+        - ["Status", "Still flying with ANA (seen 2026-09); repaired after a tail strike at Houston on 2026-02-27, and the R2-D2 livery came off after its last flight on 2025-08-06"]
       history:
         - ["2015-10-01", "Delivery flight to Haneda"]
         - ["2015-10-18", "Entered service on Haneda to Vancouver"]
         - ["2025-08-06", "Last flight in the R2-D2 livery"]
+        - ["2026-02-27", "Tail strike landing at Houston as NH114; repaired at IAH"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α5000"]

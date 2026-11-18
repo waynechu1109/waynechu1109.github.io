@@ -4,12 +4,12 @@
 {%- if include.i == 1 and include.n >= 3 %}{% assign lead = true %}{% else %}{% assign lead = false %}{% endif -%}
 {%- assign states = "" %}{% assign pairs = "" -%}
 {%- for g in p.details %}{% assign g0 = g.group | slice: 0, 8 %}{% if g0 == "Aircraft" %}{% for row in g.rows %}{% if row[0] == "Registration" or row[0] == "Side number" %}{% assign reg = row[1] %}{% endif %}{% if row[0] == "Status" -%}
-{%- assign s = row[1] %}{% assign s7 = s | slice: 0, 7 %}{% assign s8 = s | slice: 0, 8 -%}
+{%- assign s = row[1] %}{% assign s5 = s | slice: 0, 5 %}{% assign s7 = s | slice: 0, 7 %}{% assign s8 = s | slice: 0, 8 -%}
 {%- comment %} an airline shutting down or a brand ending says nothing certain about the airframe itself {% endcomment -%}
 {%- if s contains "suspended" or s contains "ended" %}{% assign k = "unconfirmed" -%}
 {%- elsif s8 == "Still fl" or s8 == "Still wi" %}{% assign k = "flying" -%}
 {%- elsif s7 == "Retired" %}{% assign k = "retired" -%}
-{%- elsif s8 == "Moved to" or s8 == "Now with" %}{% assign k = "moved" -%}
+{%- elsif s8 == "Moved to" or s8 == "Now with" or s8 == "Returned" or s5 == "Left " %}{% assign k = "moved" -%}
 {%- else %}{% assign k = "unconfirmed" %}{% endif -%}
 {%- unless states contains k %}{% assign states = states | append: k | append: " " %}{% endunless -%}
 {%- assign pairs = pairs | append: reg | append: "|" | append: k | append: ";" -%}

@@ -27,7 +27,7 @@
         - ["Engines", "CFM56-7B"]
         - ["Delivered", "2016"]
         - ["Operator", "ANA Wings"]
-        - ["Status", "Last recorded with ANA in 2025-12; no 2026 record found"]
+        - ["Status", "Still flying with ANA (seen 2026-08)"]
     - group: "Aircraft &middot; ANA 787"
       rows:
         - ["Registration", "JA888A"]
@@ -37,7 +37,7 @@
         - ["Delivered", "2016-11"]
         - ["Operator", "Air Japan"]
         - ["Position", "Background, at the terminal"]
-        - ["Status", "Still flying with Air Japan (seen 2026-01)"]
+        - ["Status", "Still flying on ANA international flights (seen 2026-11)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -96,7 +96,7 @@
         - ["First flight", "2017-12-16"]
         - ["Livery", "&ldquo;Sakura Jinbei&rdquo; pink whale shark, supporting the Okinawa Churaumi Aquarium"]
         - ["Note", "The second pink Sakura Jinbei, after a JTA 737-400 unveiled in 2014"]
-        - ["Status", "Still flying with JTA in the Sakura Jinbei livery (seen 2026-01)"]
+        - ["Status", "Still flying with JTA (seen 2026-08); last confirmed in the Sakura Jinbei livery in 2026-01"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -282,10 +282,11 @@
         - ["Engines", "Pratt &amp; Whitney PW4000"]
         - ["Delivered", "2013-03"]
         - ["Livery", "C-3PO ANA JET, 2017-03-21 to 2026-01-09"]
-        - ["Status", "Still with ANA; its C-3PO livery was retired in 2026-01"]
+        - ["Status", "Still flying with ANA in standard colors after its C-3PO livery came off in 2026-01 (seen 2026-05)"]
       history:
         - ["2017-03-21", "Began flying in the C-3PO ANA JET livery"]
         - ["2026-01-09", "Last flight in the C-3PO livery"]
+        - ["2026-01-14", "Ferried to Taoyuan for a repaint into standard ANA colors"]
     - group: "Aircraft &middot; Lufthansa"
       rows:
         - ["Registration", "D-ABYT"]
@@ -646,10 +647,10 @@
         - ["Engines", "Rolls-Royce Trent 1000"]
         - ["Livery", "&ldquo;Pikachu Jet NH&rdquo; for Pokémon Air Adventures, with Rayquaza across the fuselage alongside Pikachu, Charizard, Latias, Latios and Vivillon, since 2023"]
         - ["Note", "Flies ANA international routes from Haneda"]
-        - ["Status", "Still flying with ANA in the Pikachu Jet NH livery (ANA, 2026-02)"]
+        - ["Status", "Still flying with ANA in the Pikachu Jet NH livery, planned to run until about 2028 (seen 2026-09)"]
       history:
         - ["2023-06-04", "Began flying in the Pikachu Jet NH livery"]
-        - ["2026-02", "Still flying with ANA in the Pikachu Jet NH livery"]
+        - ["2026-05-01", "Back in service in the Pikachu Jet NH livery after maintenance"]
       watch:
         - ["2028-06", "Pikachu Jet NH was planned to run about five years from 2023-06-04; check the livery"]
     - group: "Photo"
@@ -784,7 +785,7 @@
         - ["Delivered", "2009-09"]
         - ["Note", "Seen from the JAL Sky Museum hangar tour apron"]
         - ["Background", "Another Japan Airlines jet taking off"]
-        - ["Status", "Still flying with Japan Airlines (seen 2026-02)"]
+        - ["Status", "Still flying with Japan Airlines (seen 2026-07)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]

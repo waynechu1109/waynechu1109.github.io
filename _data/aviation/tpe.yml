@@ -18,7 +18,7 @@
         - ["Delivered", "2011-11"]
         - ["Livery", "Sanrio Characters &ldquo;Joyful Dream&rdquo;, since 2017-04"]
         - ["Previous livery", "Hello Kitty &ldquo;Loves Apples&rdquo;, 2011-12 to 2017-04"]
-        - ["Status", "Still flying with EVA Air in Sanrio &ldquo;Joyful Dream&rdquo; livery (seen 2026-04)"]
+        - ["Status", "Still flying with EVA Air in Sanrio &ldquo;Joyful Dream&rdquo; livery (seen 2026-08)"]
       history:
         - ["2011-12", "Began flying in the Hello Kitty &ldquo;Loves Apples&rdquo; livery"]
         - ["2017-04-10", "Debuted in the Sanrio Characters &ldquo;Joyful Dream&rdquo; livery"]
@@ -416,7 +416,7 @@
         - ["Variant", "A330-323"]
         - ["Engines", "Pratt &amp; Whitney PW4000"]
         - ["Livery", "&ldquo;Malaysia Negaraku&rdquo; Harimau Malaya, supporting the Malaysian national football team, since 2020"]
-        - ["Status", "Still flying with Malaysia Airlines in Harimau Malaya livery (seen 2026-02)"]
+        - ["Status", "Still flying with Malaysia Airlines (seen 2026-10); last confirmed in the Harimau Malaya livery in 2026-02"]
       history:
         - ["2020-10", "Reportedly first seen in the Harimau Malaya livery (enthusiast forums)"]
         - ["2022-02-08", "Harimau Malaya livery officially unveiled at KLIA"]
@@ -917,7 +917,7 @@
         - ["Line no.", "634"]
         - ["Engines", "GE90-115B"]
         - ["Livery", "The previous EVA livery, with a white upper fuselage, green belly and the globe logo on the tail; the aircraft has since been repainted in EVA&rsquo;s current livery"]
-        - ["Status", "Last recorded with EVA Air in 2025-10; no 2026 record found"]
+        - ["Status", "Still flying with EVA Air (seen 2026-08)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -1077,11 +1077,11 @@
         - ["MSN", "2529"]
         - ["Engines", "CFM International CFM56-5B"]
         - ["History", "Delivered new to Niki in 2005 as OE-LEA; per one fleet database, later D-ASPG with Small Planet Airlines Germany (2016), XU-127 and XU-991 with Lanmei Airlines, and wet-leased to Bamboo Airways in 2024"]
-        - ["Status", "Royal Air Philippines suspended its scheduled passenger flights on 2026-01-04; the aircraft&rsquo;s later fate is unknown"]
+        - ["Status", "Royal Air Philippines suspended its scheduled passenger flights on 2026-01-04 and reportedly went into liquidation; the aircraft was last tracked arriving at Clark that day, and its later fate is unknown"]
       history:
         - ["2005-09-27", "Delivered new to Niki as OE-LEA"]
         - ["2016", "Reportedly re-registered D-ASPG for Small Planet Airlines Germany (fleet database)"]
-        - ["2026-01-04", "Royal Air Philippines suspended its scheduled passenger flights"]
+        - ["2026-01-04", "Last tracked flight, arriving at Clark as Royal Air Philippines suspended its scheduled passenger flights"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -1090,3 +1090,261 @@
         - ["Aperture", "f/8"]
         - ["Shutter", "1/1250"]
         - ["ISO", "100"]
+
+- img: "tpe/DSC00116"
+  shot: "2024-09-17 15:00:42"
+  date: "2024-09-17"
+  title: "🇹🇭 Thai Airways"
+  aircraft: "Boeing 777-300ER"
+  regs: ["HS-TKZ"]
+  alt: "Thai Airways Boeing 777-300ER HS-TKZ climbing out of Taiwan Taoyuan International Airport with gear retracting, registration under the right wing, against blue sky and cloud"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "HS-TKZ"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-3D7(ER)"]
+        - ["MSN", "42115"]
+        - ["Line no.", "1338"]
+        - ["Engines", "GE GE90-115B"]
+        - ["Built", "2015"]
+        - ["Status", "Still flying with Thai Airways (seen 2026-10)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/1600"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC01476"
+  shot: "2024-11-02 14:26:20"
+  date: "2024-11-02"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Airbus A330-300"
+  regs: ["B-16331"]
+  liveries: ["Bad Badtz-Maru livery"]
+  alt: "EVA Air Airbus A330-300 B-16331 in the Sanrio Bad Badtz-Maru livery, with the penguin and friends on a picnic along the fuselage, on approach to Taiwan Taoyuan International Airport under dark clouds"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16331"]
+        - ["Type", "Airbus A330-300"]
+        - ["Variant", "A330-302"]
+        - ["MSN", "1254"]
+        - ["Engines", "GE CF6-80E1"]
+        - ["Delivered", "2011-10-20"]
+        - ["Livery", "Sanrio Bad Badtz-Maru &ldquo;Travel Fun&rdquo; (郊遊機), since 2017-03-04"]
+        - ["Previous livery", "Hello Kitty &ldquo;Magic Stars&rdquo;, the first of EVA&rsquo;s second-generation Hello Kitty jets, 2011-10 to 2017"]
+        - ["Status", "Still flying with EVA Air in the Bad Badtz-Maru livery (seen 2026-07)"]
+      history:
+        - ["2011-10", "Began flying in the Hello Kitty &ldquo;Magic Stars&rdquo; livery"]
+        - ["2017-03-04", "Debuted in the Sanrio Bad Badtz-Maru &ldquo;Travel Fun&rdquo; livery on Taipei to Fukuoka and Seoul"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "100 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC01599"
+  shot: "2024-12-29 15:13:45"
+  date: "2024-12-29"
+  title: "🇬🇧 TUI Airways"
+  aircraft: "Boeing 787-8"
+  regs: ["G-TUIC"]
+  alt: "TUI Airways Boeing 787-8 G-TUIC parked in front of an open Evergreen Aviation Technologies hangar at Taiwan Taoyuan International Airport, with trees in the foreground"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "G-TUIC"]
+        - ["Type", "Boeing 787-8"]
+        - ["MSN", "34424"]
+        - ["Line no.", "96"]
+        - ["At TPE", "Parked outside the Evergreen Aviation Technologies (EGAT) hangar"]
+        - ["Status", "Still flying with TUI Airways (seen 2026-10)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "400 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/200"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC02084"
+  shot: "2024-12-31 09:25:31"
+  date: "2024-12-31"
+  title: "🇹🇼 China Airlines Cargo"
+  aircraft: "Boeing 747-400F"
+  regs: ["B-18722"]
+  alt: "China Airlines Cargo Boeing 747-400F B-18722 with gear down on approach to Taiwan Taoyuan International Airport against a deep blue sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18722"]
+        - ["Type", "Boeing 747-400F"]
+        - ["Variant", "747-409F(SCD)"]
+        - ["MSN", "34265"]
+        - ["Line no.", "1372"]
+        - ["Delivered", "2006-06-29"]
+        - ["Status", "Still flying with China Airlines Cargo (seen 2026-09); China Airlines is selling four of its eight 747-400Fs to Cargolux for removal in 2027, and which four has not been made public"]
+      watch:
+        - ["2027-01", "China Airlines hands four 747-400Fs to Cargolux during 2027; check whether this is one of them"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "128 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC02179"
+  shot: "2024-12-31 10:21:41"
+  date: "2024-12-31"
+  title: "🇰🇷 Aero K"
+  aircraft: "Airbus A320"
+  regs: ["HL8563"]
+  alt: "Aero K Airbus A320 HL8563 in white with the blue and yellow K tail, gear down on approach to Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "HL8563"]
+        - ["Type", "Airbus A320"]
+        - ["Variant", "A320-214"]
+        - ["MSN", "2407"]
+        - ["First flight", "2005-03-15"]
+        - ["Delivered", "2005-04-11 (to Vueling as EC-JGM)"]
+        - ["History", "Flew for Vueling as EC-JGM and later as OE-LOH before joining Aero K in 2024"]
+        - ["Status", "Still flying with Aero K (seen 2026-08)"]
+      history:
+        - ["2024-02", "Delivered to Aero K at Cheongju"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "116 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC02763"
+  shot: "2025-01-17 11:58:42"
+  date: "2025-01-17"
+  title: "🇨🇳 Spring Airlines"
+  aircraft: "Airbus A320"
+  regs: ["B-6902"]
+  liveries: ["Booking.com livery"]
+  alt: "Spring Airlines Airbus A320 B-6902 in the dark blue Booking.com livery rotating off the runway at Taiwan Taoyuan International Airport, with the sea behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-6902"]
+        - ["Type", "Airbus A320"]
+        - ["Variant", "A320-214 (sharklets)"]
+        - ["MSN", "5108"]
+        - ["Built", "2012"]
+        - ["Livery", "Dark blue Booking.com special scheme with 春秋航空 titles"]
+        - ["Status", "Still flying with Spring Airlines in the Booking.com livery (seen 2026-02)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "229 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC02854"
+  shot: "2025-01-17 12:07:04"
+  date: "2025-01-17"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 777-300ER"
+  regs: ["B-16715"]
+  liveries: ["Star Alliance livery"]
+  alt: "EVA Air Boeing 777-300ER B-16715 in Star Alliance livery lifting off runway 05L at Taiwan Taoyuan International Airport, with houses and the sea behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16715"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-35E(ER)"]
+        - ["MSN", "33757"]
+        - ["Line no.", "810"]
+        - ["Engines", "GE GE90-115B"]
+        - ["Delivered", "2010-11-14"]
+        - ["Livery", "Star Alliance livery"]
+        - ["Status", "Still flying with EVA Air in Star Alliance livery (seen 2026-05)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "262 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC04139"
+  shot: "2025-02-01 10:42:44"
+  date: "2025-02-01"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Airbus A330-300"
+  regs: ["B-16333"]
+  liveries: ["Celebration Flight livery"]
+  alt: "EVA Air Airbus A330-300 B-16333 in the Sanrio Characters Celebration Flight livery, with party bunting, Little Twin Stars and Keroppi on the fuselage, taxiing at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16333"]
+        - ["Type", "Airbus A330-300"]
+        - ["Variant", "A330-302"]
+        - ["MSN", "1274"]
+        - ["Delivered", "2011-12"]
+        - ["Livery", "Sanrio Characters &ldquo;Celebration Flight&rdquo; (派對機), since 2017-05-23"]
+        - ["Previous livery", "Hello Kitty &ldquo;Around the World&rdquo; (環球機), the third of EVA&rsquo;s second-generation Hello Kitty jets, 2011-12 to 2017"]
+        - ["Status", "Still flying with EVA Air in the Celebration Flight livery (seen 2026-09)"]
+      history:
+        - ["2011-12-23", "Debuted in the Hello Kitty &ldquo;Around the World&rdquo; livery"]
+        - ["2017-05-23", "Debuted in the Sanrio Characters &ldquo;Celebration Flight&rdquo; livery on Songshan to Hongqiao and Haneda"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "137 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "160"]
+
+- img: "tpe/DSC03541"
+  shot: "2023-12-27 17:13:57"
+  date: "2023-12-27"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 787-10"
+  regs: ["B-17812"]
+  liveries: ["Star Alliance livery"]
+  alt: "EVA Air Boeing 787-10 B-17812 in Star Alliance livery lifting off at Taiwan Taoyuan International Airport at dusk, panned with the background blurred"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-17812"]
+        - ["Type", "Boeing 787-10"]
+        - ["MSN", "63519"]
+        - ["Line no.", "1142"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["Delivered", "2023-05-05"]
+        - ["Livery", "Star Alliance livery since delivery, marking EVA&rsquo;s tenth year in the alliance; EVA&rsquo;s only Dreamliner in a special livery"]
+        - ["Status", "Still flying with EVA Air in Star Alliance livery (seen 2026-01)"]
+      history:
+        - ["2023-05-05", "Handed over to EVA at Boeing&rsquo;s North Charleston plant as its eighth 787-10"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "189 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/40"]
+        - ["ISO", "400"]
