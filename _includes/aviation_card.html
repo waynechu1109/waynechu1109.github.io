@@ -17,7 +17,7 @@
 {%- assign states = states | strip -%}
 {%- comment %} one badge when every aircraft shares a state, otherwise one per registration so the two can be told apart {% endcomment -%}
 {%- if states contains " " %}{% assign badges = pairs | split: ";" %}{% else %}{% assign badges = states | split: " " %}{% endif -%}
-          <article class="photo-card{% if lead %} is-lead{% endif %}{% if include.i > cap %} is-extra{% endif %}" id="p-{{ p.img | replace: '/', '-' }}"{% if p.spotted %} data-spotted="{{ p.spotted }}"{% endif %}{% if states != "" %} data-status="{{ states }}"{% endif %}>
+          <article class="photo-card{% if lead %} is-lead{% endif %}{% if include.i > cap %} is-extra{% endif %}" id="p-{{ p.img | replace: '/', '-' }}"{% if p.spotted %} data-spotted="{{ p.spotted }}"{% endif %}{% if states != "" %} data-status="{{ states }}"{% endif %} data-shot="{{ p.shot }}">
             <div class="photo-frame real-photo{% if p.video %} has-video{% endif %}">
               <img
                 src="{{ base }}-1280.jpg"

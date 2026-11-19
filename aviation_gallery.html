@@ -288,6 +288,11 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <div class="photo-browse">
           <select id="browse-airline" aria-label="Browse by airline or operator"><option value="">All airlines &amp; operators</option></select>
           <select id="browse-type" aria-label="Browse by aircraft type"><option value="">All aircraft types</option></select>
+          <select id="sort-order" aria-label="Sort photos">
+            <option value="">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="airline">Airline A&ndash;Z</option>
+          </select>
         </div>
         <p class="photo-filter-count" aria-live="polite"></p>
       </div>
@@ -808,7 +813,43 @@ header_subtitle: "Selected aircraft photography organized by airport."
       var filter = 'all';
       var tocLinks = document.querySelectorAll('.page-toc-link, .airport-links a');
 
+      // Reordering within each airport. Newest first is the page as built, so it restores the original order,
+      // the lead card and the featured photo; the other orders drop the lead so no single photo looks promoted
+      var airlineOf = new Map();
+      items.forEach(function (it) { airlineOf.set(it.card, it.airlines[0] || ''); });
+      sections.forEach(function (section) {
+        section.querySelectorAll('.photo-card').forEach(function (card, i) {
+          card.dataset.order = i;
+          if (card.classList.contains('is-lead')) card.dataset.lead = '1';
+        });
+      });
+      var byOrder = function (a, b) { return a.dataset.order - b.dataset.order; };
+      var byShot = function (a, b) { return a.dataset.shot < b.dataset.shot ? -1 : a.dataset.shot > b.dataset.shot ? 1 : 0; };
+      var SORTS = {
+        '': byOrder,
+        oldest: byShot,
+        airline: function (a, b) { return airlineOf.get(a).localeCompare(airlineOf.get(b)) || byShot(b, a); }
+      };
+      var currentSort = '';
+      function reorder() {
+        var mode = SORTS[sortSelect.value] ? sortSelect.value : '';
+        if (mode === currentSort) return;
+        currentSort = mode;
+        sections.forEach(function (section) {
+          var grid = section.querySelector('.photo-grid');
+          var cards = Array.prototype.slice.call(grid.querySelectorAll('.photo-card'));
+          // the collapsed count is fixed by how the page was built, so keep the same number of cards in view
+          var cap = cards.length - grid.querySelectorAll('.photo-card.is-extra').length;
+          cards.sort(SORTS[mode]).forEach(function (card, i) {
+            grid.appendChild(card);
+            card.classList.toggle('is-lead', mode === '' && card.dataset.lead === '1');
+            card.classList.toggle('is-extra', i >= cap);
+          });
+        });
+      }
+
       function apply(push) {
+        reorder();
         var q = input.value.trim().toLowerCase();
         var sq = squash(q);
         var shown = 0;
@@ -840,7 +881,8 @@ header_subtitle: "Selected aircraft photography organized by airport."
 
       // the query string mirrors the filters so any filtered view can be shared. Clicks, picks and chips push an
       // entry so back undoes them; typing only replaces, or every keystroke would become a step
-      var PARAMS = { q: input, airline: airlineSelect, type: typeSelect };
+      var sortSelect = document.getElementById('sort-order');
+      var PARAMS = { q: input, airline: airlineSelect, type: typeSelect, sort: sortSelect };
       var lastSearch = location.search;
       function writeQuery(push) {
         var params = new URLSearchParams(location.search);
@@ -926,6 +968,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
       input.addEventListener('input', function () { apply(); });
       airlineSelect.addEventListener('change', function () { apply(true); });
       typeSelect.addEventListener('change', function () { apply(true); });
+      sortSelect.addEventListener('change', function () { apply(true); });
       input.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && input.value) { input.value = ''; apply(); }
       });

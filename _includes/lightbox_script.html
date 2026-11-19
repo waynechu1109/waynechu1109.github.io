@@ -447,14 +447,19 @@
           render();
         }
 
-        photoImages.forEach(function (image, i) {
+        // the gallery can be re-sorted, so read the current order each time rather than trusting the order at load
+        function openImage(image) {
+          photoImages = Array.prototype.slice.call(document.querySelectorAll(".photo-image"));
+          openLightbox(photoImages.indexOf(image));
+        }
+        photoImages.forEach(function (image) {
           image.setAttribute("tabindex", "0");
           image.setAttribute("role", "button");
-          image.addEventListener("click", function () { openLightbox(i); });
+          image.addEventListener("click", function () { openImage(image); });
           image.addEventListener("keydown", function (event) {
             if (event.key === "Enter" || event.key === " ") {
               event.preventDefault();
-              openLightbox(i);
+              openImage(image);
             }
           });
         });

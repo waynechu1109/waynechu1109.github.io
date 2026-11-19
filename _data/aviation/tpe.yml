@@ -1588,3 +1588,214 @@
         - ["Shutter", "1/800"]
         - ["ISO", "100"]
 
+- img: "tpe/DSC03158"
+  shot: "2015-09 ~01"
+  date: "2015-09"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Airbus A330-200"
+  regs: ["B-16309"]
+  liveries: ["Hello Kitty Speed Puff"]
+  alt: "EVA Air Airbus A330-200 B-16309 in the Hello Kitty Speed Puff livery about to touch down at Taiwan Taoyuan International Airport under a grey sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16309"]
+        - ["Last registered", "SU-TCH"]
+        - ["Type", "Airbus A330-200"]
+        - ["Variant", "A330-203"]
+        - ["MSN", "661"]
+        - ["Livery", "Hello Kitty &ldquo;Speed Puff&rdquo; (雲彩機), 2012-06 to 2017"]
+        - ["Note", "The only EVA aircraft to wear Hello Kitty colours twice; it was also the second first-generation Hello Kitty jet, from 2006-10 to early 2009"]
+        - ["Status", "Left EVA Air in 2017-03; flew as VP-BIO for VIM Airlines from 2017-09, then as SU-TCH for AlMasria Universal Airlines from 2018-02"]
+      history:
+        - ["2006-10-21", "Debuted as EVA&rsquo;s second first-generation Hello Kitty jet"]
+        - ["early 2009", "Returned to standard colours as the first Hello Kitty deal ended"]
+        - ["2012-06", "Rejoined the Hello Kitty fleet as Speed Puff (雲彩機)"]
+        - ["2017-03", "Left the EVA Air fleet"]
+        - ["2017-09", "Registered VP-BIO for VIM Airlines"]
+        - ["2018-02", "Registered SU-TCH for AlMasria Universal Airlines in Egypt"]
+        - ["2020-08", "Reportedly re-registered EI-GTE and later scrapped at Lourdes (one photo caption)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Focal", "210 mm"]
+        - ["Aperture", "f/6.3"]
+        - ["Shutter", "1/400"]
+        - ["ISO", "320"]
+
+- img: "tpe/DSC03289_20151024235019234"
+  shot: "2015-09 ~02"
+  date: "2015-09"
+  title: "🇹🇼 China Airlines"
+  aircraft: "Airbus A330-300"
+  regs: ["B-18361"]
+  liveries: ["Cloud Gate Dance Theatre livery"]
+  alt: "China Airlines Airbus A330-300 B-18361 in the Cloud Gate Dance Theatre livery, with a dancer painted near the nose, about to land at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18361"]
+        - ["Type", "Airbus A330-300"]
+        - ["Variant", "A330-302"]
+        - ["MSN", "1539"]
+        - ["Livery", "Cloud Gate Dance Theatre (雲門舞集), with dancers and calligraphy chosen by Lin Hwai-min, unveiled in 2014-07"]
+        - ["Status", "Still flying with China Airlines (seen 2026-10)"]
+      history:
+        - ["2014-07-22", "First flight in the Cloud Gate Dance Theatre livery, Taipei to Rome via New Delhi"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Aperture", "f/6.3"]
+        - ["Shutter", "1/400"]
+        - ["ISO", "320"]
+
+- img: "tpe/DSC01413"
+  shot: "2015-09 ~03"
+  date: "2015-09"
+  title: "🇸🇬 Scoot"
+  aircraft: "Boeing 787-9"
+  regs: ["9V-OJE"]
+  liveries: ["SG50 livery"]
+  alt: "Scoot Boeing 787-9 9V-OJE in the SG50 livery celebrating Singapore's 50th birthday, about to touch down at Taiwan Taoyuan International Airport with an EVA Air MD-90 behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "9V-OJE"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "37116"]
+        - ["Line no.", "316"]
+        - ["Delivered", "2015-06-28"]
+        - ["Name", "Maju-Lah"]
+        - ["Livery", "SG50, marking Singapore&rsquo;s 50th birthday, with a Merlion, Scoot characters and the logos of 20 sponsors"]
+        - ["Note", "Scoot&rsquo;s fifth 787-9"]
+        - ["Status", "Still flying with Scoot (seen 2026-09)"]
+      history:
+        - ["2015-07-08", "Entered service in the SG50 livery on the Bangkok route"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Aperture", "f/6.3"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "200"]
+
+- img: "tpe/DSC01489"
+  shot: "2015-09 ~04"
+  date: "2015-09"
+  title: "🇹🇼 China Airlines"
+  aircraft: "Airbus A340-300"
+  regs: ["B-18806"]
+  liveries: ["Climate Monitoring livery"]
+  alt: "China Airlines Airbus A340-300 B-18806 in the Official Airline for Climate Monitoring livery, a flight attendant holding the globe on the rear fuselage, taxiing at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18806"]
+        - ["Type", "Airbus A340-300"]
+        - ["Variant", "A340-313X"]
+        - ["MSN", "433"]
+        - ["Livery", "&ldquo;The Official Airline for Climate Monitoring&rdquo;, with a flight attendant cradling the Earth; it previously wore the 50th anniversary livery"]
+        - ["Note", "Carried IAGOS atmospheric sensors from 2012-06, making China Airlines the first Asian airline in the Pacific Greenhouse Gases Measurement project"]
+        - ["Status", "Retired by China Airlines after its last commercial flight on 2017-05-31, the airline&rsquo;s final A340-300 service; ferried to the US on 2017-06-26"]
+      history:
+        - ["2012-06", "Fitted with IAGOS climate sensors and repainted as the Official Airline for Climate Monitoring"]
+        - ["2017-05-31", "Last commercial flight, CI916 Hong Kong to Taipei, ending China Airlines&rsquo; A340-300 service"]
+        - ["2017-06-26", "Ferried from Taoyuan to the US"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Focal", "210 mm"]
+        - ["Aperture", "f/6.3"]
+        - ["Shutter", "1/200"]
+        - ["ISO", "200"]
+
+- img: "tpe/DSC03519"
+  shot: "2015-09 ~05"
+  date: "2015-09"
+  title: "🇹🇼 China Airlines"
+  aircraft: "Airbus A330-300"
+  regs: ["B-18355"]
+  liveries: ["Welcome to Taiwan livery"]
+  alt: "China Airlines Airbus A330-300 B-18355 in the Welcome to Taiwan tourism livery, with illustrated night-market and boating scenes, taking off past the Evergreen hangar at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-18355"]
+        - ["Now registered", "UK33001"]
+        - ["Type", "Airbus A330-300"]
+        - ["Variant", "A330-302"]
+        - ["MSN", "1177"]
+        - ["Built", "2010"]
+        - ["Livery", "&ldquo;Welcome to Taiwan&rdquo; (台灣觀光彩繪機), made with the Tourism Bureau around six themes: lifestyle, ecology, romance, food, shopping and culture"]
+        - ["History", "Flew for China Airlines from 2010 to 2022, then briefly carried the transit registration 2-LCCV"]
+        - ["Status", "Left China Airlines in 2022; registered UK33001 as Air Samarkand&rsquo;s first aircraft since 2023-11"]
+      history:
+        - ["2013-11-13", "Debuted in the Welcome to Taiwan livery on Songshan to Haneda"]
+        - ["2022", "Left the China Airlines fleet"]
+        - ["2023-11", "Delivered to Air Samarkand in Uzbekistan as UK33001, the airline&rsquo;s first aircraft"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Focal", "139 mm"]
+        - ["Aperture", "f/5.6"]
+        - ["Shutter", "1/250"]
+        - ["ISO", "250"]
+
+- img: "tpe/DSC03351"
+  shot: "2015-09 ~06"
+  date: "2015-09"
+  title: "🇹🇼 TransAsia Airways"
+  aircraft: "Airbus A320"
+  regs: ["B-22318"]
+  alt: "TransAsia Airways Airbus A320 B-22318 taxiing at Taiwan Taoyuan International Airport in front of a large hangar"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-22318"]
+        - ["Now registered", "9H-MMO"]
+        - ["Type", "Airbus A320"]
+        - ["Variant", "A320-233"]
+        - ["MSN", "3577"]
+        - ["First flight", "2008-07-11"]
+        - ["Delivered", "2008-08-13 (to TACA as N681TA)"]
+        - ["History", "Flew for TACA as N681TA before TransAsia; after TransAsia it also carried 2-DLLA, OE-IOB, XU-118 and ER-00003"]
+        - ["Status", "Left TransAsia when the airline shut down on 2016-11-22; now registered 9H-MMO with Malta MedAir, and reported parked in 2026-07"]
+      history:
+        - ["2016-11-22", "TransAsia Airways shut down"]
+        - ["2026-07", "Wet-leased to Nouvelair in Tunisia, then parked at Monastir"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Focal", "210 mm"]
+        - ["Aperture", "f/6.3"]
+        - ["Shutter", "1/400"]
+        - ["ISO", "400"]
+
+- img: "tpe/DSC02384"
+  shot: "2015-09 ~07"
+  date: "2015-09"
+  title: "🇹🇼 EVA Air Cargo"
+  aircraft: "Boeing 747-400F"
+  regs: ["B-16483"]
+  alt: "EVA Air Cargo Boeing 747-400F B-16483 parked with its nose cargo door raised and ground equipment around it at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16483"]
+        - ["Now registered", "N487MC"]
+        - ["Type", "Boeing 747-400F"]
+        - ["Variant", "747-45EF(SCD)"]
+        - ["MSN", "30609"]
+        - ["Line no.", "1309"]
+        - ["Delivered", "2002-07"]
+        - ["Status", "Left EVA Air Cargo in 2018; registered in the US as N487MC since 2018-08-23"]
+      history:
+        - ["2018-08-23", "Registered N487MC in the US, reportedly to fly for Polar Air Cargo and DHL"]
+        - ["2020-06", "Reportedly moved to Atlas Air"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Focal", "210 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "200"]
+

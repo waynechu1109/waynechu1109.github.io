@@ -1,0 +1,65 @@
+{%- comment -%}
+  Structured data for search engines: one ImageObject per card (and a VideoObject for cards with a clip),
+  so a search for a registration or an airline can surface the photo. Built from the same data as the cards.
+{%- endcomment -%}
+{%- assign base = "https://waynechu1109.github.io/" -%}
+{%- assign page_url = base | append: "aviation_gallery.html" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Aviation Gallery",
+  "description": {{ page.description | jsonify }},
+  "url": {{ page_url | jsonify }},
+  "author": { "@type": "Person", "name": "Wei-Teng (Wayne) Chu", "url": {{ base | jsonify }} },
+  "associatedMedia": [
+  {%- assign first = true -%}
+  {%- for set in site.data.aviation -%}
+  {%- assign key = set[0] -%}
+  {%- assign place = site.data.aviation_places[key] -%}
+  {%- for p in set[1] -%}
+    {%- assign img = base | append: "media/gallery/aviation_gallery/" | append: p.img -%}
+    {%- assign flag = p.title | split: " " | first -%}
+    {%- capture airline %}{{ p.title | remove: flag }}{% endcapture -%}
+    {%- assign anchor = p.img | replace: "/", "-" -%}
+    {%- capture name %}{{ airline | strip }} {{ p.aircraft }}{% if p.regs %} {{ p.regs | join: ", " }}{% endif %}{% endcapture -%}
+    {%- capture where %}{% if p.spotted %}Over {{ p.spotted }}{% else %}{{ place }}{% endif %}{% endcapture -%}
+    {%- capture keywords %}{{ p.regs | join: ", " }}, {{ airline | strip }}, {{ p.aircraft }}{% if p.liveries %}, {{ p.liveries | join: ", " }}{% endif %}{% endcapture -%}
+    {%- unless first %},{% endunless %}{% assign first = false %}
+    {
+      "@type": "ImageObject",
+      "name": {% include ld_text.html t=name %},
+      "caption": {% include ld_text.html t=p.alt %},
+      "contentUrl": {{ img | append: "-2560.jpg" | jsonify }},
+      "thumbnailUrl": {{ img | append: "-640.jpg" | jsonify }},
+      "url": {{ page_url | append: "#p-" | append: anchor | jsonify }},
+      "dateCreated": {{ p.shot | replace: " ", "T" | jsonify }},
+      "contentLocation": { "@type": "Place", "name": {% include ld_text.html t=where %} },
+      "keywords": {% include ld_text.html t=keywords %},
+      "creator": { "@type": "Person", "name": "Wei-Teng (Wayne) Chu" },
+      "creditText": "Wei-Teng (Wayne) Chu",
+      "copyrightNotice": "© Wei-Teng (Wayne) Chu"
+    }
+    {%- if p.video -%}
+    {%- assign secs = "" -%}
+    {%- for g in p.details %}{% for row in g.rows %}{% if row[0] == "Length" %}{% assign secs = row[1] | split: " " | first %}{% endif %}{% endfor %}{% endfor -%}
+    ,
+    {
+      "@type": "VideoObject",
+      "name": {% include ld_text.html t=name %},
+      "description": {% include ld_text.html t=p.alt %},
+      "contentUrl": {{ base | append: "media/gallery/aviation_gallery/" | append: p.video | jsonify }},
+      "thumbnailUrl": {{ img | append: "-1280.jpg" | jsonify }},
+      "uploadDate": {{ p.date | jsonify }},
+      {%- if secs != "" %}
+      "duration": "PT{{ secs }}S",
+      {%- endif %}
+      "contentLocation": { "@type": "Place", "name": {% include ld_text.html t=where %} },
+      "creator": { "@type": "Person", "name": "Wei-Teng (Wayne) Chu" }
+    }
+    {%- endif -%}
+  {%- endfor -%}
+  {%- endfor %}
+  ]
+}
+</script>
