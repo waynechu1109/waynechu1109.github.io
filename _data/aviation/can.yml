@@ -103,3 +103,158 @@
         - ["Shutter", "1/320"]
         - ["ISO", "100"]
 
+- img: "can/DSC08746"
+  shot: "2016-09-18 14:23:53"
+  date: "2016-09-18"
+  title: "🇲🇲 Myanmar Airways International"
+  aircraft: "Airbus A319"
+  regs: ["XY-AGR"]
+  alt: "Myanmar Airways International Airbus A319 XY-AGR taxiing on the apron at Guangzhou Baiyun International Airport, with terminal buildings and cranes behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "XY-AGR"]
+        - ["Type", "Airbus A319"]
+        - ["Variant", "A319-112"]
+        - ["MSN", "1791"]
+        - ["History", "Previously registered OH-LVE"]
+        - ["Status", "Still flying with Myanmar Airways International (seen 2026-01)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α5000"]
+        - ["Lens", "E 55-210mm F4.5-6.3 OSS"]
+        - ["Focal", "89 mm"]
+        - ["Aperture", "f/7.1"]
+        - ["Shutter", "1/200"]
+        - ["ISO", "100"]
+
+- img: "can/DSC08834"
+  shot: "2016-09-18 15:35:27"
+  date: "2016-09-18"
+  title: "🇨🇳 Shenzhen Airlines"
+  aircraft: "Airbus A320"
+  regs: ["B-6297"]
+  liveries: ["Star Alliance livery"]
+  alt: "Shenzhen Airlines Airbus A320 B-6297 in Star Alliance livery being pushed back by a tug from the terminal at Guangzhou Baiyun International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-6297"]
+        - ["Type", "Airbus A320"]
+        - ["Variant", "A320-214"]
+        - ["MSN", "2980"]
+        - ["Livery", "Star Alliance livery, one of two Shenzhen Airlines A320s in the scheme alongside B-6296"]
+        - ["Status", "Still flying with Shenzhen Airlines in Star Alliance livery (seen 2026-01)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α5000"]
+        - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+        - ["Focal", "50 mm"]
+        - ["Aperture", "f/9"]
+        - ["Shutter", "1/100"]
+        - ["ISO", "100"]
+
+- img: "can/DSC08755"
+  shot: "2016-09-18 14:40:03"
+  date: "2016-09-18"
+  title: "🇨🇳 China Southern Airlines"
+  aircraft: "Boeing 777-300ER"
+  regs: ["B-2099"]
+  alt: "China Southern Airlines Boeing 777-300ER B-2099 parked at a gate at Guangzhou Baiyun International Airport, seen from above, with a JAL Boeing 767 behind it"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-2099"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-31B(ER)"]
+        - ["MSN", "43219"]
+        - ["Delivered", "2014-02-25"]
+        - ["Note", "China Southern&rsquo;s first 777-300ER"]
+        - ["Status", "Still flying with China Southern Airlines (seen 2026-09)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α5000"]
+        - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+        - ["Focal", "28 mm"]
+        - ["Aperture", "f/10"]
+        - ["Shutter", "1/100"]
+        - ["ISO", "100"]
+
+- img: "can/DSC08569"
+  shot: "2016-09-18 11:28:25"
+  date: "2016-09-18"
+  title: "🇨🇳 Hainan Airlines"
+  aircraft: "Boeing 787-8"
+  regs: ["B-2730"]
+  alt: "Hainan Airlines Boeing 787-8 B-2730 taxiing at Guangzhou Baiyun International Airport, with the control tower and terminal behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-2730"]
+        - ["Type", "Boeing 787-8"]
+        - ["MSN", "34943"]
+        - ["Line no.", "85"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["Delivered", "2013-11-08"]
+        - ["Status", "Last recorded with Hainan Airlines in 2024-06; no 2026 record found"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α5000"]
+        - ["Lens", "E 55-210mm F4.5-6.3 OSS"]
+        - ["Focal", "83 mm"]
+        - ["Aperture", "f/9"]
+        - ["Shutter", "1/160"]
+        - ["ISO", "100"]
+
+- img: "can/DSC08506"
+  shot: "2016-09-18 11:16:51"
+  date: "2016-09-18"
+  title: "🇨🇳 Hebei Airlines"
+  aircraft: "Boeing 737-800"
+  regs: ["B-1930"]
+  alt: "Hebei Airlines Boeing 737-800 B-1930 taxiing at Guangzhou Baiyun International Airport, with China Southern aircraft parked behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-1930"]
+        - ["Type", "Boeing 737-800"]
+        - ["Variant", "737-85C"]
+        - ["MSN", "39335"]
+        - ["Status", "Still flying with Hebei Airlines (seen 2026-08)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α5000"]
+        - ["Lens", "E 55-210mm F4.5-6.3 OSS"]
+        - ["Focal", "210 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]
+
+- img: "can/DSC08340"
+  shot: "2016-09-18 10:31:36"
+  date: "2016-09-18"
+  title: "🇨🇳 China Eastern Airlines"
+  aircraft: "Boeing 737-800"
+  regs: ["B-1790"]
+  liveries: ["Yunnan peacock livery"]
+  alt: "China Eastern Airlines Boeing 737-800 B-1790 in the Yunnan peacock livery taxiing at Guangzhou Baiyun International Airport, with the control tower and terminal behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-1790"]
+        - ["Type", "Boeing 737-800"]
+        - ["Variant", "737-89P(WL)"]
+        - ["MSN", "41509"]
+        - ["Line no.", "5405"]
+        - ["Livery", "Yunnan peacock (雲南孔雀), flown by China Eastern&rsquo;s Yunnan branch"]
+        - ["Note", "Sister ship B-1791 in the same livery was the aircraft lost as MU5735 in 2022"]
+        - ["Status", "Still flying with China Eastern (seen 2026-11)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α5000"]
+        - ["Lens", "E 55-210mm F4.5-6.3 OSS"]
+        - ["Focal", "86 mm"]
+        - ["Aperture", "f/10"]
+        - ["Shutter", "1/200"]
+        - ["ISO", "100"]
+
