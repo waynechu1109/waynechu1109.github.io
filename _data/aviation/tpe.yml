@@ -88,13 +88,13 @@
         - ["Shutter", "1/800"]
         - ["ISO", "100"]
 
-- img: "tpe/DSC04683"
-  shot: "2025-02-21 12:12:00"
+- img: "tpe/DSC04671"
+  shot: "2025-02-21 12:11:36"
   date: "2025-02-21"
   title: "🇧🇪 TUI fly Belgium"
   aircraft: "Boeing 787-8"
   regs: ["OO-JDL"]
-  alt: "TUI fly Belgium Boeing 787-8 OO-JDL on approach to Taiwan Taoyuan International Airport under overcast skies"
+  alt: "TUI fly Belgium Boeing 787-8 OO-JDL head-on with gear down on approach to Taiwan Taoyuan International Airport under overcast skies"
   details:
     - group: "Aircraft"
       rows:
@@ -104,17 +104,18 @@
         - ["MSN", "34425"]
         - ["Line no.", "137"]
         - ["First flight", "2013-11"]
-        - ["Delivered", "2013-12"]
-        - ["Note", "Jetairfly&rsquo;s first 787 (Jetairfly became TUI fly Belgium); later moved to TUI Airways in the UK as G-TUIP"]
+        - ["Delivered", "2013-12-04"]
+        - ["Name", "Diamond"]
+        - ["Note", "Jetairfly&rsquo;s first 787 and the first 787 in Belgium (Jetairfly became TUI fly Belgium); later moved to TUI Airways in the UK as G-TUIP"]
         - ["At TPE", "Likely visiting Evergreen Aviation Technologies (EGAT) for maintenance; a TUI 787 tail was in the EGAT hangar on 2025-02-01"]
         - ["Status", "Moved to TUI Airways UK as G-TUIP (seen 2026-10)"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
         - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
-        - ["Focal", "130 mm"]
+        - ["Focal", "400 mm"]
         - ["Aperture", "f/8"]
-        - ["Shutter", "1/800"]
+        - ["Shutter", "1/500"]
         - ["ISO", "160"]
 
 - img: "tpe/DSC04181"
@@ -1505,4 +1506,85 @@
         - ["Length", "11 s loop"]
         - ["Frame rate", "30 fps"]
         - ["Resolution", "1920&times;1080 (16:9)"]
+
+- img: "tpe/DSC04694"
+  shot: "2025-02-21 12:35:48"
+  date: "2025-02-21"
+  title: "🇭🇰 Cathay Cargo"
+  aircraft: "Boeing 747-400ERF"
+  regs: ["B-LIF"]
+  alt: "Cathay Cargo Boeing 747-400ERF B-LIF with gear down on approach to Taiwan Taoyuan International Airport under a grey sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-LIF"]
+        - ["Type", "Boeing 747-400ERF"]
+        - ["Variant", "747-467ERF"]
+        - ["MSN", "36871"]
+        - ["Line no.", "1417"]
+        - ["Engines", "PW4062A"]
+        - ["Delivered", "2009-04-09"]
+        - ["Status", "Still flying with Cathay Cargo (seen 2026-11)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "100 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/640"]
+        - ["ISO", "160"]
+
+- img: "tpe/DSC04632"
+  shot: "2025-02-21 11:12:13"
+  date: "2025-02-21"
+  title: "🇰🇷 Korean Air"
+  aircraft: "Airbus A380-800"
+  regs: ["HL7621"]
+  alt: "Korean Air Airbus A380 HL7621 with gear down on approach to Taiwan Taoyuan International Airport under a grey sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "HL7621"]
+        - ["Type", "Airbus A380-800"]
+        - ["Variant", "A380-861"]
+        - ["MSN", "126"]
+        - ["Engines", "Engine Alliance GP7270"]
+        - ["Delivered", "2013-08"]
+        - ["Note", "Korean Air&rsquo;s seventh A380; the airline has pushed its A380 retirement past 2026"]
+        - ["Status", "Still flying with Korean Air (seen 2026-09)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "100 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "250"]
+
+- img: "tpe/DSC05247"
+  shot: "2025-02-28 10:17:48"
+  date: "2025-02-28"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 787-9"
+  regs: ["B-17882"]
+  liveries: ["787 livery"]
+  alt: "EVA Air Boeing 787-9 B-17882 in the 787 livery being towed by a tug at Taiwan Taoyuan International Airport, a ground crew member walking alongside"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-17882"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "39298"]
+        - ["Line no.", "757"]
+        - ["Engines", "GE GEnx-1B"]
+        - ["Livery", "787 livery, with large &ldquo;787&rdquo; titles on the forward fuselage"]
+        - ["Status", "Still flying with EVA Air (seen 2026-09)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α6000"]
+        - ["Lens", "FE 100-400mm F4.5-5.6 GM OSS"]
+        - ["Focal", "282 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/800"]
+        - ["ISO", "100"]
 

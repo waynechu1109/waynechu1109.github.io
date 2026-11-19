@@ -5,7 +5,8 @@ title: "Aviation Gallery | Wei-Teng (Wayne) Chu"
 description: "Aviation photography portfolio by Wei-Teng (Wayne) Chu, organized by airport and featuring selected aircraft photography work."
 og_title: "Aviation Gallery | Wei-Teng (Wayne) Chu"
 og_url: "https://waynechu1109.github.io/aviation_gallery.html"
-og_image: "https://waynechu1109.github.io/media/gallery/aviation_gallery/sf_fleet_week/DSC05942-1280.jpg"
+og_image: "https://waynechu1109.github.io/media/og/aviation.jpg"
+og_image_alt: "United Airlines Boeing 777-300ER flying past the Golden Gate Bridge during San Francisco Fleet Week"
 header_title: "Aviation Gallery"
 header_subtitle: "Selected aircraft photography organized by airport."
 ---
@@ -154,7 +155,8 @@ header_subtitle: "Selected aircraft photography organized by airport."
           "regions": [
             { "key": "tw", "label": "🇹🇼 Taiwan" },
             { "key": "us", "label": "🇺🇸 Bay Area" },
-            { "key": "jp", "label": "🇯🇵 Tokyo area" }
+            { "key": "jp", "label": "🇯🇵 Tokyo area" },
+            { "key": "cn", "label": "🇨🇳 Guangzhou" }
           ],
           "spots": [
             { "label": "TPE", "name": "Taiwan Taoyuan International Airport", "region": "tw", "lat": 25.0777, "lng": 121.2328, "cards": "#rctp .photo-card", "href": "rctp" },
@@ -167,7 +169,8 @@ header_subtitle: "Selected aircraft photography organized by airport."
             { "label": "HND", "name": "Tokyo Haneda Airport", "region": "jp", "lat": 35.5523, "lng": 139.7797, "cards": "#rjtt .photo-card", "href": "rjtt" },
             { "label": "NRT", "name": "Narita International Airport", "region": "jp", "lat": 35.7647, "lng": 140.3864, "cards": "#rjaa .photo-card", "href": "rjaa" },
             { "label": "OKO", "name": "Yokota Air Base", "region": "jp", "lat": 35.7485, "lng": 139.3485, "cards": "#rjty .photo-card", "href": "rjty" },
-            { "label": "Iruma", "name": "Iruma Air Base", "region": "jp", "lat": 35.8419, "lng": 139.4106, "cards": "#iruma-air-base .photo-card", "href": "iruma-air-base" }
+            { "label": "Iruma", "name": "Iruma Air Base", "region": "jp", "lat": 35.8419, "lng": 139.4106, "cards": "#iruma-air-base .photo-card", "href": "iruma-air-base" },
+            { "label": "CAN", "name": "Guangzhou Baiyun International Airport", "region": "cn", "lat": 23.3924, "lng": 113.2988, "cards": "#zggg .photo-card", "href": "zggg" }
           ]
         }
       </script>
@@ -195,7 +198,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         document.addEventListener('DOMContentLoaded', function () {
           var wrap = document.querySelector('.passport-stamps');
           if (!wrap) return;
-          var COUNTRY = { TW: 'Taiwan', US: 'United States', JP: 'Japan' };
+          var COUNTRY = { TW: 'Taiwan', US: 'United States', JP: 'Japan', CN: 'China' };
           var MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
           // flags are two regional-indicator letters; turning them back into ASCII gives the ISO country code
           function countryOf(text) {
@@ -270,6 +273,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         <a href="#rjaa" class="resource-btn">🇯🇵 RJAA / NRT</a>
         <a href="#rjty" class="resource-btn">🇯🇵 RJTY / OKO</a>
         <a href="#iruma-air-base" class="resource-btn">🇯🇵 RJTJ</a>
+        <a href="#zggg" class="resource-btn">🇨🇳 ZGGG / CAN</a>
       </div>
 
       <div class="photo-filter" role="search">
@@ -480,6 +484,22 @@ header_subtitle: "Selected aircraft photography organized by airport."
         </div>
       </section>
 
+      <section id="zggg" class="airport-section" data-code="CAN" data-code-sub="ZGGG &middot; Guangzhou" aria-labelledby="zggg-heading">
+        <div class="airport-header">
+          <div>
+            <h3 id="zggg-heading" class="airport-name">🇨🇳 Guangzhou Baiyun International Airport</h3>
+            <p class="airport-meta">ZGGG / CAN</p>
+          </div>
+        </div>
+        <p class="airport-description">
+          Southern China&rsquo;s main gateway and the hub of China Southern Airlines, with long-haul widebodies arriving from the Middle East, Europe and beyond.
+        </p>
+        <div class="photo-grid">
+          {% assign sorted = site.data.aviation.can | sort: "shot" | reverse %}{% assign feat = sorted | where: "featured", true %}{% assign rest = sorted | where_exp: "p", "p.featured != true" %}{% assign photos = feat | concat: rest %}
+          {%- for p in photos %}{% include aviation_card.html p=p i=forloop.index n=photos.size %}{% endfor %}
+        </div>
+      </section>
+
       <div class="portfolio-cta">
         <a
           href="https://www.instagram.com/waynechu_aviation/"
@@ -508,6 +528,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
       <div class="lightbox-bar">
         <p class="lightbox-caption" aria-live="polite"></p>
         <button class="lightbox-info-toggle" type="button" aria-expanded="false" aria-controls="lightbox-info" hidden>Details</button>
+        <button class="lightbox-sound" type="button" aria-pressed="false" hidden>Sound</button>
         <button class="lightbox-share" type="button" hidden>Copy link</button>
       </div>
     </div>

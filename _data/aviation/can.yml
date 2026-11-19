@@ -1,0 +1,105 @@
+- img: "can/DSC08806"
+  shot: "2016-09-18 15:29:26"
+  date: "2016-09-18"
+  title: "🇶🇦 Qatar Airways"
+  aircraft: "Airbus A380-800"
+  regs: ["A7-APE"]
+  alt: "Qatar Airways Airbus A380 A7-APE taxiing at Guangzhou Baiyun International Airport with hills and the city behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "A7-APE"]
+        - ["Type", "Airbus A380-800"]
+        - ["Variant", "A380-861"]
+        - ["MSN", "181"]
+        - ["Status", "Still flying with Qatar Airways (seen 2026-11)"]
+      history:
+        - ["2026-03-25", "Last scheduled flight before Qatar grounded its A380 fleet, QR837 Bangkok to Doha"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α5000"]
+        - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+        - ["Focal", "50 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/100"]
+        - ["ISO", "100"]
+
+- img: "can/DSC08796"
+  shot: "2016-09-18 15:16:18"
+  date: "2016-09-18"
+  title: "🇸🇦 Saudi Arabian Airlines"
+  aircraft: "Boeing 777-200ER"
+  regs: ["HZ-AKE"]
+  alt: "Saudi Arabian Airlines Boeing 777-200ER HZ-AKE being pushed back by a tug at Guangzhou Baiyun International Airport with hills behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "HZ-AKE"]
+        - ["Now registered", "N774CL"]
+        - ["Type", "Boeing 777-200ER"]
+        - ["Variant", "777-268(ER)"]
+        - ["MSN", "28348"]
+        - ["Line no.", "109"]
+        - ["Delivered", "1998-01"]
+        - ["Livery", "Saudi Arabian Airlines titles, from before the airline rebranded as Saudia"]
+        - ["Status", "Returned to its lessor by Saudia in 2017-04; registered in the US as N774CL to IAGCAS LLC since 2020-03"]
+      history:
+        - ["2017-04", "Returned to its lessor as Saudia retired its 777-200ERs"]
+        - ["2020-03-27", "Registered N774CL in the US to IAGCAS LLC, Miami"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α5000"]
+        - ["Lens", "E PZ 16-50mm F3.5-5.6 OSS"]
+        - ["Focal", "50 mm"]
+        - ["Aperture", "f/9"]
+        - ["Shutter", "1/100"]
+        - ["ISO", "100"]
+
+- img: "can/DSC08307"
+  shot: "2016-09-18 10:26:24"
+  date: "2016-09-18"
+  title: "🇨🇳 Chongqing Airlines"
+  aircraft: "Airbus A320"
+  regs: ["B-6641"]
+  alt: "Chongqing Airlines Airbus A320 B-6641 taxiing at Guangzhou Baiyun International Airport, with another jet on approach in the distance"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-6641"]
+        - ["Type", "Airbus A320"]
+        - ["Status", "Still flying with Chongqing Airlines (seen 2026-11)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α5000"]
+        - ["Lens", "E 55-210mm F4.5-6.3 OSS"]
+        - ["Focal", "210 mm"]
+        - ["Aperture", "f/6.3"]
+        - ["Shutter", "1/400"]
+        - ["ISO", "100"]
+
+- img: "can/DSC08849"
+  shot: "2016-09-18 15:46:40"
+  date: "2016-09-18"
+  title: "🇨🇳 Air China"
+  aircraft: "Boeing 787-9"
+  regs: ["B-7878"]
+  alt: "Air China Boeing 787-9 B-7878 being towed by a tug at Guangzhou Baiyun International Airport, with hills and a hangar behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-7878"]
+        - ["Type", "Boeing 787-9"]
+        - ["MSN", "34306"]
+        - ["Line no.", "433"]
+        - ["Engines", "Rolls-Royce Trent 1000"]
+        - ["Delivered", "2016-06-12"]
+        - ["Status", "Still flying with Air China (seen 2026-10)"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony α5000"]
+        - ["Lens", "E 55-210mm F4.5-6.3 OSS"]
+        - ["Focal", "152 mm"]
+        - ["Aperture", "f/8"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "100"]
+
