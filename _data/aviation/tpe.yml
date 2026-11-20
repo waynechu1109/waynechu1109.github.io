@@ -1871,7 +1871,7 @@
   title: "🇹🇼 EVA AIR"
   aircraft: "Boeing 747-400"
   regs: ["B-16410"]
-  alt: "EVA Air Boeing 747-400 B-16410 in the airline's original green livery about to touch down at Taiwan Taoyuan International Airport, with a China Airlines 747-400 taxiing behind under a grey sky"
+  alt: "EVA Air Boeing 747-400 B-16410 in the airline's pre-2015 green livery about to touch down at Taiwan Taoyuan International Airport, with a China Airlines 747-400 taxiing behind under a grey sky"
   details:
     - group: "Aircraft"
       rows:
@@ -1895,4 +1895,104 @@
         - ["Aperture", "f/5.6"]
         - ["Shutter", "1/200"]
         - ["ISO", "200"]
+
+- img: "tpe/DSC01523"
+  shot: "2015-09 ~04b"
+  date: "2015-09"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 747-400"
+  regs: ["B-16412"]
+  alt: "EVA Air Boeing 747-400 B-16412 in the airline's pre-2015 green livery, gear down just above the runway at Taiwan Taoyuan International Airport under a grey sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16412"]
+        - ["Type", "Boeing 747-400"]
+        - ["Variant", "747-45E"]
+        - ["MSN", "29112"]
+        - ["Line no.", "1159"]
+        - ["Engines", "GE CF6-80C2"]
+        - ["Delivered", "1998-05"]
+        - ["Note", "One of EVA&rsquo;s last three passenger 747-400s, with B-16410 and B-16411; it kept the pre-2015 livery to the end"]
+        - ["Status", "Retired by EVA Air and ferried to San Bernardino on 2017-07-30; reportedly broken up in 2020-06"]
+      history:
+        - ["2017-07-30", "Retirement flight BR1012 from Taipei to San Bernardino"]
+        - ["2020-06", "Reportedly broken up"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Focal", "173 mm"]
+        - ["Aperture", "f/6.3"]
+        - ["Shutter", "1/200"]
+        - ["ISO", "200"]
+
+- img: "tpe/PSX_20160403_110047"
+  shot: "2016-04 ~03"
+  date: "2016-04"
+  wide: true
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 777-300ER"
+  regs: ["B-16703"]
+  liveries: ["Hello Kitty Hand-in-Hand Jet"]
+  alt: "EVA Air Boeing 777-300ER B-16703 in the Hello Kitty Hand-in-Hand livery, with Sanrio characters holding hands along the fuselage, rotating off the runway at Taiwan Taoyuan International Airport, with a red sign in the foreground warning not to cross without tower clearance"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16703"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-35E(ER)"]
+        - ["MSN", "32643"]
+        - ["Line no.", "572"]
+        - ["Engines", "GE90-115B"]
+        - ["Delivered", "2006-06-22"]
+        - ["Livery", "Hello Kitty &ldquo;Hand-in-Hand&rdquo; (牽手機), 19 Sanrio characters holding hands under &ldquo;Sanrio Family&rdquo; titles, 2013-09 to 2021-05"]
+        - ["Note", "EVA&rsquo;s sixth Hello Kitty jet and the first on a 777, and the first time Hello Kitty flew with her Sanrio friends"]
+        - ["Status", "Retired by EVA Air in 2024-06 and flown to Knock, Ireland, where EirTrade broke it up"]
+      history:
+        - ["2013-09-18", "First flight in the Hand-in-Hand livery, Taipei to Los Angeles, with chairman Chang Kuo-wei as captain"]
+        - ["2014-10-29", "Moved to the Taipei to Paris route"]
+        - ["2018-03-27", "Returned to the Los Angeles route three days a week"]
+        - ["2021-05-16", "Returned to standard EVA colours"]
+        - ["2024-06-17", "Retirement flight from Taipei to Ireland West Airport Knock"]
+        - ["2024-07", "EirTrade began taking it apart at Knock"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Focal", "68 mm"]
+        - ["Aperture", "f/9"]
+        - ["Shutter", "1/320"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC03500"
+  shot: "2016-04 ~02"
+  date: "2016-04"
+  wide: true
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 777-300ER"
+  regs: ["B-16722"]
+  liveries: ["Hello Kitty Shining Star"]
+  alt: "EVA Air Boeing 777-300ER B-16722 in the Hello Kitty Shining Star livery, Little Twin Stars flying over a city skyline on the forward fuselage, lifting off at Taiwan Taoyuan International Airport with the control tower behind"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16722"]
+        - ["Type", "Boeing 777-300ER"]
+        - ["Variant", "777-36N(ER)"]
+        - ["MSN", "42107"]
+        - ["Line no.", "1302"]
+        - ["Engines", "GE90-115B"]
+        - ["Delivered", "2015-05"]
+        - ["Livery", "Hello Kitty &ldquo;Shining Star&rdquo; with Little Twin Stars and friends, 2015-06 to 2024"]
+        - ["Note", "Repainted as the Hello Kitty &ldquo;Besties Jet&rdquo; in 2024"]
+        - ["Status", "Still flying with EVA Air in the Hello Kitty Besties Jet livery (seen 2026-07)"]
+      history:
+        - ["2015-06-19", "Debuted in the Hello Kitty &ldquo;Shining Star&rdquo; livery"]
+        - ["2024-08-28", "Debuted as the Hello Kitty &ldquo;Besties Jet&rdquo;"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Focal", "91 mm"]
+        - ["Aperture", "f/9"]
+        - ["Shutter", "1/500"]
+        - ["ISO", "100"]
 
