@@ -83,6 +83,8 @@
           }
           renderInfo(img);
           setHash(cardIdFor(img));
+          // the aviation gallery pages its sections, so it turns to whichever page holds this photo
+          img.dispatchEvent(new CustomEvent("gallery:show", { bubbles: true }));
           preload(current + 1);
           preload(current - 1);
         }

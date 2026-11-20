@@ -358,15 +358,32 @@
     .photo-card[hidden], .airport-section[hidden] { display: none !important; }
     .page-toc-link.is-empty, .airport-links a.is-empty { opacity: .4; }
     .photo-card { scroll-margin-top: calc(var(--nav-offset) + 16px); }
-    body:not(.is-filtering) .is-collapsible:not(.is-expanded) .photo-card.is-extra { display: none; }
-    .section-more {
-      display: block; margin: 18px auto 0; padding: 8px 18px; border-radius: 999px; cursor: pointer;
-      font: inherit; font-size: .85rem; font-weight: 700; color: var(--primary-deep);
+    .photo-card.is-offpage { display: none !important; }
+    .section-pager { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 18px 0 0; }
+    .section-pager[hidden] { display: none; }
+    .pager-btn, .pager-page {
+      display: inline-grid; place-items: center; min-width: 34px; height: 34px; padding: 0 6px; border-radius: 999px;
+      cursor: pointer; font: inherit; font-size: .82rem; font-weight: 700; color: var(--primary-deep);
       background: var(--surface); border: 1px solid rgba(var(--line-rgb),.25);
       transition: background .18s ease, border-color .18s ease;
     }
-    .section-more:hover { background: var(--hover); border-color: rgba(var(--line-rgb),.4); }
-    .is-filtering .section-more { display: none; }
+    .pager-btn:hover:not(:disabled), .pager-page:hover { background: var(--hover); border-color: rgba(var(--line-rgb),.4); }
+    .pager-btn:disabled { opacity: .35; cursor: default; }
+    .pager-btn .icon { width: 12px; height: 12px; fill: currentColor; }
+    .pager-prev .icon { transform: rotate(-90deg); }
+    .pager-next .icon { transform: rotate(90deg); }
+    .pager-page[aria-current="true"] { color: #fff; background: var(--primary-deep); border-color: var(--primary-deep); cursor: default; }
+    .pager-gap { min-width: 16px; text-align: center; color: var(--muted); }
+    .pager-count { margin-left: 8px; font-size: .8rem; color: var(--muted); white-space: nowrap; }
+    .photo-grid.turn-next .photo-card:not(.is-offpage) { animation: page-in-next .28s ease both; }
+    .photo-grid.turn-prev .photo-card:not(.is-offpage) { animation: page-in-prev .28s ease both; }
+    @keyframes page-in-next { from { opacity: 0; transform: translateX(24px); } }
+    @keyframes page-in-prev { from { opacity: 0; transform: translateX(-24px); } }
+    @media (prefers-reduced-motion: reduce) { .photo-grid .photo-card { animation: none !important; } }
+    @media (max-width: 640px) {
+      .pager-page:not([aria-current="true"]), .pager-gap { display: none; }
+      .pager-count { margin: 0 6px; }
+    }
     .spotted-link { color: var(--primary-deep); font-weight: 700; text-decoration: none; border-bottom: 1px dotted currentColor; }
     .spotted-link:hover { border-bottom-style: solid; }
     .pass-rows .spotted-link, .pass-rows .track-link { color: #163453; }
@@ -448,6 +465,14 @@
     .photo-frame.real-photo { aspect-ratio: auto; display: block; background: #0f1b2f; }
     .photo-frame.real-photo::before, .photo-frame.real-photo::after { content: none; }
     .photo-image { width: 100%; height: auto; display: block; cursor: zoom-in; }
+    /* a panorama keeps the 3:2 frame of its row without losing the nose or tail to a crop; a blurred
+       copy of itself fills the bands, and the lead card and lightbox still show it at its own ratio */
+    .photo-frame.real-photo.is-wide { aspect-ratio: 3 / 2; display: flex; align-items: center; }
+    .photo-frame.real-photo.is-wide::before {
+      content: ""; position: absolute; inset: -24px;
+      background: var(--fill) center / cover; filter: blur(18px) brightness(.72) saturate(1.1);
+    }
+    .photo-frame.is-wide .photo-image { position: relative; box-shadow: 0 0 18px rgba(0,0,0,.35); }
     /* the newest photo in each section runs the full row at its own aspect ratio, with the text
        beside it; seven visible cards then fill the lead row plus two rows of three */
     .photo-card.is-lead { grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 1fr; align-items: center; }
@@ -611,8 +636,9 @@
     [data-theme="dark"] .airport-name { color: #e8eef5; }
     [data-theme="dark"] .photo-search { border-color: var(--border); }
     [data-theme="dark"] .photo-browse select { border-color: var(--border); }
-    [data-theme="dark"] .section-more { background: var(--surface-alt); border-color: var(--border); }
-    [data-theme="dark"] .section-more:hover { background: #223145; }
+    [data-theme="dark"] .pager-btn, [data-theme="dark"] .pager-page { background: var(--surface-alt); border-color: var(--border); }
+    [data-theme="dark"] .pager-btn:hover:not(:disabled), [data-theme="dark"] .pager-page:hover { background: #223145; }
+    [data-theme="dark"] .pager-page[aria-current="true"] { color: #0f1b2f; background: var(--primary-deep); border-color: var(--primary-deep); }
     [data-theme="dark"] .photo-filter-chips button { color: var(--text); background: var(--surface-alt); border-color: var(--border); }
     [data-theme="dark"] .photo-filter-chips button:hover { background: #223145; }
     [data-theme="dark"] .photo-filter-chips button[aria-pressed="true"] { color: #0f1b2f; background: var(--primary-deep); border-color: var(--primary-deep); }

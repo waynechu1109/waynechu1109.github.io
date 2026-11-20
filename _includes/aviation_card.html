@@ -1,6 +1,5 @@
 {%- assign p = include.p -%}
 {%- assign base = "media/gallery/aviation_gallery/" | append: p.img -%}
-{%- if include.n >= 3 %}{% assign cap = 7 %}{% else %}{% assign cap = 6 %}{% endif -%}
 {%- if include.i == 1 and include.n >= 3 %}{% assign lead = true %}{% else %}{% assign lead = false %}{% endif -%}
 {%- assign states = "" %}{% assign pairs = "" -%}
 {%- for g in p.details %}{% assign g0 = g.group | slice: 0, 8 %}{% if g0 == "Aircraft" %}{% for row in g.rows %}{% if row[0] == "Registration" or row[0] == "Side number" %}{% assign reg = row[1] %}{% endif %}{% if row[0] == "Status" -%}
@@ -17,8 +16,8 @@
 {%- assign states = states | strip -%}
 {%- comment %} one badge when every aircraft shares a state, otherwise one per registration so the two can be told apart {% endcomment -%}
 {%- if states contains " " %}{% assign badges = pairs | split: ";" %}{% else %}{% assign badges = states | split: " " %}{% endif -%}
-          <article class="photo-card{% if lead %} is-lead{% endif %}{% if include.i > cap %} is-extra{% endif %}" id="p-{{ p.img | replace: '/', '-' }}"{% if p.spotted %} data-spotted="{{ p.spotted }}"{% endif %}{% if states != "" %} data-status="{{ states }}"{% endif %} data-shot="{{ p.shot }}">
-            <div class="photo-frame real-photo{% if p.video %} has-video{% endif %}">
+          <article class="photo-card{% if lead %} is-lead{% endif %}" id="p-{{ p.img | replace: '/', '-' }}"{% if p.spotted %} data-spotted="{{ p.spotted }}"{% endif %}{% if states != "" %} data-status="{{ states }}"{% endif %} data-shot="{{ p.shot }}">
+            <div class="photo-frame real-photo{% if p.video %} has-video{% endif %}{% if p.wide and lead == false %} is-wide{% endif %}"{% if p.wide and lead == false %} style="--fill: url('{{ base }}-640.jpg')"{% endif %}>
               <img
                 src="{{ base }}-1280.jpg"
                 srcset="{{ base }}-640.jpg 640w, {{ base }}-1280.jpg 1280w, {{ base }}-2560.jpg 2560w"

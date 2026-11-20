@@ -543,56 +543,6 @@ header_subtitle: "Selected aircraft photography organized by airport."
   </div>
 
   <script>
-    /* Long sections start with six photos; the rest sit behind a toggle so the page stays scannable */
-    (function () {
-      var sections = document.querySelectorAll('.airport-section');
-      sections.forEach(function (section) {
-        var extras = section.querySelectorAll('.photo-card.is-extra');
-        if (!extras.length) return;
-        var total = section.querySelectorAll('.photo-card').length;
-        section.classList.add('is-collapsible');
-        var btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'section-more';
-        btn.setAttribute('aria-expanded', 'false');
-        var label = function () {
-          var open = section.classList.contains('is-expanded');
-          btn.textContent = open ? 'Show fewer' : 'Show all ' + total + ' photos';
-          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        };
-        btn.addEventListener('click', function () {
-          var open = section.classList.toggle('is-expanded');
-          label();
-          // collapsing from far down the list would strand the reader below the section
-          if (!open && section.getBoundingClientRect().top < 0) section.scrollIntoView({ block: 'start' });
-        });
-        label();
-        section.querySelector('.photo-grid').insertAdjacentElement('afterend', btn);
-      });
-
-      function reveal(id) {
-        var card = id && document.getElementById(id);
-        var section = card && card.classList.contains('is-extra') && card.closest('.airport-section');
-        if (!section || section.classList.contains('is-expanded')) return;
-        section.classList.add('is-expanded');
-        var btn = section.querySelector('.section-more');
-        if (btn) { btn.textContent = 'Show fewer'; btn.setAttribute('aria-expanded', 'true'); }
-      }
-      // runs in the capture phase so the section opens before the browser scrolls to the anchor
-      document.addEventListener('click', function (e) {
-        var a = e.target.closest('a[href^="#p-"]');
-        if (a) reveal(a.getAttribute('href').slice(1));
-      }, true);
-      window.addEventListener('hashchange', function () { reveal(location.hash.slice(1)); });
-      if (location.hash.indexOf('#p-') === 0) {
-        reveal(location.hash.slice(1));
-        var t = document.getElementById(location.hash.slice(1));
-        if (t) t.scrollIntoView();
-      }
-    })();
-  </script>
-
-  <script>
     /* Card clips: load and play only while on screen, and never for readers who ask for reduced motion */
     (function () {
       var clips = document.querySelectorAll('.card-video');
@@ -838,15 +788,122 @@ header_subtitle: "Selected aircraft photography organized by airport."
         sections.forEach(function (section) {
           var grid = section.querySelector('.photo-grid');
           var cards = Array.prototype.slice.call(grid.querySelectorAll('.photo-card'));
-          // the collapsed count is fixed by how the page was built, so keep the same number of cards in view
-          var cap = cards.length - grid.querySelectorAll('.photo-card.is-extra').length;
-          cards.sort(SORTS[mode]).forEach(function (card, i) {
+          cards.sort(SORTS[mode]).forEach(function (card) {
             grid.appendChild(card);
             card.classList.toggle('is-lead', mode === '' && card.dataset.lead === '1');
-            card.classList.toggle('is-extra', i >= cap);
           });
         });
       }
+
+      // Each airport pages left and right through its photos rather than growing down the page. A page is two
+      // rows of three, and the first page also carries the lead card when there is one. Filters and sorts page
+      // through whatever is left, starting again from page one
+      var PER_PAGE = 6;
+      var pagers = new Map();
+      var ARROW = '<svg class="icon" aria-hidden="true"><use href="#i-chevron-up"/></svg>';
+      sections.forEach(function (section) {
+        var nav = document.createElement('nav');
+        nav.className = 'section-pager';
+        nav.setAttribute('aria-label', section.querySelector('.airport-name').textContent.trim() + ' photo pages');
+        nav.innerHTML = '<button type="button" class="pager-btn pager-prev" aria-label="Previous page">' + ARROW + '</button>'
+          + '<span class="pager-pages"></span>'
+          + '<button type="button" class="pager-btn pager-next" aria-label="Next page">' + ARROW + '</button>'
+          + '<span class="pager-count" aria-live="polite"></span>';
+        var grid = section.querySelector('.photo-grid');
+        grid.insertAdjacentElement('afterend', nav);
+        var state = { section: section, grid: grid, nav: nav, page: 0, pages: [] };
+        pagers.set(section, state);
+        nav.querySelector('.pager-prev').addEventListener('click', function () { turn(state, state.page - 1, true); });
+        nav.querySelector('.pager-next').addEventListener('click', function () { turn(state, state.page + 1, true); });
+        nav.querySelector('.pager-pages').addEventListener('click', function (e) {
+          var b = e.target.closest('.pager-page');
+          if (b) turn(state, +b.dataset.page, true);
+        });
+        // a horizontal swipe across the grid turns the page on touch screens
+        var x0 = null, y0 = 0;
+        grid.addEventListener('touchstart', function (e) {
+          x0 = e.touches.length === 1 ? e.touches[0].clientX : null;
+          y0 = x0 === null ? 0 : e.touches[0].clientY;
+        }, { passive: true });
+        grid.addEventListener('touchend', function (e) {
+          if (x0 === null) return;
+          var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+          x0 = null;
+          if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) turn(state, state.page + (dx < 0 ? 1 : -1), true);
+        });
+      });
+      function paginate(state) {
+        var shown = Array.prototype.filter.call(state.grid.querySelectorAll('.photo-card'), function (c) { return !c.hidden; });
+        var first = shown[0] && shown[0].classList.contains('is-lead') ? PER_PAGE + 1 : PER_PAGE;
+        state.pages = shown.length ? [shown.slice(0, first)] : [];
+        for (var i = first; i < shown.length; i += PER_PAGE) state.pages.push(shown.slice(i, i + PER_PAGE));
+        state.total = shown.length;
+        state.page = 0;
+        render(state);
+      }
+      // with many pages only the ends and the neighbours of the current page get a number
+      function pageList(n, cur) {
+        var out = [];
+        for (var i = 0; i < n; i++) {
+          if (n <= 7 || i === 0 || i === n - 1 || Math.abs(i - cur) <= 1) out.push(i);
+          else if (out[out.length - 1] !== -1) out.push(-1);
+        }
+        return out;
+      }
+      function render(state, dir) {
+        var onPage = state.pages[state.page] || [];
+        state.grid.querySelectorAll('.photo-card').forEach(function (c) {
+          c.classList.toggle('is-offpage', onPage.indexOf(c) === -1);
+        });
+        var n = state.pages.length;
+        state.nav.hidden = n < 2;
+        if (n < 2) return;
+        state.nav.querySelector('.pager-prev').disabled = state.page === 0;
+        state.nav.querySelector('.pager-next').disabled = state.page === n - 1;
+        state.nav.querySelector('.pager-pages').innerHTML = pageList(n, state.page).map(function (i) {
+          if (i === -1) return '<span class="pager-gap" aria-hidden="true">&hellip;</span>';
+          return '<button type="button" class="pager-page" data-page="' + i + '" aria-label="Page ' + (i + 1) + '"'
+            + (i === state.page ? ' aria-current="true"' : '') + '>' + (i + 1) + '</button>';
+        }).join('');
+        var start = state.pages.slice(0, state.page).reduce(function (sum, p) { return sum + p.length; }, 0);
+        state.nav.querySelector('.pager-count').textContent = (start + 1) + '\u2013' + (start + onPage.length) + ' of ' + state.total;
+        if (dir) {
+          state.grid.classList.remove('turn-next', 'turn-prev');
+          void state.grid.offsetWidth;
+          state.grid.classList.add(dir > 0 ? 'turn-next' : 'turn-prev');
+        }
+      }
+      function turn(state, page, byReader) {
+        if (page < 0 || page >= state.pages.length || page === state.page) return;
+        var dir = page > state.page ? 1 : -1;
+        state.page = page;
+        render(state, byReader ? dir : 0);
+        if (!byReader) return;
+        // pages differ in height, so bring the top of the section back when the reader has scrolled past it
+        if (state.section.getBoundingClientRect().top < 0) state.section.scrollIntoView({ block: 'start' });
+      }
+      function reveal(card) {
+        var state = card && pagers.get(card.closest('.airport-section'));
+        if (!state) return;
+        for (var i = 0; i < state.pages.length; i++) {
+          if (state.pages[i].indexOf(card) !== -1) return turn(state, i, false);
+        }
+      }
+      // links to a card (shared links, "Also spotted") and the lightbox both turn to the page that holds the photo;
+      // the click listener runs in the capture phase so the page is showing before the browser scrolls to the anchor
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href^="#p-"]');
+        if (a) reveal(document.getElementById(a.getAttribute('href').slice(1)));
+      }, true);
+      document.addEventListener('gallery:show', function (e) { reveal(e.target.closest('.photo-card')); });
+      window.addEventListener('hashchange', function () { reveal(document.getElementById(location.hash.slice(1))); });
+      // arrow keys page the section that has focus, unless a form field or the lightbox wants them
+      document.addEventListener('keydown', function (e) {
+        if ((e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') || e.altKey || e.metaKey || e.ctrlKey) return;
+        if (document.querySelector('.lightbox.is-open') || /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
+        var state = e.target.closest && pagers.get(e.target.closest('.airport-section'));
+        if (state) turn(state, state.page + (e.key === 'ArrowRight' ? 1 : -1), true);
+      });
 
       function apply(push) {
         reorder();
@@ -867,6 +924,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         });
         sections.forEach(function (section) {
           section.hidden = !section.querySelector('.photo-card:not([hidden])');
+          paginate(pagers.get(section));
         });
         tocLinks.forEach(function (a) {
           var target = document.getElementById(a.getAttribute('href').slice(1));
@@ -974,6 +1032,11 @@ header_subtitle: "Selected aircraft photography organized by airport."
       });
       readQuery();
       apply();
+      if (location.hash.indexOf('#p-') === 0) {
+        var linked = document.getElementById(location.hash.slice(1));
+        reveal(linked);
+        if (linked) linked.scrollIntoView();
+      }
     })();
   </script>
 
