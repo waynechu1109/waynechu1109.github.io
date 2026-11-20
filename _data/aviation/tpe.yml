@@ -1799,3 +1799,100 @@
         - ["Shutter", "1/500"]
         - ["ISO", "200"]
 
+- img: "tpe/PSX_20160210_150858"
+  shot: "2016-02 ~10"
+  date: "2016-02"
+  title: "🇹🇭 Orient Thai Airlines"
+  aircraft: "Boeing 747-400"
+  regs: ["HS-STB"]
+  alt: "Orient Thai Airlines Boeing 747-400 HS-STB parked without engines on a remote stand at Taiwan Taoyuan International Airport under a clear blue sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "HS-STB"]
+        - ["Type", "Boeing 747-400"]
+        - ["Variant", "747-441"]
+        - ["MSN", "24956"]
+        - ["Line no.", "917"]
+        - ["History", "Previously registered PP-VPG, PK-GSI and N791LF"]
+        - ["At TPE", "Reportedly flew in for maintenance at Evergreen Aviation Technologies in 2014 and never left; unpaid bills led to parts being removed and sold"]
+        - ["Status", "Retired at Taoyuan: reportedly written off in 2017-12 and dismantled on 2019-09-11, with the fuselage moved to private land in Guanyin, Taoyuan"]
+      history:
+        - ["2014", "Reportedly flew to Taoyuan for maintenance at Evergreen Aviation Technologies"]
+        - ["2017-12", "Reportedly written off and sold to a private landowner"]
+        - ["2018-10", "Orient Thai Airlines stopped flying"]
+        - ["2019-09-11", "Reportedly dismantled; the fuselage was moved to private land in Guanyin, Taoyuan"]
+        - ["2025-08", "Listed as on display at an aircraft-restaurant site in Guanyin"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Focal", "50 mm"]
+        - ["Aperture", "f/9"]
+        - ["Shutter", "1/250"]
+        - ["ISO", "100"]
+
+- img: "tpe/PSX_20160210_150535"
+  shot: "2016-02 ~09"
+  date: "2016-02"
+  title: "🇩🇪 Eurowings"
+  aircraft: "Airbus A330-200"
+  regs: ["B-16303"]
+  alt: "Former EVA Air Airbus A330-200 B-16303, freshly painted in Eurowings colours but still on its Taiwanese registration, parked at Taiwan Taoyuan International Airport"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16303"]
+        - ["Last registered", "D-AXGC"]
+        - ["Type", "Airbus A330-200"]
+        - ["Variant", "A330-203"]
+        - ["MSN", "555"]
+        - ["Engines", "GE CF6-80E1A3"]
+        - ["Delivered", "2004-02-04"]
+        - ["Note", "Leased from GECAS; one of three EVA A330s that went to Eurowings, with B-16301 (D-AXGA) and B-16305 (D-AXGD)"]
+        - ["Status", "Retired after flying Eurowings long-haul until 2020; broken up as D-AXGC in 2023-11"]
+      history:
+        - ["2005-10", "Reportedly debuted as EVA&rsquo;s first Hello Kitty A330"]
+        - ["2015", "Left the EVA Air fleet"]
+        - ["2016-02-18", "Registered D-AXGC to SunExpress Deutschland"]
+        - ["2016-04-13", "Entered Eurowings long-haul service, flown by SunExpress Deutschland"]
+        - ["2020-06", "SunExpress Deutschland announced its shutdown"]
+        - ["2023-11", "Broken up"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Focal", "50 mm"]
+        - ["Aperture", "f/9"]
+        - ["Shutter", "1/400"]
+        - ["ISO", "100"]
+
+- img: "tpe/DSC01476-2"
+  shot: "2015-09 ~03b"
+  date: "2015-09"
+  title: "🇹🇼 EVA AIR"
+  aircraft: "Boeing 747-400"
+  regs: ["B-16410"]
+  alt: "EVA Air Boeing 747-400 B-16410 in the airline's original green livery about to touch down at Taiwan Taoyuan International Airport, with a China Airlines 747-400 taxiing behind under a grey sky"
+  details:
+    - group: "Aircraft"
+      rows:
+        - ["Registration", "B-16410"]
+        - ["Type", "Boeing 747-400"]
+        - ["Variant", "747-45E"]
+        - ["MSN", "29061"]
+        - ["Line no.", "1140"]
+        - ["Engines", "GE CF6-80C2"]
+        - ["Delivered", "1998-01-19"]
+        - ["Note", "One of EVA&rsquo;s last three passenger 747-400s after the final Combi retired in early 2015, with B-16411 and B-16412"]
+        - ["Status", "Retired by EVA Air in 2017-04 and ferried to the US; reportedly broken up in 2021"]
+      history:
+        - ["2017-03-27", "Reportedly flew its last scheduled Manila service, then was stored"]
+        - ["2017-04-28", "Assigned the US import number N317UA, which was never registered and was cancelled on 2017-08-14"]
+        - ["2021", "Reportedly broken up"]
+    - group: "Photo"
+      rows:
+        - ["Camera", "Sony NEX-5R"]
+        - ["Focal", "152 mm"]
+        - ["Aperture", "f/5.6"]
+        - ["Shutter", "1/200"]
+        - ["ISO", "200"]
+
