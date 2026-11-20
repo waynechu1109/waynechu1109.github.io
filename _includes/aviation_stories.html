@@ -1,0 +1,40 @@
+{%- comment %} Every card with a story: line, in page order. The year span runs from the first milestone row
+(first flight, delivery or build) or, failing that, the first history entry, to the last history entry {% endcomment -%}
+{%- assign keys = "tpe,tsa,hsz,sfo,sjc,sf_fleet_week,overhead,hnd,nrt,oko,rjtj,can" | split: "," -%}
+      <section id="airframe-stories" class="story-section" aria-labelledby="airframe-stories-heading">
+        <div class="airport-header story-header">
+          <div>
+            <h3 id="airframe-stories-heading" class="airport-name">Airframe stories</h3>
+            <p class="airport-meta">Aircraft whose past is worth a second look</p>
+          </div>
+          <div class="story-nav">
+            <button type="button" class="pager-btn pager-prev story-prev" aria-label="Previous stories"><svg class="icon" aria-hidden="true"><use href="#i-chevron-up"/></svg></button>
+            <button type="button" class="pager-btn pager-next story-next" aria-label="More stories"><svg class="icon" aria-hidden="true"><use href="#i-chevron-up"/></svg></button>
+          </div>
+        </div>
+        <div class="story-rail">
+          {%- for key in keys %}{% assign set = site.data.aviation[key] %}{% for p in set %}{% if p.story %}
+          {%- assign reg = "" %}{% assign now = "" %}{% assign from = "" %}{% assign to = "" %}{% assign milestone = "" -%}
+          {%- for g in p.details %}{% assign g0 = g.group | slice: 0, 8 %}{% if g0 == "Aircraft" and reg == "" -%}
+          {%- for row in g.rows -%}
+          {%- if row[0] == "Registration" or row[0] == "Serial" %}{% assign reg = row[1] -%}
+          {%- elsif row[0] == "Now registered" or row[0] == "Last registered" %}{% assign now = row[1] -%}
+          {%- elsif milestone == "" %}{% if row[0] == "First flight" or row[0] == "Delivered" or row[0] == "Built" %}{% assign milestone = row[1] | slice: 0, 4 %}{% endif -%}
+          {%- endif %}{% endfor -%}
+          {%- for h in g.history %}{% assign y = h[0] | remove: "early " | remove: "late " | slice: 0, 4 %}{% if forloop.first %}{% assign from = y %}{% endif %}{% assign to = y %}{% endfor -%}
+          {%- endif %}{% endfor -%}
+          {%- if milestone != "" %}{% assign from = milestone %}{% endif -%}
+          {%- assign id = "p-" | append: p.img | replace: "/", "-" %}
+          <a class="story-card" href="#{{ id }}" data-opens="{{ id }}">
+            {%- assign thumb = "media/gallery/aviation_gallery/" | append: p.img | append: "-640.jpg" %}
+            <span class="story-frame{% if p.wide %} is-wide{% endif %}"{% if p.wide %} style="--fill: url('{{ thumb }}')"{% endif %}><img class="story-thumb" src="{{ thumb }}" alt="" loading="lazy" /></span>
+            <span class="story-body">
+              <span class="story-years">{{ from }}{% if to != "" and to != from %}&ndash;{{ to }}{% endif %}</span>
+              <span class="story-headline">{{ p.story }}</span>
+              <span class="story-meta">{{ p.title }} &middot; {{ p.aircraft }}</span>
+              <span class="story-regs"><span class="reg-chip">{{ reg }}</span>{% if now != "" %}<span class="story-arrow" aria-label="later">&rarr;</span><span class="reg-chip">{{ now }}</span>{% endif %}</span>
+            </span>
+          </a>
+          {%- endif %}{% endfor %}{% endfor %}
+        </div>
+      </section>

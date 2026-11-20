@@ -261,7 +261,10 @@ header_subtitle: "Selected aircraft photography organized by airport."
         });
       </script>
 
+{% include aviation_stories.html %}
+
       <div class="airport-links" aria-label="Airport categories">
+        <a href="#airframe-stories" class="resource-btn">Airframe stories</a>
         <a href="#rctp" class="resource-btn">🇹🇼 RCTP / TPE</a>
         <a href="#rcss" class="resource-btn">🇹🇼 RCSS / TSA</a>
         <a href="#hsinchu-air-base" class="resource-btn">🇹🇼 RCPO / HSZ</a>
@@ -543,6 +546,25 @@ header_subtitle: "Selected aircraft photography organized by airport."
   </div>
 
   <script>
+    /* Story rail: the arrows scroll by a screenful of cards and gray out at either end */
+    (function () {
+      var rail = document.querySelector('.story-rail');
+      if (!rail) return;
+      var prev = document.querySelector('.story-prev'), next = document.querySelector('.story-next');
+      function ends() {
+        prev.disabled = rail.scrollLeft <= 2;
+        next.disabled = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 2;
+        prev.parentNode.hidden = prev.disabled && next.disabled;
+      }
+      prev.addEventListener('click', function () { rail.scrollBy({ left: -rail.clientWidth, behavior: 'smooth' }); });
+      next.addEventListener('click', function () { rail.scrollBy({ left: rail.clientWidth, behavior: 'smooth' }); });
+      rail.addEventListener('scroll', ends, { passive: true });
+      window.addEventListener('resize', ends);
+      ends();
+    })();
+  </script>
+
+  <script>
     /* Card clips: load and play only while on screen, and never for readers who ask for reduced motion */
     (function () {
       var clips = document.querySelectorAll('.card-video');
@@ -761,6 +783,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
       fill(typeSelect, [{ label: 'Airliners', counts: typeCounts.airliner }, { label: 'Military', counts: typeCounts.military }, { label: 'Business & other', counts: typeCounts.other }]);
 
       var filter = 'all';
+      var stories = document.getElementById('airframe-stories');
       var tocLinks = document.querySelectorAll('.page-toc-link, .airport-links a');
 
       // Reordering within each airport. Newest first is the page as built, so it restores the original order,
@@ -841,7 +864,7 @@ header_subtitle: "Selected aircraft photography organized by airport."
         state.page = 0;
         render(state);
       }
-      // with many pages only the ends and the neighbours of the current page get a number
+      // with many pages only the ends and the neighbors of the current page get a number
       function pageList(n, cur) {
         var out = [];
         for (var i = 0; i < n; i++) {
@@ -926,6 +949,8 @@ header_subtitle: "Selected aircraft photography organized by airport."
           section.hidden = !section.querySelector('.photo-card:not([hidden])');
           paginate(pagers.get(section));
         });
+        // stories are a way in from the top, not a search result, so they step aside while a filter is on
+        if (stories) stories.hidden = !!(q || filter !== 'all' || airlineSelect.value || typeSelect.value);
         tocLinks.forEach(function (a) {
           var target = document.getElementById(a.getAttribute('href').slice(1));
           a.classList.toggle('is-empty', !!(target && target.hidden));

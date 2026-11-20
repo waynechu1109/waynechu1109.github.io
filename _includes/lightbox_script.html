@@ -405,7 +405,8 @@
           lightboxImage.alt = "";
           if (lens) lens.style.display = "none";
           document.body.style.overflow = "";
-          var toFocus = photoImages[current] || lastFocused;
+          var toFocus = returnTo || photoImages[current] || lastFocused;
+          returnTo = null;
           if (toFocus && toFocus.focus) toFocus.focus();
         }
 
@@ -454,6 +455,19 @@
           photoImages = Array.prototype.slice.call(document.querySelectorAll(".photo-image"));
           openLightbox(photoImages.indexOf(image));
         }
+        // a link elsewhere on the page (the story rail) can open a card's photo; focus goes back to that link
+        // on close, so the reader is not dropped at the card further down the page
+        var returnTo = null;
+        document.addEventListener("click", function (e) {
+          var link = e.target.closest("[data-opens]");
+          var card = link && document.getElementById(link.getAttribute("data-opens"));
+          var image = card && card.querySelector(".photo-image");
+          if (!image) return;
+          e.preventDefault();
+          e.stopPropagation();
+          returnTo = link;
+          openImage(image);
+        }, true);
         photoImages.forEach(function (image) {
           image.setAttribute("tabindex", "0");
           image.setAttribute("role", "button");

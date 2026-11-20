@@ -386,6 +386,7 @@
   title: "🇰🇷 Asiana Cargo"
   aircraft: "Boeing 747-400BDSF"
   regs: ["HL7415"]
+  story: "Delivered to Asiana as a passenger 747 in 1992, converted to a freighter, and reported as the last Asiana 747-400 to go"
   alt: "Asiana Cargo Boeing 747-400 freighter HL7415 on approach to Narita International Airport at dusk"
   details:
     - group: "Aircraft"
@@ -398,7 +399,7 @@
         - ["Line no.", "946"]
         - ["Engines", "Pratt &amp; Whitney PW4056"]
         - ["History", "Delivered to Asiana as a passenger 747-400 in 1992 and later converted to a freighter"]
-        - ["Status", "Left Asiana Cargo on 2025-12-14 as N271KP, reported as the last Asiana 747-400 to go, and listed for KP Aviation; the FAA now shows N271KP only as a cancelled reservation"]
+        - ["Status", "Left Asiana Cargo on 2025-12-14 as N271KP, reported as the last Asiana 747-400 to go, and listed for KP Aviation; the FAA now shows N271KP only as a canceled reservation"]
       history:
         - ["1992-12-03", "Delivered to Asiana as a passenger 747-400"]
         - ["2007-10", "Converted to a freighter for Asiana Cargo"]

@@ -781,10 +781,10 @@
         - ["MSN", "33737"]
         - ["Delivered", "2005-04"]
         - ["Note", "Boeing&rsquo;s last-built passenger 747-400, and the aircraft on China Airlines&rsquo; 747-400 farewell flight CI2747"]
-        - ["Status", "Retired by China Airlines in 2021; registered to JetOneX in the US as N733JX until the registration was cancelled after a reported sale on 2024-08-05; no later registration found, and forum posts say it was broken up at Taoyuan around 2023&ndash;24"]
+        - ["Status", "Retired by China Airlines in 2021; registered to JetOneX in the US as N733JX until the registration was canceled after a reported sale on 2024-08-05; no later registration found, and forum posts say it was broken up at Taoyuan around 2023&ndash;24"]
       history:
         - ["2021-03-20", "Flew CI2747, China Airlines&rsquo; 747-400 farewell flight"]
-        - ["2024-08-05", "US registration N733JX cancelled after a reported sale"]
+        - ["2024-08-05", "US registration N733JX canceled after a reported sale"]
     - group: "Photo"
       rows:
         - ["Camera", "Sony α6000"]
@@ -800,7 +800,7 @@
   title: "🇭🇰 Hong Kong Air Cargo"
   aircraft: "Airbus A330-200F"
   regs: ["B-LNY"]
-  alt: "Hong Kong Air Cargo Airbus A330-200F B-LNY climbing out of Taiwan Taoyuan International Airport under grey clouds, registration on the underside of the wing"
+  alt: "Hong Kong Air Cargo Airbus A330-200F B-LNY climbing out of Taiwan Taoyuan International Airport under gray clouds, registration on the underside of the wing"
   details:
     - group: "Aircraft"
       rows:
@@ -881,7 +881,7 @@
   title: "🇱🇺 Cargolux"
   aircraft: "Boeing 747-8F"
   regs: ["LX-VCN"]
-  alt: "Cargolux Boeing 747-8F LX-VCN climbing out of Taiwan Taoyuan International Airport with its gear retracting under a grey sky"
+  alt: "Cargolux Boeing 747-8F LX-VCN climbing out of Taiwan Taoyuan International Airport with its gear retracting under a gray sky"
   details:
     - group: "Aircraft"
       rows:
@@ -1438,7 +1438,7 @@
   title: "🇭🇰 Cathay Pacific"
   aircraft: "Airbus A321neo"
   regs: ["B-HPG"]
-  alt: "Cathay Pacific Airbus A321neo B-HPG on final approach and touching down with tyre smoke at Taiwan Taoyuan International Airport as flight CX464"
+  alt: "Cathay Pacific Airbus A321neo B-HPG on final approach and touching down with tire smoke at Taiwan Taoyuan International Airport as flight CX464"
   details:
     - group: "Aircraft"
       rows:
@@ -1513,7 +1513,7 @@
   title: "🇭🇰 Cathay Cargo"
   aircraft: "Boeing 747-400ERF"
   regs: ["B-LIF"]
-  alt: "Cathay Cargo Boeing 747-400ERF B-LIF with gear down on approach to Taiwan Taoyuan International Airport under a grey sky"
+  alt: "Cathay Cargo Boeing 747-400ERF B-LIF with gear down on approach to Taiwan Taoyuan International Airport under a gray sky"
   details:
     - group: "Aircraft"
       rows:
@@ -1540,7 +1540,7 @@
   title: "🇰🇷 Korean Air"
   aircraft: "Airbus A380-800"
   regs: ["HL7621"]
-  alt: "Korean Air Airbus A380 HL7621 with gear down on approach to Taiwan Taoyuan International Airport under a grey sky"
+  alt: "Korean Air Airbus A380 HL7621 with gear down on approach to Taiwan Taoyuan International Airport under a gray sky"
   details:
     - group: "Aircraft"
       rows:
@@ -1594,8 +1594,9 @@
   title: "🇹🇼 EVA AIR"
   aircraft: "Airbus A330-200"
   regs: ["B-16309"]
+  story: "The only EVA jet to wear Hello Kitty colors twice, later flown in Russia and Egypt"
   liveries: ["Hello Kitty Speed Puff"]
-  alt: "EVA Air Airbus A330-200 B-16309 in the Hello Kitty Speed Puff livery about to touch down at Taiwan Taoyuan International Airport under a grey sky"
+  alt: "EVA Air Airbus A330-200 B-16309 in the Hello Kitty Speed Puff livery about to touch down at Taiwan Taoyuan International Airport under a gray sky"
   details:
     - group: "Aircraft"
       rows:
@@ -1605,11 +1606,11 @@
         - ["Variant", "A330-203"]
         - ["MSN", "661"]
         - ["Livery", "Hello Kitty &ldquo;Speed Puff&rdquo; (雲彩機), 2012-06 to 2017"]
-        - ["Note", "The only EVA aircraft to wear Hello Kitty colours twice; it was also the second first-generation Hello Kitty jet, from 2006-10 to early 2009"]
+        - ["Note", "The only EVA aircraft to wear Hello Kitty colors twice; it was also the second first-generation Hello Kitty jet, from 2006-10 to early 2009"]
         - ["Status", "Left EVA Air in 2017-03; flew as VP-BIO for VIM Airlines from 2017-09, then as SU-TCH for AlMasria Universal Airlines from 2018-02"]
       history:
         - ["2006-10-21", "Debuted as EVA&rsquo;s second first-generation Hello Kitty jet"]
-        - ["early 2009", "Returned to standard colours as the first Hello Kitty deal ended"]
+        - ["early 2009", "Returned to standard colors as the first Hello Kitty deal ended"]
         - ["2012-06", "Rejoined the Hello Kitty fleet as Speed Puff (雲彩機)"]
         - ["2017-03", "Left the EVA Air fleet"]
         - ["2017-09", "Registered VP-BIO for VIM Airlines"]
@@ -1684,6 +1685,7 @@
   title: "🇹🇼 China Airlines"
   aircraft: "Airbus A340-300"
   regs: ["B-18806"]
+  story: "China Airlines&rsquo; last A340-300 in service, which measured greenhouse gases on passenger flights"
   liveries: ["Climate Monitoring livery"]
   alt: "China Airlines Airbus A340-300 B-18806 in the Official Airline for Climate Monitoring livery, a flight attendant holding the globe on the rear fuselage, taxiing at Taiwan Taoyuan International Airport"
   details:
@@ -1714,6 +1716,7 @@
   title: "🇹🇼 China Airlines"
   aircraft: "Airbus A330-300"
   regs: ["B-18355"]
+  story: "The Welcome to Taiwan A330, which went on to become Air Samarkand&rsquo;s first aircraft in Uzbekistan"
   liveries: ["Welcome to Taiwan livery"]
   alt: "China Airlines Airbus A330-300 B-18355 in the Welcome to Taiwan tourism livery, with illustrated night-market and boating scenes, taking off past the Evergreen hangar at Taiwan Taoyuan International Airport"
   details:
@@ -1746,6 +1749,7 @@
   title: "🇹🇼 TransAsia Airways"
   aircraft: "Airbus A320"
   regs: ["B-22318"]
+  story: "Grounded when TransAsia shut down in 2016, later flying in Malta as 9H-MMO"
   alt: "TransAsia Airways Airbus A320 B-22318 taxiing at Taiwan Taoyuan International Airport in front of a large hangar"
   details:
     - group: "Aircraft"
@@ -1805,7 +1809,8 @@
   title: "🇹🇭 Orient Thai Airlines"
   aircraft: "Boeing 747-400"
   regs: ["HS-STB"]
-  alt: "Orient Thai Airlines Boeing 747-400 HS-STB parked without engines on a remote stand at Taiwan Taoyuan International Airport under a clear blue sky"
+  story: "Flew for Varig and Garuda, carried Hajj pilgrims for Saudia, then sat at Taoyuan for five years until it was cut up"
+  alt: "Orient Thai Airlines Boeing 747-400 HS-STB parked on a remote stand at Taiwan Taoyuan International Airport under a clear blue sky"
   details:
     - group: "Aircraft"
       rows:
@@ -1814,14 +1819,24 @@
         - ["Variant", "747-441"]
         - ["MSN", "24956"]
         - ["Line no.", "917"]
-        - ["History", "Previously registered PP-VPG, PK-GSI and N791LF"]
-        - ["At TPE", "Reportedly flew in for maintenance at Evergreen Aviation Technologies in 2014 and never left; unpaid bills led to parts being removed and sold"]
-        - ["Status", "Retired at Taoyuan: reportedly written off in 2017-12 and dismantled on 2019-09-11, with the fuselage moved to private land in Guanyin, Taoyuan"]
+        - ["First flight", "1992-05-05"]
+        - ["History", "Previously PP-VPG with Varig, N791LF with lessor ILFC and PK-GSI with Garuda Indonesia"]
+        - ["Livery", "Orient Thai&rsquo;s plain white Hajj scheme; the outline of the Saudia palm-and-swords emblem still shows on the tail from its 2012 Hajj lease"]
+        - ["At TPE", "Flew in for maintenance at Evergreen Aviation Technologies in 2014 and never flew again; reportedly held there over unpaid bills"]
+        - ["Status", "Retired at Taoyuan: sold in 2017-12 and dismantled on 2019-09-11, with the fuselage moved to private land in Guanyin, Taoyuan"]
       history:
-        - ["2014", "Reportedly flew to Taoyuan for maintenance at Evergreen Aviation Technologies"]
-        - ["2017-12", "Reportedly written off and sold to a private landowner"]
+        - ["1992-05-05", "First flight, for Varig as PP-VPG"]
+        - ["1994-09", "Registered N791LF to lessor ILFC"]
+        - ["1995-03", "Leased to Garuda Indonesia as PK-GSI"]
+        - ["2012-06", "Returned to the lessor by Garuda"]
+        - ["2012-07-11", "Delivered to Orient Thai Airlines as HS-STB"]
+        - ["2012-09", "Wet-leased to Saudia for the Hajj season, flying pilgrims as HS-STB with the Saudia emblem on its tail"]
+        - ["2012-12", "Hajj lease ended; back with Orient Thai"]
+        - ["2014", "Flew to Taoyuan for maintenance at Evergreen Aviation Technologies; its last flight"]
+        - ["2017-12", "Sold by Orient Thai to a private buyer; Evergreen Aviation Technologies handed it over on 2018-01-01"]
+        - ["2018-01-25", "Parts worth more than NT$30 million reported missing from the airframe"]
         - ["2018-10", "Orient Thai Airlines stopped flying"]
-        - ["2019-09-11", "Reportedly dismantled; the fuselage was moved to private land in Guanyin, Taoyuan"]
+        - ["2019-09-11", "Dismantled; the fuselage was moved to private land in Guanyin, Taoyuan"]
         - ["2025-08", "Listed as on display at an aircraft-restaurant site in Guanyin"]
     - group: "Photo"
       rows:
@@ -1837,7 +1852,8 @@
   title: "🇩🇪 Eurowings"
   aircraft: "Airbus A330-200"
   regs: ["B-16303"]
-  alt: "Former EVA Air Airbus A330-200 B-16303, freshly painted in Eurowings colours but still on its Taiwanese registration, parked at Taiwan Taoyuan International Airport"
+  story: "Already in Eurowings colors but still on its Taiwanese registration, before it became D-AXGC"
+  alt: "Former EVA Air Airbus A330-200 B-16303, freshly painted in Eurowings colors but still on its Taiwanese registration, parked at Taiwan Taoyuan International Airport"
   details:
     - group: "Aircraft"
       rows:
@@ -1871,7 +1887,7 @@
   title: "🇹🇼 EVA AIR"
   aircraft: "Boeing 747-400"
   regs: ["B-16410"]
-  alt: "EVA Air Boeing 747-400 B-16410 in the airline's pre-2015 green livery about to touch down at Taiwan Taoyuan International Airport, with a China Airlines 747-400 taxiing behind under a grey sky"
+  alt: "EVA Air Boeing 747-400 B-16410 in the airline's pre-2015 green livery about to touch down at Taiwan Taoyuan International Airport, with a China Airlines 747-400 taxiing behind under a gray sky"
   details:
     - group: "Aircraft"
       rows:
@@ -1886,7 +1902,7 @@
         - ["Status", "Retired by EVA Air in 2017-04 and ferried to the US; reportedly broken up in 2021"]
       history:
         - ["2017-03-27", "Reportedly flew its last scheduled Manila service, then was stored"]
-        - ["2017-04-28", "Assigned the US import number N317UA, which was never registered and was cancelled on 2017-08-14"]
+        - ["2017-04-28", "Assigned the US import number N317UA, which was never registered and was canceled on 2017-08-14"]
         - ["2021", "Reportedly broken up"]
     - group: "Photo"
       rows:
@@ -1902,7 +1918,8 @@
   title: "🇹🇼 EVA AIR"
   aircraft: "Boeing 747-400"
   regs: ["B-16412"]
-  alt: "EVA Air Boeing 747-400 B-16412 in the airline's pre-2015 green livery, gear down just above the runway at Taiwan Taoyuan International Airport under a grey sky"
+  story: "One of EVA&rsquo;s last three passenger 747s, still in the pre-2015 livery when it flew to San Bernardino to retire"
+  alt: "EVA Air Boeing 747-400 B-16412 in the airline's pre-2015 green livery, gear down just above the runway at Taiwan Taoyuan International Airport under a gray sky"
   details:
     - group: "Aircraft"
       rows:
@@ -1933,6 +1950,7 @@
   title: "🇹🇼 EVA AIR"
   aircraft: "Boeing 777-300ER"
   regs: ["B-16703"]
+  story: "EVA&rsquo;s first Hello Kitty 777, with 19 Sanrio characters holding hands, broken up in Ireland in 2024"
   liveries: ["Hello Kitty Hand-in-Hand Jet"]
   alt: "EVA Air Boeing 777-300ER B-16703 in the Hello Kitty Hand-in-Hand livery, with Sanrio characters holding hands along the fuselage, rotating off the runway at Taiwan Taoyuan International Airport, with a red sign in the foreground warning not to cross without tower clearance"
   details:
@@ -1952,7 +1970,7 @@
         - ["2013-09-18", "First flight in the Hand-in-Hand livery, Taipei to Los Angeles, with chairman Chang Kuo-wei as captain"]
         - ["2014-10-29", "Moved to the Taipei to Paris route"]
         - ["2018-03-27", "Returned to the Los Angeles route three days a week"]
-        - ["2021-05-16", "Returned to standard EVA colours"]
+        - ["2021-05-16", "Returned to standard EVA colors"]
         - ["2024-06-17", "Retirement flight from Taipei to Ireland West Airport Knock"]
         - ["2024-07", "EirTrade began taking it apart at Knock"]
     - group: "Photo"

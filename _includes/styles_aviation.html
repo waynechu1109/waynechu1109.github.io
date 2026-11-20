@@ -403,13 +403,47 @@
     .airport-links .resource-btn { flex: none; white-space: nowrap; }
     /* the side index takes over once there's room for it */
     @media (min-width: 1500px) { .airport-links { display: none; } }
-    .airport-section {
+    .airport-section, .story-section {
       margin-top: 34px; padding: 28px; border-radius: 20px;
       background: linear-gradient(135deg, #fffdf8 0%, #faf5ea 55%, #fdf3e3 100%);
       border: 1px solid rgba(var(--line-rgb),.16);
       box-shadow: 0 14px 34px rgba(var(--shadow-rgb),.08);
     }
-    .airport-section { scroll-margin-top: calc(var(--nav-offset) + 16px); }
+    .airport-section, .story-section { scroll-margin-top: calc(var(--nav-offset) + 16px); }
+    .story-section[hidden] { display: none; }
+    .story-header { justify-content: space-between; gap: 12px; }
+    .story-nav { display: flex; gap: 6px; }
+    .story-nav[hidden] { display: none; }
+    .story-rail {
+      display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 32px) / 3); gap: 16px;
+      overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain;
+      margin: 0 -6px; padding: 4px 6px 10px; scroll-padding-inline: 6px;
+    }
+    .story-rail::-webkit-scrollbar { display: none; }
+    .story-card {
+      scroll-snap-align: start; display: flex; flex-direction: column; overflow: hidden;
+      border-radius: 16px; background: var(--surface); color: inherit; text-decoration: none;
+      border: 1px solid rgba(var(--line-rgb),.12); box-shadow: 0 10px 24px rgba(var(--shadow-rgb),.08);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .story-card:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(var(--shadow-rgb),.14); }
+    .story-frame { position: relative; display: flex; align-items: center; aspect-ratio: 3 / 2; overflow: hidden; background: #0f1b2f; }
+    .story-thumb { display: block; width: 100%; height: 100%; object-fit: cover; }
+    /* panoramas get the same treatment as their grid card: the whole frame, with a blurred copy filling the bands */
+    .story-frame.is-wide::before {
+      content: ""; position: absolute; inset: -24px;
+      background: var(--fill) center / cover; filter: blur(18px) brightness(.72) saturate(1.1);
+    }
+    .story-frame.is-wide .story-thumb { position: relative; height: auto; box-shadow: 0 0 18px rgba(0,0,0,.35); }
+    .story-body { display: flex; flex-direction: column; gap: 6px; flex: 1; padding: 14px 16px 16px; }
+    .story-years { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .74rem; font-weight: 700; letter-spacing: .08em; color: var(--muted); }
+    .story-headline { font-size: .95rem; font-weight: 700; line-height: 1.4; color: var(--ink); }
+    .story-meta { font-size: .8rem; color: var(--muted); }
+    .story-regs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: auto; padding-top: 4px; }
+    .story-arrow { color: var(--muted); font-size: .8rem; }
+    @media (max-width: 900px) { .story-rail { grid-auto-columns: calc((100% - 16px) / 2); } }
+    @media (max-width: 640px) { .story-rail { grid-auto-columns: 82%; } }
+    @media (prefers-reduced-motion: reduce) { .story-card { transition: none; } .story-card:hover { transform: none; } }
     .airport-header { display: flex; align-items: flex-end; margin-bottom: 18px; }
     .airport-name { margin: 0; color: var(--ink); }
     .airport-meta { margin: 0; color: var(--muted); font-style: italic; }
@@ -433,7 +467,7 @@
     }
     .video-badge .icon { width: 9px; height: 9px; fill: currentColor; }
     .lightbox-image[hidden] { display: none !important; }
-    /* clips are 16:9 but the grid is built from 3:2 photos, so the card crops to match its neighbours;
+    /* clips are 16:9 but the grid is built from 3:2 photos, so the card crops to match its neighbors;
        the lightbox still shows the whole frame */
     .photo-frame.real-photo.has-video { aspect-ratio: 3 / 2; }
     .photo-frame.has-video .photo-image { height: 100%; object-fit: cover; }
@@ -628,12 +662,14 @@
     /* =========================
        Dark Theme Overrides
        ========================= */
-    [data-theme="dark"] .airport-section {
+    [data-theme="dark"] .airport-section, [data-theme="dark"] .story-section {
       background: linear-gradient(135deg, #17202d 0%, #1a2637 45%, #2a2620 100%);
       border-color: var(--border);
       box-shadow: 0 14px 34px rgba(0,0,0,.4);
     }
     [data-theme="dark"] .airport-name { color: #e8eef5; }
+    [data-theme="dark"] .story-card { background: var(--surface-alt); border-color: var(--border); }
+    [data-theme="dark"] .story-headline { color: #e8eef5; }
     [data-theme="dark"] .photo-search { border-color: var(--border); }
     [data-theme="dark"] .photo-browse select { border-color: var(--border); }
     [data-theme="dark"] .pager-btn, [data-theme="dark"] .pager-page { background: var(--surface-alt); border-color: var(--border); }
